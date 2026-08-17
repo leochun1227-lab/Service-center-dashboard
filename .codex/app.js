@@ -10,8 +10,7 @@ const state = {
 };
 
 const pageConfig = {
-  overview: { title: "Service Centre Overview", subtitle: "" },
-  activity: { title: "Dealers Workflow", subtitle: "" },
+  overview: { title: "Dealers Workflow", subtitle: "" },
   backlog: { title: "Open Backlog", subtitle: "Month-end open tickets, ageing and blocking reasons." },
   hours: { title: "Hours & Payroll", subtitle: "Technician list, payroll hours, assigned hours and invoiced hours." },
   adoption: { title: "Dealer Adoption", subtitle: "Placeholder view for phase 2 detail." },
@@ -26,7 +25,9 @@ function initFilters() {
   if (document.getElementById("yardFilter")) {
     renderSelect("yardFilter", dashboardData.meta.yards, state.yard);
   }
-  renderSelect("ticketTypeFilter", dashboardData.meta.ticketTypes || ["All Ticket Types"], state.ticketType);
+  if (document.getElementById("ticketTypeFilter")) {
+    renderSelect("ticketTypeFilter", dashboardData.meta.ticketTypes || ["All Ticket Types"], state.ticketType);
+  }
   if (document.getElementById("invoiceFilter")) {
     renderSelect("invoiceFilter", dashboardData.meta.invoiceScopes, state.invoice);
   }
@@ -36,6 +37,7 @@ function initFilters() {
 
 function renderSelect(id, options, selected) {
   const select = document.getElementById(id);
+  if (!select) return;
   select.innerHTML = options.map((option) => `<option ${option === selected ? "selected" : ""}>${option}</option>`).join("");
   select.onchange = () => {
     const key = id === "monthFilter" ? "month" : id === "yardFilter" ? "yard" : id === "ticketTypeFilter" ? "ticketType" : "invoice";
@@ -49,6 +51,9 @@ function getSelectedDealerRows() {
     || dashboardData.pages.overview.monthlyDealerActivity?.[state.month]
     || dashboardData.pages.overview.yardActivity
     || [];
+  if (state.page === "overview") {
+    return rows.filter((row) => row.yard === state.workflowDealer);
+  }
   if (!state.yard || state.yard === "All Dealers") return rows;
   return rows.filter((row) => row.yard === state.yard);
 }
@@ -67,12 +72,18 @@ function getPeriodRowsByType(type) {
     || [];
 }
 
+function getSelectedPeriodRowsByType(type) {
+  return getPeriodRowsByType(type).filter((row) => row.yard === state.workflowDealer);
+}
+
 function combineRowsByDealer(repairRows, pdiRows) {
   const pdiByDealer = new Map(pdiRows.map((row) => [row.yard, row]));
-  return repairRows.map((repair) => ({
-    yard: repair.yard,
-    repair,
-    pdi: pdiByDealer.get(repair.yard) || { yard: repair.yard },
+  const repairByDealer = new Map(repairRows.map((row) => [row.yard, row]));
+  const dealers = [...new Set([...repairByDealer.keys(), ...pdiByDealer.keys()])];
+  return dealers.map((yard) => ({
+    yard,
+    repair: repairByDealer.get(yard) || { yard },
+    pdi: pdiByDealer.get(yard) || { yard },
   }));
 }
 
@@ -379,8 +390,8 @@ function renderMetricChart(targetId, config) {
 }
 
 function renderTypeSplitMetricChart(targetId, config) {
-  const repairRows = getPeriodRowsByType("Repair ticket");
-  const pdiRows = getPeriodRowsByType("PDI ticket");
+  const repairRows = getSelectedPeriodRowsByType("Repair ticket");
+  const pdiRows = getSelectedPeriodRowsByType("PDI ticket");
   const chartRows = combineRowsByDealer(repairRows, pdiRows).map(({ yard, repair, pdi }) => ({
     yard,
     repair: config.mapRow(repair || {}),
@@ -565,8 +576,8 @@ function buildInvoiceMixFromRows(rows) {
 }
 
 function renderOpenStatusMix() {
-  const repairMix = buildOpenStatusMixFromRows(getPeriodRowsByType("Repair ticket"));
-  const pdiMix = buildOpenStatusMixFromRows(getPeriodRowsByType("PDI ticket"));
+  const repairMix = buildOpenStatusMixFromRows(getSelectedPeriodRowsByType("Repair ticket"));
+  const pdiMix = buildOpenStatusMixFromRows(getSelectedPeriodRowsByType("PDI ticket"));
   renderOpenStatusMixTo("repairOpenStatusMixChart", "repairOpenStatusMixCopy", repairMix);
   renderOpenStatusMixTo("pdiOpenStatusMixChart", "pdiOpenStatusMixCopy", pdiMix);
 }
@@ -1006,10 +1017,6 @@ function renderBreakdown() {
 function renderWorkflow() {
   renderWorkflowDealerTabs();
   renderWorkflowPipeline();
-
-  const row = getWorkflowCurrentRow();
-  renderInvoiceMixSummary("workflowInvoiceMixSummary", buildInvoiceMixFromRows([row]));
-  renderWorkflowInvoiceScope(row);
 }
 
 function renderWorkflowInvoiceScope(row) {
@@ -1089,18 +1096,18 @@ function renderHoursRows() {
 }
 
 function switchPage(page) {
-  state.page = page;
-  if (page === "activity" && state.ticketType === "All Ticket Types") {
-    state.ticketType = "Repair ticket";
-    renderSelect("ticketTypeFilter", dashboardData.meta.ticketTypes || ["All Ticket Types"], state.ticketType);
+  state.page = pageConfig[page] ? page : "overview";
+  const appShell = document.getElementById("appShell");
+  if (appShell) {
+    appShell.classList.toggle("is-workflow-page", state.page === "overview");
   }
   document.querySelectorAll(".page-view").forEach((view) => {
-    view.classList.toggle("is-active", view.dataset.page === page);
+    view.classList.toggle("is-active", view.dataset.page === state.page);
   });
   document.querySelectorAll(".nav-item").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.view === page);
+    button.classList.toggle("is-active", button.dataset.view === state.page);
   });
-  const next = pageConfig[page];
+  const next = pageConfig[state.page];
   document.getElementById("pageTitle").textContent = next.title;
 }
 
@@ -1136,7 +1143,7 @@ function bindNav() {
 
 function getInitialPage() {
   const hashPage = window.location.hash.replace("#", "");
-  return pageConfig[hashPage] ? hashPage : state.page;
+  return pageConfig[hashPage] ? hashPage : "overview";
 }
 
 function bindChartTooltips() {
@@ -1166,10 +1173,6 @@ function bindChartTooltips() {
 }
 
 function renderAll() {
-  if (state.page === "activity" && state.ticketType === "All Ticket Types") {
-    state.ticketType = "Repair ticket";
-    renderSelect("ticketTypeFilter", dashboardData.meta.ticketTypes || ["All Ticket Types"], state.ticketType);
-  }
   renderPeriodBanner();
   renderCardPeriodNotes();
   const selectedKpis = buildSelectedKpis();
@@ -1180,10 +1183,6 @@ function renderAll() {
   renderGroupedBars();
   renderInvoiceMix();
   renderOpenStatusMix();
-  renderYardSummary();
-  renderUtilisation("utilisationList", dashboardData.pages.overview.utilisation);
-  renderAgeing();
-  renderLifecycle();
   renderTrend();
   renderLegacyActivity();
   renderBacklogRows();
@@ -1195,7 +1194,7 @@ function renderAll() {
 function renderPeriodBanner() {
   const periodType = /^\d{4}$/.test(state.month) ? "year" : "month";
   document.getElementById("stateBanner").textContent =
-    `Current ${periodType}: ${state.month}. Ticket type: ${state.ticketType}. Abnormal tickets: ${(dashboardData.meta.abnormalTickets || 0).toLocaleString("en-US")}.`;
+    `Current ${periodType}: ${state.month}. Dealer: ${state.workflowDealer}. Ticket type: Repair + PDI. Abnormal tickets: ${(dashboardData.meta.abnormalTickets || 0).toLocaleString("en-US")}.`;
 }
 
 function renderCardPeriodNotes() {

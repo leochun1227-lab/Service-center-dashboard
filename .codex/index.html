@@ -15,13 +15,7 @@
       </div>
 
       <nav class="nav-list" id="navList">
-        <button class="nav-item is-active" data-view="overview"><span class="nav-icon icon-grid"></span><span>Overview</span></button>
-        <button class="nav-item" data-view="activity"><span class="nav-icon icon-bars"></span><span>Dealers Workflow</span></button>
-        <button class="nav-item" data-view="backlog"><span class="nav-icon icon-clock"></span><span>Open Backlog</span></button>
-        <button class="nav-item" data-view="hours"><span class="nav-icon icon-team"></span><span>Hours & Payroll</span></button>
-        <button class="nav-item" data-view="adoption"><span class="nav-icon icon-shield"></span><span>Dealer Adoption</span></button>
-        <button class="nav-item" data-view="quality"><span class="nav-icon icon-alert"></span><span>Data Quality</span></button>
-        <button class="nav-item" data-view="reports"><span class="nav-icon icon-report"></span><span>Reports</span></button>
+        <button class="nav-item is-active" data-view="overview"><span class="nav-icon icon-bars"></span><span>Dealers Workflow</span></button>
       </nav>
 
       <div class="sidebar-bottom">
@@ -41,13 +35,12 @@
         <div class="title-block">
           <button class="menu-button" id="sidebarToggle" aria-label="Toggle sidebar"><span></span></button>
           <div>
-            <h1 id="pageTitle">Service Centre Overview</h1>
+            <h1 id="pageTitle">Dealers Workflow</h1>
           </div>
         </div>
         <div class="header-tools">
           <span class="last-updated" id="lastUpdated"></span>
           <label class="filter-select date-select"><span>Period</span><select id="monthFilter"></select></label>
-          <label class="filter-select"><span>Ticket Type</span><select id="ticketTypeFilter"></select></label>
           <button class="reset-button" id="resetBtn">Reset</button>
           <button class="export-button" id="exportBtn"><span></span>Export Abnormal</button>
         </div>
@@ -58,12 +51,24 @@
       </div>
 
       <section class="page-view is-active" id="view-overview" data-page="overview">
+        <div class="dealer-tabs" id="workflowDealerTabs" aria-label="Dealer workflow selector"></div>
+
         <section class="kpi-grid" id="overviewKpis" aria-label="Overview KPIs"></section>
+
+        <section class="workflow-board-row">
+          <article class="card workflow-status-card">
+            <div class="card-header">
+              <h2>Status Pipeline</h2>
+              <div class="card-note">Selected dealer open workload and ageing by created date</div>
+            </div>
+            <div class="pipeline-list" id="workflowPipeline"></div>
+          </article>
+        </section>
 
         <section class="metric-charts-grid">
           <article class="card chart-card metric-chart-card">
             <div class="card-header">
-              <h2>New Tickets Created By Dealer</h2>
+              <h2>New Tickets Created</h2>
               <div class="card-note">Qty and quote amount</div>
             </div>
             <div class="chart-area grouped-bars dual-metric-bars" id="newTicketsChart"></div>
@@ -75,7 +80,7 @@
 
           <article class="card chart-card metric-chart-card">
             <div class="card-header">
-              <h2>Tickets Invoiced By Dealer</h2>
+              <h2>Tickets Invoiced</h2>
               <div class="card-note">Internal / external filter applies</div>
             </div>
             <div class="chart-area grouped-bars dual-metric-bars" id="invoicedTicketsChart"></div>
@@ -87,7 +92,7 @@
 
           <article class="card chart-card metric-chart-card">
             <div class="card-header">
-              <h2>Open Tickets By Dealer</h2>
+              <h2>Open Tickets</h2>
               <div class="card-note">Month-end open snapshot</div>
             </div>
             <div class="chart-area grouped-bars dual-metric-bars" id="openTicketsChart"></div>
@@ -115,7 +120,7 @@
           <article class="card chart-card donut-card">
             <div class="card-header">
               <h2>Repair Open Status Mix</h2>
-              <div class="card-note">All dealers</div>
+              <div class="card-note">Selected dealer</div>
             </div>
             <div class="donut-wrap">
               <div class="donut-chart" id="repairOpenStatusMixChart"></div>
@@ -126,88 +131,11 @@
           <article class="card chart-card donut-card">
             <div class="card-header">
               <h2>PDI Open Status Mix</h2>
-              <div class="card-note">All dealers</div>
+              <div class="card-note">Selected dealer</div>
             </div>
             <div class="donut-wrap">
               <div class="donut-chart" id="pdiOpenStatusMixChart"></div>
               <div class="donut-copy" id="pdiOpenStatusMixCopy"></div>
-            </div>
-          </article>
-        </section>
-
-        <section class="middle-row">
-          <article class="card">
-            <div class="card-header">
-              <h2>Yard Summary</h2>
-              <button class="link-button">All core KPIs by yard</button>
-            </div>
-            <div class="table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr><th>Dealer</th><th class="num">New Qty</th><th class="num">New Quote Amount</th><th class="num">Invoiced Qty</th><th class="num">Invoiced Amount</th><th class="num">Open Qty</th><th class="num">Open Tickets Quote Amount</th><th>Status</th></tr>
-                </thead>
-                <tbody id="yardSummaryRows"></tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <h2>Technician Assigned Hours vs Payroll Hours</h2>
-              <div class="segmented"><button class="is-active">Utilisation</button><button>Capacity</button></div>
-            </div>
-            <div class="utilisation-list" id="utilisationList"></div>
-          </article>
-        </section>
-
-        <section class="bottom-row">
-          <article class="card">
-            <div class="card-header">
-              <h2>Open Ticket Ageing</h2>
-              <div class="card-note">Used to spot unresolved backlog</div>
-            </div>
-            <div class="chart-area stacked-bars" id="ageingChart"></div>
-            <div class="chart-legend">
-              <span><i class="legend-fresh"></i>0-7 days</span>
-              <span><i class="legend-warm"></i>8-30 days</span>
-              <span><i class="legend-stale"></i>30+ days</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <h2>Ticket Lifecycle Snapshot</h2>
-              <div class="card-note">Makes usage gaps visible very quickly</div>
-            </div>
-            <div class="lifecycle-grid" id="lifecycleGrid"></div>
-          </article>
-        </section>
-      </section>
-
-      <section class="page-view" id="view-activity" data-page="activity">
-        <div class="dealer-tabs" id="workflowDealerTabs" aria-label="Dealer workflow selector"></div>
-
-        <section class="workflow-board-row">
-          <article class="card workflow-status-card">
-            <div class="card-header">
-              <h2>Status Pipeline</h2>
-              <div class="card-note">Selected dealer open workload and ageing by created date</div>
-            </div>
-            <div class="pipeline-list" id="workflowPipeline"></div>
-          </article>
-        </section>
-
-        <section class="workflow-invoice-row">
-          <article class="card chart-card metric-chart-card invoice-combo-card">
-            <div class="card-header">
-              <h2>Invoice Mix & Internal vs External</h2>
-              <div class="card-note">Selected dealer</div>
-            </div>
-            <div class="invoice-mix-summary" id="workflowInvoiceMixSummary"></div>
-            <div class="chart-area grouped-bars dual-metric-bars scope-bars" id="workflowInvoiceScopeChart"></div>
-            <div class="chart-legend">
-              <span><i class="legend-invoice-amount"></i>Internal</span>
-              <span><i class="legend-invoiced"></i>External</span>
             </div>
           </article>
         </section>
