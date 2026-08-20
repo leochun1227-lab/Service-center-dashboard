@@ -7,6 +7,7 @@ const state = {
   invoice: dashboardData.meta.invoiceScopes[0],
   ticketType: dashboardData.meta.ticketTypes?.[0] || "All Ticket Types",
   workflowDealer: "Perth",
+  showWorkflowAging: false,
 };
 
 const pageConfig = {
@@ -74,6 +75,10 @@ function getPeriodRowsByType(type) {
 
 function getSelectedPeriodRowsByType(type) {
   return getPeriodRowsByType(type).filter((row) => row.yard === state.workflowDealer);
+}
+
+function getSingleSelectedDealerRowByType(type) {
+  return getPeriodRowsByType(type).find((row) => row.yard === state.workflowDealer) || {};
 }
 
 function combineRowsByDealer(repairRows, pdiRows) {
@@ -188,8 +193,35 @@ function getWorkflowSeriesData(typeOverride) {
 }
 
 function getWorkflowPipelineData(typeOverride) {
-  const row = getWorkflowCurrentRow(typeOverride);
-  return {
+  const type = typeOverride || getWorkflowTicketType();
+  const period = getWorkflowPeriod();
+  if (isYearPeriod(period)) {
+    const workflowMonths = getWorkflowMonthlyLabels(period);
+    const latestMonth = workflowMonths[workflowMonths.length - 1];
+    const latestWorkflowData = dashboardData.pages.overview.workflowDaily?.[latestMonth]?.[type]?.[state.workflowDealer];
+    if ((latestWorkflowData?.pipeline || []).length) {
+      const yearRow = getWorkflowCurrentRow(type);
+      return alignWorkflowInvoiceStage(
+        {
+          ...latestWorkflowData,
+          period,
+          totals: {
+            ...(latestWorkflowData.totals || {}),
+            open: yearRow.openTickets || latestWorkflowData.totals?.open || 0,
+          },
+        },
+        type,
+      );
+    }
+  }
+
+  const periodPipeline = getWorkflowDailyData(type);
+  if (periodPipeline.pipeline?.length) {
+    return alignWorkflowInvoiceStage(periodPipeline, type);
+  }
+
+  const row = getWorkflowCurrentRow(type);
+  const waitingPipeline = {
     totals: { open: row.openTickets || 0 },
     pipeline: (row.openStatusMix?.segments || []).map((segment) => ({
       status: segment.name,
@@ -200,6 +232,33 @@ function getWorkflowPipelineData(typeOverride) {
       aging: segment.aging || [],
       color: segment.color,
     })),
+  };
+  if (waitingPipeline.pipeline.length) {
+    return waitingPipeline;
+  }
+
+  return getWorkflowDailyData(type);
+}
+
+function alignWorkflowInvoiceStage(pipelineData, typeOverride) {
+  const type = typeOverride || getWorkflowTicketType();
+  if (type !== "Repair ticket") return pipelineData;
+
+  const row = getWorkflowCurrentRow(type);
+  const invoicedQty = row.invoicedTickets ?? row.completedTickets;
+  if (invoicedQty == null) return pipelineData;
+
+  return {
+    ...pipelineData,
+    pipeline: (pipelineData.pipeline || []).map((stage) => {
+      if (stage.status !== "Completed / Invoiced") return stage;
+      return {
+        ...stage,
+        qty: invoicedQty || 0,
+        quoteAmount: row.invoicedAmount || stage.quoteAmount || 0,
+        quoteAmountLabel: row.invoicedAmountLabel || stage.quoteAmountLabel || "$0",
+      };
+    }),
   };
 }
 
@@ -286,18 +345,18 @@ function buildSelectedKpis() {
       badgeTone: "up",
     },
     {
-      title: "Open Tickets",
+      title: "Waiting Tickets",
       value: openQty.toLocaleString("en-US"),
-      detail: `${state.month} ${periodEndLabel} open snapshot by CreatedOn`,
+      detail: `${state.month} ${periodEndLabel} tickets still waiting by status rule`,
       icon: "OP",
       tone: "blue",
       badge: "Month end",
       badgeTone: "warn",
     },
     {
-      title: "Open Tickets Quote Amount",
+      title: "Waiting Tickets Quote Amount",
       value: formatMoney(openQuoteAmount),
-      detail: "AmountIncludingTax for tickets not finished by status rule",
+      detail: "AmountIncludingTax for tickets still waiting by status rule",
       icon: "OQ",
       tone: "teal",
       badge: "Quote",
@@ -351,7 +410,9 @@ function formatTooltipContent(value) {
 }
 
 function renderPageKpis(targetId, kpis) {
-  document.getElementById(targetId).innerHTML = kpis.map((kpi) => `
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  target.innerHTML = kpis.map((kpi) => `
     <article class="kpi-card">
       <div>
         <span class="kpi-title">${kpi.title}</span>
@@ -362,13 +423,15 @@ function renderPageKpis(targetId, kpis) {
 }
 
 function renderMetricChart(targetId, config) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
   const rows = getSelectedDealerRows();
   const chartRows = rows.map((row) => config.mapRow(row));
   const totalQty = chartRows.reduce((sum, row) => sum + row.qty, 0);
   const totalAmount = chartRows.reduce((sum, row) => sum + row.amount, 0);
   const maxQtyShare = Math.max(0.01, ...chartRows.map((row) => share(row.qty, totalQty)));
   const maxAmountShare = Math.max(0.01, ...chartRows.map((row) => share(row.amount, totalAmount)));
-  document.getElementById(targetId).innerHTML = chartRows.map((row) => `
+  target.innerHTML = chartRows.map((row) => `
     <div class="yard-group">
       <div class="bar-stack">
         ${renderBarPair(
@@ -390,6 +453,8 @@ function renderMetricChart(targetId, config) {
 }
 
 function renderTypeSplitMetricChart(targetId, config) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
   const repairRows = getSelectedPeriodRowsByType("Repair ticket");
   const pdiRows = getSelectedPeriodRowsByType("PDI ticket");
   const chartRows = combineRowsByDealer(repairRows, pdiRows).map(({ yard, repair, pdi }) => ({
@@ -401,7 +466,7 @@ function renderTypeSplitMetricChart(targetId, config) {
   const totalPdi = chartRows.reduce((sum, row) => sum + row.pdi.qty, 0);
   const maxRepairShare = Math.max(0.01, ...chartRows.map((row) => share(row.repair.qty, totalRepair)));
   const maxPdiShare = Math.max(0.01, ...chartRows.map((row) => share(row.pdi.qty, totalPdi)));
-  document.getElementById(targetId).innerHTML = chartRows.map((row) => `
+  target.innerHTML = chartRows.map((row) => `
     <div class="yard-group">
       <div class="bar-stack">
         ${renderBarPair(
@@ -484,12 +549,14 @@ function renderGroupedBars() {
 }
 
 function renderInvoiceScopeChart() {
+  const target = document.getElementById("invoiceScopeChart");
+  if (!target) return;
   const rows = getSelectedDealerRows();
   const totalInternal = rows.reduce((sum, row) => sum + (row.internalInvoicedAmount || 0), 0);
   const totalExternal = rows.reduce((sum, row) => sum + (row.externalInvoicedAmount || 0), 0);
   const maxInternalShare = Math.max(0.01, ...rows.map((row) => share(row.internalInvoicedAmount || 0, totalInternal)));
   const maxExternalShare = Math.max(0.01, ...rows.map((row) => share(row.externalInvoicedAmount || 0, totalExternal)));
-  document.getElementById("invoiceScopeChart").innerHTML = rows.map((row) => `
+  target.innerHTML = rows.map((row) => `
     <div class="yard-group">
       <div class="bar-stack">
         ${renderBarPair(
@@ -513,6 +580,166 @@ function renderInvoiceScopeChart() {
 function renderInvoiceMix() {
   const mix = buildInvoiceMixFromRows(getSelectedDealerRows());
   renderInvoiceMixSummary("invoiceMixSummary", mix);
+}
+
+function renderControlTowerPanels() {
+  renderCurrentWorkSource();
+  renderLabourCapacityBoard();
+  renderWorkerPerformanceBoard();
+  renderActionRequiredBoard();
+}
+
+function renderCurrentWorkSource() {
+  const target = document.getElementById("currentWorkSource");
+  if (!target) return;
+  const repair = getSingleSelectedDealerRowByType("Repair ticket");
+  const pdi = getSingleSelectedDealerRowByType("PDI ticket");
+  const allRows = getSelectedDealerRows();
+  const internalTickets = allRows.reduce((sum, row) => sum + (row.internalInvoicedTickets || 0), 0);
+  const externalTickets = allRows.reduce((sum, row) => sum + (row.externalInvoicedTickets || 0), 0);
+  const internalAmount = allRows.reduce((sum, row) => sum + (row.internalInvoicedAmount || 0), 0);
+  const externalAmount = allRows.reduce((sum, row) => sum + (row.externalInvoicedAmount || 0), 0);
+  const totalAmount = internalAmount + externalAmount;
+  const totalTickets = internalTickets + externalTickets;
+
+  const typeRows = [
+    { label: "Repair ticket", value: repair.openTickets || 0, color: "#1f6feb" },
+    { label: "PDI ticket", value: pdi.openTickets || 0, color: "#17a6ad" },
+  ];
+  const invoiceRows = [
+    { label: "Internal", qty: internalTickets, amount: internalAmount, amountLabel: formatMoney(internalAmount), color: "#f58b1f" },
+    { label: "External", qty: externalTickets, amount: externalAmount, amountLabel: formatMoney(externalAmount), color: "#0f3f68" },
+  ];
+  const maxTypeValue = Math.max(1, ...typeRows.map((row) => row.value));
+  target.innerHTML = `
+    <div class="source-type-block">
+      <div class="source-section-title">Waiting Tickets</div>
+      ${typeRows.map((row) => `
+        <div class="source-row type-source-row" ${tooltipAttr([row.label, state.month, state.workflowDealer, `Waiting Tickets: ${row.value.toLocaleString("en-US")}`])}>
+          <span>${row.label}</span>
+          <div class="source-track"><i style="width:${Math.max(row.value > 0 ? 4 : 0, Math.round((row.value / maxTypeValue) * 100))}%; background:${row.color}"></i></div>
+          <strong>${row.value.toLocaleString("en-US")}</strong>
+        </div>
+      `).join("")}
+    </div>
+    <div class="source-invoice-block">
+      <div class="source-total" ${tooltipAttr(["Tickets Invoiced", state.month, state.workflowDealer, `Qty: ${totalTickets.toLocaleString("en-US")}`, `Amount: ${formatMoney(totalAmount)}`])}>
+        <span>Tickets Invoiced</span>
+        <strong>${totalTickets.toLocaleString("en-US")} <em>${formatMoney(totalAmount)}</em></strong>
+      </div>
+      ${invoiceRows.map((row) => {
+        const sharePercent = totalAmount ? Math.round((row.amount / totalAmount) * 100) : 0;
+        return `
+          <div class="source-row invoice-source-row" ${tooltipAttr([row.label, state.month, state.workflowDealer, `Qty: ${row.qty.toLocaleString("en-US")}`, `Amount: ${row.amountLabel}`, `Share: ${sharePercent}%`])}>
+            <span>${row.label}</span>
+            <div class="source-track"><i style="width:${Math.max(row.amount > 0 ? 4 : 0, sharePercent)}%; background:${row.color}"></i></div>
+            <strong>${row.qty.toLocaleString("en-US")} <em>${row.amountLabel}</em></strong>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderLabourCapacityBoard() {
+  const target = document.getElementById("labourCapacityBoard");
+  if (!target) return;
+  const labour = dashboardData.pages.overview.monthlyLabour?.[state.month]?.[state.workflowDealer] || {};
+  const totalHours = labour.totalHours || 0;
+  const typeRows = [
+    { label: "Repair", value: labour.repairHours || 0, valueLabel: labour.repairHoursLabel || "0.0h", color: "#1f6feb" },
+    { label: "PDI", value: labour.pdiHours || 0, valueLabel: labour.pdiHoursLabel || "0.0h", color: "#17a6ad" },
+  ];
+  const maxHours = Math.max(1, ...typeRows.map((row) => row.value));
+  target.innerHTML = `
+    <div class="capacity-flow">
+      <span>C4C Labour Hours</span>
+      <i></i>
+      <span>Repair / PDI Split</span>
+      <i></i>
+      <span>Worker Hours</span>
+      <i></i>
+      <span>HR Utilisation Pending</span>
+    </div>
+    <div class="capacity-metrics">
+      <div class="capacity-metric" ${tooltipAttr([state.workflowDealer, state.month, `TotalLabourHours: ${labour.totalHoursLabel || "0.0h"}`, `Tickets: ${(labour.ticketCount || 0).toLocaleString("en-US")}`])}>
+        <span>Total Labour</span>
+        <strong>${labour.totalHoursLabel || "0.0h"}</strong>
+      </div>
+      <div class="capacity-metric" ${tooltipAttr([state.workflowDealer, state.month, `Workers: ${(labour.workerCount || 0).toLocaleString("en-US")}`])}>
+        <span>Workers</span>
+        <strong>${(labour.workerCount || 0).toLocaleString("en-US")}</strong>
+      </div>
+    </div>
+    <div class="capacity-split">
+      ${typeRows.map((row) => `
+        <div class="source-row type-source-row" ${tooltipAttr([row.label, state.month, state.workflowDealer, `Labour hours: ${row.valueLabel}`])}>
+          <span>${row.label}</span>
+          <div class="source-track"><i style="width:${Math.max(row.value > 0 ? 4 : 0, Math.round((row.value / maxHours) * 100))}%; background:${row.color}"></i></div>
+          <strong>${row.valueLabel}</strong>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderWorkerPerformanceBoard() {
+  const target = document.getElementById("workerPerformanceBoard");
+  if (!target) return;
+  const labour = dashboardData.pages.overview.monthlyLabour?.[state.month]?.[state.workflowDealer] || {};
+  const rows = labour.topWorkers || [];
+  target.innerHTML = `
+    <table class="worker-table">
+      <thead>
+        <tr><th>Worker</th><th class="num">Tickets</th><th class="num">Labour Hrs</th><th class="num">Avg / Ticket</th><th class="num">Repair</th><th class="num">PDI</th></tr>
+      </thead>
+      <tbody>
+        ${rows.length ? rows.map((row) => `
+          <tr ${tooltipAttr([row.worker, state.month, state.workflowDealer, `Tickets: ${(row.tickets || 0).toLocaleString("en-US")}`, `Labour: ${row.hoursLabel || "0.0h"}`])}>
+            <td>${escapeHtml(row.worker)}</td>
+            <td class="num">${(row.tickets || 0).toLocaleString("en-US")}</td>
+            <td class="num">${row.hoursLabel || "0.0h"}</td>
+            <td class="num">${row.avgHoursLabel || "0.0h"}</td>
+            <td class="num">${row.repairHoursLabel || "0.0h"}</td>
+            <td class="num">${row.pdiHoursLabel || "0.0h"}</td>
+          </tr>
+        `).join("") : `<tr><td colspan="6">No C4C labour hours for this period and dealer.</td></tr>`}
+      </tbody>
+    </table>
+  `;
+}
+
+function renderActionRequiredBoard() {
+  const target = document.getElementById("actionRequiredBoard");
+  if (!target) return;
+  const repair = getWorkflowPipelineData("Repair ticket");
+  const pdi = getWorkflowPipelineData("PDI ticket");
+  const longAgeRows = [...(repair.pipeline || []), ...(pdi.pipeline || [])]
+    .map((row) => {
+      const aged = (row.aging || []).find((bucket) => bucket.label === "60+ days")?.qty || 0;
+      return { status: row.status, aged, qty: row.qty || 0 };
+    })
+    .filter((row) => row.aged > 0)
+    .sort((a, b) => b.aged - a.aged)
+    .slice(0, 4);
+  const items = [
+    ...longAgeRows.map((row) => ({
+      label: `${row.aged.toLocaleString("en-US")} over 60 days`,
+      detail: row.status,
+      tone: "warn",
+    })),
+    {
+      label: `${(dashboardData.meta.abnormalTickets || 0).toLocaleString("en-US")} abnormal tickets`,
+      detail: "Export Abnormal",
+      tone: "danger",
+    },
+  ];
+  target.innerHTML = items.map((item) => `
+    <div class="action-chip ${item.tone}" ${tooltipAttr([item.detail, state.month, state.workflowDealer, item.label])}>
+      <span>${item.label}</span>
+      <strong>${item.detail}</strong>
+    </div>
+  `).join("");
 }
 
 function renderInvoiceMixSummary(targetId, mix) {
@@ -800,13 +1027,14 @@ function renderWorkflowPipeline() {
     const data = getWorkflowPipelineData(type);
     const rows = data.pipeline || [];
     const maxAgeQty = Math.max(1, ...rows.flatMap((row) => (row.aging || []).map((bucket) => bucket.qty || 0)));
-    const body = rows.length ? rows.map((row) => `
-      <div class="pipeline-row stage-card ${row.qty ? "" : "is-empty"}" ${tooltipAttr([row.status, type, state.workflowDealer, `Qty: ${(row.qty || 0).toLocaleString("en-US")}`, row.rawStatuses?.length ? `Raw C4C status: ${row.rawStatuses.join(", ")}` : ""])}>
+    const isRepair = type === "Repair ticket";
+    const body = rows.length ? rows.map((row, index) => `
+      <div class="pipeline-row stage-card stage-index-${index} ${row.qty ? "" : "is-empty"} ${state.showWorkflowAging ? "" : "is-aging-hidden"} ${index === rows.length - 1 ? "is-last-stage" : ""} ${isRepair && index === 3 ? "is-turn-down" : ""} ${isRepair && index >= 4 && index < rows.length - 1 ? "is-reverse-flow" : ""}" ${tooltipAttr([row.status, type, state.workflowDealer, `Qty: ${(row.qty || 0).toLocaleString("en-US")}`, row.rawStatuses?.length ? `Raw C4C status: ${row.rawStatuses.join(", ")}` : ""])}>
         <div class="stage-card-head">
           <span style="--stage-color:${row.color || "#64748b"}">${row.status}</span>
           <strong>${(row.qty || 0).toLocaleString("en-US")}</strong>
         </div>
-        <div class="stage-aging">
+        ${state.showWorkflowAging ? `<div class="stage-aging">
           ${(row.aging || []).map((bucket) => `
             <div class="stage-aging-row">
               <span>${bucket.label}</span>
@@ -814,7 +1042,7 @@ function renderWorkflowPipeline() {
               <strong>${(bucket.qty || 0).toLocaleString("en-US")}</strong>
             </div>
           `).join("")}
-        </div>
+        </div>` : ""}
       </div>
     `).join("") : `<div class="pipeline-empty">No open ${type.toLowerCase()} workload.</div>`;
     return `
@@ -823,7 +1051,10 @@ function renderWorkflowPipeline() {
           <strong>${type === "Repair ticket" ? "Repair" : "PDI"}</strong>
           <span>${(data.totals?.open || 0).toLocaleString("en-US")} open</span>
         </div>
-        <div class="pipeline-stage-grid">${body}</div>
+        <div class="pipeline-stage-grid ${isRepair ? "repair-flow-grid" : "pdi-flow-grid"}">
+          ${body}
+          ${isRepair ? `<div class="cancel-group-box repair-cancel-group" aria-hidden="true"></div>` : `<div class="cancel-group-box pdi-cancel-group" aria-hidden="true"></div>`}
+        </div>
       </div>
     `;
   }).join("");
@@ -1139,6 +1370,14 @@ function bindNav() {
   document.getElementById("exportBtn").addEventListener("click", () => {
     window.location.href = dashboardData.meta.abnormalExportFile || "../abnormal_tickets.xlsx";
   });
+
+  const agingToggle = document.getElementById("agingToggle");
+  if (agingToggle) {
+    agingToggle.addEventListener("click", () => {
+      state.showWorkflowAging = !state.showWorkflowAging;
+      renderAll();
+    });
+  }
 }
 
 function getInitialPage() {
@@ -1175,6 +1414,7 @@ function bindChartTooltips() {
 function renderAll() {
   renderPeriodBanner();
   renderCardPeriodNotes();
+  renderWorkflowAgingToggle();
   const selectedKpis = buildSelectedKpis();
   renderPageKpis("overviewKpis", selectedKpis);
   renderWorkflow();
@@ -1183,6 +1423,7 @@ function renderAll() {
   renderGroupedBars();
   renderInvoiceMix();
   renderOpenStatusMix();
+  renderControlTowerPanels();
   renderTrend();
   renderLegacyActivity();
   renderBacklogRows();
@@ -1191,10 +1432,19 @@ function renderAll() {
   renderUtilisation("hoursBalance", dashboardData.pages.hours.balance);
 }
 
+function renderWorkflowAgingToggle() {
+  const button = document.getElementById("agingToggle");
+  if (!button) return;
+  button.classList.toggle("is-active", state.showWorkflowAging);
+  button.textContent = state.showWorkflowAging ? "Aging On" : "Aging Off";
+  button.setAttribute("aria-pressed", state.showWorkflowAging ? "true" : "false");
+}
+
 function renderPeriodBanner() {
-  const periodType = /^\d{4}$/.test(state.month) ? "year" : "month";
-  document.getElementById("stateBanner").textContent =
-    `Current ${periodType}: ${state.month}. Dealer: ${state.workflowDealer}. Ticket type: Repair + PDI. Abnormal tickets: ${(dashboardData.meta.abnormalTickets || 0).toLocaleString("en-US")}.`;
+  const banner = document.getElementById("stateBanner");
+  if (!banner) return;
+  banner.textContent = "";
+  banner.hidden = true;
 }
 
 function renderCardPeriodNotes() {
@@ -1212,3 +1462,10 @@ window.addEventListener("hashchange", () => {
   renderAll();
 });
 renderAll();
+
+
+
+
+
+
+

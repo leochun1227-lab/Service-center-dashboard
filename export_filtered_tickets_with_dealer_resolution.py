@@ -23,8 +23,8 @@ BASE_URL = os.getenv(
 )
 PATH = os.getenv("C4C_API_PATH", "/http/PC4C/Ticket/queryOdataBatch")
 
-USERNAME = os.getenv("C4C_USERNAME", "")
-PASSWORD = os.getenv("C4C_PASSWORD", "")
+USERNAME = os.getenv("C4C_USERNAME", "XIEYONGDONG@newgonow.cn")
+PASSWORD = os.getenv("C4C_PASSWORD", "Max@sap2022")
 
 ROLE_CODES = [x.strip() for x in os.getenv("C4C_ROLE_CODES", "1001,40,43").split(",") if x.strip()]
 API_TOP = int(os.getenv("C4C_API_TOP", "1000"))
@@ -258,7 +258,9 @@ def merge_rows_to_ticket_table(rows_by_role: Dict[str, List[Dict[str, Any]]]) ->
         "TicketStatus",
         "TicketStatusText",
         "AmountIncludingTax",
+        "TotalLabourHours",
         "ERPInvoiceNumber",
+        "Role_40_InvolvedPartyName",
         "Description",
         "Subject",
     ]
@@ -400,11 +402,13 @@ def apply_filters_and_resolution(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Dat
         "ERPInvoiceNumberPrice",
         "Billing date",
         "AmountIncludingTax",
+        "TotalLabourHours",
         "WarrantyHandlingDealerID",
         "CreatedOn",
         "TicketStatus",
         "TicketStatusText",
         "ERPFreeOrder",
+        "Role_40_InvolvedPartyName",
         "Role_43_InvolvedPartyName",
         "TicketName",
         "SerialID",

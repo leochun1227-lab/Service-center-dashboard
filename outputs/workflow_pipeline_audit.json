@@ -1,0 +1,46 @@
+{
+  "source": "C:\\Users\\Leo.Li\\Documents\\ChatGPT\\Service centre dashboard\\c4c_ticket_table_z007_z010_checked_hana_final.xlsx",
+  "dashboardData": "C:\\Users\\Leo.Li\\Documents\\ChatGPT\\Service centre dashboard\\dashboard-data.js",
+  "lastUpdated": "20 Aug 2026, 02:14 PM",
+  "checks": 200,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "perthSpotlight": {
+    "2026": {
+      "Repair ticket": {
+        "Awaiting Quote Approval": 118,
+        "Approved, Awaiting Repair": 100,
+        "Repair In Progress": 49,
+        "Repair Complete, Awaiting Time Claim": 0,
+        "Time Claimed, Awaiting Invoice": 0,
+        "Completed / Invoiced": 205,
+        "Invoice Cancelled, SO Still Open": 6,
+        "Cancelled": 5
+      },
+      "PDI ticket": {
+        "Awaiting PDI Start": 1,
+        "PDI Complete, Awaiting Time Claim": 215,
+        "PDI Completed": 102,
+        "Cancelled": 3
+      }
+    },
+    "Aug 2026": {
+      "Repair ticket": {
+        "Awaiting Quote Approval": 16,
+        "Approved, Awaiting Repair": 23,
+        "Repair In Progress": 1,
+        "Repair Complete, Awaiting Time Claim": 0,
+        "Time Claimed, Awaiting Invoice": 0,
+        "Completed / Invoiced": 1,
+        "Invoice Cancelled, SO Still Open": 0,
+        "Cancelled": 1
+      },
+      "PDI ticket": {
+        "Awaiting PDI Start": 1,
+        "PDI Complete, Awaiting Time Claim": 3,
+        "PDI Completed": 29,
+        "Cancelled": 0
+      }
+    }
+  }
+}

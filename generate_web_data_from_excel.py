@@ -105,6 +105,10 @@ def parse_amount(series: pd.Series) -> pd.Series:
     return pd.to_numeric(cleaned, errors="coerce").fillna(0.0)
 
 
+def parse_hours(series: pd.Series) -> pd.Series:
+    return pd.to_numeric(series.fillna("").astype(str).str.strip(), errors="coerce").fillna(0.0)
+
+
 def money(value: float) -> str:
     if abs(value) >= 1_000_000:
         return f"${value / 1_000_000:.2f}M"
@@ -315,6 +319,66 @@ def build_invoice_mix(invoice_rows: pd.DataFrame) -> dict[str, Any]:
     }
 
 
+def hours_label(value: float) -> str:
+    return f"{value:,.1f}h"
+
+
+def build_labour_summary(rows: pd.DataFrame) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    source = rows.copy().reset_index(drop=True)
+    source = source.loc[:, ~source.columns.duplicated()].copy()
+    if "LabourHours" not in source.columns:
+        source["LabourHours"] = 0.0
+    if "TicketTypeBucket" not in source.columns:
+        source["TicketTypeBucket"] = source.apply(ticket_type_bucket, axis=1) if not source.empty else pd.Series(dtype="object")
+    if "WorkerName" not in source.columns:
+        source["WorkerName"] = source.get("Role_40_InvolvedPartyName", pd.Series(dtype="object")).map(lambda value: clean(value) or "Unassigned")
+
+    for dealer in DEALER_ORDER:
+        dealer_rows = source.loc[source["DealerBucket"].eq(dealer)].copy() if "DealerBucket" in source.columns else source.iloc[0:0].copy()
+        repair_rows = dealer_rows.loc[dealer_rows["TicketTypeBucket"].eq("Repair ticket")]
+        pdi_rows = dealer_rows.loc[dealer_rows["TicketTypeBucket"].eq("PDI ticket")]
+        total_hours = float(dealer_rows["LabourHours"].sum()) if "LabourHours" in dealer_rows.columns else 0.0
+        repair_hours = float(repair_rows["LabourHours"].sum()) if "LabourHours" in repair_rows.columns else 0.0
+        pdi_hours = float(pdi_rows["LabourHours"].sum()) if "LabourHours" in pdi_rows.columns else 0.0
+        worker_rows = []
+        if not dealer_rows.empty:
+            grouped = dealer_rows.groupby("WorkerName", dropna=False)
+            for worker, worker_group in grouped:
+                worker_name = clean(worker) or "Unassigned"
+                worker_repair = worker_group[worker_group["TicketTypeBucket"].eq("Repair ticket")]
+                worker_pdi = worker_group[worker_group["TicketTypeBucket"].eq("PDI ticket")]
+                hours = float(worker_group["LabourHours"].sum())
+                tickets = int(len(worker_group))
+                worker_rows.append(
+                    {
+                        "worker": worker_name,
+                        "tickets": tickets,
+                        "hours": round(hours, 2),
+                        "hoursLabel": hours_label(hours),
+                        "avgHours": round(hours / tickets, 2) if tickets else 0.0,
+                        "avgHoursLabel": hours_label(hours / tickets) if tickets else "0.0h",
+                        "repairHours": round(float(worker_repair["LabourHours"].sum()), 2),
+                        "repairHoursLabel": hours_label(float(worker_repair["LabourHours"].sum())),
+                        "pdiHours": round(float(worker_pdi["LabourHours"].sum()), 2),
+                        "pdiHoursLabel": hours_label(float(worker_pdi["LabourHours"].sum())),
+                    }
+                )
+        worker_rows.sort(key=lambda item: (-item["hours"], item["worker"]))
+        result[dealer] = {
+            "totalHours": round(total_hours, 2),
+            "totalHoursLabel": hours_label(total_hours),
+            "repairHours": round(repair_hours, 2),
+            "repairHoursLabel": hours_label(repair_hours),
+            "pdiHours": round(pdi_hours, 2),
+            "pdiHoursLabel": hours_label(pdi_hours),
+            "ticketCount": int(len(dealer_rows)),
+            "workerCount": len({row["worker"] for row in worker_rows if row["worker"] != "Unassigned"}),
+            "topWorkers": worker_rows[:8],
+        }
+    return result
+
+
 def build_open_status_mix(open_rows: pd.DataFrame, ticket_type_filter: str | None = None) -> dict[str, Any]:
     total = int(len(open_rows))
     stage_rows = open_rows.copy()
@@ -388,6 +452,10 @@ def open_rows_at_month_end(open_tickets: pd.DataFrame, period: str) -> pd.DataFr
 def open_rows_at_year_end(open_tickets: pd.DataFrame, year: str) -> pd.DataFrame:
     year_end = pd.Period(year, freq="Y").to_timestamp(how="end")
     return open_tickets[open_tickets["CreatedDate"].le(year_end)].copy()
+
+
+def rows_created_by(rows: pd.DataFrame, end: pd.Timestamp) -> pd.DataFrame:
+    return rows[rows["CreatedDate"].le(end)].copy()
 
 
 def completed_date(row: pd.Series) -> pd.Timestamp | pd.NaT:
@@ -469,6 +537,7 @@ def build_daily_workflow(
     ]
     created_rows = type_rows[type_rows["CreatedMonth"].eq(period)].copy()
     period_open = type_open[type_open["CreatedDate"].le(end)].copy()
+    pipeline_rows = rows_created_by(type_rows, end)
 
     days = pd.date_range(start=start, end=end, freq="D")
     daily = []
@@ -497,7 +566,7 @@ def build_daily_workflow(
         "ticketType": ticket_type_filter,
         "period": pd.Period(period).to_timestamp().strftime("%b %Y"),
         "daily": daily,
-        "pipeline": build_status_pipeline(period_open, ticket_type_filter),
+        "pipeline": build_status_pipeline(pipeline_rows, ticket_type_filter),
         "totals": {
             "created": int(len(created_rows)),
             "completed": int(len(completed_rows)),
@@ -567,6 +636,9 @@ def build_dashboard_payload() -> dict[str, Any]:
     tickets["DealerBucket"] = tickets["DealerName"].map(dealer_bucket)
     tickets["NewTicketQuoteAmount"] = parse_amount(tickets["AmountIncludingTax"])
     tickets["InvoiceAmount"] = parse_amount(tickets["ERPInvoiceNumberPrice"])
+    tickets["LabourHours"] = parse_hours(tickets["TotalLabourHours"]) if "TotalLabourHours" in tickets.columns else 0.0
+    tickets["TicketTypeBucket"] = tickets.apply(ticket_type_bucket, axis=1)
+    tickets["WorkerName"] = tickets.get("Role_40_InvolvedPartyName", pd.Series(dtype="object")).map(lambda value: clean(value) or "Unassigned")
     tickets["AbnormalParty"] = tickets.apply(is_abnormal_party, axis=1)
     tickets["InvoiceScope"] = tickets.apply(invoice_scope, axis=1)
     tickets["AbnormalReason"] = tickets.apply(lambda row: "; ".join(abnormal_reasons(row)), axis=1)
@@ -577,9 +649,9 @@ def build_dashboard_payload() -> dict[str, Any]:
     normal_tickets = tickets[~tickets["AbnormalParty"]].copy()
     normal_tickets["CompletedDate"] = normal_tickets.apply(completed_date, axis=1)
     created_tickets = normal_tickets[normal_tickets["CreatedMonth"].ne("")].copy()
-    open_tickets = normal_tickets[
-        normal_tickets["CreatedMonth"].ne("")
-        & normal_tickets.apply(is_open_ticket, axis=1)
+    open_tickets = tickets[
+        tickets["CreatedMonth"].ne("")
+        & tickets.apply(is_open_ticket, axis=1)
     ].copy()
     missing_invoice_mask = (
         normal_tickets["TicketStatusText"].map(lambda value: clean(value).lower()).eq(CREATE_INVOICE_STATUS)
@@ -641,11 +713,13 @@ def build_dashboard_payload() -> dict[str, Any]:
     monthly_dealer_activity_by_type = {}
     monthly_invoice_mix = {}
     monthly_open_status_mix = {}
+    monthly_labour = {}
     workflow_daily = {}
     for year in year_labels:
         year_created = created_tickets[created_tickets["CreatedYear"].eq(year)]
         year_invoice = invoice_tickets[invoice_tickets["InvoiceYear"].eq(year)]
         year_open = open_rows_at_year_end(open_tickets, year)
+        year_labour = tickets[tickets["CreatedYear"].eq(year)].copy()
         monthly_dealer_activity_by_type[year] = {}
         for type_filter in TICKET_TYPE_FILTERS:
             monthly_dealer_activity_by_type[year][type_filter] = build_dealer_rows(
@@ -657,11 +731,13 @@ def build_dashboard_payload() -> dict[str, Any]:
         monthly_dealer_activity[year] = monthly_dealer_activity_by_type[year]["All Ticket Types"]
         monthly_invoice_mix[year] = build_invoice_mix(year_invoice)
         monthly_open_status_mix[year] = build_open_status_mix(year_open)
+        monthly_labour[year] = build_labour_summary(year_labour)
     for period in month_periods:
         label = pd.Period(period).to_timestamp().strftime("%b %Y")
         period_open = open_rows_at_month_end(open_tickets, period)
         period_created = created_tickets[created_tickets["CreatedMonth"].eq(period)]
         period_invoice = invoice_tickets[invoice_tickets["InvoiceMonth"].eq(period)]
+        period_labour = tickets[tickets["CreatedMonth"].eq(period)].copy()
         monthly_dealer_activity_by_type[label] = {}
         for type_filter in TICKET_TYPE_FILTERS:
             monthly_dealer_activity_by_type[label][type_filter] = build_dealer_rows(
@@ -673,6 +749,7 @@ def build_dashboard_payload() -> dict[str, Any]:
         monthly_dealer_activity[label] = monthly_dealer_activity_by_type[label]["All Ticket Types"]
         monthly_invoice_mix[label] = build_invoice_mix(invoice_tickets[invoice_tickets["InvoiceMonth"].eq(period)])
         monthly_open_status_mix[label] = build_open_status_mix(period_open)
+        monthly_labour[label] = build_labour_summary(period_labour)
         workflow_daily[label] = {}
         for type_filter in TICKET_TYPE_FILTERS:
             if type_filter == "All Ticket Types":
@@ -772,6 +849,7 @@ def build_dashboard_payload() -> dict[str, Any]:
                 "monthlyInvoiceMix": monthly_invoice_mix,
                 "openStatusMix": build_open_status_mix(current_open),
                 "monthlyOpenStatusMix": monthly_open_status_mix,
+                "monthlyLabour": monthly_labour,
                 "workflowDaily": workflow_daily,
                 "yardSummary": [
                     {

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Service Centre Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=202608201416">
 </head>
 <body>
   <div class="app-shell" id="appShell">
@@ -53,90 +53,50 @@
       <section class="page-view is-active" id="view-overview" data-page="overview">
         <div class="dealer-tabs" id="workflowDealerTabs" aria-label="Dealer workflow selector"></div>
 
-        <section class="kpi-grid" id="overviewKpis" aria-label="Overview KPIs"></section>
+        <section class="kpi-grid control-kpi-strip" id="overviewKpis" aria-label="Overview KPIs"></section>
 
-        <section class="workflow-board-row">
-          <article class="card workflow-status-card">
+        <section class="control-tower-grid">
+          <article class="card workflow-status-card control-panel pipeline-panel">
             <div class="card-header">
-              <h2>Status Pipeline</h2>
-              <div class="card-note">Selected dealer open workload and ageing by created date</div>
+              <h2>Workflow</h2>
+              <div class="workflow-header-tools">
+                <div class="card-note">Selected period open tickets waiting and ageing by created date</div>
+                <button class="mini-toggle is-active" id="agingToggle" type="button">Aging On</button>
+              </div>
             </div>
             <div class="pipeline-list" id="workflowPipeline"></div>
           </article>
-        </section>
 
-        <section class="metric-charts-grid">
-          <article class="card chart-card metric-chart-card">
+          <article class="card control-panel work-source-panel">
             <div class="card-header">
-              <h2>New Tickets Created</h2>
-              <div class="card-note">Qty and quote amount</div>
-            </div>
-            <div class="chart-area grouped-bars dual-metric-bars" id="newTicketsChart"></div>
-            <div class="chart-legend">
-              <span><i class="legend-repair"></i>Repair qty</span>
-              <span><i class="legend-pdi"></i>PDI qty</span>
-            </div>
-          </article>
-
-          <article class="card chart-card metric-chart-card">
-            <div class="card-header">
-              <h2>Tickets Invoiced</h2>
-              <div class="card-note">Internal / external filter applies</div>
-            </div>
-            <div class="chart-area grouped-bars dual-metric-bars" id="invoicedTicketsChart"></div>
-            <div class="chart-legend">
-              <span><i class="legend-repair"></i>Repair qty</span>
-              <span><i class="legend-pdi"></i>PDI qty</span>
-            </div>
-          </article>
-
-          <article class="card chart-card metric-chart-card">
-            <div class="card-header">
-              <h2>Open Tickets</h2>
-              <div class="card-note">Month-end open snapshot</div>
-            </div>
-            <div class="chart-area grouped-bars dual-metric-bars" id="openTicketsChart"></div>
-            <div class="chart-legend">
-              <span><i class="legend-repair"></i>Repair qty</span>
-              <span><i class="legend-pdi"></i>PDI qty</span>
-            </div>
-          </article>
-        </section>
-
-        <section class="overview-mix-grid">
-          <article class="card chart-card metric-chart-card invoice-combo-card">
-            <div class="card-header">
-              <h2>Invoice Mix & Internal vs External</h2>
-              <div class="card-note">External amount should align with finance</div>
-            </div>
-            <div class="invoice-mix-summary" id="invoiceMixSummary"></div>
-            <div class="chart-area grouped-bars dual-metric-bars scope-bars" id="invoiceScopeChart"></div>
-            <div class="chart-legend">
-              <span><i class="legend-invoice-amount"></i>Internal</span>
-              <span><i class="legend-invoiced"></i>External</span>
-            </div>
-          </article>
-
-          <article class="card chart-card donut-card">
-            <div class="card-header">
-              <h2>Repair Open Status Mix</h2>
+              <h2>Current Work Source</h2>
               <div class="card-note">Selected dealer</div>
             </div>
-            <div class="donut-wrap">
-              <div class="donut-chart" id="repairOpenStatusMixChart"></div>
-              <div class="donut-copy" id="repairOpenStatusMixCopy"></div>
-            </div>
+            <div class="source-bars" id="currentWorkSource"></div>
           </article>
 
-          <article class="card chart-card donut-card">
+          <article class="card control-panel labour-panel">
             <div class="card-header">
-              <h2>PDI Open Status Mix</h2>
-              <div class="card-note">Selected dealer</div>
+              <h2>Labour Capacity</h2>
+              <div class="card-note">HR source pending</div>
             </div>
-            <div class="donut-wrap">
-              <div class="donut-chart" id="pdiOpenStatusMixChart"></div>
-              <div class="donut-copy" id="pdiOpenStatusMixCopy"></div>
+            <div class="labour-capacity-board" id="labourCapacityBoard"></div>
+          </article>
+
+          <article class="card control-panel worker-panel">
+            <div class="card-header">
+              <h2>Worker Performance</h2>
+              <div class="card-note">Technician detail pending</div>
             </div>
+            <div class="worker-performance-board" id="workerPerformanceBoard"></div>
+          </article>
+
+          <article class="card control-panel action-panel">
+            <div class="card-header">
+              <h2>Action Required</h2>
+              <div class="card-note">Exceptions and ageing signals</div>
+            </div>
+            <div class="action-required-board" id="actionRequiredBoard"></div>
           </article>
         </section>
       </section>
@@ -198,7 +158,18 @@
   </div>
   <div class="chart-tooltip" id="chartTooltip" role="tooltip"></div>
 
-  <script src="../dashboard-data.js"></script>
-  <script src="app.js"></script>
+  <script src="../dashboard-data.js?v=202608201435"></script>
+  <script src="app.js?v=202608201435"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

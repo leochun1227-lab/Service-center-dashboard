@@ -25,6 +25,10 @@ RESULT_SHEET = "DealerMappingResult"
 MAPPING_SHEET = "DealerMappingUsed"
 SCHEMA = os.getenv("SAP_SCHEMA", "SAPHANADB")
 SAP_CLIENT = os.getenv("SAP_CLIENT", "800")
+SAP_HANA_DSN = os.getenv(
+    "SAP_HANA_DSN",
+    "DRIVER={HDBODBC};SERVERNODE=10.11.2.25:30241;UID=BAOJIANFENG;PWD=Xja@2025ABC;",
+)
 
 
 def clean(value: object) -> str:
@@ -42,7 +46,7 @@ def chunked(values: list[str], size: int) -> Iterable[list[str]]:
 
 
 def load_hana_dsn() -> str:
-    dsn = clean(os.getenv("SAP_HANA_DSN", ""))
+    dsn = clean(SAP_HANA_DSN)
     if not dsn:
         raise SystemExit("SAP_HANA_DSN is empty. Set it before running SAP HANA enrichment.")
     return dsn
@@ -95,11 +99,13 @@ def enrich_sheet(df: pd.DataFrame, invoice_map: pd.DataFrame) -> pd.DataFrame:
         "ERPInvoiceNumberPrice",
         "Billing date",
         "AmountIncludingTax",
+        "TotalLabourHours",
         "WarrantyHandlingDealerID",
         "CreatedOn",
         "TicketStatus",
         "TicketStatusText",
         "ERPFreeOrder",
+        "Role_40_InvolvedPartyName",
         "Role_43_InvolvedPartyName",
         "TicketName",
         "SerialID",
