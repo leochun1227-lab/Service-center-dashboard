@@ -444,6 +444,75 @@ def month_label(dt: pd.Timestamp) -> str:
     return dt.strftime("%b %Y")
 
 
+def date_label(value: Any) -> str:
+    if pd.isna(value):
+        return ""
+    return pd.Timestamp(value).strftime("%d/%m/%Y")
+
+
+def period_label(period: str) -> str:
+    if not period:
+        return ""
+    return pd.Period(period).to_timestamp().strftime("%b %Y")
+
+
+def numeric_value(value: Any) -> float:
+    text = clean(value).replace(",", "").replace("$", "")
+    number = pd.to_numeric(pd.Series([text]), errors="coerce").fillna(0.0).iloc[0]
+    return float(number)
+
+
+def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
+    details = []
+    source = rows.copy().sort_values(["CreatedDate", "TicketID"], ascending=[False, True])
+    for _, row in source.iterrows():
+        invoice_number = clean(row.get("ERPInvoiceNumber", ""))
+        invoice_price = clean(row.get("ERPInvoiceNumberPrice", ""))
+        quote_amount = float(row.get("NewTicketQuoteAmount", 0) or 0)
+        invoice_amount = float(row.get("InvoiceAmount", 0) or 0)
+        labour_hours = float(row.get("LabourHours", 0) or 0)
+        claim_hours = numeric_value(row.get("Z1Z8TimeConsumed", ""))
+        completed = completed_date(row)
+        created_month = clean(row.get("CreatedMonth", ""))
+        details.append(
+            {
+                "serviceOrderId": clean(row.get("TicketID", "")) or "TBC",
+                "source": "C4C",
+                "period": period_label(created_month),
+                "periodKey": created_month,
+                "year": clean(row.get("CreatedYear", "")),
+                "createdDate": date_label(row.get("CreatedDate")) or "TBC",
+                "completedDate": date_label(completed) or "TBC",
+                "dealerYard": clean(row.get("DealerBucket", "")) or "Other",
+                "dealerName": clean(row.get("DealerName", "")) or "TBC",
+                "serviceType": clean(row.get("TicketTypeBucket", "")) or "TBC",
+                "ticketTypeCode": clean(row.get("TicketType", "")) or "TBC",
+                "status": workflow_stage(row) or "TBC",
+                "rawStatus": clean(row.get("TicketStatusText", "")) or "TBC",
+                "priority": clean(row.get("TicketSeverity", "")) or "TBC",
+                "quoteAmount": round(quote_amount, 2),
+                "quoteAmountLabel": money(quote_amount) if quote_amount else "TBC",
+                "invoiceNo": invoice_number or "TBC",
+                "invoiceAmount": round(invoice_amount, 2),
+                "invoiceAmountLabel": money(invoice_amount) if invoice_number and invoice_price else "TBC",
+                "billingDate": date_label(row.get("BillingDate")) or "TBC",
+                "invoiceScope": clean(row.get("InvoiceScope", "")) or "TBC",
+                "labourHours": round(labour_hours, 2),
+                "labourHoursLabel": hours_label(labour_hours) if labour_hours else "TBC",
+                "claimHours": round(claim_hours, 2),
+                "claimHoursLabel": hours_label(claim_hours) if claim_hours else "TBC",
+                "actualWorkHours": round(labour_hours, 2),
+                "actualWorkHoursLabel": hours_label(labour_hours) if labour_hours else "TBC",
+                "invoicePaidHours": "Missing",
+                "workerName": clean(row.get("WorkerName", "")) or "TBC",
+                "vehicle": clean(row.get("SerialID", "")) or clean(row.get("ChassisNumber", "")) or "TBC",
+                "chassisNumber": clean(row.get("ChassisNumber", "")) or "TBC",
+                "ticketName": clean(row.get("TicketName", "")) or "TBC",
+            }
+        )
+    return details
+
+
 def open_rows_at_month_end(open_tickets: pd.DataFrame, period: str) -> pd.DataFrame:
     month_end = pd.Period(period).to_timestamp(how="end")
     return open_tickets[open_tickets["CreatedDate"].le(month_end)].copy()
@@ -850,6 +919,7 @@ def build_dashboard_payload() -> dict[str, Any]:
                 "openStatusMix": build_open_status_mix(current_open),
                 "monthlyOpenStatusMix": monthly_open_status_mix,
                 "monthlyLabour": monthly_labour,
+                "ticketDetails": build_ticket_details(created_tickets),
                 "workflowDaily": workflow_daily,
                 "yardSummary": [
                     {

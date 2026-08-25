@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Center Data Center ERD</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef6ff;
+      font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+      color: #071433;
+    }
+    .page {
+      position: relative;
+      width: 1456px;
+      height: 1092px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 24%, rgba(214,232,255,.8), transparent 360px),
+        radial-gradient(circle at 18% 42%, rgba(255,255,255,.9), transparent 390px),
+        linear-gradient(135deg, #f8fbff 0%, #edf6ff 55%, #f9fcff 100%);
+      padding: 24px 30px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 44px;
+      line-height: 1.06;
+      font-weight: 900;
+      letter-spacing: 0;
+      color: #070a2d;
+    }
+    .subtitle {
+      margin-top: 10px;
+      font-size: 25px;
+      font-weight: 700;
+      color: #0b2f6e;
+    }
+    .legend {
+      position: absolute;
+      right: 24px;
+      top: 14px;
+      width: 248px;
+      padding: 8px 14px 9px;
+      border: 1px solid #c5d6ea;
+      border-radius: 12px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 4px 14px rgba(31,70,130,.16);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      height: 21px;
+      padding: 0 7px;
+      margin-right: 8px;
+      border-radius: 5px;
+      color: #17223b;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    }
+    .tag.pk { background: #ffd969; border: 1px solid #e4b94a; }
+    .tag.fk { background: #9ee6b2; border: 1px solid #6fc889; }
+    .tag.dim { background: #5489d8; color: white; }
+    .tag.fact { background: #f14131; color: white; }
+    .table {
+      position: absolute;
+      width: 286px;
+      border: 2px solid #1a68bf;
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 7px 16px rgba(34,80,132,.25);
+    }
+    .table.fact { border-color: #e1291f; }
+    .table-head {
+      height: 43px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .dim .table-head { background: linear-gradient(180deg,#0e7be3,#0757b5); }
+    .fact .table-head { background: linear-gradient(180deg,#f23827,#cc160f); }
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: white;
+      color: #0b62c5;
+      font-weight: 900;
+      font-size: 18px;
+      flex: 0 0 auto;
+    }
+    .fact .icon { color: #e1291f; }
+    .field {
+      position: relative;
+      height: 19px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px 0 20px;
+      border-top: 1px solid #d9e2ec;
+      font-size: 15px;
+      line-height: 1;
+      color: #111827;
+    }
+    .field .mini {
+      position: absolute;
+      right: 22px;
+      top: 2px;
+      min-width: 27px;
+      height: 18px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .mini.pk { background: #ffe08a; border: 1px solid #ddb64d; }
+    .mini.fk { background: #a9edbd; border: 1px solid #6ec98a; }
+    .note {
+      position: absolute;
+      border: 1.5px solid #a7c0dd;
+      border-radius: 8px;
+      background: rgba(255,255,255,.72);
+      box-shadow: 0 4px 13px rgba(31,70,130,.12);
+      padding: 13px 14px 13px 45px;
+      color: #0e2c59;
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    .note.fact-note {
+      border-color: #efb3ad;
+      background: rgba(255,245,244,.83);
+      color: #a82118;
+    }
+    .info-dot {
+      position: absolute;
+      left: 12px;
+      top: 13px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #0d65c5;
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .fact-note .info-dot { background: #e22b1e; }
+    .relation {
+      position: absolute;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #071b48;
+      font-size: 16px;
+      line-height: 1.32;
+      font-weight: 800;
+      text-align: center;
+    }
+    .rel-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      color: white;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .rel-num.blue { background: #0d62bf; }
+    .rel-num.red { background: #e12b1f; }
+    .relation-list {
+      position: absolute;
+      left: 24px;
+      top: 580px;
+      width: 370px;
+      padding: 18px 22px 20px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid #d3deeb;
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(44,78,120,.18);
+      color: #0b2d66;
+      font-size: 16px;
+      line-height: 1.38;
+      font-weight: 700;
+    }
+    .relation-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 13px;
+    }
+    .target-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 3px solid #0d62bf;
+      color: #0d62bf;
+      font-size: 20px;
+    }
+    .rel-item {
+      display: grid;
+      grid-template-columns: 31px 1fr;
+      gap: 10px;
+      margin: 11px 0;
+    }
+    .rel-text { text-align: left; }
+    .rel-text small {
+      display: block;
+      font-size: 15px;
+      color: #102f65;
+      font-weight: 700;
+    }
+    .small-card {
+      position: absolute;
+      width: 385px;
+      height: 158px;
+      border: 2px solid #e1291f;
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 7px 16px rgba(34,80,132,.18);
+    }
+    .small-card .field { width: 50%; }
+    .small-card .field {
+      height: 18px;
+      font-size: 14px;
+    }
+    .small-card .right-col {
+      position: absolute;
+      left: 50%;
+      top: 43px;
+      width: 50%;
+    }
+    .arrow-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="page" data-document-role="page" data-label="Service Center Data Center ERD">
+    <h1>Service Center Data Center (简化版 + 财务)</h1>
+    <div class="subtitle">6张核心表 · 表关系图 · 用于接单、维修任务、工时、财务 / Invoice 分析</div>
+
+    <div class="legend">
+      <div><span class="tag pk">PK</span>= Primary Key（主键）</div>
+      <div><span class="tag fk">FK</span>= Foreign Key（外键）</div>
+      <div><span class="tag dim">DIM</span>= 维度表</div>
+      <div><span class="tag fact">FACT</span>= 事实表</div>
+    </div>
+
+    <svg class="arrow-layer" width="1456" height="1092" viewBox="0 0 1456 1092">
+      <defs>
+        <marker id="blueArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+          <path d="M0,0 L9,4.5 L0,9 Z" fill="#0d62bf"></path>
+        </marker>
+        <marker id="redArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+          <path d="M0,0 L9,4.5 L0,9 Z" fill="#e12b1f"></path>
+        </marker>
+      </defs>
+      <line x1="350" y1="220" x2="526" y2="220" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></line>
+      <line x1="680" y1="499" x2="680" y2="546" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></line>
+      <line x1="832" y1="682" x2="1052" y2="696" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></line>
+      <line x1="1188" y1="586" x2="1188" y2="450" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></line>
+      <line x1="1188" y1="450" x2="1188" y2="586" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></line>
+      <path d="M832 642 H930 Q956 642 956 616 V568" fill="none" stroke="#0d62bf" stroke-width="2.5" stroke-dasharray="7 7"></path>
+      <line x1="874" y1="835" x2="874" y2="900" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></line>
+    </svg>
+
+    <div class="table dim" style="left:70px;top:136px;height:204px">
+      <div class="table-head"><span class="icon">🚗</span><span>1. DIM_VEHICLE</span></div>
+      <div class="field">VehicleID <span class="mini pk">PK</span></div>
+      <div class="field">VIN</div>
+      <div class="field">ChassisNo</div>
+      <div class="field">Model</div>
+      <div class="field">ModelYear</div>
+    </div>
+    <div class="note" style="left:67px;top:353px;width:285px;height:86px">
+      <span class="info-dot">i</span>
+      <b>车辆主数据表：</b>存放每台车的唯一资料。一台车只保留一条记录，用来连接所有后续的服务工单。
+    </div>
+
+    <div class="table fact" style="left:534px;top:124px;height:299px;width:342px">
+      <div class="table-head"><span class="icon">▦</span><span>2. FACT_SERVICE_ORDER</span></div>
+      <div class="field">ServiceOrderID <span class="mini pk">PK</span></div>
+      <div class="field">VehicleID <span class="mini fk">FK</span></div>
+      <div class="field">ServiceType</div>
+      <div class="field">Source</div>
+      <div class="field">CreatedDate</div>
+      <div class="field">BookingDate</div>
+      <div class="field">ArrivalDateTime</div>
+      <div class="field">WorkStartDateTime</div>
+      <div class="field">CompletedDateTime</div>
+      <div class="field">DepartedDateTime</div>
+      <div class="field">Status</div>
+      <div class="field">Priority</div>
+    </div>
+    <div class="note fact-note" style="left:532px;top:414px;width:346px;height:84px">
+      <span class="info-dot">i</span>
+      <b>接单主表：</b>一行代表一台车的一次进厂 / 一次服务单。主要用于统计接单量、在厂车辆、周期和完成情况。
+    </div>
+
+    <div class="table fact" style="left:529px;top:552px;height:271px;width:303px">
+      <div class="table-head"><span class="icon">🔧</span><span>3. FACT_SERVICE_TASK</span></div>
+      <div class="field">TaskID <span class="mini pk">PK</span></div>
+      <div class="field">ServiceOrderID <span class="mini fk">FK</span></div>
+      <div class="field">TaskCategory</div>
+      <div class="field">Component</div>
+      <div class="field">ProblemDescription</div>
+      <div class="field">RepairAction</div>
+      <div class="field">AssignedTechnicianID <span class="mini fk">FK</span></div>
+      <div class="field">EstimatedHours</div>
+      <div class="field">ActualHours</div>
+      <div class="field">TaskStatus</div>
+      <div class="field">WaitingReason</div>
+      <div class="field">ReworkFlag</div>
+    </div>
+    <div class="note fact-note" style="left:526px;top:828px;width:323px;height:70px">
+      <span class="info-dot">i</span>
+      <b>维修任务表：</b>一行代表一个具体维修项目。用于分析该台车修了什么、哪些问题最多、任务是否完成。
+    </div>
+
+    <div class="small-card" style="left:436px;top:902px;height:188px">
+      <div class="table-head" style="background:linear-gradient(180deg,#f23827,#cc160f);color:white;height:43px;font-size:18px;font-weight:900;padding:0 16px;display:flex;align-items:center;gap:12px;white-space:nowrap"><span class="icon" style="color:#e1291f">▤</span><span>6. FACT_INVOICE</span></div>
+      <div class="field">InvoiceID <span class="mini pk">PK</span></div>
+      <div class="field">ServiceOrderID <span class="mini fk">FK</span></div>
+      <div class="field">InvoiceNo</div>
+      <div class="field">InvoiceType</div>
+      <div class="field">InvoiceDate</div>
+      <div class="field">DueDate</div>
+      <div class="field">InvoiceStatus</div>
+      <div class="right-col">
+        <div class="field" style="width:100%">LabourAmount</div>
+        <div class="field" style="width:100%">PartsAmount</div>
+        <div class="field" style="width:100%">GSTAmount</div>
+        <div class="field" style="width:100%">TotalAmount</div>
+        <div class="field" style="width:100%">PaidAmount</div>
+        <div class="field" style="width:100%">BalanceAmount</div>
+        <div class="field" style="width:100%">PaymentDate</div>
+        <div class="field" style="width:100%">PaymentStatus</div>
+      </div>
+    </div>
+    <div class="note fact-note" style="left:860px;top:927px;width:280px;height:144px">
+      <span class="info-dot">i</span>
+      <b>财务 / Invoice表：</b>一行代表一张发票记录。用于分析开票情况、应收金额、已收金额、未收余额、付款状态，以及 labour / parts 的财务拆分。
+    </div>
+
+    <div class="table dim" style="left:1046px;top:140px;height:196px">
+      <div class="table-head"><span class="icon">👤</span><span>5. DIM_TECHNICIAN</span></div>
+      <div class="field">TechnicianID <span class="mini pk">PK</span></div>
+      <div class="field">TechnicianName</div>
+      <div class="field">Team</div>
+      <div class="field">SkillType</div>
+      <div class="field">ActiveFlag</div>
+    </div>
+    <div class="note" style="left:1045px;top:349px;width:291px;height:99px">
+      <span class="info-dot">i</span>
+      <b>技师主数据表：</b>存放技师 / 工人的基础信息，用来分析谁做了什么工作、做了多久、工作量是否均衡。
+    </div>
+
+    <div class="table fact" style="left:1058px;top:589px;height:226px;width:282px">
+      <div class="table-head"><span class="icon">◴</span><span>4. FACT_LABOUR</span></div>
+      <div class="field">LabourID <span class="mini pk">PK</span></div>
+      <div class="field">TaskID <span class="mini fk">FK</span></div>
+      <div class="field">TechnicianID <span class="mini fk">FK</span></div>
+      <div class="field">WorkDate</div>
+      <div class="field">StartTime</div>
+      <div class="field">EndTime</div>
+      <div class="field">ActualHours</div>
+      <div class="field">WorkType</div>
+      <div class="field">Comment</div>
+    </div>
+    <div class="note fact-note" style="left:1058px;top:823px;width:285px;height:86px">
+      <span class="info-dot">i</span>
+      <b>工时记录表：</b>一行代表一次实际工作记录。用于分析工时、技师效率、工作负荷和实际投入时间。
+    </div>
+
+    <div class="relation" style="left:394px;top:243px">
+      <span class="rel-num blue">1</span><div>1：多<br>VehicleID<br>关联</div>
+    </div>
+    <div class="relation" style="left:702px;top:510px">
+      <span class="rel-num red">2</span><div>1：多<br>ServiceOrderID 关联</div>
+    </div>
+    <div class="relation" style="left:910px;top:722px">
+      <span class="rel-num red">3</span><div>1：多<br>TaskID<br>关联</div>
+    </div>
+    <div class="relation" style="left:1242px;top:471px">
+      <span class="rel-num blue">4</span><div>1：多<br>TechnicianID<br>关联</div>
+    </div>
+    <div class="relation" style="left:965px;top:506px">
+      <span class="rel-num blue">5</span><div>多：1（主指派）<br>AssignedTechnicianID<br>关联</div>
+    </div>
+    <div class="relation" style="left:914px;top:858px">
+      <span class="rel-num red">6</span><div>1：多<br>ServiceOrderID 关联</div>
+    </div>
+
+    <div class="relation-list">
+      <div class="relation-title"><span class="target-icon">◎</span>关系说明</div>
+      <div class="rel-item"><span class="rel-num blue">1</span><div class="rel-text">DIM_VEHICLE.VehicleID<small>→ FACT_SERVICE_ORDER.VehicleID</small></div></div>
+      <div class="rel-item"><span class="rel-num red">2</span><div class="rel-text">FACT_SERVICE_ORDER.ServiceOrderID<small>→ FACT_SERVICE_TASK.ServiceOrderID</small></div></div>
+      <div class="rel-item"><span class="rel-num red">3</span><div class="rel-text">FACT_SERVICE_TASK.TaskID<small>→ FACT_LABOUR.TaskID</small></div></div>
+      <div class="rel-item"><span class="rel-num blue">4</span><div class="rel-text">DIM_TECHNICIAN.TechnicianID<small>→ FACT_LABOUR.TechnicianID</small></div></div>
+      <div class="rel-item"><span class="rel-num blue">5</span><div class="rel-text">FACT_SERVICE_TASK.AssignedTechnicianID<small>→ DIM_TECHNICIAN.TechnicianID<br>（主指派技师关联）</small></div></div>
+      <div class="rel-item"><span class="rel-num red">6</span><div class="rel-text">FACT_SERVICE_ORDER.ServiceOrderID<small>→ FACT_INVOICE.ServiceOrderID</small></div></div>
+    </div>
+  </div>
+</body>
+</html>
