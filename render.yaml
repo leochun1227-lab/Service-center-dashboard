@@ -1,0 +1,9 @@
+services:
+  - type: web
+    runtime: static
+    name: service-center-dashboard
+    buildCommand: mkdir -p dist && cp overview.html dashboard-data.js dist/ && cp overview.html dist/index.html
+    staticPublishPath: dist
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
