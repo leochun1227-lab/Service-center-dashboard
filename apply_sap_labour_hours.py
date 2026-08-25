@@ -9,7 +9,7 @@ import pandas as pd
 from openpyxl import load_workbook
 
 
-BASE_DIR = Path(r"C:\Users\Leo.Li\Documents\ChatGPT\Service centre dashboard")
+BASE_DIR = Path(__file__).resolve().parent
 SOURCE_WORKBOOK = BASE_DIR / "c4c_ticket_table_z007_z010_checked_hana_final.xlsx"
 SAP_LABOUR_REPORT = Path(
     r"C:\Users\Leo.Li\Downloads\SAPAnalyticsReport(Z3F22153042C7B7B40972C2) (1).xlsx"
@@ -59,6 +59,19 @@ def header_map(ws) -> dict[str, int]:
     return result
 
 
+def ensure_column(ws, headers: dict[str, int], column_name: str, after_column: str | None = None) -> int:
+    if column_name in headers:
+        return headers[column_name]
+
+    insert_at = ws.max_column + 1
+    if after_column and after_column in headers:
+        insert_at = headers[after_column] + 1
+        ws.insert_cols(insert_at)
+
+    ws.cell(1, insert_at).value = column_name
+    return insert_at
+
+
 def main() -> None:
     labour = load_sap_labour()
     labour_by_ticket = labour.set_index("TicketID").to_dict("index")
@@ -71,6 +84,8 @@ def main() -> None:
 
     wb = load_workbook(SOURCE_WORKBOOK)
     ws = wb["Tickets"]
+    headers = header_map(ws)
+    ensure_column(ws, headers, "TotalLabourHours", after_column="Z1Z8TimeConsumed")
     headers = header_map(ws)
     required = ["TicketID", "Role_40_InvolvedPartyName", "TotalLabourHours"]
     missing = [name for name in required if name not in headers]
