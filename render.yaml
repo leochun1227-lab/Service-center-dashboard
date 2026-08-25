@@ -4,6 +4,16 @@ services:
     name: service-center-dashboard
     buildCommand: mkdir -p dist && cp overview.html dashboard-data.js dist/ && cp overview.html dist/index.html
     staticPublishPath: dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+      - path: /*
+        name: Pragma
+        value: no-cache
+      - path: /*
+        name: Expires
+        value: "0"
     envVars:
       - key: SKIP_INSTALL_DEPS
         value: "true"

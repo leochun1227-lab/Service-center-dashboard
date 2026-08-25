@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
     body {
       margin: 0;
       background: #eef6ff;
-      font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: #071433;
     }
     .page {
@@ -264,14 +264,14 @@
 </head>
 <body>
   <div class="page" data-document-role="page" data-label="Service Center Data Center ERD">
-    <h1>Service Center Data Center (简化版 + 财务)</h1>
-    <div class="subtitle">6张核心表 · 表关系图 · 用于接单、维修任务、工时、财务 / Invoice 分析</div>
+    <h1>Service Center Data Center</h1>
+    <div class="subtitle">6 core tables · service orders · repair tasks · labour · invoice analysis</div>
 
     <div class="legend">
-      <div><span class="tag pk">PK</span>= Primary Key（主键）</div>
-      <div><span class="tag fk">FK</span>= Foreign Key（外键）</div>
-      <div><span class="tag dim">DIM</span>= 维度表</div>
-      <div><span class="tag fact">FACT</span>= 事实表</div>
+      <div><span class="tag pk">PK</span>= Primary Key</div>
+      <div><span class="tag fk">FK</span>= Foreign Key</div>
+      <div><span class="tag dim">DIM</span>= Dimension</div>
+      <div><span class="tag fact">FACT</span>= Fact Table</div>
     </div>
 
     <svg class="arrow-layer" width="1456" height="1092" viewBox="0 0 1456 1092">
@@ -302,7 +302,7 @@
     </div>
     <div class="note" style="left:67px;top:353px;width:285px;height:86px">
       <span class="info-dot">i</span>
-      <b>车辆主数据表：</b>存放每台车的唯一资料。一台车只保留一条记录，用来连接所有后续的服务工单。
+      <b>Vehicle master:</b> one record per vehicle, used to connect service activity back to the unit.
     </div>
 
     <div class="table fact" style="left:534px;top:124px;height:299px;width:342px">
@@ -322,7 +322,7 @@
     </div>
     <div class="note fact-note" style="left:532px;top:414px;width:346px;height:84px">
       <span class="info-dot">i</span>
-      <b>接单主表：</b>一行代表一台车的一次进厂 / 一次服务单。主要用于统计接单量、在厂车辆、周期和完成情况。
+      <b>Service order fact:</b> one row per service order, used for volume, status, backlog and completion tracking.
     </div>
 
     <div class="table fact" style="left:529px;top:552px;height:271px;width:303px">
@@ -342,7 +342,7 @@
     </div>
     <div class="note fact-note" style="left:526px;top:828px;width:323px;height:70px">
       <span class="info-dot">i</span>
-      <b>维修任务表：</b>一行代表一个具体维修项目。用于分析该台车修了什么、哪些问题最多、任务是否完成。
+      <b>Task fact:</b> repair tasks under a service order, used for work category and issue analysis.
     </div>
 
     <div class="small-card" style="left:436px;top:902px;height:188px">
@@ -367,7 +367,7 @@
     </div>
     <div class="note fact-note" style="left:860px;top:927px;width:280px;height:144px">
       <span class="info-dot">i</span>
-      <b>财务 / Invoice表：</b>一行代表一张发票记录。用于分析开票情况、应收金额、已收金额、未收余额、付款状态，以及 labour / parts 的财务拆分。
+      <b>Invoice fact:</b> invoice records for revenue, payment status and labour / parts amount split.
     </div>
 
     <div class="table dim" style="left:1046px;top:140px;height:196px">
@@ -380,7 +380,7 @@
     </div>
     <div class="note" style="left:1045px;top:349px;width:291px;height:99px">
       <span class="info-dot">i</span>
-      <b>技师主数据表：</b>存放技师 / 工人的基础信息，用来分析谁做了什么工作、做了多久、工作量是否均衡。
+      <b>Technician master:</b> worker reference data for workload, team and skill analysis.
     </div>
 
     <div class="table fact" style="left:1058px;top:589px;height:226px;width:282px">
@@ -397,36 +397,36 @@
     </div>
     <div class="note fact-note" style="left:1058px;top:823px;width:285px;height:86px">
       <span class="info-dot">i</span>
-      <b>工时记录表：</b>一行代表一次实际工作记录。用于分析工时、技师效率、工作负荷和实际投入时间。
+      <b>Labour fact:</b> work-hour records for efficiency, workload and labour usage analysis.
     </div>
 
     <div class="relation" style="left:394px;top:243px">
-      <span class="rel-num blue">1</span><div>1：多<br>VehicleID<br>关联</div>
+      <span class="rel-num blue">1</span><div>1:N</div>
     </div>
     <div class="relation" style="left:702px;top:510px">
-      <span class="rel-num red">2</span><div>1：多<br>ServiceOrderID 关联</div>
+      <span class="rel-num red">2</span><div>1:N</div>
     </div>
     <div class="relation" style="left:910px;top:722px">
-      <span class="rel-num red">3</span><div>1：多<br>TaskID<br>关联</div>
+      <span class="rel-num red">3</span><div>1:N</div>
     </div>
     <div class="relation" style="left:1242px;top:471px">
-      <span class="rel-num blue">4</span><div>1：多<br>TechnicianID<br>关联</div>
+      <span class="rel-num blue">4</span><div>1:N</div>
     </div>
     <div class="relation" style="left:965px;top:506px">
-      <span class="rel-num blue">5</span><div>多：1（主指派）<br>AssignedTechnicianID<br>关联</div>
+      <span class="rel-num blue">5</span><div>N:1</div>
     </div>
     <div class="relation" style="left:914px;top:858px">
-      <span class="rel-num red">6</span><div>1：多<br>ServiceOrderID 关联</div>
+      <span class="rel-num red">6</span><div>1:N</div>
     </div>
 
     <div class="relation-list">
-      <div class="relation-title"><span class="target-icon">◎</span>关系说明</div>
-      <div class="rel-item"><span class="rel-num blue">1</span><div class="rel-text">DIM_VEHICLE.VehicleID<small>→ FACT_SERVICE_ORDER.VehicleID</small></div></div>
-      <div class="rel-item"><span class="rel-num red">2</span><div class="rel-text">FACT_SERVICE_ORDER.ServiceOrderID<small>→ FACT_SERVICE_TASK.ServiceOrderID</small></div></div>
-      <div class="rel-item"><span class="rel-num red">3</span><div class="rel-text">FACT_SERVICE_TASK.TaskID<small>→ FACT_LABOUR.TaskID</small></div></div>
-      <div class="rel-item"><span class="rel-num blue">4</span><div class="rel-text">DIM_TECHNICIAN.TechnicianID<small>→ FACT_LABOUR.TechnicianID</small></div></div>
-      <div class="rel-item"><span class="rel-num blue">5</span><div class="rel-text">FACT_SERVICE_TASK.AssignedTechnicianID<small>→ DIM_TECHNICIAN.TechnicianID<br>（主指派技师关联）</small></div></div>
-      <div class="rel-item"><span class="rel-num red">6</span><div class="rel-text">FACT_SERVICE_ORDER.ServiceOrderID<small>→ FACT_INVOICE.ServiceOrderID</small></div></div>
+      <div class="relation-title"><span class="target-icon">◎</span>Relationship Guide</div>
+      <div class="rel-item"><span class="rel-num blue">1</span><div class="rel-text">Vehicle to service orders</div></div>
+      <div class="rel-item"><span class="rel-num red">2</span><div class="rel-text">Service order to tasks</div></div>
+      <div class="rel-item"><span class="rel-num red">3</span><div class="rel-text">Task to labour records</div></div>
+      <div class="rel-item"><span class="rel-num blue">4</span><div class="rel-text">Technician to labour records</div></div>
+      <div class="rel-item"><span class="rel-num blue">5</span><div class="rel-text">Assigned technician lookup</div></div>
+      <div class="rel-item"><span class="rel-num red">6</span><div class="rel-text">Service order to invoices</div></div>
     </div>
   </div>
 </body>
