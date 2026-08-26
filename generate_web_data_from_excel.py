@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -9,7 +10,12 @@ from openpyxl.styles import Font, PatternFill
 
 
 BASE_DIR = Path(__file__).resolve().parent
-SOURCE_WORKBOOK = BASE_DIR / "c4c_ticket_table_z007_z010_checked_hana_final.xlsx"
+SOURCE_WORKBOOK = Path(
+    os.getenv(
+        "SOURCE_WORKBOOK",
+        str(BASE_DIR / "c4c_ticket_table_z007_z010_checked_hana_final.xlsx"),
+    )
+)
 OUTPUT_JS = BASE_DIR / "dashboard-data.js"
 ABNORMAL_WORKBOOK = BASE_DIR / "abnormal_tickets.xlsx"
 
@@ -456,6 +462,20 @@ def period_label(period: str) -> str:
     return pd.Period(period).to_timestamp().strftime("%b %Y")
 
 
+def source_date_range_label(created_dates: pd.Series, period_label_text: str) -> str:
+    if not period_label_text or created_dates.empty:
+        return period_label_text
+    if len(period_label_text) == 4 and period_label_text.isdigit():
+        return period_label_text
+    period = pd.Period(period_label_text, freq="M")
+    start = period.to_timestamp()
+    end = period.to_timestamp(how="end").normalize()
+    in_period = created_dates[created_dates.dt.to_period("M").astype(str).eq(period.strftime("%Y-%m"))]
+    if not in_period.empty:
+        end = min(end, in_period.max().normalize())
+    return f"{start.strftime('%d/%m/%Y')} - {end.strftime('%d/%m/%Y')}"
+
+
 def numeric_value(value: Any) -> float:
     text = clean(value).replace(",", "").replace("$", "")
     number = pd.to_numeric(pd.Series([text]), errors="coerce").fillna(0.0).iloc[0]
@@ -491,23 +511,24 @@ def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
                 "rawStatus": clean(row.get("TicketStatusText", "")) or "TBC",
                 "priority": clean(row.get("TicketSeverity", "")) or "TBC",
                 "quoteAmount": round(quote_amount, 2),
-                "quoteAmountLabel": money(quote_amount) if quote_amount else "TBC",
-                "invoiceNo": invoice_number or "TBC",
+                "quoteAmountLabel": money(quote_amount) if quote_amount else "",
+                "invoiceNo": invoice_number,
                 "invoiceAmount": round(invoice_amount, 2),
-                "invoiceAmountLabel": money(invoice_amount) if invoice_number and invoice_price else "TBC",
+                "invoiceAmountLabel": money(invoice_amount) if invoice_number and invoice_price else "",
                 "billingDate": date_label(row.get("BillingDate")) or "TBC",
                 "invoiceScope": clean(row.get("InvoiceScope", "")) or "TBC",
                 "labourHours": round(labour_hours, 2),
-                "labourHoursLabel": hours_label(labour_hours) if labour_hours else "TBC",
+                "labourHoursLabel": hours_label(labour_hours) if labour_hours else "",
                 "claimHours": round(claim_hours, 2),
-                "claimHoursLabel": hours_label(claim_hours) if claim_hours else "TBC",
+                "claimHoursLabel": hours_label(claim_hours) if claim_hours else "",
                 "actualWorkHours": round(labour_hours, 2),
-                "actualWorkHoursLabel": hours_label(labour_hours) if labour_hours else "TBC",
+                "actualWorkHoursLabel": hours_label(labour_hours) if labour_hours else "",
                 "invoicePaidHours": "Missing",
                 "workerName": clean(row.get("WorkerName", "")) or "TBC",
                 "vehicle": clean(row.get("SerialID", "")) or clean(row.get("ChassisNumber", "")) or "TBC",
                 "chassisNumber": clean(row.get("ChassisNumber", "")) or "TBC",
                 "ticketName": clean(row.get("TicketName", "")) or "TBC",
+                "abnormalReason": clean(row.get("AbnormalReason", "")),
             }
         )
     return details
@@ -692,7 +713,18 @@ def write_abnormal_workbook(abnormal: pd.DataFrame) -> None:
 
 
 def build_dashboard_payload() -> dict[str, Any]:
-    tickets = pd.read_excel(SOURCE_WORKBOOK, sheet_name="Tickets", dtype=str).fillna("")
+    workbook = pd.ExcelFile(SOURCE_WORKBOOK)
+    ticket_frames = [pd.read_excel(workbook, sheet_name="Tickets", dtype=str).fillna("")]
+    if "NotAssigned" in workbook.sheet_names:
+        not_assigned = pd.read_excel(workbook, sheet_name="NotAssigned", dtype=str).fillna("")
+        if not not_assigned.empty:
+            ticket_frames.append(not_assigned)
+    tickets = (
+        pd.concat(ticket_frames, ignore_index=True, sort=False)
+        .fillna("")
+        .drop_duplicates(subset=["TicketID"], keep="first")
+        .reset_index(drop=True)
+    )
     created = pd.to_datetime(tickets["CreatedOn"], errors="coerce", format="mixed", dayfirst=True)
     billing = pd.to_datetime(tickets["Billing date"], errors="coerce", format="mixed", dayfirst=True)
     changed = pd.to_datetime(tickets["ChangeOnDateTime"], errors="coerce", format="mixed", dayfirst=True)
@@ -715,7 +747,10 @@ def build_dashboard_payload() -> dict[str, Any]:
     abnormal_tickets = tickets[tickets["AbnormalReason"].ne("")].copy()
     write_abnormal_workbook(abnormal_tickets)
 
-    normal_tickets = tickets[~tickets["AbnormalParty"]].copy()
+    # Keep data-quality issues visible in the abnormal export, but do not drop
+    # operational tickets from the dashboard because the customer party is a
+    # dealer/org. Those tickets still count for backlog, completion and labour.
+    normal_tickets = tickets.copy()
     normal_tickets["CompletedDate"] = normal_tickets.apply(completed_date, axis=1)
     created_tickets = normal_tickets[normal_tickets["CreatedMonth"].ne("")].copy()
     open_tickets = tickets[
@@ -857,11 +892,22 @@ def build_dashboard_payload() -> dict[str, Any]:
     trend_rows.reverse()
 
     generated_at = pd.Timestamp.now().strftime("%d %b %Y, %I:%M %p")
+    created_dates = tickets["CreatedDate"].dropna()
+    changed_dates = tickets["ChangeDate"].dropna()
+    period_labels = {
+        label: source_date_range_label(created_dates, label)
+        for label in months
+    }
 
     return {
         "meta": {
             "lastUpdated": generated_at,
+            "sourceWorkbook": str(SOURCE_WORKBOOK),
+            "sourceRows": int(len(tickets)),
+            "sourceCreatedMax": date_label(created_dates.max()) if not created_dates.empty else "",
+            "sourceChangedMax": date_label(changed_dates.max()) if not changed_dates.empty else "",
             "months": months,
+            "periodLabels": period_labels,
             "yards": ["All Dealers", *DEALER_ORDER],
             "invoiceScopes": ["All Invoices", "Internal", "External"],
             "ticketTypes": TICKET_TYPE_FILTERS,

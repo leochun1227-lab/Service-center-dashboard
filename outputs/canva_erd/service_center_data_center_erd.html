@@ -9,59 +9,63 @@
     body {
       margin: 0;
       background: #eef6ff;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Aptos", "Segoe UI", Arial, Helvetica, sans-serif;
       color: #071433;
     }
     .page {
       position: relative;
-      width: 1456px;
-      height: 1092px;
+      width: 2400px;
+      height: 1580px;
       overflow: hidden;
       background:
         radial-gradient(circle at 80% 24%, rgba(214,232,255,.8), transparent 360px),
         radial-gradient(circle at 18% 42%, rgba(255,255,255,.9), transparent 390px),
         linear-gradient(135deg, #f8fbff 0%, #edf6ff 55%, #f9fcff 100%);
-      padding: 24px 30px;
+      padding: 46px 56px;
     }
     h1 {
       margin: 0;
-      font-size: 44px;
+      font-size: 66px;
       line-height: 1.06;
       font-weight: 900;
       letter-spacing: 0;
       color: #070a2d;
     }
     .subtitle {
-      margin-top: 10px;
-      font-size: 25px;
-      font-weight: 700;
+      margin-top: 14px;
+      font-size: 31px;
+      font-weight: 650;
       color: #0b2f6e;
     }
     .legend {
       position: absolute;
-      right: 24px;
-      top: 14px;
-      width: 248px;
-      padding: 8px 14px 9px;
+      right: 42px;
+      top: 34px;
+      width: 560px;
+      padding: 14px 20px 15px;
       border: 1px solid #c5d6ea;
-      border-radius: 12px;
+      border-radius: 14px;
       background: rgba(255,255,255,.88);
       box-shadow: 0 4px 14px rgba(31,70,130,.16);
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 700;
-      line-height: 1.55;
+      line-height: 1.45;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 18px;
+      row-gap: 3px;
     }
     .tag {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-width: 36px;
-      height: 21px;
+      height: 24px;
       padding: 0 7px;
       margin-right: 8px;
       border-radius: 5px;
       color: #17223b;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 900;
       box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
     }
@@ -71,57 +75,57 @@
     .tag.fact { background: #f14131; color: white; }
     .table {
       position: absolute;
-      width: 286px;
+      width: 440px;
       border: 2px solid #1a68bf;
-      border-radius: 12px;
+      border-radius: 14px;
       background: #fff;
       overflow: hidden;
-      box-shadow: 0 7px 16px rgba(34,80,132,.25);
+      box-shadow: 0 10px 22px rgba(34,80,132,.20);
     }
     .table.fact { border-color: #e1291f; }
     .table-head {
-      height: 43px;
+      height: 60px;
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 0 16px;
+      padding: 0 18px;
       color: white;
-      font-size: 18px;
-      font-weight: 900;
+      font-size: 24px;
+      font-weight: 850;
       white-space: nowrap;
     }
     .dim .table-head { background: linear-gradient(180deg,#0e7be3,#0757b5); }
     .fact .table-head { background: linear-gradient(180deg,#f23827,#cc160f); }
     .icon {
-      width: 34px;
-      height: 34px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: white;
       color: #0b62c5;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 20px;
       flex: 0 0 auto;
     }
     .fact .icon { color: #e1291f; }
     .field {
       position: relative;
-      height: 19px;
+      height: 29px;
       display: flex;
       align-items: center;
-      padding: 0 24px 0 20px;
+      padding: 0 34px 0 24px;
       border-top: 1px solid #d9e2ec;
-      font-size: 15px;
-      line-height: 1;
+      font-size: 19px;
+      line-height: 1.08;
       color: #111827;
     }
     .field .mini {
       position: absolute;
-      right: 22px;
-      top: 2px;
+      right: 25px;
+      top: 6px;
       min-width: 27px;
-      height: 18px;
+      height: 17px;
       border-radius: 4px;
       display: inline-flex;
       align-items: center;
@@ -131,17 +135,26 @@
     }
     .mini.pk { background: #ffe08a; border: 1px solid #ddb64d; }
     .mini.fk { background: #a9edbd; border: 1px solid #6ec98a; }
+    .src {
+      margin-left: 9px;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+    .src.sap { color: #c7251a; }
+    .src.c4c { color: #075f43; }
+    .src.unknown { color: #111827; }
     .note {
       position: absolute;
       border: 1.5px solid #a7c0dd;
-      border-radius: 8px;
+      border-radius: 10px;
       background: rgba(255,255,255,.72);
       box-shadow: 0 4px 13px rgba(31,70,130,.12);
-      padding: 13px 14px 13px 45px;
+      padding: 14px 18px 14px 50px;
       color: #0e2c59;
-      font-size: 16px;
-      line-height: 1.25;
-      font-weight: 700;
+      font-size: 19px;
+      line-height: 1.32;
+      font-weight: 650;
     }
     .note.fact-note {
       border-color: #efb3ad;
@@ -151,7 +164,7 @@
     .info-dot {
       position: absolute;
       left: 12px;
-      top: 13px;
+      top: 14px;
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -159,7 +172,7 @@
       place-items: center;
       background: #0d65c5;
       color: white;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 900;
     }
     .fact-note .info-dot { background: #e22b1e; }
@@ -169,14 +182,14 @@
       align-items: flex-start;
       gap: 10px;
       color: #071b48;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.32;
       font-weight: 800;
       text-align: center;
     }
     .rel-num {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       display: inline-flex;
       align-items: center;
@@ -190,24 +203,24 @@
     .rel-num.red { background: #e12b1f; }
     .relation-list {
       position: absolute;
-      left: 24px;
-      top: 580px;
-      width: 370px;
-      padding: 18px 22px 20px;
+      left: 95px;
+      top: 1030px;
+      width: 430px;
+      padding: 20px 24px 22px;
       background: rgba(255,255,255,.86);
       border: 1px solid #d3deeb;
       border-radius: 12px;
       box-shadow: 0 8px 22px rgba(44,78,120,.18);
       color: #0b2d66;
-      font-size: 16px;
-      line-height: 1.38;
+      font-size: 18px;
+      line-height: 1.46;
       font-weight: 700;
     }
     .relation-title {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 900;
       margin-bottom: 13px;
     }
@@ -260,21 +273,40 @@
       inset: 0;
       pointer-events: none;
     }
+    .section-label {
+      position: absolute;
+      height: 34px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(12, 57, 122, .08);
+      color: #0b2d66;
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
   <div class="page" data-document-role="page" data-label="Service Center Data Center ERD">
     <h1>Service Center Data Center</h1>
-    <div class="subtitle">6 core tables · service orders · repair tasks · labour · invoice analysis</div>
+    <div class="subtitle">6 tables · dashboard serving model with repair order finance KPI inputs</div>
 
     <div class="legend">
       <div><span class="tag pk">PK</span>= Primary Key</div>
       <div><span class="tag fk">FK</span>= Foreign Key</div>
       <div><span class="tag dim">DIM</span>= Dimension</div>
       <div><span class="tag fact">FACT</span>= Fact Table</div>
+      <div><span class="src sap">SAP</span> = finance source</div>
+      <div><span class="src c4c">C4C</span> = service source</div>
+      <div><span class="src unknown">Black</span> = no confirmed source</div>
     </div>
 
-    <svg class="arrow-layer" width="1456" height="1092" viewBox="0 0 1456 1092">
+    <div class="section-label" style="left:95px;top:150px">KPI Inputs</div>
+    <div class="section-label" style="left:720px;top:150px">Operations</div>
+    <div class="section-label" style="left:1480px;top:150px">Labour & Finance</div>
+
+    <svg class="arrow-layer" width="2400" height="1580" viewBox="0 0 2400 1580">
       <defs>
         <marker id="blueArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
           <path d="M0,0 L9,4.5 L0,9 Z" fill="#0d62bf"></path>
@@ -283,151 +315,150 @@
           <path d="M0,0 L9,4.5 L0,9 Z" fill="#e12b1f"></path>
         </marker>
       </defs>
-      <line x1="350" y1="220" x2="526" y2="220" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></line>
-      <line x1="680" y1="499" x2="680" y2="546" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></line>
-      <line x1="832" y1="682" x2="1052" y2="696" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></line>
-      <line x1="1188" y1="586" x2="1188" y2="450" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></line>
-      <line x1="1188" y1="450" x2="1188" y2="586" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></line>
-      <path d="M832 642 H930 Q956 642 956 616 V568" fill="none" stroke="#0d62bf" stroke-width="2.5" stroke-dasharray="7 7"></path>
-      <line x1="874" y1="835" x2="874" y2="900" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></line>
+      <path d="M1280 480 H1360 V925 H1280" fill="none" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></path>
+      <path d="M1280 450 H1420 V385 H1480" fill="none" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></path>
+      <path d="M1280 1040 H1420 V1015 H1480" fill="none" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></path>
+      <path d="M555 990 H650 V1050 H1480" fill="none" stroke="#0d62bf" stroke-width="3" marker-end="url(#blueArrow)"></path>
+      <path d="M720 455 H655" fill="none" stroke="#e12b1f" stroke-width="3" marker-end="url(#redArrow)"></path>
     </svg>
 
-    <div class="table dim" style="left:70px;top:136px;height:204px">
-      <div class="table-head"><span class="icon">🚗</span><span>1. DIM_VEHICLE</span></div>
-      <div class="field">VehicleID <span class="mini pk">PK</span></div>
-      <div class="field">VIN</div>
-      <div class="field">ChassisNo</div>
-      <div class="field">Model</div>
-      <div class="field">ModelYear</div>
+    <div class="table fact" style="left:95px;top:225px;height:470px;width:560px">
+      <div class="table-head"><span class="icon">F</span><span>1. FACT_RO_FINANCE</span></div>
+      <div class="field">ROFinanceID <span class="mini pk">PK</span></div>
+      <div class="field">ServiceOrderID <span class="src c4c">C4C</span><span class="mini fk">FK</span></div>
+      <div class="field">InvoiceID <span class="src sap">SAP</span><span class="mini fk">FK</span></div>
+      <div class="field">RepairOrderRevenue <span class="src sap">SAP</span></div>
+      <div class="field">LaborRevenue <span class="src sap">SAP</span></div>
+      <div class="field">PartsRevenue <span class="src sap">SAP</span></div>
+      <div class="field">LaborCost</div>
+      <div class="field">PartsCost <span class="src sap">SAP</span></div>
+      <div class="field">OperatingExpenses <span class="src sap">SAP</span></div>
+      <div class="field">LaborHoursSold <span class="src c4c">C4C</span></div>
+      <div class="field">PostedLaborRate</div>
+      <div class="field">FinancialPeriod <span class="src sap">SAP</span></div>
     </div>
-    <div class="note" style="left:67px;top:353px;width:285px;height:86px">
+    <div class="note fact-note" style="left:95px;top:720px;width:560px;height:108px">
       <span class="info-dot">i</span>
-      <b>Vehicle master:</b> one record per vehicle, used to connect service activity back to the unit.
+      <b>RO finance fact:</b> finance KPI inputs for ARO, labor rate, gross margin and absorption.
     </div>
 
-    <div class="table fact" style="left:534px;top:124px;height:299px;width:342px">
-      <div class="table-head"><span class="icon">▦</span><span>2. FACT_SERVICE_ORDER</span></div>
-      <div class="field">ServiceOrderID <span class="mini pk">PK</span></div>
-      <div class="field">VehicleID <span class="mini fk">FK</span></div>
-      <div class="field">ServiceType</div>
-      <div class="field">Source</div>
-      <div class="field">CreatedDate</div>
-      <div class="field">BookingDate</div>
-      <div class="field">ArrivalDateTime</div>
-      <div class="field">WorkStartDateTime</div>
-      <div class="field">CompletedDateTime</div>
-      <div class="field">DepartedDateTime</div>
-      <div class="field">Status</div>
-      <div class="field">Priority</div>
-    </div>
-    <div class="note fact-note" style="left:532px;top:414px;width:346px;height:84px">
-      <span class="info-dot">i</span>
-      <b>Service order fact:</b> one row per service order, used for volume, status, backlog and completion tracking.
-    </div>
-
-    <div class="table fact" style="left:529px;top:552px;height:271px;width:303px">
-      <div class="table-head"><span class="icon">🔧</span><span>3. FACT_SERVICE_TASK</span></div>
-      <div class="field">TaskID <span class="mini pk">PK</span></div>
-      <div class="field">ServiceOrderID <span class="mini fk">FK</span></div>
-      <div class="field">TaskCategory</div>
-      <div class="field">Component</div>
-      <div class="field">ProblemDescription</div>
-      <div class="field">RepairAction</div>
-      <div class="field">AssignedTechnicianID <span class="mini fk">FK</span></div>
-      <div class="field">EstimatedHours</div>
-      <div class="field">ActualHours</div>
-      <div class="field">TaskStatus</div>
-      <div class="field">WaitingReason</div>
-      <div class="field">ReworkFlag</div>
-    </div>
-    <div class="note fact-note" style="left:526px;top:828px;width:323px;height:70px">
-      <span class="info-dot">i</span>
-      <b>Task fact:</b> repair tasks under a service order, used for work category and issue analysis.
-    </div>
-
-    <div class="small-card" style="left:436px;top:902px;height:188px">
-      <div class="table-head" style="background:linear-gradient(180deg,#f23827,#cc160f);color:white;height:43px;font-size:18px;font-weight:900;padding:0 16px;display:flex;align-items:center;gap:12px;white-space:nowrap"><span class="icon" style="color:#e1291f">▤</span><span>6. FACT_INVOICE</span></div>
-      <div class="field">InvoiceID <span class="mini pk">PK</span></div>
-      <div class="field">ServiceOrderID <span class="mini fk">FK</span></div>
-      <div class="field">InvoiceNo</div>
-      <div class="field">InvoiceType</div>
-      <div class="field">InvoiceDate</div>
-      <div class="field">DueDate</div>
-      <div class="field">InvoiceStatus</div>
-      <div class="right-col">
-        <div class="field" style="width:100%">LabourAmount</div>
-        <div class="field" style="width:100%">PartsAmount</div>
-        <div class="field" style="width:100%">GSTAmount</div>
-        <div class="field" style="width:100%">TotalAmount</div>
-        <div class="field" style="width:100%">PaidAmount</div>
-        <div class="field" style="width:100%">BalanceAmount</div>
-        <div class="field" style="width:100%">PaymentDate</div>
-        <div class="field" style="width:100%">PaymentStatus</div>
-      </div>
-    </div>
-    <div class="note fact-note" style="left:860px;top:927px;width:280px;height:144px">
-      <span class="info-dot">i</span>
-      <b>Invoice fact:</b> invoice records for revenue, payment status and labour / parts amount split.
-    </div>
-
-    <div class="table dim" style="left:1046px;top:140px;height:196px">
-      <div class="table-head"><span class="icon">👤</span><span>5. DIM_TECHNICIAN</span></div>
-      <div class="field">TechnicianID <span class="mini pk">PK</span></div>
-      <div class="field">TechnicianName</div>
-      <div class="field">Team</div>
+    <div class="table dim" style="left:95px;top:870px;height:235px;width:460px">
+      <div class="table-head"><span class="icon">T</span><span>5. DIM_TECHNICIAN</span></div>
+      <div class="field">TechnicianID <span class="src c4c">C4C</span><span class="mini pk">PK</span></div>
+      <div class="field">TechnicianName <span class="src c4c">C4C</span></div>
+      <div class="field">Team <span class="src c4c">C4C</span></div>
       <div class="field">SkillType</div>
       <div class="field">ActiveFlag</div>
     </div>
-    <div class="note" style="left:1045px;top:349px;width:291px;height:99px">
+    <div class="note" style="left:95px;top:1128px;width:460px;height:92px">
       <span class="info-dot">i</span>
-      <b>Technician master:</b> worker reference data for workload, team and skill analysis.
+      <b>Technician master:</b> supports productivity, efficiency and utilisation KPI grouping.
     </div>
 
-    <div class="table fact" style="left:1058px;top:589px;height:226px;width:282px">
-      <div class="table-head"><span class="icon">◴</span><span>4. FACT_LABOUR</span></div>
-      <div class="field">LabourID <span class="mini pk">PK</span></div>
-      <div class="field">TaskID <span class="mini fk">FK</span></div>
-      <div class="field">TechnicianID <span class="mini fk">FK</span></div>
-      <div class="field">WorkDate</div>
-      <div class="field">StartTime</div>
-      <div class="field">EndTime</div>
-      <div class="field">ActualHours</div>
-      <div class="field">WorkType</div>
-      <div class="field">Comment</div>
+    <div class="relation-list" style="left:95px;top:1248px;width:460px">
+      <div class="relation-title"><span class="target-icon">◎</span>Merged Fields</div>
+      <div class="rel-item"><span class="rel-num red">Q</span><div class="rel-text">Quote outcome sits on service order.</div></div>
+      <div class="rel-item"><span class="rel-num red">A</span><div class="rel-text">Appointment lead time sits on service order.</div></div>
+      <div class="rel-item"><span class="rel-num red">C</span><div class="rel-text">Comeback flag sits on service order.</div></div>
+      <div class="rel-item"><span class="rel-num red">F</span><div class="rel-text">Financial KPI inputs sit in RO finance.</div></div>
+      <div class="rel-item"><span class="rel-num red">T</span><div class="rel-text">Capacity hours sit on labour.</div></div>
     </div>
-    <div class="note fact-note" style="left:1058px;top:823px;width:285px;height:86px">
+
+    <div class="table fact" style="left:720px;top:225px;height:535px;width:560px">
+      <div class="table-head"><span class="icon">O</span><span>2. FACT_SERVICE_ORDER</span></div>
+      <div class="field">ServiceOrderID <span class="src c4c">C4C</span><span class="mini pk">PK</span></div>
+      <div class="field">VehicleID <span class="src c4c">C4C</span><span class="mini fk">FK</span></div>
+      <div class="field">DealerYard <span class="src c4c">C4C</span></div>
+      <div class="field">ServiceType <span class="src c4c">C4C</span></div>
+      <div class="field">Source <span class="src c4c">C4C</span></div>
+      <div class="field">CreatedDate <span class="src c4c">C4C</span></div>
+      <div class="field">BookingDate <span class="src c4c">C4C</span></div>
+      <div class="field">ArrivalDateTime <span class="src c4c">C4C</span></div>
+      <div class="field">CompletedDateTime <span class="src c4c">C4C</span></div>
+      <div class="field">DepartedDateTime <span class="src c4c">C4C</span></div>
+      <div class="field">Status <span class="src c4c">C4C</span></div>
+      <div class="field">Priority <span class="src c4c">C4C</span></div>
+      <div class="field">QuoteAmount <span class="src c4c">C4C</span></div>
+      <div class="field">QuoteStatus <span class="src c4c">C4C</span></div>
+      <div class="field">AppointmentLeadTimeDays <span class="src c4c">C4C</span></div>
+      <div class="field">ComebackFlag <span class="src c4c">C4C</span></div>
+    </div>
+    <div class="note fact-note" style="left:720px;top:785px;width:560px;height:94px">
       <span class="info-dot">i</span>
-      <b>Labour fact:</b> work-hour records for efficiency, workload and labour usage analysis.
+      <b>Service order fact:</b> main dashboard grain for volume, status, lead time, quote and comeback KPIs.
     </div>
 
-    <div class="relation" style="left:394px;top:243px">
-      <span class="rel-num blue">1</span><div>1:N</div>
+    <div class="table fact" style="left:720px;top:925px;height:430px;width:560px">
+      <div class="table-head"><span class="icon">R</span><span>3. FACT_SERVICE_TASK</span></div>
+      <div class="field">TaskID <span class="src c4c">C4C</span><span class="mini pk">PK</span></div>
+      <div class="field">ServiceOrderID <span class="src c4c">C4C</span><span class="mini fk">FK</span></div>
+      <div class="field">TaskCategory <span class="src c4c">C4C</span></div>
+      <div class="field">Component <span class="src c4c">C4C</span></div>
+      <div class="field">ProblemDescription <span class="src c4c">C4C</span></div>
+      <div class="field">RepairAction <span class="src c4c">C4C</span></div>
+      <div class="field">AssignedTechnicianID <span class="src c4c">C4C</span><span class="mini fk">FK</span></div>
+      <div class="field">EstimatedHours <span class="src c4c">C4C</span></div>
+      <div class="field">ActualHours <span class="src c4c">C4C</span></div>
+      <div class="field">TaskStatus <span class="src c4c">C4C</span></div>
+      <div class="field">WaitingReason <span class="src c4c">C4C</span></div>
+      <div class="field">ReworkFlag <span class="src c4c">C4C</span></div>
     </div>
-    <div class="relation" style="left:702px;top:510px">
-      <span class="rel-num red">2</span><div>1:N</div>
-    </div>
-    <div class="relation" style="left:910px;top:722px">
-      <span class="rel-num red">3</span><div>1:N</div>
-    </div>
-    <div class="relation" style="left:1242px;top:471px">
-      <span class="rel-num blue">4</span><div>1:N</div>
-    </div>
-    <div class="relation" style="left:965px;top:506px">
-      <span class="rel-num blue">5</span><div>N:1</div>
-    </div>
-    <div class="relation" style="left:914px;top:858px">
-      <span class="rel-num red">6</span><div>1:N</div>
+    <div class="note fact-note" style="left:720px;top:1360px;width:560px;height:82px">
+      <span class="info-dot">i</span>
+      <b>Task fact:</b> repair jobs under a service order, used for task mix and rework signals.
     </div>
 
-    <div class="relation-list">
-      <div class="relation-title"><span class="target-icon">◎</span>Relationship Guide</div>
-      <div class="rel-item"><span class="rel-num blue">1</span><div class="rel-text">Vehicle to service orders</div></div>
-      <div class="rel-item"><span class="rel-num red">2</span><div class="rel-text">Service order to tasks</div></div>
-      <div class="rel-item"><span class="rel-num red">3</span><div class="rel-text">Task to labour records</div></div>
-      <div class="rel-item"><span class="rel-num blue">4</span><div class="rel-text">Technician to labour records</div></div>
-      <div class="rel-item"><span class="rel-num blue">5</span><div class="rel-text">Assigned technician lookup</div></div>
-      <div class="rel-item"><span class="rel-num red">6</span><div class="rel-text">Service order to invoices</div></div>
+    <div class="table fact" style="left:1480px;top:850px;height:455px;width:620px">
+      <div class="table-head"><span class="icon">L</span><span>4. FACT_LABOUR</span></div>
+      <div class="field">LabourID <span class="src c4c">C4C</span><span class="mini pk">PK</span></div>
+      <div class="field">TaskID <span class="src c4c">C4C</span><span class="mini fk">FK</span></div>
+      <div class="field">TechnicianID <span class="src c4c">C4C</span><span class="mini fk">FK</span></div>
+      <div class="field">LabourDate <span class="src c4c">C4C</span></div>
+      <div class="field">WorkerName <span class="src c4c">C4C</span></div>
+      <div class="field">ClaimHours <span class="src c4c">C4C</span></div>
+      <div class="field">ActualWorkHours <span class="src c4c">C4C</span></div>
+      <div class="field">InvoicePaidHours <span class="src sap">SAP</span></div>
+      <div class="field">AvailableHours</div>
+      <div class="field">ClockedHours</div>
+      <div class="field">SoldHours</div>
+      <div class="field">NonProductiveHours</div>
+      <div class="field">WorkType <span class="src c4c">C4C</span></div>
     </div>
+    <div class="note fact-note" style="left:1480px;top:1328px;width:620px;height:92px">
+      <span class="info-dot">i</span>
+      <b>Labour fact:</b> labour hours plus capacity fields for productivity, efficiency and utilisation.
+    </div>
+
+    <div class="table fact" style="left:1480px;top:225px;height:590px;width:620px">
+      <div class="table-head"><span class="icon">I</span><span>6. FACT_INVOICE</span></div>
+      <div class="field">InvoiceID <span class="src sap">SAP</span><span class="mini pk">PK</span></div>
+      <div class="field">ServiceOrderID <span class="src sap">SAP</span><span class="mini fk">FK</span></div>
+      <div class="field">InvoiceNo <span class="src sap">SAP</span></div>
+      <div class="field">InvoiceType <span class="src sap">SAP</span></div>
+      <div class="field">InvoiceDate <span class="src sap">SAP</span></div>
+      <div class="field">DueDate <span class="src sap">SAP</span></div>
+      <div class="field">InvoiceStatus <span class="src sap">SAP</span></div>
+      <div class="field">InvoiceAmount <span class="src sap">SAP</span></div>
+      <div class="field">LabourRevenueAmount <span class="src sap">SAP</span></div>
+      <div class="field">LabourCostAmount <span class="src sap">SAP</span></div>
+      <div class="field">PartsRevenueAmount <span class="src sap">SAP</span></div>
+      <div class="field">PartsCostAmount <span class="src sap">SAP</span></div>
+      <div class="field">HoursBilled <span class="src sap">SAP</span></div>
+      <div class="field">GSTAmount <span class="src sap">SAP</span></div>
+      <div class="field">PaidAmount <span class="src sap">SAP</span></div>
+      <div class="field">BalanceAmount <span class="src sap">SAP</span></div>
+      <div class="field">PaymentStatus <span class="src sap">SAP</span></div>
+    </div>
+    <div class="note fact-note" style="left:1480px;top:840px;width:620px;height:92px">
+      <span class="info-dot">i</span>
+      <b>Invoice fact:</b> header plus margin split for ARO, gross margin, paid amount and absorption KPIs.
+    </div>
+
+    <div class="relation" style="left:1300px;top:690px"><span class="rel-num red">2</span><div>1:N</div></div>
+    <div class="relation" style="left:1315px;top:360px"><span class="rel-num red">3</span><div>1:N</div></div>
+    <div class="relation" style="left:1315px;top:985px"><span class="rel-num red">4</span><div>1:N</div></div>
+    <div class="relation" style="left:680px;top:1015px"><span class="rel-num blue">5</span><div>1:N</div></div>
+    <div class="relation" style="left:666px;top:420px"><span class="rel-num red">6</span><div>1:N</div></div>
   </div>
 </body>
 </html>

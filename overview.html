@@ -268,6 +268,24 @@
       letter-spacing: 0;
     }
 
+    .panel-action {
+      height: 28px;
+      border: 1px solid rgba(145, 180, 214, 0.28);
+      border-radius: 5px;
+      padding: 0 10px;
+      background: rgba(47, 125, 246, 0.18);
+      color: #f3f8ff;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .panel-action:hover {
+      border-color: rgba(145, 180, 214, 0.46);
+      background: rgba(47, 125, 246, 0.28);
+    }
+
     .panel-body { padding: 8px 14px 14px; }
     .span-2 { grid-column: span 2; }
     .span-3 { grid-column: span 3; }
@@ -304,12 +322,13 @@
     .trend-chart-shell {
       position: relative;
       margin-top: 2px;
+      overflow: visible;
     }
 
     .chart-tooltip {
       position: absolute;
-      z-index: 5;
-      min-width: 150px;
+      z-index: 20;
+      width: min(176px, calc(100% - 16px));
       padding: 9px 10px;
       border: 1px solid rgba(145, 180, 214, .34);
       border-radius: 8px;
@@ -336,7 +355,7 @@
     .chart-tooltip span {
       display: flex;
       justify-content: space-between;
-      gap: 18px;
+      gap: 12px;
       color: #d7e6f7;
     }
 
@@ -534,31 +553,31 @@
       </div>
       <nav>
         <div class="nav-group">
-          <div class="nav-item active"><span class="nav-icon">⌂</span>Overview</div>
+          <div class="nav-item active"><span class="nav-icon">O</span>Overview</div>
         </div>
         <div class="nav-label">Workflow</div>
         <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">▱</span>Service Orders</div>
-          <div class="nav-item"><span class="nav-icon">☑</span>Tasks</div>
-          <div class="nav-item"><span class="nav-icon">♙</span>Labour</div>
-          <div class="nav-item"><span class="nav-icon">◎</span>Technicians</div>
+          <div class="nav-item"><span class="nav-icon">SO</span>Service Orders</div>
+          <div class="nav-item"><span class="nav-icon">T</span>Tasks</div>
+          <div class="nav-item"><span class="nav-icon">L</span>Labour</div>
+          <div class="nav-item"><span class="nav-icon">TE</span>Technicians</div>
         </div>
         <div class="nav-label">Finance</div>
         <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">▤</span>Invoices</div>
+          <div class="nav-item"><span class="nav-icon">I</span>Invoices</div>
           <div class="nav-item"><span class="nav-icon">$</span>Revenue</div>
-          <div class="nav-item"><span class="nav-icon">↗</span>Profitability</div>
+          <div class="nav-item"><span class="nav-icon">P</span>Profitability</div>
         </div>
         <div class="nav-label">Quality</div>
         <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">▣</span>Rework & Quality</div>
-          <div class="nav-item"><span class="nav-icon">⬡</span>Parts Usage</div>
+          <div class="nav-item"><span class="nav-icon">RQ</span>Rework & Quality</div>
+          <div class="nav-item"><span class="nav-icon">PU</span>Parts Usage</div>
         </div>
         <div class="nav-label">Others</div>
         <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">▰</span>Vehicles</div>
-          <div class="nav-item"><span class="nav-icon">▧</span>Reports</div>
-          <div class="nav-item"><span class="nav-icon">⚙</span>Settings</div>
+          <div class="nav-item"><span class="nav-icon">V</span>Vehicles</div>
+          <div class="nav-item"><span class="nav-icon">R</span>Reports</div>
+          <div class="nav-item"><span class="nav-icon">S</span>Settings</div>
         </div>
       </nav>
       <div class="sidebar-footer">
@@ -572,7 +591,7 @@
       <section class="topbar">
         <div>
           <h1>Service Center Dashboard</h1>
-          <div class="subtitle">Operations • Labour • Finance</div>
+          <div class="subtitle">Operations &middot; Labour &middot; Finance</div>
         </div>
         <div class="filters">
           <label>Date Range <select id="dateRange"></select></label>
@@ -654,15 +673,15 @@
         </article>
 
         <article class="panel alert-panel span-5">
-          <div class="panel-head"><h2 class="panel-title alert-title">Exceptions / Alerts</h2></div>
+          <div class="panel-head"><h2 class="panel-title alert-title">Exceptions / Alerts</h2><button class="panel-action" id="exportAlerts" type="button">Export</button></div>
           <div class="panel-body table-wrap"><table id="alertTable" class="alert-table"></table></div>
         </article>
       </section>
-      <div class="footnote">ⓘ All amounts in AUD. Data integrated from C4C Service and SAP S/4HANA Finance exports.</div>
+      <div class="footnote">All amounts in AUD. Data integrated from C4C Service and SAP S/4HANA Finance exports.</div>
     </main>
   </div>
 
-  <script src="./dashboard-data.js?v=20260825-dashboard-refresh"></script>
+  <script src="./dashboard-data.js?v=20260826_161133"></script>
   <script>
     const data = window.serviceCentreData;
     const page = data.pages.overview;
@@ -679,7 +698,7 @@
 
     document.getElementById("lastRefresh").textContent = data.meta.lastUpdated;
     document.getElementById("dataAsOf").textContent = data.meta.lastUpdated.replace(",", "");
-    fillSelect("dateRange", data.meta.months.map(month => ({ label: month === defaultMonth ? "01/08/2026 - 25/08/2026" : month, value: month })), defaultMonth);
+    fillSelect("dateRange", data.meta.months.map(month => ({ label: data.meta.periodLabels?.[month] || month, value: month })), defaultMonth);
     fillSelect("serviceCenter", ["All"], "All");
     fillSelect("dealerYard", data.meta.yards.map(y => ({ label: y === "All Dealers" ? "All" : y, value: y === "All Dealers" ? "All" : y })), "All");
     fillSelect("serviceType", data.meta.ticketTypes.map(t => ({ label: t === "All Ticket Types" ? "All" : t.replace(" ticket", ""), value: t })), "All Ticket Types");
@@ -693,6 +712,7 @@
       });
     });
     document.getElementById("exportCsv").addEventListener("click", exportCurrentView);
+    document.getElementById("exportAlerts").addEventListener("click", exportAlerts);
 
     renderDashboard();
 
@@ -700,13 +720,13 @@
       const latest = getLatest();
       const previous = getPrevious();
       const labour = labourTotals();
-      const completed = sumDaily("completed");
+      const completed = getCompletedTotal();
       const created = getCreatedTotal();
       const invoice = getInvoiceMix();
       const totalOrders = getOpenTotal();
       const labourBadge = state.type === "Repair ticket" ? "Repair scope" : state.type === "PDI ticket" ? "PDI scope" : pct(labour.repair, labour.total) + " repair";
       const kpis = [
-        ["Total Service Orders", num(created), "", "vs previous period", delta(created, previous.newTickets), "blue", iconDoc()],
+        ["New Service Orders", num(created), "", "vs previous period", delta(created, previous.newTickets), "blue", iconDoc()],
         ["Open Service Orders", num(totalOrders), "", "Current open backlog", "+ " + money(getOpenQuoteAmount()), "teal", iconClock()],
         ["Orders Completed", num(completed), "", "Completed / invoiced in scope", pct(completed, created), "purple", iconCheck()],
         ["Avg Turnaround Time", "TBC", "", "Arrival / start / completion timestamps", "TBC", "yellow", iconHourglass()],
@@ -723,7 +743,7 @@
 
       drawLineChart("trendChart", getTrendRows(), [
         { key: "newTickets", name: "Created", color: "#2f7df6", fill: "rgba(47,125,246,.14)" },
-        { key: "invoicedTickets", name: "Completed", color: "#49d17d", fill: "rgba(73,209,125,.12)" }
+        { key: "completedTickets", name: "Completed", color: "#49d17d", fill: "rgba(73,209,125,.12)" }
       ]);
 
       const statusMix = getStatusMix();
@@ -756,7 +776,7 @@
     function delta(now, prev) {
       if (!prev) return "+ 0%";
       const value = ((now - prev) / prev * 100).toFixed(1);
-      return (value >= 0 ? "↑ " : "↓ ") + Math.abs(value) + "%";
+      return (value >= 0 ? "+ " : "- ") + Math.abs(value) + "%";
     }
 
     function getDealerRows(month = state.month, type = state.type) {
@@ -767,8 +787,8 @@
 
     function summarizeRows(rows, month = state.month) {
       const fallback = page.trend.find(row => row.monthFull === month) || { month: month.slice(0, 3), monthFull: month };
-      if (!rows.length && state.yard === "All" && state.type === "All Ticket Types") return fallback;
-      return rows.reduce((acc, row) => {
+      if (!rows.length && state.yard === "All" && state.type === "All Ticket Types") return withCompletedMetric(fallback, month);
+      const summary = rows.reduce((acc, row) => {
         acc.newTickets += row.newTickets || 0;
         acc.newAmount += row.newAmount || row.newQuoteAmount || 0;
         acc.newQuoteAmount += row.newQuoteAmount || row.newAmount || 0;
@@ -778,6 +798,7 @@
         acc.openQuoteAmount += row.openQuoteAmount || 0;
         return acc;
       }, { month: fallback.month || month, monthFull: month, newTickets: 0, newAmount: 0, newQuoteAmount: 0, invoicedTickets: 0, invoicedAmount: 0, openTickets: 0, openQuoteAmount: 0 });
+      return withCompletedMetric(summary, month);
     }
 
     function getLatest() {
@@ -796,6 +817,46 @@
 
     function getCreatedTotal() {
       return getLatest().newTickets || 0;
+    }
+
+    function getCompletedTotal() {
+      return getLatest().completedTickets || 0;
+    }
+
+    function withCompletedMetric(summary, month = state.month) {
+      const workflowEntries = getWorkflowEntries(month);
+      const completed = sumWorkflowEntries(workflowEntries, "completed");
+      return {
+        ...summary,
+        completedTickets: workflowEntries.length ? completed : summary.invoicedTickets || 0
+      };
+    }
+
+    function getWorkflowEntries(month = state.month) {
+      const labels = periodWorkflowLabels(month);
+      return labels.flatMap(label => {
+        const monthData = page.workflowDaily[label] || {};
+        const typeEntries = state.type === "All Ticket Types" ? Object.values(monthData) : [monthData[state.type]].filter(Boolean);
+        return typeEntries.flatMap(type => {
+          return state.yard === "All" ? Object.values(type) : [type[state.yard]].filter(Boolean);
+        });
+      });
+    }
+
+    function periodWorkflowLabels(month) {
+      if (/^\d{4}$/.test(month)) {
+        return Object.keys(page.workflowDaily || {}).filter(label => label.endsWith(" " + month));
+      }
+      return [month];
+    }
+
+    function sumWorkflowEntries(entries, key) {
+      return entries.reduce((total, entry) => {
+        if (entry.totals && Number.isFinite(Number(entry.totals[key]))) {
+          return total + Number(entry.totals[key]);
+        }
+        return total + (entry.daily || []).reduce((sum, day) => sum + (Number(day[key]) || 0), 0);
+      }, 0);
     }
 
     function combineStatusMix(rows) {
@@ -878,14 +939,7 @@
     }
 
     function sumDaily(key) {
-      const month = page.workflowDaily[state.month] || {};
-      let total = 0;
-      const typeEntries = state.type === "All Ticket Types" ? Object.values(month) : [month[state.type]].filter(Boolean);
-      typeEntries.forEach(type => {
-        const yardEntries = state.yard === "All" ? Object.values(type) : [type[state.yard]].filter(Boolean);
-        yardEntries.forEach(yard => (yard.daily || []).forEach(day => total += day[key] || 0));
-      });
-      return total;
+      return sumWorkflowEntries(getWorkflowEntries(), key);
     }
 
     function agingRisk() {
@@ -974,6 +1028,23 @@
           series.map(s => `<span><em style="color:${s.color};font-style:normal">${htmlText(s.name || s.key)}</em><b>${num(row[s.key] || 0)}</b></span>`).join("");
       };
 
+      const positionTooltip = (index, topValue = null) => {
+        const shell = tooltip.parentElement;
+        const box = svg.getBoundingClientRect();
+        const shellWidth = shell?.clientWidth || box.width;
+        const shellHeight = shell?.clientHeight || box.height;
+        const cx = geom.x(index) / geom.w * shellWidth;
+        const rawTop = topValue ?? Math.max(46, geom.y(Math.max(...series.map(s => rows[index][s.key] || 0))) - 10);
+        const top = rawTop / geom.h * shellHeight;
+        const tooltipWidth = tooltip.offsetWidth || 176;
+        const edgePad = 8;
+        const maxLeft = Math.max(edgePad, shellWidth - tooltipWidth - edgePad);
+        const left = Math.max(edgePad, Math.min(maxLeft, cx - tooltipWidth / 2));
+        tooltip.style.left = `${left}px`;
+        tooltip.style.top = `${Math.max(46, top)}px`;
+        tooltip.style.transform = "translateY(-110%)";
+      };
+
       svg.onmousemove = event => {
         const box = svg.getBoundingClientRect();
         const localX = ((event.clientX - box.left) / box.width) * geom.w;
@@ -983,8 +1054,7 @@
         const index = Math.max(0, Math.min(rows.length - 1, Math.round(ratio * (rows.length - 1))));
         showPoint(index);
         tooltip.classList.add("show");
-        tooltip.style.left = `${((geom.x(index) / geom.w) * 100).toFixed(2)}%`;
-        tooltip.style.top = `${Math.max(42, geom.y(Math.max(...series.map(s => rows[index][s.key] || 0))) - 8)}px`;
+        positionTooltip(index);
       };
 
       svg.onmouseleave = () => {
@@ -995,8 +1065,7 @@
       svg.onfocus = () => {
         showPoint(rows.length - 1);
         tooltip.classList.add("show");
-        tooltip.style.left = `${((geom.x(rows.length - 1) / geom.w) * 100).toFixed(2)}%`;
-        tooltip.style.top = "48px";
+        positionTooltip(rows.length - 1, 48);
       };
       svg.onblur = svg.onmouseleave;
     }
@@ -1064,19 +1133,32 @@
     }
 
     function renderAlerts() {
+      const rows = getTicketDetails();
+      const abnormalExample = rows.find(row => row.abnormalReason);
       const top = [
-        { name: "Abnormal tickets detail", qty: data.meta.abnormalTickets || "TBC" },
-        ...getStatusMix().segments.slice(0, 4)
+        { name: "Abnormal tickets detail", qty: rows.filter(row => row.abnormalReason).length || data.meta.abnormalTickets || 0, example: abnormalExample?.serviceOrderId || "" },
+        ...getStatusMix().segments.slice(0, 4).map(segment => {
+          const sample = rows.find(row => row.status === segment.name);
+          return { ...segment, example: sample?.serviceOrderId || "" };
+        })
       ];
       document.getElementById("alertTable").innerHTML = `<thead><tr><th>Type</th><th class="num">Count</th><th>Example</th></tr></thead><tbody>` +
-        top.map(r => `<tr><td><span class="alert-badge">!</span>${r.name}</td><td class="num">${r.qty}</td><td><span class="tbc">TBC</span></td></tr>`).join("") + `</tbody>`;
+        top.map(r => `<tr><td><span class="alert-badge">!</span>${r.name}</td><td class="num">${r.qty}</td><td>${r.example ? htmlText(r.example) : ""}</td></tr>`).join("") + `</tbody>`;
     }
 
     function exportCurrentView() {
       const ticketRows = getTicketDetails();
       downloadWorkbook(
-        buildDataCenterSheets(ticketRows),
-        `service-center-overview-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`
+        buildTicketDetailSheet(ticketRows),
+        `service-center-ticket-details-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`
+      );
+    }
+
+    function exportAlerts() {
+      const sheets = buildAlertExportSheets();
+      downloadWorkbook(
+        sheets,
+        `service-center-alert-ticket-details-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`
       );
     }
 
@@ -1090,133 +1172,118 @@
       });
     }
 
-    function buildDataCenterSheets(ticketRows) {
-      const vehicleRows = uniqueBy(ticketRows, row => [row.vehicle, row.chassisNumber].join("|"))
-        .map(row => [
-          exportText(row.vehicle),
-          "",
-          exportText(row.chassisNumber),
-          "",
-          ""
-        ]);
-      const technicianRows = uniqueBy(
-        ticketRows.filter(row => row.workerName && row.workerName !== "TBC"),
-        row => row.workerName
-      ).map(row => [
-        "",
-        exportText(row.workerName),
-        "",
-        "",
-        ""
-      ]);
-
+    function buildTicketDetailSheet(ticketRows) {
       return [
         {
-          name: "1_DIM_VEHICLE",
-          rows: [
-            ["VehicleID", "VIN", "ChassisNo", "Model", "ModelYear"],
-            ...vehicleRows
-          ]
-        },
-        {
-          name: "2_FACT_SERVICE_ORDER",
-          rows: [
-            ["ServiceOrderID", "VehicleID", "ServiceType", "Source", "CreatedDate", "BookingDate", "ArrivalDateTime", "WorkStartDateTime", "CompletedDateTime", "DepartedDateTime", "Status", "Priority"],
-            ...ticketRows.map(row => [
-              exportText(row.serviceOrderId),
-              exportText(row.vehicle),
-              serviceTypeText(row),
-              row.source || "C4C",
-              exportText(row.createdDate),
-              "",
-              "",
-              "",
-              exportText(row.completedDate),
-              "",
-              exportText(row.rawStatus || row.status),
-              exportText(row.priority)
-            ])
-          ]
-        },
-        {
-          name: "3_FACT_SERVICE_TASK",
-          rows: [
-            ["TaskID", "ServiceOrderID", "TaskCategory", "Component", "ProblemDescription", "RepairAction", "AssignedTechnicianID", "EstimatedHours", "ActualHours", "TaskStatus", "WaitingReason", "ReworkFlag"],
-            ...ticketRows.map(row => [
-              "",
-              exportText(row.serviceOrderId),
-              "",
-              "",
-              exportText(row.ticketName),
-              "",
-              "",
-              numberIfAvailable(row.claimHours),
-              numberIfAvailable(row.actualWorkHours ?? row.labourHours),
-              "",
-              "",
-              ""
-            ])
-          ]
-        },
-        {
-          name: "4_FACT_LABOUR",
-          rows: [
-            ["LabourID", "TaskID", "TechnicianID", "WorkDate", "StartTime", "EndTime", "ClaimHours", "AcutualLabourHours", "WorkType", "Comment"],
-            ...ticketRows.map(row => [
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-              numberIfAvailable(row.claimHours),
-              numberIfAvailable(row.actualWorkHours ?? row.labourHours),
-              serviceTypeText(row),
-              exportText(row.workerName)
-            ])
-          ]
-        },
-        {
-          name: "5_DIM_TECHNICIAN",
-          rows: [
-            ["TechnicianID", "TechnicianName", "Team", "SkillType", "ActiveFlag"],
-            ...technicianRows
-          ]
-        },
-        {
-          name: "6_FACT_INVOICE",
-          rows: [
-            ["InvoiceID", "ServiceOrderID", "InvoiceNo", "InvoiceType", "InvoiceDate", "DueDate", "InvoiceStatus", "LabourAmount", "PartsAmount", "GSTAmount", "InvoiceAmount", "PaidAmount", "BalanceAmount", "PaymentDate", "PaymentStatus"],
-            ...ticketRows.map(row => [
-              exportText(row.invoiceNo),
-              exportText(row.serviceOrderId),
-              exportText(row.invoiceNo),
-              exportText(row.invoiceScope),
-              exportText(row.billingDate),
-              "",
-              exportText(row.rawStatus),
-              "",
-              "",
-              "",
-              numberIfAvailable(row.invoiceAmount),
-              "",
-              "",
-              "",
-              ""
-            ])
-          ]
+          name: "Ticket_Details",
+          rows: ticketDetailRows(ticketRows)
         }
       ];
     }
 
-    function uniqueBy(rows, keyFn) {
-      const seen = new Set();
-      return rows.filter(row => {
-        const key = keyFn(row);
-        if (!key || seen.has(key)) return false;
-        seen.add(key);
-        return true;
+    function ticketDetailRows(ticketRows) {
+      return [
+        [
+          "ServiceOrderID",
+          "CreatedDate",
+          "CompletedDate",
+          "BillingDate",
+          "DealerYard",
+          "DealerName",
+          "ServiceType",
+          "Status",
+          "Priority",
+          "TicketName",
+          "VehicleID",
+          "ChassisNo",
+          "QuoteAmount",
+          "InvoiceNo",
+          "InvoiceScope",
+          "InvoiceAmount",
+          "LabourHours",
+          "ClaimHours",
+          "ActualWorkHours",
+          "InvoicePaidHours",
+          "WorkerName",
+          "Source",
+          "Period"
+        ],
+        ...ticketRows.map(row => ticketDetailValues(row))
+      ];
+    }
+
+    function ticketDetailValues(row) {
+      return [
+        exportText(row.serviceOrderId),
+        exportText(row.createdDate),
+        exportText(row.completedDate),
+        exportText(row.billingDate),
+        exportText(row.dealerYard),
+        exportText(row.dealerName),
+        serviceTypeText(row),
+        exportText(row.rawStatus || row.status),
+        exportText(row.priority),
+        exportText(row.ticketName),
+        exportText(row.vehicle),
+        exportText(row.chassisNumber),
+        numberIfAvailable(row.quoteAmount),
+        exportText(row.invoiceNo),
+        exportText(row.invoiceScope),
+        numberIfAvailable(row.invoiceAmount),
+        numberIfAvailable(row.labourHours),
+        numberIfAvailable(row.claimHours),
+        numberIfAvailable(row.actualWorkHours),
+        numberIfAvailable(row.invoicePaidHours),
+        exportText(row.workerName),
+        exportText(row.source),
+        exportText(row.period)
+      ];
+    }
+
+    function buildAlertExportSheets() {
+      const rows = getTicketDetails();
+      const groups = new Map();
+      const addGroup = (name, row) => {
+        if (!groups.has(name)) groups.set(name, []);
+        groups.get(name).push(row);
+      };
+
+      rows.forEach(row => {
+        splitReasons(row.abnormalReason).forEach(reason => addGroup(reason, row));
       });
+
+      getStatusMix().segments.slice(0, 4).forEach(segment => {
+        const statusRows = rows.filter(row => row.status === segment.name);
+        if (statusRows.length) groups.set("Status - " + segment.name, statusRows);
+      });
+
+      const sheets = [...groups.entries()]
+        .filter(([, groupRows]) => groupRows.length)
+        .map(([name, groupRows]) => ({
+          name: shortSheetName(name),
+          rows: [
+            ["ExceptionCategory", ...ticketDetailRows([])[0]],
+            ...groupRows.map(row => [exportText(name), ...ticketDetailValues(row)])
+          ]
+        }));
+
+      return sheets.length ? sheets : [{ name: "No_Alerts", rows: [["Message"], ["No exception tickets in current filter"]] }];
+    }
+
+    function splitReasons(value) {
+      return String(value || "")
+        .split(";")
+        .map(reason => reason.trim())
+        .filter(Boolean);
+    }
+
+    function shortSheetName(value) {
+      return String(value || "Alert")
+        .replace(/^Invalid Role_1001 party: /, "Invalid party - ")
+        .replace("Create invoice status but invoice number/price is empty", "Missing invoice")
+        .replace("Invoice exists but status is not Create invoice", "Invoice status mismatch")
+        .replace("Status - ", "")
+        .slice(0, 31);
     }
 
     function serviceTypeText(row) {
@@ -1292,3 +1359,4 @@ ${sheet.rows.map((row, rowIndex) => `<Row>${row.map(value => excelCell(value, ro
   </script>
 </body>
 </html>
+
