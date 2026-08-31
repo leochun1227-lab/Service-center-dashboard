@@ -724,6 +724,311 @@
       white-space: pre-line;
     }
 
+    .mapping-card {
+      min-height: auto;
+    }
+
+    .mapping-wide {
+      grid-column: 1 / -1;
+    }
+
+    .mapping-card .table-wrap {
+      overflow-x: auto;
+    }
+
+    .mapping-table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .mapping-table th {
+      color: #91abc2;
+      font-size: 11px;
+      font-weight: 850;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 0 10px 9px;
+      border-bottom: 1px solid rgba(145, 180, 214, 0.20);
+    }
+
+    .mapping-table td {
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(145, 180, 214, 0.13);
+      color: #dce8f5;
+      line-height: 1.45;
+    }
+
+    .mapping-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .mapping-table strong {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .mapping-source {
+      color: #8ed5e0;
+      font-weight: 750;
+    }
+
+    .mapping-note {
+      margin-top: 10px;
+      color: #a9bbcd;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .workflow-section {
+      grid-column: 1 / -1;
+      display: grid;
+      gap: 12px;
+      padding: 16px 0 2px;
+    }
+
+    .workflow-controls {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid rgba(145, 180, 214, 0.20);
+      border-radius: 8px;
+      background: rgba(9, 27, 45, 0.66);
+    }
+
+    .workflow-controls-title {
+      margin: 0;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .workflow-controls-copy {
+      margin-top: 4px;
+      color: #a9bbcd;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .workflow-dealer-buttons {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .workflow-dealer-button {
+      min-height: 34px;
+      border: 1px solid rgba(145, 180, 214, 0.28);
+      border-radius: 7px;
+      background: rgba(6, 18, 31, 0.76);
+      color: #dbe8f6;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .16s ease, border-color .16s ease, color .16s ease;
+    }
+
+    .workflow-dealer-button:hover {
+      border-color: rgba(145, 180, 214, 0.46);
+      background: rgba(47, 125, 246, 0.16);
+      color: #ffffff;
+    }
+
+    .workflow-dealer-button.active {
+      border-color: rgba(173, 207, 244, 0.36);
+      background: linear-gradient(135deg, #2874ef, #1c5fd2);
+      box-shadow: 0 8px 18px rgba(39, 116, 239, 0.28);
+      color: #ffffff;
+    }
+
+    .workflow-section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: end;
+    }
+
+    .workflow-section-title {
+      margin: 0;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .workflow-section-subtitle {
+      margin-top: 4px;
+      color: #a9bbcd;
+      font-size: 13px;
+    }
+
+    .workflow-summary {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .workflow-pill {
+      min-width: 90px;
+      padding: 7px 9px;
+      border: 1px solid rgba(145, 180, 214, 0.22);
+      border-radius: 7px;
+      background: rgba(9, 27, 45, 0.62);
+      color: #a9bbcd;
+      font-size: 11px;
+      text-align: right;
+    }
+
+    .workflow-pill strong {
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 1.1;
+    }
+
+    .workflow-track {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+      overflow-x: auto;
+      padding: 2px 0 12px;
+      scroll-snap-type: x proximity;
+    }
+
+    .workflow-step {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      flex: 0 0 auto;
+    }
+
+    .workflow-node {
+      width: 264px;
+      min-height: 250px;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 11px;
+      padding: 14px;
+      border: 1px solid rgba(145, 180, 214, 0.20);
+      border-top: 3px solid var(--stage-color, #1f6feb);
+      border-radius: 8px;
+      background: rgba(9, 27, 45, 0.78);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.035), var(--shadow);
+      scroll-snap-align: start;
+    }
+
+    .workflow-node-title {
+      margin: 0;
+      min-height: 42px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 850;
+      line-height: 1.28;
+    }
+
+    .workflow-node-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .workflow-metric {
+      padding: 8px;
+      border: 1px solid rgba(145, 180, 214, 0.15);
+      border-radius: 6px;
+      background: rgba(255,255,255,.035);
+      color: #9fb2c5;
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
+    .workflow-metric strong {
+      display: block;
+      margin-top: 3px;
+      color: #f8fbff;
+      font-size: 17px;
+      line-height: 1.05;
+    }
+
+    .workflow-aging {
+      display: grid;
+      gap: 7px;
+      align-self: end;
+    }
+
+    .workflow-aging-chart {
+      display: grid;
+      gap: 7px;
+      color: #b9cadc;
+      font-size: 11px;
+    }
+
+    .workflow-aging-row {
+      display: grid;
+      grid-template-columns: 46px minmax(86px, 1fr) 64px;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .workflow-aging-label {
+      color: #bfd0e1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .workflow-aging-track {
+      height: 16px;
+      overflow: hidden;
+      border-radius: 5px;
+      background: rgba(145, 180, 214, 0.10);
+    }
+
+    .workflow-aging-fill {
+      display: block;
+      width: var(--bar-width, 0%);
+      min-width: var(--bar-min, 0);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--stage-color, #1f6feb), rgba(142, 213, 224, 0.86));
+    }
+
+    .workflow-aging-value {
+      color: #f5f9ff;
+      text-align: right;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .workflow-raw {
+      min-height: 20px;
+      color: #8fa6bd;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .workflow-arrow {
+      width: 34px;
+      display: grid;
+      place-items: center;
+      color: #7fa2c3;
+      font-size: 23px;
+      font-weight: 650;
+    }
+
+    .workflow-note {
+      grid-column: 1 / -1;
+      color: #a9bbcd;
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 0 2px;
+    }
+
     .tbc-box {
       display: flex;
       align-items: center;
@@ -772,6 +1077,10 @@
       .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .module-grid { grid-template-columns: 1fr; }
+      .workflow-controls { grid-template-columns: 1fr; }
+      .workflow-dealer-buttons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .workflow-section-head { grid-template-columns: 1fr; align-items: start; }
+      .workflow-summary { justify-content: flex-start; }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7 { grid-column: span 6; }
     }
 
@@ -781,6 +1090,8 @@
       .kpis, .filters { grid-template-columns: 1fr; }
       .module-header, .module-fields, .module-meta { grid-template-columns: 1fr; }
       .module-field.wide { grid-column: auto; }
+      .workflow-dealer-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .workflow-node { width: min(224px, calc(100vw - 58px)); }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-12 { grid-column: span 12; }
       .donut-wrap { grid-template-columns: 1fr; }
       table { min-width: 620px; }
@@ -805,11 +1116,16 @@
         <div class="nav-group">
           <button class="nav-item" type="button" data-page="service-orders"><span class="nav-icon">SO</span>Service Orders</button>
           <button class="nav-item" type="button" data-page="technician-labour"><span class="nav-icon">TL</span>Technician & Labour</button>
+          <button class="nav-item" type="button" data-page="workflow"><span class="nav-icon">WF</span>Workflow</button>
         </div>
         <div class="nav-label">Performance</div>
         <div class="nav-group">
           <button class="nav-item" type="button" data-page="financial-performance"><span class="nav-icon">$</span>Financial Performance</button>
           <button class="nav-item" type="button" data-page="quality-customer"><span class="nav-icon">QC</span>Quality & Customer</button>
+        </div>
+        <div class="nav-label">Reference</div>
+        <div class="nav-group">
+          <button class="nav-item" type="button" data-page="mapping"><span class="nav-icon">MP</span>Mapping</button>
         </div>
       </nav>
       <div class="sidebar-footer">
@@ -914,13 +1230,13 @@
       </section>
 
       <section class="module-view" id="moduleView" hidden>
-        <div class="module-header">
+        <div class="module-header" id="moduleHeader">
           <div>
             <div class="module-kicker" id="moduleKicker">Workflow</div>
             <h2 class="module-title" id="moduleTitle">Service Orders</h2>
             <div class="module-subtitle" id="moduleSubtitle"></div>
           </div>
-          <div class="module-count"><strong id="moduleCount">0</strong>Functions</div>
+          <div class="module-count"><strong id="moduleCount">0</strong><span id="moduleCountLabel">Functions</span></div>
         </div>
         <div class="module-grid" id="moduleGrid"></div>
       </section>
@@ -939,10 +1255,12 @@
     const state = {
       month: defaultMonth,
       yard: "All",
-      type: "All Ticket Types"
+      type: "All Ticket Types",
+      workflowDealer: "Perth"
     };
     const overviewTitle = "Service Center Dashboard";
     const overviewSubtitle = "Operations &middot; Labour &middot; Finance";
+    const workflowDealers = ["Perth", "Traralgon", "Launceston", "Geelong", "Frankston"];
     const kpiNextSteps = [
       { functionName: "New Service Orders", formula: "C4C CreatedOn", field: "C4C CreatedOn", nextStep: "Ready", stage: "", target: "New Orders by DMY", owner: "", dueDate: "" },
       { functionName: "Complete Orders", formula: "Repair: Status == Create Invoice\nPDI: Status == Claim Ticket Time", field: "Missing\nTickets Status last Change Time", nextStep: "Add a new field\nTickets Status last Change Time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
@@ -973,6 +1291,12 @@
         subtitle: "Order volume, completion, backlog, turnaround, trend, quote approval, and appointment lead time.",
         functions: ["New Service Orders", "Complete Orders", "Open Service Orders", "Turnaround Time", "Service Orders Trend", "Quotation Approval Rate", "Service Appointment Lead Time"]
       },
+      "workflow": {
+        group: "Operations",
+        title: "Workflow",
+        subtitle: "Repair and PDI ticket status flow, with aging distribution and average current age by stage.",
+        kind: "workflow"
+      },
       "technician-labour": {
         group: "Operations",
         title: "Technician & Labour",
@@ -990,8 +1314,54 @@
         title: "Quality & Customer",
         subtitle: "Rework, first-time-right, and customer retention readiness.",
         functions: ["Comeback / Rework Rate", "Fixed First Time Right", "Customer Retention Rate"]
+      },
+      "mapping": {
+        group: "Reference",
+        title: "Mapping",
+        subtitle: "How C4C ticket statuses, dashboard labels, KPI rules, and source fields are translated in this page.",
+        kind: "mapping"
       }
     };
+    const workflowAgingColors = {
+      "0-7 days": "#49d17d",
+      "8-30 days": "#f5bf2f",
+      "31-60 days": "#8f5cf6",
+      "60+ days": "#2f7df6"
+    };
+    const workflowAgeMidpoints = {
+      "0-7 days": 4,
+      "8-30 days": 19,
+      "31-60 days": 45,
+      "60+ days": 75
+    };
+    const statusMappingNotes = {
+      "PDI Complete, Awaiting Time Claim": "PDI work appears complete, but the time claim / invoice step is still pending.",
+      "Awaiting Quote Approval": "Quote has not been approved yet; shown as an open repair order waiting for customer or internal approval.",
+      "Approved, Awaiting Repair": "Quote is approved and the repair can be scheduled or started.",
+      "Repair In Progress": "Repair has started and has not reached the completion or invoice step.",
+      "Invoice Cancelled, SO Still Open": "Invoice was cancelled while the service order still remains open; keep visible as an exception.",
+      "Awaiting PDI Start": "PDI ticket exists, but the PDI start / completion status has not been reached.",
+      "Time Claimed, Awaiting Invoice": "Technician time has been claimed, but the final invoice step is not yet complete."
+    };
+    const kpiMappings = [
+      ["New Service Orders", "C4C CreatedOn", "Counts tickets created in the selected period."],
+      ["Complete Orders", "Repair: Create Invoice. PDI: Claim Time Ticket.", "Current completion proxy until status-change timestamp is available."],
+      ["Open Service Orders", "Not completed orders", "Open backlog is any ticket not in the completion proxy."],
+      ["Service Orders Trend", "CreatedOn now; Status Change Date later", "Created trend is ready. Completion trend needs a reliable status-change date."],
+      ["Quotation Approval Rate", "Approved Quotes / Raised Quotes", "Needs a cleaner quote rejected / quote approved status split."],
+      ["Technician Productivity", "Sold Hours / Available Hours", "Sold hours can use C4C claim hours; available hours should come from HR payslip."],
+      ["Average Repair Order Amount", "Repair Order Revenue / Repair Order Count", "Revenue comes from SAP invoice enrichment; order count comes from C4C TicketID."]
+    ];
+    const sourceMappings = [
+      ["ServiceOrderID", "TicketID", "C4C", "Primary key used by the dashboard."],
+      ["Service Type", "TicketType / TicketTypeText", "C4C", "Repair vs PDI split."],
+      ["Dashboard Status", "TicketStatus / TicketStatusText + workflow logic", "C4C", "Raw status is renamed into business workflow labels."],
+      ["Quote Amount", "AmountIncludingTax", "C4C", "Open quote value and quote amount context."],
+      ["Invoice No.", "ERPInvoiceNumber", "C4C + SAP", "C4C stores the invoice number used to enrich SAP finance data."],
+      ["Invoice Amount", "ERPInvoiceNumberPrice", "SAP", "Invoice amount pulled through SAP/HANA enrichment."],
+      ["Labour Hours", "LabourHours / TotalLabourHours", "C4C + SAP", "Claimed and patched labour-hour values used for labour KPIs."],
+      ["Technician Name", "Role_40_InvolvedPartyName / Worker", "C4C", "Current worker display proxy until technician assignment is confirmed."]
+    ];
 
     document.getElementById("lastRefresh").textContent = data.meta.lastUpdated;
     document.getElementById("dataAsOf").textContent = data.meta.lastUpdated.replace(",", "");
@@ -1033,6 +1403,15 @@
 
     function renderModule(pageId) {
       const config = modulePages[pageId] || modulePages["service-orders"];
+      if (config.kind === "mapping") {
+        renderMappingPage(config);
+        return;
+      }
+      if (config.kind === "workflow") {
+        renderWorkflowPage(config);
+        return;
+      }
+      document.getElementById("moduleHeader").hidden = false;
       const items = config.functions.map(name => kpiNextSteps.find(item => item.functionName === name)).filter(Boolean);
       document.getElementById("pageTitle").textContent = config.title;
       document.getElementById("pageSubtitle").textContent = "KPI setup and field readiness";
@@ -1040,7 +1419,67 @@
       document.getElementById("moduleTitle").textContent = config.title;
       document.getElementById("moduleSubtitle").textContent = config.subtitle;
       document.getElementById("moduleCount").textContent = items.length || "TBC";
+      document.getElementById("moduleCountLabel").textContent = "Functions";
       document.getElementById("moduleGrid").innerHTML = items.length ? items.map(moduleCard).join("") : emptyModule(config);
+    }
+
+    function renderMappingPage(config) {
+      const statusRows = mappingStatusRows();
+      document.getElementById("moduleHeader").hidden = false;
+      document.getElementById("pageTitle").textContent = "Mapping";
+      document.getElementById("pageSubtitle").textContent = "Status names, KPI rules, and source fields";
+      document.getElementById("moduleKicker").textContent = config.group;
+      document.getElementById("moduleTitle").textContent = config.title;
+      document.getElementById("moduleSubtitle").textContent = config.subtitle;
+      document.getElementById("moduleCount").textContent = statusRows.length + kpiMappings.length + sourceMappings.length;
+      document.getElementById("moduleCountLabel").textContent = "Rows";
+      document.getElementById("moduleGrid").innerHTML = `
+        ${mappingTableCard("Ticket Status Mapping", "Website Name", "C4C Raw Status", "Dashboard Rule", "Current Open Qty", statusRows.map(row => [
+          `<strong>${htmlText(row.display)}</strong>`,
+          htmlText(row.raw),
+          htmlText(row.note),
+          `<strong>${num(row.qty)}</strong>`
+        ]), "These status mappings are read from the current dashboard data, then labelled in business language for the webpage.")}
+        ${mappingTableCard("KPI Logic Mapping", "Dashboard KPI", "Current Formula / Rule", "Meaning", "", kpiMappings.map(row => [
+          `<strong>${htmlText(row[0])}</strong>`,
+          htmlText(row[1]),
+          htmlText(row[2])
+        ]))}
+        ${mappingTableCard("Field Source Mapping", "Dashboard Field", "Source Field", "System", "Use", sourceMappings.map(row => [
+          `<strong>${htmlText(row[0])}</strong>`,
+          htmlText(row[1]),
+          `<span class="mapping-source">${htmlText(row[2])}</span>`,
+          htmlText(row[3])
+        ]))}
+      `;
+    }
+
+    function mappingStatusRows() {
+      const source = page.openStatusMix?.segments || getStatusMix().segments || [];
+      return source.map(segment => ({
+        display: segment.name,
+        raw: (segment.rawStatuses || [segment.name]).join(", "),
+        note: statusMappingNotes[segment.name] || "Displayed as a grouped workflow status in the dashboard.",
+        qty: segment.qty || 0
+      })).sort((a, b) => b.qty - a.qty);
+    }
+
+    function mappingTableCard(title, col1, col2, col3, col4, rows, note = "") {
+      const headers = [col1, col2, col3, col4].filter(Boolean);
+      return `
+        <article class="module-card mapping-card mapping-wide">
+          <div class="module-card-head">
+            <span class="module-chip">Reference</span>
+            <h3>${htmlText(title)}</h3>
+          </div>
+          <div class="table-wrap">
+            <table class="mapping-table">
+              <thead><tr>${headers.map(header => `<th>${htmlText(header)}</th>`).join("")}</tr></thead>
+              <tbody>${rows.map(row => `<tr>${row.map(value => `<td>${value}</td>`).join("")}</tr>`).join("")}</tbody>
+            </table>
+          </div>
+          ${note ? `<div class="mapping-note">${htmlText(note)}</div>` : ""}
+        </article>`;
     }
 
     function moduleCard(item) {
@@ -1071,6 +1510,193 @@
             </div>
           </div>
         </article>`;
+    }
+
+    function renderWorkflowPage(config) {
+      if (!workflowDealers.includes(state.workflowDealer)) state.workflowDealer = workflowDealers[0];
+      const period = workflowPeriod();
+      const sections = ["Repair ticket", "PDI ticket"].map(type => workflowSection(type, period));
+      const nodeCount = sections.reduce((sum, section) => sum + section.pipeline.length, 0);
+      document.getElementById("moduleHeader").hidden = true;
+      document.getElementById("pageTitle").textContent = "Workflow";
+      document.getElementById("pageSubtitle").textContent = state.workflowDealer;
+      document.getElementById("moduleKicker").textContent = config.group;
+      document.getElementById("moduleTitle").textContent = config.title;
+      document.getElementById("moduleSubtitle").textContent = config.subtitle;
+      document.getElementById("moduleCount").textContent = nodeCount;
+      document.getElementById("moduleCountLabel").textContent = "Stages";
+      document.getElementById("moduleGrid").innerHTML = renderWorkflowControls() + sections.map(renderWorkflowSection).join("") +
+        `<div class="workflow-note">Avg age is estimated from the current aging buckets and can be refined after the workflow timestamps are confirmed.</div>`;
+      attachWorkflowControls();
+    }
+
+    function renderWorkflowControls() {
+      const buttons = workflowDealers.map(dealer => `
+        <button class="workflow-dealer-button ${dealer === state.workflowDealer ? "active" : ""}" type="button" data-dealer="${htmlText(dealer)}">${htmlText(dealer)}</button>
+      `).join("");
+      return `
+        <div class="workflow-controls">
+          <div>
+            <h3 class="workflow-controls-title">Dealer Scope</h3>
+            <div class="workflow-controls-copy">Choose one dealer to see that dealer's Repair and PDI status aging flow.</div>
+          </div>
+          <div class="workflow-dealer-buttons" role="group" aria-label="Dealer / Yard">${buttons}</div>
+        </div>`;
+    }
+
+    function attachWorkflowControls() {
+      document.querySelectorAll(".workflow-dealer-button").forEach(button => {
+        button.addEventListener("click", event => {
+          state.workflowDealer = event.currentTarget.dataset.dealer;
+          renderWorkflowPage(modulePages.workflow);
+        });
+      });
+    }
+
+    function workflowDealer() {
+      if (workflowDealers.includes(state.workflowDealer)) return state.workflowDealer;
+      return workflowDealers[0];
+    }
+
+    function syncWorkflowDealerFromGlobal() {
+      if (workflowDealers.includes(state.yard)) {
+        state.workflowDealer = state.yard;
+      } else if (!workflowDealers.includes(state.workflowDealer)) {
+        state.workflowDealer = workflowDealers[0];
+      }
+    }
+
+    function workflowPeriod() {
+      return page.workflowDaily?.[state.month] ? state.month : defaultMonth;
+    }
+
+    function workflowSection(type, period) {
+      const monthData = page.workflowDaily?.[period]?.[type] || {};
+      const dealer = workflowDealer();
+      const entries = [monthData[dealer]].filter(Boolean);
+      const pipeline = combineWorkflowPipelines(entries.map(entry => entry.pipeline || []));
+      const metrics = workflowMetrics(pipeline);
+      return {
+        type,
+        title: type.replace(" ticket", ""),
+        subtitle: dealer,
+        pipeline,
+        metrics
+      };
+    }
+
+    function combineWorkflowPipelines(pipelines) {
+      const order = [];
+      const map = new Map();
+      pipelines.flat().forEach(stage => {
+        const name = stage.status || stage.name || "Blank";
+        if (!map.has(name)) {
+          order.push(name);
+          map.set(name, {
+            status: name,
+            qty: 0,
+            quoteAmount: 0,
+            rawStatuses: new Set(),
+            agingMap: new Map(),
+            color: stage.color || "#7890a5"
+          });
+        }
+        const target = map.get(name);
+        target.qty += stage.qty || 0;
+        target.quoteAmount += stage.quoteAmount || 0;
+        target.color = target.color || stage.color || "#7890a5";
+        (stage.rawStatuses || []).forEach(status => target.rawStatuses.add(status));
+        (stage.aging || []).forEach(item => target.agingMap.set(item.label, (target.agingMap.get(item.label) || 0) + (item.qty || 0)));
+      });
+      return order.map(name => {
+        const stage = map.get(name);
+        const aging = Object.keys(workflowAgingColors).map(label => ({ label, qty: stage.agingMap.get(label) || 0 }));
+        return {
+          status: stage.status,
+          qty: stage.qty,
+          quoteAmount: stage.quoteAmount,
+          quoteAmountLabel: money(stage.quoteAmount),
+          rawStatuses: [...stage.rawStatuses],
+          aging,
+          avgAge: avgAgeFromBuckets(aging),
+          color: stage.color
+        };
+      });
+    }
+
+    function renderWorkflowSection(section) {
+      return `
+        <section class="workflow-section">
+          <div class="workflow-section-head">
+            <div>
+              <h3 class="workflow-section-title">${htmlText(section.title)} Workflow</h3>
+              <div class="workflow-section-subtitle">${htmlText(section.subtitle)}</div>
+            </div>
+            <div class="workflow-summary">
+              <span class="workflow-pill">Total<strong>${num(section.metrics.total)}</strong></span>
+              <span class="workflow-pill">Active<strong>${num(section.metrics.active)}</strong></span>
+              <span class="workflow-pill">Avg Age<strong>${section.metrics.avgAge}</strong></span>
+            </div>
+          </div>
+          <div class="workflow-track">
+            ${section.pipeline.map((stage, index) => workflowNode(stage, index, section.pipeline.length)).join("")}
+          </div>
+        </section>`;
+    }
+
+    function workflowNode(stage, index, count) {
+      const total = stage.qty || 0;
+      const aging = stage.aging || [];
+      const maxAging = Math.max(...aging.map(item => item.qty || 0), 1);
+      const bars = aging.map(item => {
+        const qty = item.qty || 0;
+        const width = qty ? Math.max(6, qty / maxAging * 100) : 0;
+        const percent = total ? (qty / total * 100).toFixed(1) : "0.0";
+        return `
+          <div class="workflow-aging-row">
+            <span class="workflow-aging-label">${htmlText(item.label.replace(" days", ""))}</span>
+            <span class="workflow-aging-track"><span class="workflow-aging-fill" style="--bar-width:${width}%;--bar-min:${qty ? "4px" : "0"}"></span></span>
+            <span class="workflow-aging-value">${num(qty)} (${percent}%)</span>
+          </div>`;
+      }).join("");
+      return `
+        <div class="workflow-step">
+          <article class="workflow-node" style="--stage-color:${stage.color || "#7890a5"}">
+            <h4 class="workflow-node-title">${htmlText(stage.status)}</h4>
+            <div class="workflow-node-metrics">
+              <div class="workflow-metric">Tickets<strong>${num(stage.qty)}</strong></div>
+              <div class="workflow-metric">Avg Age<strong>${stage.avgAge}</strong></div>
+            </div>
+            <div class="workflow-aging">
+              <div class="workflow-aging-chart">${bars}</div>
+            </div>
+            <div class="workflow-raw">C4C: ${htmlText((stage.rawStatuses || []).join(", ") || "No current tickets")}</div>
+          </article>
+          ${index < count - 1 ? `<div class="workflow-arrow">-&gt;</div>` : ""}
+        </div>`;
+    }
+
+    function avgAgeFromBuckets(aging) {
+      const total = aging.reduce((sum, item) => sum + (item.qty || 0), 0);
+      if (!total) return "0d";
+      const weighted = aging.reduce((sum, item) => sum + (item.qty || 0) * (workflowAgeMidpoints[item.label] || 0), 0);
+      return Math.round(weighted / total) + "d";
+    }
+
+    function workflowMetrics(pipeline) {
+      const total = pipeline.reduce((sum, stage) => sum + (stage.qty || 0), 0);
+      const active = pipeline
+        .filter(stage => !isTerminalWorkflowStage(stage.status))
+        .reduce((sum, stage) => sum + (stage.qty || 0), 0);
+      const aging = Object.keys(workflowAgingColors).map(label => ({
+        label,
+        qty: pipeline.reduce((sum, stage) => sum + ((stage.aging || []).find(item => item.label === label)?.qty || 0), 0)
+      }));
+      return { total, active, avgAge: avgAgeFromBuckets(aging) };
+    }
+
+    function isTerminalWorkflowStage(status) {
+      return /completed \/ invoiced|pdi completed|cancelled/i.test(status || "");
     }
 
     function emptyModule(config) {
