@@ -1,0 +1,993 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/evxhav",
+    "id": "evxhav",
+    "slide": 7,
+    "layoutId": "ef613379-def1-4201-b2fb-003ea4f98fbd",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "7578f748-8b46-4da5-b6f3-2726d4aee08d",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1600,
+      "height": 900
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ef613379-def1-4201-b2fb-003ea4f98fbd",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "7578f748-8b46-4da5-b6f3-2726d4aee08d",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "7578f748-8b46-4da5-b6f3-2726d4aee08d",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9wvi9k3",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1600,
+        18
+      ],
+      "geometry": "rect",
+      "fillColor": "#0F766E",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcnudoju",
+      "id": "2",
+      "bbox": [
+        80,
+        50,
+        500,
+        28
+      ],
+      "geometry": "rect",
+      "text": "PRODUCTIVITY 2",
+      "textPreview": "PRODUCTIVITY 2",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PRODUCTIVITY 2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PRODUCTIVITY 2",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#0F766E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PRODUCTIVITY 2",
+              "fontSize": 16,
+              "color": "#0F766E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbedkj29",
+      "id": "3",
+      "bbox": [
+        80,
+        78,
+        1200,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Technician utilisation needs calendar capacity",
+      "textPreview": "Technician utilisation needs calendar capacity",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "fontSize": 44,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Technician utilisation needs calendar capacity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Technician utilisation needs calendar capacity",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Technician utilisation needs calendar capacity",
+              "fontSize": 44,
+              "color": "#111827",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3e5wfy1k",
+      "id": "4",
+      "bbox": [
+        80,
+        150,
+        1440,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#CBD5E1",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2dwvmtkz",
+      "id": "5",
+      "bbox": [
+        1460,
+        62,
+        70,
+        34
+      ],
+      "geometry": "rect",
+      "text": "07",
+      "textPreview": "07",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "07"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "07",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "07",
+              "fontSize": 20,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg7eh8jq",
+      "id": "6",
+      "bbox": [
+        90,
+        245,
+        7,
+        420
+      ],
+      "geometry": "rect",
+      "fillColor": "#DC2626",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fedo325",
+      "id": "7",
+      "bbox": [
+        112,
+        243,
+        1396,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Technician Utilisation",
+      "textPreview": "Technician Utilisation",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Technician Utilisation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Technician Utilisation",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Technician Utilisation",
+              "fontSize": 24,
+              "color": "#111827",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ripwjy1w",
+      "id": "8",
+      "bbox": [
+        112,
+        279,
+        360,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Target: >90%",
+      "textPreview": "Target: >90%",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Target: >90%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Target: >90%",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#0F766E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Target: >90%",
+              "fontSize": 16,
+              "color": "#0F766E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qhgvqt0b",
+      "id": "9",
+      "bbox": [
+        490,
+        279,
+        1000,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Source: C4C Labour + Technician calendar",
+      "textPreview": "Source: C4C Labour + Technician calendar",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Source: C4C Labour + Technician calendar"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Source: C4C Labour + Technician calendar",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Source: C4C Labour + Technician calendar",
+              "fontSize": 16,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nqp4nih",
+      "id": "10",
+      "bbox": [
+        112,
+        317,
+        1376,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E5E7EB",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/poz6dsj2",
+      "id": "11",
+      "bbox": [
+        112,
+        331,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Formula",
+      "textPreview": "Formula",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Formula"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Formula",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Formula",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2l872d0b",
+      "id": "12",
+      "bbox": [
+        245,
+        331,
+        1240,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Productive / Claimed Hours / Available Hours",
+      "textPreview": "Productive / Claimed Hours / Available Hours",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Productive / Claimed Hours / Available Hours"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Productive / Claimed Hours / Available Hours",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Productive / Claimed Hours / Available Hours",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3mhobi1w",
+      "id": "13",
+      "bbox": [
+        112,
+        389,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Field",
+      "textPreview": "Field",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/crqp8nit",
+      "id": "14",
+      "bbox": [
+        245,
+        389,
+        1240,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Field in System: ____________________",
+      "textPreview": "Field in System: ____________________",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field in System: ____________________"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field in System: ____________________",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field in System: ____________________",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsj6hsjy",
+      "id": "15",
+      "bbox": [
+        112,
+        433,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Next Step",
+      "textPreview": "Next Step",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Next Step"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Next Step",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Next Step",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qp876d0n",
+      "id": "16",
+      "bbox": [
+        245,
+        433,
+        1240,
+        50
+      ],
+      "geometry": "rect",
+      "text": "Confirm roster / calendar available hours and productive hour logic.",
+      "textPreview": "Confirm roster / calendar available hours and productive hour logic.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Confirm roster / calendar available hours and productive hour logic."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Confirm roster / calendar available hours and productive hour logic.",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Confirm roster / calendar available hours and productive hour logic.",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqhofi18",
+      "id": "17",
+      "bbox": [
+        245,
+        613,
+        738,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Alternative: claimed hours / working-day capacity.",
+      "textPreview": "Alternative: claimed hours / working-day capacity.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Alternative: claimed hours / working-day capacity."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Alternative: claimed hours / working-day capacity.",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alternative: claimed hours / working-day capacity.",
+              "fontSize": 15,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fapc7ip",
+      "id": "18",
+      "bbox": [
+        1080,
+        613,
+        385,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Owner: Service Managers / C4C owner",
+      "textPreview": "Owner: Service Managers / C4C owner",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Owner: Service Managers / C4C owner"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Owner: Service Managers / C4C owner",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Owner: Service Managers / C4C owner",
+              "fontSize": 15,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

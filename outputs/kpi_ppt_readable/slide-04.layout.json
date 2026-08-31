@@ -1,0 +1,1700 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/k6at8w",
+    "id": "k6at8w",
+    "slide": 4,
+    "layoutId": "ef613379-def1-4201-b2fb-003ea4f98fbd",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "7578f748-8b46-4da5-b6f3-2726d4aee08d",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1600,
+      "height": 900
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ef613379-def1-4201-b2fb-003ea4f98fbd",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "7578f748-8b46-4da5-b6f3-2726d4aee08d",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "7578f748-8b46-4da5-b6f3-2726d4aee08d",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t0v65gva",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1600,
+        18
+      ],
+      "geometry": "rect",
+      "fillColor": "#0F766E",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6xk7a1cz",
+      "id": "2",
+      "bbox": [
+        80,
+        50,
+        500,
+        28
+      ],
+      "geometry": "rect",
+      "text": "FINANCIAL 2",
+      "textPreview": "FINANCIAL 2",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FINANCIAL 2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FINANCIAL 2",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#0F766E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "FINANCIAL 2",
+              "fontSize": 16,
+              "color": "#0F766E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7yto36d4",
+      "id": "3",
+      "bbox": [
+        80,
+        78,
+        1200,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Financial margin KPIs need labour cost mapping",
+      "textPreview": "Financial margin KPIs need labour cost mapping",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "fontSize": 44,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Financial margin KPIs need labour cost mapping"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Financial margin KPIs need labour cost mapping",
+          "resolvedTextStyle": {
+            "fontSize": 44,
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Financial margin KPIs need labour cost mapping",
+              "fontSize": 44,
+              "color": "#111827",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3mpgvu1",
+      "id": "4",
+      "bbox": [
+        80,
+        150,
+        1440,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#CBD5E1",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4v69gvm",
+      "id": "5",
+      "bbox": [
+        1460,
+        62,
+        70,
+        34
+      ],
+      "geometry": "rect",
+      "text": "04",
+      "textPreview": "04",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "04"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "04",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "04",
+              "fontSize": 20,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u147elcv",
+      "id": "6",
+      "bbox": [
+        90,
+        205,
+        7,
+        300
+      ],
+      "geometry": "rect",
+      "fillColor": "#DC2626",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f2do7qdg",
+      "id": "7",
+      "bbox": [
+        112,
+        203,
+        1396,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Gross Profit Margin",
+      "textPreview": "Gross Profit Margin",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gross Profit Margin"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gross Profit Margin",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gross Profit Margin",
+              "fontSize": 24,
+              "color": "#111827",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7ip4ruh",
+      "id": "8",
+      "bbox": [
+        112,
+        239,
+        360,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Target: 58% to 65%",
+      "textPreview": "Target: 58% to 65%",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Target: 58% to 65%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Target: 58% to 65%",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#0F766E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Target: 58% to 65%",
+              "fontSize": 16,
+              "color": "#0F766E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x8b6xwv2",
+      "id": "9",
+      "bbox": [
+        490,
+        239,
+        1000,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Source: SAP Invoice + SAP PO + HR / Finance",
+      "textPreview": "Source: SAP Invoice + SAP PO + HR / Finance",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Source: SAP Invoice + SAP PO + HR / Finance"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Source: SAP Invoice + SAP PO + HR / Finance",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Source: SAP Invoice + SAP PO + HR / Finance",
+              "fontSize": 16,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t8vyhsfq",
+      "id": "10",
+      "bbox": [
+        112,
+        277,
+        1376,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E5E7EB",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87mxony5",
+      "id": "11",
+      "bbox": [
+        112,
+        291,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Formula",
+      "textPreview": "Formula",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Formula"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Formula",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Formula",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/76tgf2xk",
+      "id": "12",
+      "bbox": [
+        245,
+        291,
+        1240,
+        48
+      ],
+      "geometry": "rect",
+      "text": "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue",
+      "textPreview": "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65kfmxgz",
+      "id": "13",
+      "bbox": [
+        112,
+        349,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Field",
+      "textPreview": "Field",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwvylcf2",
+      "id": "14",
+      "bbox": [
+        245,
+        349,
+        1240,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Field in System: ____________________",
+      "textPreview": "Field in System: ____________________",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field in System: ____________________"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field in System: ____________________",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field in System: ____________________",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbmxs7yh",
+      "id": "15",
+      "bbox": [
+        112,
+        393,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Next Step",
+      "textPreview": "Next Step",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Next Step"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Next Step",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Next Step",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vadgj2xw",
+      "id": "16",
+      "bbox": [
+        245,
+        393,
+        1240,
+        50
+      ],
+      "geometry": "rect",
+      "text": "Confirm revenue, cost and expense allocation rules.",
+      "textPreview": "Confirm revenue, cost and expense allocation rules.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Confirm revenue, cost and expense allocation rules."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Confirm revenue, cost and expense allocation rules.",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Confirm revenue, cost and expense allocation rules.",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u94fqxgb",
+      "id": "17",
+      "bbox": [
+        245,
+        453,
+        738,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Alternative: report gross margin before full expense allocation.",
+      "textPreview": "Alternative: report gross margin before full expense allocation.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Alternative: report gross margin before full expense allocation."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Alternative: report gross margin before full expense allocation.",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alternative: report gross margin before full expense allocation.",
+              "fontSize": 15,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/50fypcfy",
+      "id": "18",
+      "bbox": [
+        1080,
+        453,
+        385,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Owner: Finance / Mary",
+      "textPreview": "Owner: Finance / Mary",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Owner: Finance / Mary"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Owner: Finance / Mary",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Owner: Finance / Mary",
+              "fontSize": 15,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4z6xwryd",
+      "id": "19",
+      "bbox": [
+        90,
+        530,
+        7,
+        300
+      ],
+      "geometry": "rect",
+      "fillColor": "#DC2626",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o3ehsv6p",
+      "id": "20",
+      "bbox": [
+        112,
+        528,
+        1396,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Service Gross %",
+      "textPreview": "Service Gross %",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Service Gross %"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Service Gross %",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Service Gross %",
+              "fontSize": 24,
+              "color": "#111827",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4nil0na",
+      "id": "21",
+      "bbox": [
+        112,
+        564,
+        360,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Target: 65% to 75%",
+      "textPreview": "Target: 65% to 75%",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Target: 65% to 75%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Target: 65% to 75%",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#0F766E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Target: 65% to 75%",
+              "fontSize": 16,
+              "color": "#0F766E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2hczqloj",
+      "id": "22",
+      "bbox": [
+        490,
+        564,
+        1000,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Source: SAP Invoice + HR / Payroll",
+      "textPreview": "Source: SAP Invoice + HR / Payroll",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Source: SAP Invoice + HR / Payroll"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Source: SAP Invoice + HR / Payroll",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Source: SAP Invoice + HR / Payroll",
+              "fontSize": 16,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ni50jq54",
+      "id": "23",
+      "bbox": [
+        112,
+        602,
+        1376,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E5E7EB",
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7e1wv6l",
+      "id": "24",
+      "bbox": [
+        112,
+        616,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Formula",
+      "textPreview": "Formula",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Formula"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Formula",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Formula",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x8nip0n6",
+      "id": "25",
+      "bbox": [
+        245,
+        616,
+        1240,
+        48
+      ],
+      "geometry": "rect",
+      "text": "(Labor Sales - Direct Labor Cost) / Labor Sales",
+      "textPreview": "(Labor Sales - Direct Labor Cost) / Labor Sales",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "(Labor Sales - Direct Labor Cost) / Labor Sales"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "(Labor Sales - Direct Labor Cost) / Labor Sales",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "(Labor Sales - Direct Labor Cost) / Labor Sales",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5wzu5of",
+      "id": "26",
+      "bbox": [
+        112,
+        674,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Field",
+      "textPreview": "Field",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b650nq50",
+      "id": "27",
+      "bbox": [
+        245,
+        674,
+        1240,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Field in System: ____________________",
+      "textPreview": "Field in System: ____________________",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field in System: ____________________"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field in System: ____________________",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field in System: ____________________",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sbuhkb6h",
+      "id": "28",
+      "bbox": [
+        112,
+        718,
+        130,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Next Step",
+      "textPreview": "Next Step",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Next Step"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Next Step",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#64748B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Next Step",
+              "fontSize": 16,
+              "color": "#64748B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tc3idgn2",
+      "id": "29",
+      "bbox": [
+        245,
+        718,
+        1240,
+        50
+      ],
+      "geometry": "rect",
+      "text": "Confirm labour sales and direct labour cost source.",
+      "textPreview": "Confirm labour sales and direct labour cost source.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#111827",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Confirm labour sales and direct labour cost source."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Confirm labour sales and direct labour cost source.",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#111827",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Confirm labour sales and direct labour cost source.",
+              "fontSize": 17,
+              "color": "#111827",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v69kzepk",
+      "id": "30",
+      "bbox": [
+        245,
+        778,
+        738,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Alternative: overview-only service gross until People ID is mapped.",
+      "textPreview": "Alternative: overview-only service gross until People ID is mapped.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Alternative: overview-only service gross until People ID is mapped."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Alternative: overview-only service gross until People ID is mapped.",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alternative: overview-only service gross until People ID is mapped.",
+              "fontSize": 15,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u503q98z",
+      "id": "31",
+      "bbox": [
+        1080,
+        778,
+        385,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Owner: Finance / HR",
+      "textPreview": "Owner: Finance / HR",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Owner: Finance / HR"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Owner: Finance / HR",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Owner: Finance / HR",
+              "fontSize": 15,
+              "color": "#64748B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

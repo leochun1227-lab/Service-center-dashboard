@@ -1,0 +1,866 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/y90nupkv",
+    "id": "y90nupkv",
+    "slide": 1,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "DEFAULT",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Aptos Display"
+      },
+      "minorFont": {
+        "latinTypeface": "Aptos"
+      }
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "DEFAULT",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/by9crip0",
+      "id": "1",
+      "name": "Table 4",
+      "bbox": [
+        83.13,
+        54.01,
+        1028.12,
+        599.87
+      ],
+      "text": "KPI | What It Measures\nAverage Repair Order Amount | How much revenue is generated on average from each repair order\nEffective Labour Rate | How much of the posted labour rate is actually achieved\nGross Profit Margin | Overall profitability of Service and Parts combined\nService Gross % | Profitability of labour/service sales\nParts Gross % | Profitability of parts sales\nAbsorption Rate | Whether Service and Parts gross profit can cover operating expenses\nTechnician Productivity | How many billable/sold hours are generated from each available working hour\nTechnician Efficiency | How efficiently technicians complete work compared with standard/sold hours\nTechnician Utilisation | How much of a technician’s available working time is actually spent on productive work\nComeback Rate | How often vehicles return for the same issue after a repair\nQuotation Approval Rate | How often customers approve submitted repair quotations\nCustomer Retention Rate | How successfully the service centre retains existing customers\nRetail Repair Order (RO) Growth Rate | Whether the volume of customer-paid repair orders is growing year over year\nService Appointment Lead Time | How long customers need to wait from booking request to service appointment",
+      "textPreview": "KPI | What It Measures | Average Repair Order Amount | How much revenue is generated on average from each repair order | Effective Labour...",
+      "rows": 15,
+      "cols": 2,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            83.13,
+            54.01,
+            514.06,
+            25.8
+          ],
+          "text": "KPI",
+          "textPreview": "KPI",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "KPI",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "KPI",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            597.19,
+            54.01,
+            514.06,
+            25.8
+          ],
+          "text": "What It Measures",
+          "textPreview": "What It Measures",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "What It Measures",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "What It Measures",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            83.13,
+            79.81,
+            514.06,
+            45.15
+          ],
+          "text": "Average Repair Order Amount",
+          "textPreview": "Average Repair Order Amount",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Average Repair Order Amount",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Average Repair Order Amount",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            597.19,
+            79.81,
+            514.06,
+            45.15
+          ],
+          "text": "How much revenue is generated on average from each repair order",
+          "textPreview": "How much revenue is generated on average from each repair order",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How much revenue is generated on average from each repair order",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How much revenue is generated on average from each repair order",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            83.13,
+            124.96,
+            514.06,
+            45.15
+          ],
+          "text": "Effective Labour Rate",
+          "textPreview": "Effective Labour Rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Effective Labour Rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Effective Labour Rate",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            597.19,
+            124.96,
+            514.06,
+            45.15
+          ],
+          "text": "How much of the posted labour rate is actually achieved",
+          "textPreview": "How much of the posted labour rate is actually achieved",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How much of the posted labour rate is actually achieved",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How much of the posted labour rate is actually achieved",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            83.13,
+            170.11,
+            514.06,
+            25.8
+          ],
+          "text": "Gross Profit Margin",
+          "textPreview": "Gross Profit Margin",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Gross Profit Margin",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Gross Profit Margin",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            597.19,
+            170.11,
+            514.06,
+            25.8
+          ],
+          "text": "Overall profitability of Service and Parts combined",
+          "textPreview": "Overall profitability of Service and Parts combined",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Overall profitability of Service and Parts combined",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Overall profitability of Service and Parts combined",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            83.13,
+            195.91,
+            514.06,
+            25.8
+          ],
+          "text": "Service Gross %",
+          "textPreview": "Service Gross %",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Service Gross %",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Service Gross %",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            597.19,
+            195.91,
+            514.06,
+            25.8
+          ],
+          "text": "Profitability of labour/service sales",
+          "textPreview": "Profitability of labour/service sales",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Profitability of labour/service sales",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Profitability of labour/service sales",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            83.13,
+            221.71,
+            514.06,
+            25.8
+          ],
+          "text": "Parts Gross %",
+          "textPreview": "Parts Gross %",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Parts Gross %",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Parts Gross %",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            597.19,
+            221.71,
+            514.06,
+            25.8
+          ],
+          "text": "Profitability of parts sales",
+          "textPreview": "Profitability of parts sales",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Profitability of parts sales",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Profitability of parts sales",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            83.13,
+            247.52,
+            514.06,
+            45.15
+          ],
+          "text": "Absorption Rate",
+          "textPreview": "Absorption Rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Absorption Rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Absorption Rate",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            597.19,
+            247.52,
+            514.06,
+            45.15
+          ],
+          "text": "Whether Service and Parts gross profit can cover operating expenses",
+          "textPreview": "Whether Service and Parts gross profit can cover operating expenses",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Whether Service and Parts gross profit can cover operating expenses",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Whether Service and Parts gross profit can cover operating expenses",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            83.13,
+            292.67,
+            514.06,
+            45.15
+          ],
+          "text": "Technician Productivity",
+          "textPreview": "Technician Productivity",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Technician Productivity",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Technician Productivity",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            597.19,
+            292.67,
+            514.06,
+            45.15
+          ],
+          "text": "How many billable/sold hours are generated from each available working hour",
+          "textPreview": "How many billable/sold hours are generated from each available working hour",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How many billable/sold hours are generated from each available working hour",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How many billable/sold hours are generated from each available working hour",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 9,
+          "column": 1,
+          "bbox": [
+            83.13,
+            337.82,
+            514.06,
+            45.15
+          ],
+          "text": "Technician Efficiency",
+          "textPreview": "Technician Efficiency",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Technician Efficiency",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Technician Efficiency",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 9,
+          "column": 2,
+          "bbox": [
+            597.19,
+            337.82,
+            514.06,
+            45.15
+          ],
+          "text": "How efficiently technicians complete work compared with standard/sold hours",
+          "textPreview": "How efficiently technicians complete work compared with standard/sold hours",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How efficiently technicians complete work compared with standard/sold hours",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How efficiently technicians complete work compared with standard/sold hours",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 10,
+          "column": 1,
+          "bbox": [
+            83.13,
+            382.97,
+            514.06,
+            45.15
+          ],
+          "text": "Technician Utilisation",
+          "textPreview": "Technician Utilisation",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Technician Utilisation",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Technician Utilisation",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 10,
+          "column": 2,
+          "bbox": [
+            597.19,
+            382.97,
+            514.06,
+            45.15
+          ],
+          "text": "How much of a technician’s available working time is actually spent on productive work",
+          "textPreview": "How much of a technician’s available working time is actually spent on productive work",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How much of a technician’s available working time is actually spent on productive work",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How much of a technician’s available working time is actually spent on productive work",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 11,
+          "column": 1,
+          "bbox": [
+            83.13,
+            428.13,
+            514.06,
+            45.15
+          ],
+          "text": "Comeback Rate",
+          "textPreview": "Comeback Rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Comeback Rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Comeback Rate",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 11,
+          "column": 2,
+          "bbox": [
+            597.19,
+            428.13,
+            514.06,
+            45.15
+          ],
+          "text": "How often vehicles return for the same issue after a repair",
+          "textPreview": "How often vehicles return for the same issue after a repair",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How often vehicles return for the same issue after a repair",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How often vehicles return for the same issue after a repair",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 12,
+          "column": 1,
+          "bbox": [
+            83.13,
+            473.28,
+            514.06,
+            45.15
+          ],
+          "text": "Quotation Approval Rate",
+          "textPreview": "Quotation Approval Rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Quotation Approval Rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Quotation Approval Rate",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 12,
+          "column": 2,
+          "bbox": [
+            597.19,
+            473.28,
+            514.06,
+            45.15
+          ],
+          "text": "How often customers approve submitted repair quotations",
+          "textPreview": "How often customers approve submitted repair quotations",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How often customers approve submitted repair quotations",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How often customers approve submitted repair quotations",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 13,
+          "column": 1,
+          "bbox": [
+            83.13,
+            518.43,
+            514.06,
+            45.15
+          ],
+          "text": "Customer Retention Rate",
+          "textPreview": "Customer Retention Rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Customer Retention Rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Customer Retention Rate",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 13,
+          "column": 2,
+          "bbox": [
+            597.19,
+            518.43,
+            514.06,
+            45.15
+          ],
+          "text": "How successfully the service centre retains existing customers",
+          "textPreview": "How successfully the service centre retains existing customers",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How successfully the service centre retains existing customers",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How successfully the service centre retains existing customers",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 14,
+          "column": 1,
+          "bbox": [
+            83.13,
+            563.58,
+            514.06,
+            45.15
+          ],
+          "text": "Retail Repair Order (RO) Growth Rate",
+          "textPreview": "Retail Repair Order (RO) Growth Rate",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Retail Repair Order (RO) Growth Rate",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Retail Repair Order (RO) Growth Rate",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 14,
+          "column": 2,
+          "bbox": [
+            597.19,
+            563.58,
+            514.06,
+            45.15
+          ],
+          "text": "Whether the volume of customer-paid repair orders is growing year over year",
+          "textPreview": "Whether the volume of customer-paid repair orders is growing year over year",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Whether the volume of customer-paid repair orders is growing year over year",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Whether the volume of customer-paid repair orders is growing year over year",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 15,
+          "column": 1,
+          "bbox": [
+            83.13,
+            608.73,
+            514.06,
+            45.15
+          ],
+          "text": "Service Appointment Lead Time",
+          "textPreview": "Service Appointment Lead Time",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Service Appointment Lead Time",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Service Appointment Lead Time",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 15,
+          "column": 2,
+          "bbox": [
+            597.19,
+            608.73,
+            514.06,
+            45.15
+          ],
+          "text": "How long customers need to wait from booking request to service appointment",
+          "textPreview": "How long customers need to wait from booking request to service appointment",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "How long customers need to wait from booking request to service appointment",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "How long customers need to wait from booking request to service appointment",
+                  "fontSize": 18.67
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

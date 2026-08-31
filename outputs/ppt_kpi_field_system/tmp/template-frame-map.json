@@ -1,0 +1,48 @@
+{
+  "outputSlides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "overview",
+      "reuseMode": "duplicate-slide",
+      "editTargets": []
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 2,
+      "narrativeRole": "financial KPI formulas",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {
+          "action": "rewrite-and-reposition",
+          "reason": "Add Field in System before Next Step and rebalance action columns."
+        }
+      ]
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 3,
+      "narrativeRole": "technician KPI formulas",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {
+          "action": "rewrite-and-reposition",
+          "reason": "Add Field in System before Next Step and rebalance action columns."
+        }
+      ]
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 4,
+      "narrativeRole": "operations and customer KPI formulas",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {
+          "action": "rewrite-and-reposition",
+          "reason": "Add Field in System before Next Step and rebalance action columns."
+        }
+      ]
+    }
+  ],
+  "omittedSourceSlides": []
+}

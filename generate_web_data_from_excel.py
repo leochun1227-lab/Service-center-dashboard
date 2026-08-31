@@ -556,7 +556,7 @@ def completed_date(row: pd.Series) -> pd.Timestamp | pd.NaT:
     is_repair = ticket_type == "Z007" or ticket_type_text == "repair ticket"
     if is_repair and status == CREATE_INVOICE_STATUS:
         return row.get("BillingDate") if pd.notna(row.get("BillingDate")) else row.get("ChangeDate")
-    if is_pdi and status == "claim time ticket":
+    if is_pdi and status in {"repair completed", "claim time ticket"}:
         return row.get("ChangeDate") if pd.notna(row.get("ChangeDate")) else row.get("CreatedDate")
     return pd.NaT
 

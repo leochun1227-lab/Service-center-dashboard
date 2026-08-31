@@ -1,0 +1,2438 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/hwbqtkby",
+    "id": "hwbqtkby",
+    "slide": 2,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "DEFAULT",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Aptos Display"
+      },
+      "minorFont": {
+        "latinTypeface": "Aptos"
+      }
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "DEFAULT",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9072xkry",
+      "id": "2",
+      "name": "Shape 0",
+      "bbox": [
+        0,
+        0,
+        1280,
+        13.44
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ozy1ofad",
+      "id": "3",
+      "name": "Text 1",
+      "bbox": [
+        59.52,
+        29.76,
+        364.8,
+        21.12
+      ],
+      "geometry": "rect",
+      "text": "FINANCIAL",
+      "textPreview": "FINANCIAL",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FINANCIAL"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FINANCIAL",
+          "runs": [
+            {
+              "index": 1,
+              "text": "FINANCIAL",
+              "fontSize": 12,
+              "typeface": "Aptos",
+              "color": "#088A85",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b29kza94",
+      "id": "4",
+      "name": "Text 2",
+      "bbox": [
+        59.52,
+        61.44,
+        1132.8,
+        43.2
+      ],
+      "geometry": "rect",
+      "text": "Service Centre KPI Formulas",
+      "textPreview": "Service Centre KPI Formulas",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Service Centre KPI Formulas"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Service Centre KPI Formulas",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Service Centre KPI Formulas",
+              "fontSize": 32,
+              "typeface": "Aptos Display",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a10jqpsj",
+      "id": "5",
+      "name": "Shape 3",
+      "bbox": [
+        59.52,
+        128.44,
+        1161.6,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "#D0D5DD",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4r21kru",
+      "id": "6",
+      "name": "Shape 4",
+      "bbox": [
+        69.12,
+        195.84,
+        1142.4,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "rgba(208, 213, 221, 0.75)",
+      "lineWidth": 0.6
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3i1sfa9",
+      "id": "7",
+      "name": "Shape 5",
+      "bbox": [
+        69.12,
+        144,
+        5.76,
+        47.04
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r65knqtk",
+      "id": "8",
+      "name": "Text 6",
+      "bbox": [
+        86.4,
+        136.32,
+        185,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Average Order Amount",
+      "textPreview": "Average Order Amount",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Average Order Amount"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Average Order Amount",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#172033",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Average Order Amount",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5wjelsz",
+      "id": "9",
+      "name": "Text 7",
+      "bbox": [
+        285,
+        136.32,
+        460,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Total Order Revenue(SAP Invoice, internal found in C4C) ÷ Number of Repair Orders(C4C)",
+      "textPreview": "Total Order Revenue(SAP Invoice, internal found in C4C) ÷ Number of Repair Orders(C4C)",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Total Order Revenue(SAP Invoice, internal found in C4C) ÷ Number of Repair"
+          },
+          {
+            "index": 2,
+            "text": "Orders(C4C)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Total Order Revenue(SAP Invoice, internal found in C4C) ÷ Number of Repair Orders(C4C)",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Total Order Revenue(SAP Invoice",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 2,
+              "text": ", ",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 3,
+              "text": "internal found in C4C) ÷ Number of Repair Orders(C4C)",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ove9o7yd",
+      "id": "10",
+      "name": "Shape 8",
+      "bbox": [
+        69.12,
+        265.92,
+        1142.4,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "rgba(208, 213, 221, 0.75)",
+      "lineWidth": 0.6
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9wnqhczy",
+      "id": "11",
+      "name": "Shape 9",
+      "bbox": [
+        69.12,
+        214.08,
+        5.76,
+        47.04
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mtwrmxg7",
+      "id": "12",
+      "name": "Text 10",
+      "bbox": [
+        86.4,
+        206.4,
+        185,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Effective Labor Rate",
+      "textPreview": "Effective Labor Rate",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Effective Labor Rate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Effective Labor Rate",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#172033",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Effective Labor Rate",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nu58f2hs",
+      "id": "13",
+      "name": "Text 11",
+      "bbox": [
+        285,
+        206.4,
+        405,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Target: >90% of posted rate  Total Labor Revenue(missing) ÷ Labor Hours Sold( C4C) \nno called function yet, next step: system need add new function for it ",
+      "textPreview": "Target: >90% of posted rate  Total Labor Revenue(missing) ÷ Labor Hours Sold( C4C)  | no called function yet, next step: system need add ...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Target: >90% of posted rate  Total Labor Revenue(missing) ÷ Labor Hours"
+          },
+          {
+            "index": 2,
+            "text": "Sold( C4C)"
+          },
+          {
+            "index": 3,
+            "text": "no called function yet, next step: system need add new function for it"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Target: >90% of posted rate  Total Labor Revenue(missing) ÷ Labor Hours Sold( C4C) ",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Target: >90% of posted rate ",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "italic": true
+            },
+            {
+              "index": 2,
+              "text": " Total Labor Revenue(missing) ÷ Labor Hours Sold( C4C) ",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "no called function yet, next step: system need add new function for it ",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "no called function yet, next step: system need add new function for it",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 2,
+              "text": " ",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "italic": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjy9sry9",
+      "id": "14",
+      "name": "Shape 12",
+      "bbox": [
+        69.12,
+        374.74,
+        1142.4,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "rgba(208, 213, 221, 0.75)",
+      "lineWidth": 0.6
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/do3q9szq",
+      "id": "19",
+      "name": "Shape 17",
+      "bbox": [
+        69.12,
+        294.86,
+        5.76,
+        62.4
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t8byxkn2",
+      "id": "20",
+      "name": "Text 18",
+      "bbox": [
+        86.4,
+        290.39,
+        185,
+        67.2
+      ],
+      "geometry": "rect",
+      "text": "Gross Profit Margin",
+      "textPreview": "Gross Profit Margin",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Gross Profit Margin"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Gross Profit Margin",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#172033",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Gross Profit Margin",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s72xofmh",
+      "id": "21",
+      "name": "Text 19",
+      "bbox": [
+        285,
+        264,
+        405,
+        132.48
+      ],
+      "geometry": "rect",
+      "text": "(Parts Revenue( )+ Labor Revenue() − Parts Cost ()− Labor Cost(HR PAYSLIP) ÷ (Parts Revenue + Labor Revenue) × 100%   Target: 58% to 65%  so retail price\n",
+      "textPreview": "(Parts Revenue( )+ Labor Revenue() − Parts Cost ()− Labor Cost(HR PAYSLIP) ÷ (Parts Revenue + Labor Revenue) × 100%   Target: 58% to 65% ...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "(Parts Revenue( )+ Labor Revenue() − Parts Cost ()− Labor Cost(HR PAYSLIP)"
+          },
+          {
+            "index": 2,
+            "text": "÷ (Parts Revenue + Labor Revenue) × 100%   Target: 58% to 65%  so retail"
+          },
+          {
+            "index": 3,
+            "text": "price"
+          },
+          {
+            "index": 4,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "(Parts Revenue( )+ Labor Revenue() − Parts Cost ()− Labor Cost(HR PAYSLIP) ÷ (Parts Revenue + Labor Revenue) × 100%   Target: 58% to 65%  so retail price",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "(Parts Revenue( )+ Labor Revenue() − Parts Cost ()− Labor Cost(HR PAYSLIP) ÷ (Parts Revenue + Labor Revenue) × 100%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 2,
+              "text": "   Target: 58% to 65%  so retail price",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "italic": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/76twva5c",
+      "id": "22",
+      "name": "Shape 20",
+      "bbox": [
+        69.12,
+        491.52,
+        1142.4,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "rgba(208, 213, 221, 0.75)",
+      "lineWidth": 0.6
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65kfmpor",
+      "id": "23",
+      "name": "Shape 21",
+      "bbox": [
+        69.12,
+        439.68,
+        5.76,
+        47.04
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcvy14ne",
+      "id": "24",
+      "name": "Text 22",
+      "bbox": [
+        86.4,
+        432,
+        185,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Service Gross %",
+      "textPreview": "Service Gross %",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Service Gross %"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Service Gross %",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#172033",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Service Gross %",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbmxszmt",
+      "id": "25",
+      "name": "Text 23",
+      "bbox": [
+        285,
+        432,
+        405,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "(Labor Sales (SAP Invoice, but missing labor People ID)− Direct Labor Cost ()) ÷ Labor Sales × 100%   Target: 65% to 75%",
+      "textPreview": "(Labor Sales (SAP Invoice, but missing labor People ID)− Direct Labor Cost ()) ÷ Labor Sales × 100%   Target: 65% to 75%",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "(Labor Sales (SAP Invoice, but missing labor People ID)− Direct Labor Cost"
+          },
+          {
+            "index": 2,
+            "text": "()) ÷ Labor Sales × 100%   Target: 65% to 75%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "(Labor Sales (SAP Invoice, but missing labor People ID)− Direct Labor Cost ()) ÷ Labor Sales × 100%   Target: 65% to 75%",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "(Labor Sales (SAP Invoice, but missing labor People ID)− Direct Labor Cost ()) ÷ Labor Sales × 100%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 2,
+              "text": "   Target: 65% to 75%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "italic": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fadgzu58",
+      "id": "26",
+      "name": "Shape 24",
+      "bbox": [
+        69.12,
+        561.6,
+        1142.4,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "rgba(208, 213, 221, 0.75)",
+      "lineWidth": 0.6
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u94fqp4n",
+      "id": "27",
+      "name": "Shape 25",
+      "bbox": [
+        69.12,
+        509.76,
+        5.76,
+        47.04
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0vy54na",
+      "id": "28",
+      "name": "Text 26",
+      "bbox": [
+        86.4,
+        502.08,
+        185,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Parts Gross %",
+      "textPreview": "Parts Gross %",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Parts Gross %"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Parts Gross %",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#172033",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Parts Gross %",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4zmxwzmp",
+      "id": "29",
+      "name": "Text 27",
+      "bbox": [
+        285,
+        502.08,
+        405,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "(Parts Sales(??SAP SO Invoice) − Parts Cost(??SAP PO Invoice)) ÷ Parts Sales × 100%   Target: 35% to 45%",
+      "textPreview": "(Parts Sales(??SAP SO Invoice) − Parts Cost(??SAP PO Invoice)) ÷ Parts Sales × 100%   Target: 35% to 45%",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "(Parts Sales(??SAP SO Invoice) − Parts Cost(??SAP PO Invoice)) ÷ Parts Sales"
+          },
+          {
+            "index": 2,
+            "text": "× 100%   Target: 35% to 45%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "(Parts Sales(??SAP SO Invoice) − Parts Cost(??SAP PO Invoice)) ÷ Parts Sales × 100%   Target: 35% to 45%",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "(Parts Sales(??SAP SO Invoice) − Parts Cost(??SAP PO Invoice)) ÷ Parts Sales × 100%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 2,
+              "text": "   Target: 35% to 45%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "italic": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mlgvq147",
+      "id": "30",
+      "name": "Shape 28",
+      "bbox": [
+        69.12,
+        631.68,
+        1142.4,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "rgba(208, 213, 221, 0.75)",
+      "lineWidth": 0.6
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nmpcj6ls",
+      "id": "31",
+      "name": "Shape 29",
+      "bbox": [
+        69.12,
+        579.84,
+        5.76,
+        47.04
+      ],
+      "geometry": "rect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#088A85",
+      "lineColor": "#088A85",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onydsbmd",
+      "id": "32",
+      "name": "Text 30",
+      "bbox": [
+        86.4,
+        572.16,
+        185,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "Absorption Rate*",
+      "textPreview": "Absorption Rate*",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Absorption Rate*"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Absorption Rate*",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#172033",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Absorption Rate*",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9o7ulg3y",
+      "id": "33",
+      "name": "Text 31",
+      "bbox": [
+        285,
+        572.16,
+        405,
+        51.84
+      ],
+      "geometry": "rect",
+      "text": "(Service Gross Profit + Parts Gross Profit) ÷ Operating Expenses( finance Sap, no assigned to cost centre for now) × 100%  ***        Target: 100% to 130%",
+      "textPreview": "(Service Gross Profit + Parts Gross Profit) ÷ Operating Expenses( finance Sap, no assigned to cost centre for now) × 100%  ***        Tar...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0.03,
+          "right": 0.03,
+          "bottom": 0.03,
+          "left": 0.03
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "(Service Gross Profit + Parts Gross Profit) ÷ Operating Expenses( finance"
+          },
+          {
+            "index": 2,
+            "text": "Sap, no assigned to cost centre for now) × 100%  ***        Target: 100% to"
+          },
+          {
+            "index": 3,
+            "text": "130%"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "(Service Gross Profit + Parts Gross Profit) ÷ Operating Expenses( finance Sap, no assigned to cost centre for now) × 100%  ***        Target: 100% to 130%",
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "color": "#172033",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "(Service Gross Profit + Parts Gross Profit) ÷ Operating Expenses( finance Sap, no assigned to cost centre for now) × 100%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033"
+            },
+            {
+              "index": 2,
+              "text": "  ***        Target: 100% to 130%",
+              "fontSize": 13.33,
+              "typeface": "Aptos",
+              "color": "#172033",
+              "italic": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a9gvulkj",
+      "id": "34",
+      "name": "Text 32",
+      "bbox": [
+        59.52,
+        679.68,
+        1161.6,
+        19.2
+      ],
+      "geometry": "rect",
+      "text": "Formula definitions should be confirmed against SAP / DMS / Finance data fields before dashboard build.",
+      "textPreview": "Formula definitions should be confirmed against SAP / DMS / Finance data fields before dashboard build.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Formula definitions should be confirmed against SAP / DMS / Finance data fields before dashboard build."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Formula definitions should be confirmed against SAP / DMS / Finance data fields before dashboard build.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Formula definitions should be confirmed against SAP / DMS / Finance data fields before dashboard build.",
+              "fontSize": 12.67,
+              "typeface": "Aptos",
+              "color": "#667085"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ba9cn6l4",
+      "id": "35",
+      "name": "Rectangle 34",
+      "bbox": [
+        137.06,
+        110.44,
+        185,
+        18
+      ],
+      "geometry": "rect",
+      "text": "KPI",
+      "textPreview": "KPI",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KPI"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KPI",
+          "resolvedTextStyle": {
+            "fontSize": 9.51,
+            "color": "#18233A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KPI",
+              "fontSize": 13.33,
+              "color": "#18233A",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wbidwb29",
+      "id": "36",
+      "name": "Rectangle 35",
+      "bbox": [
+        285,
+        111.32,
+        460,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Formula / Source",
+      "textPreview": "Formula / Source",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Formula / Source"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Formula / Source",
+          "resolvedTextStyle": {
+            "fontSize": 9.51,
+            "color": "#18233A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Formula / Source",
+              "fontSize": 13.33,
+              "color": "#18233A",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xcrupg3u",
+      "id": "37",
+      "name": "Rectangle 36",
+      "bbox": [
+        790,
+        112.11,
+        88,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Next Step",
+      "textPreview": "Next Step",
+      "resolvedFontSize": 9.2,
+      "resolvedTextStyle": {
+        "fontSize": 9.2,
+        "typeface": "Aptos",
+        "color": "#1F2937",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Next Step"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Next Step",
+          "resolvedTextStyle": {
+            "fontSize": 9.2,
+            "color": "#1F2937",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Next Step",
+              "fontSize": 9.2,
+              "color": "#1F2937",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/id0vylkf",
+      "id": "38",
+      "name": "Rectangle 37",
+      "bbox": [
+        882,
+        112.11,
+        58,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Priority",
+      "textPreview": "Priority",
+      "resolvedFontSize": 9.2,
+      "resolvedTextStyle": {
+        "fontSize": 9.2,
+        "typeface": "Aptos",
+        "color": "#1F2937",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Priority"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Priority",
+          "resolvedTextStyle": {
+            "fontSize": 9.2,
+            "color": "#1F2937",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Priority",
+              "fontSize": 9.2,
+              "color": "#1F2937",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/je9crql0",
+      "id": "39",
+      "name": "Rectangle 38",
+      "bbox": [
+        944,
+        112.11,
+        108,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Alternative",
+      "textPreview": "Alternative",
+      "resolvedFontSize": 9.2,
+      "resolvedTextStyle": {
+        "fontSize": 9.2,
+        "typeface": "Aptos",
+        "color": "#1F2937",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Alternative"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Alternative",
+          "resolvedTextStyle": {
+            "fontSize": 9.2,
+            "color": "#1F2937",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Alternative",
+              "fontSize": 9.2,
+              "color": "#1F2937",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ru5cbqd4",
+      "id": "40",
+      "name": "Rectangle 39",
+      "bbox": [
+        1056,
+        112.11,
+        68,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Due date",
+      "textPreview": "Due date",
+      "resolvedFontSize": 9.2,
+      "resolvedTextStyle": {
+        "fontSize": 9.2,
+        "typeface": "Aptos",
+        "color": "#1F2937",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Due date"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Due date",
+          "resolvedTextStyle": {
+            "fontSize": 9.2,
+            "color": "#1F2937",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Due date",
+              "fontSize": 9.2,
+              "color": "#1F2937",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69wbilcj",
+      "id": "41",
+      "name": "Rectangle 40",
+      "bbox": [
+        1128,
+        112.11,
+        82,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Responsible by",
+      "textPreview": "Responsible by",
+      "resolvedFontSize": 8.4,
+      "resolvedTextStyle": {
+        "fontSize": 8.4,
+        "typeface": "Aptos",
+        "color": "#1F2937",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Responsible by"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Responsible by",
+          "resolvedTextStyle": {
+            "fontSize": 8.4,
+            "color": "#1F2937",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Responsible by",
+              "fontSize": 8.4,
+              "color": "#1F2937",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tw7ud0va",
+      "id": "42",
+      "name": "Straight Connector 41",
+      "bbox": [
+        273,
+        133.32,
+        0,
+        496.68
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "#D8DEE8",
+      "lineWidth": 0.65
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1cba1wb",
+      "id": "49",
+      "name": "Straight Connector 48",
+      "bbox": [
+        69.12,
+        131.32,
+        1142.88,
+        0
+      ],
+      "geometry": "line",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Aptos",
+        "color": "tx1",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "lineColor": "#0F8F86",
+      "lineWidth": 1.1
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vq1o36x",
+      "id": "50",
+      "name": "Field in System header",
+      "bbox": [
+        702,
+        112.11,
+        84,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Field in System",
+      "textPreview": "Field in System",
+      "resolvedFontSize": 8.51,
+      "resolvedTextStyle": {
+        "fontSize": 8.51,
+        "typeface": "Aptos",
+        "color": "#1F2937",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Field in System"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Field in System",
+          "resolvedTextStyle": {
+            "fontSize": 8.51,
+            "color": "#1F2937",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Field in System",
+              "fontSize": 8.51,
+              "color": "#1F2937",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1wzix87i",
+      "id": "51",
+      "name": "Action column divider",
+      "bbox": [
+        700,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/et8zmto7",
+      "id": "52",
+      "name": "Action column divider",
+      "bbox": [
+        788,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zuh0vypc",
+      "id": "53",
+      "name": "Action column divider",
+      "bbox": [
+        880,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 43,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c76hk361",
+      "id": "54",
+      "name": "Action column divider",
+      "bbox": [
+        942,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 44,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8zit87m",
+      "id": "55",
+      "name": "Action column divider",
+      "bbox": [
+        1054,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 45,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5ozitov",
+      "id": "56",
+      "name": "Action column divider",
+      "bbox": [
+        1126,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    },
+    {
+      "order": 46,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r6x0rypg",
+      "id": "57",
+      "name": "Action column divider",
+      "bbox": [
+        1212,
+        130,
+        1,
+        496
+      ],
+      "geometry": "rect",
+      "fillColor": "#E2E8F0",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,1 @@
+Intentional deviations: slides 2-4 rebalance right-side action columns and slightly reduce formula text-box width to create space for Field in System. Existing source style, colors, row structure, and KPI copy are otherwise preserved.

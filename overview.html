@@ -84,14 +84,28 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      width: 100%;
       padding: 0 12px;
+      border: 1px solid transparent;
       border-radius: 7px;
+      background: transparent;
       color: #d8e5f2;
       font-size: 15px;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
+    }
+
+    .nav-item:hover {
+      border-color: rgba(145, 180, 214, 0.24);
+      background: rgba(145, 180, 214, 0.08);
+      color: #f3f8ff;
     }
 
     .nav-item.active {
       background: linear-gradient(135deg, #2874ef, #1c5fd2);
+      border-color: rgba(173, 207, 244, 0.28);
       box-shadow: 0 9px 22px rgba(39, 116, 239, 0.35);
       color: white;
       font-weight: 700;
@@ -187,6 +201,12 @@
       box-shadow: 0 12px 26px rgba(41, 112, 225, 0.32);
     }
 
+    body.module-mode .filters,
+    body.module-mode .refresh,
+    body.module-mode .export {
+      display: none;
+    }
+
     .kpis {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -251,6 +271,36 @@
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), var(--shadow);
       min-height: 0;
       overflow: hidden;
+    }
+
+    .data-muted-panel {
+      position: relative;
+    }
+
+    .data-muted-panel .panel-body {
+      min-height: 190px;
+      filter: blur(3px);
+      opacity: 0.34;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .data-muted-panel::after {
+      content: "TBC\A Data under validation";
+      white-space: pre;
+      position: absolute;
+      inset: 53px 14px 14px;
+      display: grid;
+      place-items: center;
+      border: 1px dashed rgba(142, 213, 224, 0.54);
+      border-radius: 7px;
+      background: rgba(5, 20, 36, 0.70);
+      color: #d7eaff;
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 850;
+      text-align: center;
+      z-index: 5;
     }
 
     .panel-head {
@@ -523,11 +573,205 @@
       font-size: 12px;
     }
 
+    [hidden] { display: none !important; }
+
+    .module-view {
+      display: grid;
+      gap: 14px;
+    }
+
+    .module-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(17, 49, 79, 0.88), rgba(8, 28, 48, 0.88));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), var(--shadow);
+    }
+
+    .module-kicker {
+      color: #8ed5e0;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .module-title {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .module-subtitle {
+      margin-top: 6px;
+      max-width: 760px;
+      color: #c9d8e7;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .module-count {
+      min-width: 112px;
+      padding: 10px 12px;
+      border: 1px solid rgba(145, 180, 214, 0.24);
+      border-radius: 7px;
+      background: rgba(5, 20, 36, 0.45);
+      text-align: right;
+      font-size: 12px;
+      color: #b9cadc;
+    }
+
+    .module-count strong {
+      display: block;
+      color: #ffffff;
+      font-size: 22px;
+      line-height: 1.05;
+    }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .module-card {
+      min-height: 258px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(9, 27, 45, 0.78);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.035), var(--shadow);
+    }
+
+    .module-card-head {
+      display: grid;
+      gap: 7px;
+      margin-bottom: 13px;
+    }
+
+    .module-chip {
+      width: max-content;
+      padding: 3px 8px;
+      border: 1px solid rgba(142, 213, 224, 0.28);
+      border-radius: 999px;
+      color: #8ed5e0;
+      background: rgba(34, 199, 189, 0.09);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .module-card h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 850;
+      line-height: 1.25;
+    }
+
+    .module-meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid rgba(145, 180, 214, 0.16);
+    }
+
+    .module-meta span,
+    .module-field-label {
+      display: block;
+      margin-bottom: 5px;
+      color: #8fa6bd;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .module-meta strong {
+      color: #f3f8ff;
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 750;
+    }
+
+    .module-fields {
+      display: grid;
+      grid-template-columns: 1fr 1.08fr;
+      gap: 14px;
+    }
+
+    .module-field {
+      min-width: 0;
+      color: #dce8f5;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .module-field.wide {
+      grid-column: span 2;
+      padding-top: 12px;
+      border-top: 1px solid rgba(145, 180, 214, 0.14);
+    }
+
+    .module-field p {
+      margin: 0;
+      white-space: pre-line;
+    }
+
+    .tbc-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      min-height: 56px;
+      border: 1px dashed rgba(142, 213, 224, 0.54);
+      border-radius: 7px;
+      color: #b7cadc;
+      background: rgba(142, 213, 224, 0.06);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .tbc-box span {
+      max-width: 100%;
+      color: #d4e4f4;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .module-empty {
+      grid-column: 1 / -1;
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      border: 1px dashed rgba(145, 180, 214, 0.30);
+      border-radius: 8px;
+      background: rgba(9, 27, 45, 0.52);
+      color: #c7d8e8;
+      text-align: center;
+    }
+
+    .module-empty strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #ffffff;
+      font-size: 18px;
+    }
+
     @media (max-width: 1280px) {
       .app { grid-template-columns: 210px 1fr; }
       .topbar { grid-template-columns: 1fr; }
       .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .module-grid { grid-template-columns: 1fr; }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7 { grid-column: span 6; }
     }
 
@@ -535,6 +779,8 @@
       .app { grid-template-columns: 1fr; }
       .sidebar { position: static; height: auto; }
       .kpis, .filters { grid-template-columns: 1fr; }
+      .module-header, .module-fields, .module-meta { grid-template-columns: 1fr; }
+      .module-field.wide { grid-column: auto; }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-12 { grid-column: span 12; }
       .donut-wrap { grid-template-columns: 1fr; }
       table { min-width: 620px; }
@@ -553,31 +799,17 @@
       </div>
       <nav>
         <div class="nav-group">
-          <div class="nav-item active"><span class="nav-icon">O</span>Overview</div>
+          <button class="nav-item active" type="button" data-page="overview"><span class="nav-icon">O</span>Overview</button>
         </div>
-        <div class="nav-label">Workflow</div>
+        <div class="nav-label">Operations</div>
         <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">SO</span>Service Orders</div>
-          <div class="nav-item"><span class="nav-icon">T</span>Tasks</div>
-          <div class="nav-item"><span class="nav-icon">L</span>Labour</div>
-          <div class="nav-item"><span class="nav-icon">TE</span>Technicians</div>
+          <button class="nav-item" type="button" data-page="service-orders"><span class="nav-icon">SO</span>Service Orders</button>
+          <button class="nav-item" type="button" data-page="technician-labour"><span class="nav-icon">TL</span>Technician & Labour</button>
         </div>
-        <div class="nav-label">Finance</div>
+        <div class="nav-label">Performance</div>
         <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">I</span>Invoices</div>
-          <div class="nav-item"><span class="nav-icon">$</span>Revenue</div>
-          <div class="nav-item"><span class="nav-icon">P</span>Profitability</div>
-        </div>
-        <div class="nav-label">Quality</div>
-        <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">RQ</span>Rework & Quality</div>
-          <div class="nav-item"><span class="nav-icon">PU</span>Parts Usage</div>
-        </div>
-        <div class="nav-label">Others</div>
-        <div class="nav-group">
-          <div class="nav-item"><span class="nav-icon">V</span>Vehicles</div>
-          <div class="nav-item"><span class="nav-icon">R</span>Reports</div>
-          <div class="nav-item"><span class="nav-icon">S</span>Settings</div>
+          <button class="nav-item" type="button" data-page="financial-performance"><span class="nav-icon">$</span>Financial Performance</button>
+          <button class="nav-item" type="button" data-page="quality-customer"><span class="nav-icon">QC</span>Quality & Customer</button>
         </div>
       </nav>
       <div class="sidebar-footer">
@@ -590,8 +822,8 @@
     <main>
       <section class="topbar">
         <div>
-          <h1>Service Center Dashboard</h1>
-          <div class="subtitle">Operations &middot; Labour &middot; Finance</div>
+          <h1 id="pageTitle">Service Center Dashboard</h1>
+          <div class="subtitle" id="pageSubtitle">Operations &middot; Labour &middot; Finance</div>
         </div>
         <div class="filters">
           <label>Date Range <select id="dateRange"></select></label>
@@ -603,10 +835,11 @@
         <button class="export" id="exportCsv" type="button">Export v</button>
       </section>
 
+      <section id="overviewView">
       <section class="kpis" id="kpis"></section>
 
       <section class="grid">
-        <article class="panel span-4">
+        <article class="panel span-4 data-muted-panel">
           <div class="panel-head"><h2 class="panel-title">Service Orders Trend</h2><select><option>By Month</option></select></div>
           <div class="panel-body">
             <div class="legend"><span><i class="dot" style="background:#2f7df6"></i>Created</span><span><i class="dot" style="background:#49d17d"></i>Completed</span></div>
@@ -639,7 +872,7 @@
         </article>
 
         <article class="panel span-4">
-          <div class="panel-head"><h2 class="panel-title">Turnaround Time Analysis (Days)</h2></div>
+          <div class="panel-head"><h2 class="panel-title">Orders Waiting Time</h2></div>
           <div class="panel-body">
             <div class="legend"><span><i class="dot" style="background:#f5bf2f"></i>8-30 days</span><span><i class="dot" style="background:#8f5cf6"></i>31-60 days</span><span><i class="dot" style="background:#49d17d"></i>0-7 days</span><span><i class="dot" style="background:#2f7df6"></i>60+ days</span></div>
             <div style="display:grid;grid-template-columns:1fr 130px;gap:14px;margin-top:15px">
@@ -649,13 +882,13 @@
           </div>
         </article>
 
-        <article class="panel span-3">
+        <article class="panel span-3 data-muted-panel">
           <div class="panel-head"><h2 class="panel-title">Technician Workload Overview</h2></div>
           <div class="panel-body table-wrap"><table id="techTable"></table></div>
         </article>
 
         <article class="panel span-3">
-          <div class="panel-head"><h2 class="panel-title">Labour Hours by Work Type</h2></div>
+          <div class="panel-head"><h2 class="panel-title">Sold Hours by Work Type</h2></div>
           <div class="panel-body donut-wrap">
             <div class="donut" id="labourDonut"><div class="donut-center"><span><b id="labourTotal">--</b>Hours</span></div></div>
             <div class="donut-list" id="labourLegend"></div>
@@ -678,6 +911,19 @@
         </article>
       </section>
       <div class="footnote">All amounts in AUD. Data integrated from C4C Service and SAP S/4HANA Finance exports.</div>
+      </section>
+
+      <section class="module-view" id="moduleView" hidden>
+        <div class="module-header">
+          <div>
+            <div class="module-kicker" id="moduleKicker">Workflow</div>
+            <h2 class="module-title" id="moduleTitle">Service Orders</h2>
+            <div class="module-subtitle" id="moduleSubtitle"></div>
+          </div>
+          <div class="module-count"><strong id="moduleCount">0</strong>Functions</div>
+        </div>
+        <div class="module-grid" id="moduleGrid"></div>
+      </section>
     </main>
   </div>
 
@@ -694,6 +940,57 @@
       month: defaultMonth,
       yard: "All",
       type: "All Ticket Types"
+    };
+    const overviewTitle = "Service Center Dashboard";
+    const overviewSubtitle = "Operations &middot; Labour &middot; Finance";
+    const kpiNextSteps = [
+      { functionName: "New Service Orders", formula: "C4C CreatedOn", field: "C4C CreatedOn", nextStep: "Ready", stage: "", target: "New Orders by DMY", owner: "", dueDate: "" },
+      { functionName: "Complete Orders", formula: "Repair: Status == Create Invoice\nPDI: Status == Claim Ticket Time", field: "Missing\nTickets Status last Change Time", nextStep: "Add a new field\nTickets Status last Change Time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
+      { functionName: "Open Service Orders", formula: "Not Complete Orders", field: "Missing\nTickets Status last Change Time", nextStep: "Add a new field\nTickets Status last Change Time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
+      { functionName: "Turnaround Time", formula: "Arrival / start / completion timestamps", field: "Missing\nArrival / start / completion time", nextStep: "Add a new field\nArrival / start / completion time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
+      { functionName: "Service Orders Trend", formula: "Status Change Date (Missing)", field: "Missing\nStatus Change Date", nextStep: "Add a new field\nStatus Change Date", stage: "", target: "Month To Month", owner: "C4C", dueDate: "" },
+      { functionName: "Technician Workload Overview", formula: "Technician ID/Name + Productive Hour", field: "Missing\nTechnician ID/Name + Productive Hour", nextStep: "Add new fields\nTechnician ID/Name + Productive Hour", stage: "", target: "Worker Perfomance", owner: "", dueDate: "" },
+      { functionName: "Technician Productivity", formula: "Sold / Available Hours", field: "Sold (ClaimHours from C4C), Available hours from HR Payslip", nextStep: "Provide HR Payslip", stage: "", target: "110% to 130%", owner: "C4C", dueDate: "" },
+      { functionName: "Technician Efficiency", formula: "Sold / Productive Hours", field: "Missing\nProductive hours", nextStep: "Add a new field\nProductive Hours + Technician ID / Name", stage: "", target: ">110%", owner: "C4C", dueDate: "" },
+      { functionName: "Technician Utilisation", formula: "Productive / Available Hours", field: "Missing\nProductive hours", nextStep: "Add a new field\nProductive hours", stage: "", target: ">90%", owner: "C4C", dueDate: "" },
+      { functionName: "Comeback / Rework Rate", formula: "Rework Tickets / Completed Repair Orders", field: "Rework can tell by same chassis number and description but looking forward a mark in system", nextStep: "Add a new field to mark rework.", stage: "", target: "<5%", owner: "C4C", dueDate: "" },
+      { functionName: "Fixed First Time Right", formula: "1 - Rework Rate", field: "Once Rework Rate is done", nextStep: "Use rework tickets as the failure signal.", stage: "", target: ">95%", owner: "C4C", dueDate: "" },
+      { functionName: "Quotation Approval Rate", formula: "Approved Quotes / Raised Quotes", field: "Missing quote rejected, having quote approved from C4C using Repair Total Amount", nextStep: "Add a new field for rejection in system instead of sharing with cancel.\nProvide Repair Total Amount Trigger", stage: "", target: ">70%", owner: "C4C", dueDate: "" },
+      { functionName: "Service Appointment Lead Time", formula: "Appointment Date - Booking Request Date", field: "Missing appointment date, having CreatedOn as Booking Request Date", nextStep: "Add a new field for Appointment Date in system.", stage: "", target: "3 to 7 days", owner: "C4C", dueDate: "" },
+      { functionName: "Customer Retention Rate", formula: "Returning Sold Vans / Sold Vans in Service Scope", field: "Chassis number in C4C", nextStep: "Define customer return logic using sold van / local service records in system. Chassis? Rego?", stage: "", target: ">90%", owner: "", dueDate: "" },
+      { functionName: "Retail Repair Order Growth Rate", formula: "(Current Period Retail ROs - Prior Period Retail ROs) / Prior Period Retail ROs", field: "RO ID in C4C, but missing status change time by date", nextStep: "Add a new field to record the status last change time.", stage: "", target: "3% to 6% YOY", owner: "C4C", dueDate: "" },
+      { functionName: "Average Repair Order Amount", formula: "Total Repair Order Revenue / Number of Repair Orders", field: "Total Repair Order Revenue:\nNumber of Repair Orders: C4C OrderID sum up", nextStep: "", stage: "", target: "Benchmark: confirm with Finance", owner: "", dueDate: "" },
+      { functionName: "Effective Labor Rate", formula: "Total Labor Revenue / Labor Hours Sold", field: "Total Labour Revenue:\nLabor Hours Sold: ClaimHour from C4C (TotalHour)", nextStep: "Confirm labour revenue and labour hours sold source.", stage: "", target: ">90% of posted rate", owner: "", dueDate: "" },
+      { functionName: "Gross Profit Margin", formula: "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue", field: "", nextStep: "", stage: "", target: "58% to 65%", owner: "", dueDate: "" },
+      { functionName: "Service Gross %", formula: "(Labor Sales - Direct Labor Cost) / Labor Sales", field: "", nextStep: "", stage: "", target: "65% to 75%", owner: "", dueDate: "" },
+      { functionName: "Parts Gross %", formula: "(Parts Sales - Parts Cost) / Parts Sales", field: "", nextStep: "Confirm parts sales and parts cost fields.", stage: "", target: "35% to 45%", owner: "", dueDate: "" },
+      { functionName: "Absorption Rate", formula: "(Service Gross Profit + Parts Gross Profit) / Operating Expenses", field: "", nextStep: "Confirm service operating expense allocation and cost centre split.", stage: "", target: "100% to 130%", owner: "", dueDate: "" }
+    ];
+    const modulePages = {
+      "service-orders": {
+        group: "Operations",
+        title: "Service Orders",
+        subtitle: "Order volume, completion, backlog, turnaround, trend, quote approval, and appointment lead time.",
+        functions: ["New Service Orders", "Complete Orders", "Open Service Orders", "Turnaround Time", "Service Orders Trend", "Quotation Approval Rate", "Service Appointment Lead Time"]
+      },
+      "technician-labour": {
+        group: "Operations",
+        title: "Technician & Labour",
+        subtitle: "Technician workload, productive hours, available hours, and labour-hour readiness.",
+        functions: ["Technician Workload Overview", "Technician Productivity", "Technician Efficiency", "Technician Utilisation"]
+      },
+      "financial-performance": {
+        group: "Performance",
+        title: "Financial Performance",
+        subtitle: "Revenue, repair order amount, labour rate, margin, service gross, parts gross, and absorption.",
+        functions: ["Retail Repair Order Growth Rate", "Average Repair Order Amount", "Effective Labor Rate", "Gross Profit Margin", "Service Gross %", "Parts Gross %", "Absorption Rate"]
+      },
+      "quality-customer": {
+        group: "Performance",
+        title: "Quality & Customer",
+        subtitle: "Rework, first-time-right, and customer retention readiness.",
+        functions: ["Comeback / Rework Rate", "Fixed First Time Right", "Customer Retention Rate"]
+      }
     };
 
     document.getElementById("lastRefresh").textContent = data.meta.lastUpdated;
@@ -713,8 +1010,91 @@
     });
     document.getElementById("exportCsv").addEventListener("click", exportCurrentView);
     document.getElementById("exportAlerts").addEventListener("click", exportAlerts);
+    document.querySelectorAll(".nav-item").forEach(item => {
+      item.addEventListener("click", () => setActivePage(item.dataset.page || "overview"));
+    });
 
     renderDashboard();
+
+    function setActivePage(pageId) {
+      document.querySelectorAll(".nav-item").forEach(item => item.classList.toggle("active", item.dataset.page === pageId));
+      const isOverview = pageId === "overview";
+      document.body.classList.toggle("module-mode", !isOverview);
+      document.getElementById("overviewView").hidden = !isOverview;
+      document.getElementById("moduleView").hidden = isOverview;
+      if (isOverview) {
+        document.getElementById("pageTitle").textContent = overviewTitle;
+        document.getElementById("pageSubtitle").innerHTML = overviewSubtitle;
+        renderDashboard();
+        return;
+      }
+      renderModule(pageId);
+    }
+
+    function renderModule(pageId) {
+      const config = modulePages[pageId] || modulePages["service-orders"];
+      const items = config.functions.map(name => kpiNextSteps.find(item => item.functionName === name)).filter(Boolean);
+      document.getElementById("pageTitle").textContent = config.title;
+      document.getElementById("pageSubtitle").textContent = "KPI setup and field readiness";
+      document.getElementById("moduleKicker").textContent = config.group;
+      document.getElementById("moduleTitle").textContent = config.title;
+      document.getElementById("moduleSubtitle").textContent = config.subtitle;
+      document.getElementById("moduleCount").textContent = items.length || "TBC";
+      document.getElementById("moduleGrid").innerHTML = items.length ? items.map(moduleCard).join("") : emptyModule(config);
+    }
+
+    function moduleCard(item) {
+      return `
+        <article class="module-card">
+          <div class="module-card-head">
+            <span class="module-chip">Function</span>
+            <h3>${htmlText(item.functionName)}</h3>
+          </div>
+          <div class="module-meta">
+            <div><span>Target</span><strong>${moduleValue(item.target)}</strong></div>
+            <div><span>Stage</span><strong>${moduleValue(item.stage)}</strong></div>
+            <div><span>Owner</span><strong>${moduleValue(item.owner)}</strong></div>
+            <div><span>Due Date</span><strong>${moduleValue(item.dueDate)}</strong></div>
+          </div>
+          <div class="module-fields">
+            <div class="module-field">
+              <span class="module-field-label">Formula</span>
+              <p>${htmlText(item.formula || "TBC")}</p>
+            </div>
+            <div class="module-field">
+              <span class="module-field-label">Field</span>
+              ${fieldContent(item.field)}
+            </div>
+            <div class="module-field wide">
+              <span class="module-field-label">Next Step</span>
+              <p>${htmlText(item.nextStep || "TBC")}</p>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function emptyModule(config) {
+      return `
+        <div class="module-empty">
+          <div>
+            <strong>${htmlText(config.title)} Function: <span class="tbc">TBC</span></strong>
+            <span>Field, formula, target, owner and due date can be filled after this module is confirmed.</span>
+          </div>
+        </div>`;
+    }
+
+    function moduleValue(value) {
+      return value ? htmlText(value) : `<span class="tbc">TBC</span>`;
+    }
+
+    function fieldContent(value) {
+      const text = String(value || "").trim();
+      if (!text || /^missing\b/i.test(text)) {
+        const needed = text.replace(/^missing\s*/i, "").trim();
+        return `<div class="tbc-box">TBC${needed ? `<br><span>${htmlText(needed)}</span>` : ""}</div>`;
+      }
+      return `<p>${htmlText(text)}</p>`;
+    }
 
     function renderDashboard() {
       const latest = getLatest();

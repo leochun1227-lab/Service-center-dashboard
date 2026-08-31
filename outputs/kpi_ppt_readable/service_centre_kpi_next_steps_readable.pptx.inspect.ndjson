@@ -1,0 +1,304 @@
+{"kind":"deck","id":"pr/kjvrmi","name":"Deck"}
+{"kind":"layout","layoutId":"7578f748-8b46-4da5-b6f3-2726d4aee08d","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"ef613379-def1-4201-b2fb-003ea4f98fbd","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/68a8zs","slide":1,"title":"SERVICE CENTRE KPI READINESS","textShapes":6}
+{"kind":"shape","id":"sh/y94b2lg7","slide":1,"bbox":[0,0,1600,26]}
+{"kind":"textbox","id":"sh/lcvuxgzi","slide":1,"text":"SERVICE CENTRE KPI READINESS","textPreview":"SERVICE CENTRE KPI READINESS","textChars":28,"textLines":1,"bbox":[90,120,600,30]}
+{"kind":"textbox","id":"sh/kbmt4vyx","slide":1,"text":"KPI Formulas and Next Steps","textPreview":"KPI Formulas and Next Steps","textChars":27,"textLines":1,"bbox":[90,172,1120,68]}
+{"kind":"textbox","id":"sh/bmtsr6hg","slide":1,"text":"Readable PPT version with larger type, clearer spacing and Field in System before each implementation step.","textPreview":"Readable PPT version with larger type, clearer spacing and Field in System before each implementation step.","textChars":107,"textLines":1,"bbox":[92,260,1060,78]}
+{"kind":"shape","id":"sh/alkby1gv","slide":1,"bbox":[90,390,1240,2]}
+{"kind":"shape","id":"sh/x8butgzm","slide":1,"bbox":[110,445,16,16]}
+{"kind":"textbox","id":"sh/wn2t0by1","slide":1,"text":"Financial source confirmation","textPreview":"Financial source confirmation","textChars":29,"textLines":1,"bbox":[150,428,1000,46]}
+{"kind":"shape","id":"sh/nitsn6h4","slide":1,"bbox":[110,523,16,16]}
+{"kind":"textbox","id":"sh/2h0bu1gz","slide":1,"text":"Technician setup and labour capture","textPreview":"Technician setup and labour capture","textChars":35,"textLines":1,"bbox":[150,506,1000,46]}
+{"kind":"shape","id":"sh/wnyhs3m9","slide":1,"bbox":[110,601,16,16]}
+{"kind":"textbox","id":"sh/ho7y183u","slide":1,"text":"Operations rules for rework, quote and appointment KPIs","textPreview":"Operations rules for rework, quote and appointment KPIs","textChars":55,"textLines":1,"bbox":[150,584,1000,46]}
+{"kind":"notes","id":"nt/68a8zs","slide":1,"text":""}
+{"kind":"slide","id":"sl/1zqzwn","slide":2,"title":"SERVICE CENTRE DASHBOARD","textShapes":10}
+{"kind":"shape","id":"sh/1gjyhg72","slide":2,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/ed8zmlob","slide":2,"text":"SERVICE CENTRE DASHBOARD","textPreview":"SERVICE CENTRE DASHBOARD","textChars":24,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/zehgfqpw","slide":2,"text":"KPI build needs system fields before automation","textPreview":"KPI build needs system fields before automation","textChars":47,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/o3ahcv6t","slide":2,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/94jil07y","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"textbox","id":"sh/mhszalon","slide":2,"text":"This version separates formula definition from implementation readiness, so each KPI has enough room for the field name, next action, owner and fallback.","textPreview":"This version separates formula definition from implementation readiness, so each KPI has enough room for the field name, next action, own...","textChars":153,"textLines":1,"bbox":[90,180,1330,70]}
+{"kind":"shape","id":"sh/ni10jqp8","slide":2,"bbox":[100,320,405,300]}
+{"kind":"shape","id":"sh/4n6hgr69","slide":2,"bbox":[100,320,405,8]}
+{"kind":"textbox","id":"sh/p8zy9w7u","slide":2,"text":"Financial","textPreview":"Financial","textChars":9,"textLines":1,"bbox":[128,360,340,38]}
+{"kind":"textbox","id":"sh/58fqt4ni","slide":2,"text":"SAP invoice, SAP PO, HR/payroll and P&L allocation need confirmation before margin KPIs can be automated.","textPreview":"SAP invoice, SAP PO, HR/payroll and P&L allocation need confirmation before margin KPIs can be automated.","textChars":105,"textLines":1,"bbox":[128,420,345,130]}
+{"kind":"shape","id":"sh/476p0z6x","slide":2,"bbox":[575,320,405,300]}
+{"kind":"shape","id":"sh/36x8ru5c","slide":2,"bbox":[575,320,405,8]}
+{"kind":"textbox","id":"sh/i5o7ypor","slide":2,"text":"Productivity","textPreview":"Productivity","textChars":12,"textLines":1,"bbox":[603,360,340,38]}
+{"kind":"textbox","id":"sh/dwzqxone","slide":2,"text":"Technician list, assignment, roster and actual / claimed hours are the core blockers.","textPreview":"Technician list, assignment, roster and actual / claimed hours are the core blockers.","textChars":85,"textLines":1,"bbox":[603,420,345,130]}
+{"kind":"shape","id":"sh/sv6p4j6t","slide":2,"bbox":[1050,320,405,300]}
+{"kind":"shape","id":"sh/rux8ve58","slide":2,"bbox":[1050,320,405,8]}
+{"kind":"textbox","id":"sh/q9o729o3","slide":2,"text":"Operations","textPreview":"Operations","textChars":10,"textLines":1,"bbox":[1078,360,340,38]}
+{"kind":"textbox","id":"sh/10zq1onq","slide":2,"text":"Rework rules, quote statuses and requested service date capture unlock the customer and workflow KPIs.","textPreview":"Rework rules, quote statuses and requested service date capture unlock the customer and workflow KPIs.","textChars":102,"textLines":1,"bbox":[1078,420,345,130]}
+{"kind":"notes","id":"nt/1zqzwn","slide":2,"text":""}
+{"kind":"slide","id":"sl/cl97u3","slide":3,"title":"FINANCIAL 1","textShapes":25}
+{"kind":"shape","id":"sh/redk7254","slide":3,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/cfml07mp","slide":3,"text":"FINANCIAL 1","textPreview":"FINANCIAL 1","textChars":11,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/dgv29cna","slide":3,"text":"Financial revenue KPIs need invoice linkage","textPreview":"Financial revenue KPIs need invoice linkage","textChars":43,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/eh432h4v","slide":3,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/zidkbm5g","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/0jml4rm1","slide":3,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/1kv2dwn6","slide":3,"text":"Average Repair Order Amount","textPreview":"Average Repair Order Amount","textChars":27,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/m5o3614r","slide":3,"text":"Benchmark: confirm with Finance","textPreview":"Benchmark: confirm with Finance","textChars":31,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/n6xkfm5c","slide":3,"text":"Source: SAP Invoice + C4C","textPreview":"Source: SAP Invoice + C4C","textChars":25,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/fqd4r2lk","slide":3,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/epknix4z","slide":3,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/1cvmtc3q","slide":3,"text":"Total Repair Order Revenue / Number of Repair Orders","textPreview":"Total Repair Order Revenue / Number of Repair Orders","textChars":52,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/0bm5k7m5","slide":3,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/rmt4ni5o","slide":3,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/qlk3ex43","slide":3,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/dobmpsne","slide":3,"text":"Confirm SAP invoice revenue field and match it with C4C repair order count.","textPreview":"Confirm SAP invoice revenue field and match it with C4C repair order count.","textChars":75,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/sn25gnm9","slide":3,"text":"Alternative: use C4C quote / invoice amount as proxy.","textPreview":"Alternative: use C4C quote / invoice amount as proxy.","textChars":53,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/bix4zmls","slide":3,"text":"Owner: Finance / SAP + C4C owner","textPreview":"Owner: Finance / SAP + C4C owner","textChars":32,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/ahonqh47","slide":3,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/6pszepsr","slide":3,"text":"Effective Labor Rate","textPreview":"Effective Labor Rate","textChars":20,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/7q1g7a9c","slide":3,"text":"Target: >90% of posted rate","textPreview":"Target: >90% of posted rate","textChars":27,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/srahgfax","slide":3,"text":"Source: SAP Invoice + C4C Labour","textPreview":"Source: SAP Invoice + C4C Labour","textChars":32,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/tcjy9kri","slide":3,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/udszipsn","slide":3,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/felgbu98","slide":3,"text":"Total Labor Revenue / Labor Hours Sold","textPreview":"Total Labor Revenue / Labor Hours Sold","textChars":38,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/gfuhkzat","slide":3,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/hg3yd4re","slide":3,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/ah8f65sj","slide":3,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/vihgzqt4","slide":3,"text":"Confirm labour revenue and labour hours sold source.","textPreview":"Confirm labour revenue and labour hours sold source.","textChars":52,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/dcn258bm","slide":3,"text":"Alternative: use claimed hours if sold hours are not ready.","textPreview":"Alternative: use claimed hours if sold hours are not ready.","textChars":59,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/cbe1c3u1","slide":3,"text":"Owner: Finance / Service Managers","textPreview":"Owner: Finance / Service Managers","textChars":33,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/cl97u3","slide":3,"text":""}
+{"kind":"slide","id":"sl/k6at8w","slide":4,"title":"FINANCIAL 2","textShapes":25}
+{"kind":"shape","id":"sh/t0v65gva","slide":4,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/6xk7a1cz","slide":4,"text":"FINANCIAL 2","textPreview":"FINANCIAL 2","textChars":11,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/7yto36d4","slide":4,"text":"Financial margin KPIs need labour cost mapping","textPreview":"Financial margin KPIs need labour cost mapping","textChars":46,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/g3mpgvu1","slide":4,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/h4v69gvm","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/u147elcv","slide":4,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/f2do7qdg","slide":4,"text":"Gross Profit Margin","textPreview":"Gross Profit Margin","textChars":19,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/w7ip4ruh","slide":4,"text":"Target: 58% to 65%","textPreview":"Target: 58% to 65%","textChars":18,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/x8b6xwv2","slide":4,"text":"Source: SAP Invoice + SAP PO + HR / Finance","textPreview":"Source: SAP Invoice + SAP PO + HR / Finance","textChars":43,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/t8vyhsfq","slide":4,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/87mxony5","slide":4,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/76tgf2xk","slide":4,"text":"(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue","textPreview":"(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue","textChars":67,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/65kfmxgz","slide":4,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/hwvylcf2","slide":4,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/gbmxs7yh","slide":4,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/vadgj2xw","slide":4,"text":"Confirm revenue, cost and expense allocation rules.","textPreview":"Confirm revenue, cost and expense allocation rules.","textChars":51,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/u94fqxgb","slide":4,"text":"Alternative: report gross margin before full expense allocation.","textPreview":"Alternative: report gross margin before full expense allocation.","textChars":64,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/50fypcfy","slide":4,"text":"Owner: Finance / Mary","textPreview":"Owner: Finance / Mary","textChars":21,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/4z6xwryd","slide":4,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/o3ehsv6p","slide":4,"text":"Service Gross %","textPreview":"Service Gross %","textChars":15,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/p4nil0na","slide":4,"text":"Target: 65% to 75%","textPreview":"Target: 65% to 75%","textChars":18,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/2hczqloj","slide":4,"text":"Source: SAP Invoice + HR / Payroll","textPreview":"Source: SAP Invoice + HR / Payroll","textChars":34,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/ni50jq54","slide":4,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/c7e1wv6l","slide":4,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/x8nip0n6","slide":4,"text":"(Labor Sales - Direct Labor Cost) / Labor Sales","textPreview":"(Labor Sales - Direct Labor Cost) / Labor Sales","textChars":47,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/a5wzu5of","slide":4,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/b650nq50","slide":4,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/sbuhkb6h","slide":4,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/tc3idgn2","slide":4,"text":"Confirm labour sales and direct labour cost source.","textPreview":"Confirm labour sales and direct labour cost source.","textChars":51,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/v69kzepk","slide":4,"text":"Alternative: overview-only service gross until People ID is mapped.","textPreview":"Alternative: overview-only service gross until People ID is mapped.","textChars":67,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/u503q98z","slide":4,"text":"Owner: Finance / HR","textPreview":"Owner: Finance / HR","textChars":19,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/k6at8w","slide":4,"text":""}
+{"kind":"slide","id":"sl/ubkg68","slide":5,"title":"FINANCIAL 3","textShapes":25}
+{"kind":"shape","id":"sh/32pgzi54","slide":5,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/o3yh8nmp","slide":5,"text":"FINANCIAL 3","textPreview":"FINANCIAL 3","textChars":11,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/p47y1snu","slide":5,"text":"Parts and absorption need cost allocation","textPreview":"Parts and absorption need cost allocation","textChars":41,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/qp0zax4f","slide":5,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/bq9g3250","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/crihcnml","slide":5,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/dsry5sn6","slide":5,"text":"Parts Gross %","textPreview":"Parts Gross %","textChars":13,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/6twfyt4b","slide":5,"text":"Target: 35% to 45%","textPreview":"Target: 35% to 45%","textChars":18,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/ru5gry5w","slide":5,"text":"Source: SAP SO Invoice + SAP PO Invoice","textPreview":"Source: SAP SO Invoice + SAP PO Invoice","textChars":39,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/3e9cv6ps","slide":5,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/id0b21o7","slide":5,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/50ruxw7i","slide":5,"text":"(Parts Sales - Parts Cost) / Parts Sales","textPreview":"(Parts Sales - Parts Cost) / Parts Sales","textChars":40,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/4zit4r6d","slide":5,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/va9crmpg","slide":5,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/u9gbyhov","slide":5,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/hcrutw7m","slide":5,"text":"Confirm parts sales and parts cost fields.","textPreview":"Confirm parts sales and parts cost fields.","textChars":42,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/gbit0r61","slide":5,"text":"Alternative: use summary parts revenue / cost before line-level mapping.","textPreview":"Alternative: use summary parts revenue / cost before line-level mapping.","textChars":72,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/76psnmpk","slide":5,"text":"Owner: Finance / SAP owner","textPreview":"Owner: Finance / SAP owner","textChars":26,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/65gbuhoz","slide":5,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/ahwv6hsr","slide":5,"text":"Absorption Rate","textPreview":"Absorption Rate","textChars":15,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/b25cf29c","slide":5,"text":"Target: 100% to 130%","textPreview":"Target: 100% to 130%","textChars":20,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/w3yd87ax","slide":5,"text":"Source: Finance P&L / SAP","textPreview":"Source: Finance P&L / SAP","textChars":25,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/x47uhcri","slide":5,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/y5gvahs3","slide":5,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/j6pcjm98","slide":5,"text":"(Service Gross Profit + Parts Gross Profit) / Operating Expenses","textPreview":"(Service Gross Profit + Parts Gross Profit) / Operating Expenses","textChars":64,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/k7ydcrat","slide":5,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/l87ulwre","slide":5,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/69gve1sz","slide":5,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/7apcnm9k","slide":5,"text":"Confirm service operating expense allocation and cost centre split.","textPreview":"Confirm service operating expense allocation and cost centre split.","textChars":67,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/h4byd0bm","slide":5,"text":"Alternative: track after-service gross profit against estimated cost.","textPreview":"Alternative: track after-service gross profit against estimated cost.","textChars":69,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/g32x4vu1","slide":5,"text":"Owner: Finance","textPreview":"Owner: Finance","textChars":14,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/ubkg68","slide":5,"text":""}
+{"kind":"slide","id":"sl/ntki59","slide":6,"title":"PRODUCTIVITY 1","textShapes":25}
+{"kind":"shape","id":"sh/2lsr6lgz","slide":6,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/pojq10zq","slide":6,"text":"PRODUCTIVITY 1","textPreview":"PRODUCTIVITY 1","textChars":14,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/ona98vy5","slide":6,"text":"Technician productivity depends on setup","textPreview":"Technician productivity depends on setup","textChars":40,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/bq183qhw","slide":6,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/apsra5gb","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/xsjq50zm","slide":6,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/cra9cvyh","slide":6,"text":"Technician Productivity","textPreview":"Technician Productivity","textChars":23,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/ruh8r6hc","slide":6,"text":"Target: 110% to 130%","textPreview":"Target: 110% to 130%","textChars":20,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/qto7y1g7","slide":6,"text":"Source: C4C Labour + Technician roster","textPreview":"Source: C4C Labour + Technician roster","textChars":38,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/wr2l4vml","slide":6,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/xsbmd03q","slide":6,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/apk32l4f","slide":6,"text":"Sold / Claimed Hours / Available Hours","textPreview":"Sold / Claimed Hours / Available Hours","textChars":38,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/bqt4bql0","slide":6,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/kfm58vmh","slide":6,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/lgvmh032","slide":6,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/yt4n654b","slide":6,"text":"Set up technician list, team and available hours.","textPreview":"Set up technician list, team and available hours.","textChars":49,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/jed4falw","slide":6,"text":"Alternative: location-level claimed hours until technician setup is live.","textPreview":"Alternative: location-level claimed hours until technician setup is live.","textChars":73,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/0jilwbmd","slide":6,"text":"Owner: Service Managers / Andy He","textPreview":"Owner: Service Managers / Andy He","textChars":33,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/1krm5g3y","slide":6,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/h4jad8ra","slide":6,"text":"Technician Efficiency","textPreview":"Technician Efficiency","textChars":21,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/g3qtk3ap","slide":6,"text":"Target: >110%","textPreview":"Target: >110%","textChars":13,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/v2hsby94","slide":6,"text":"Source: C4C Work Orders + Labour records","textPreview":"Source: C4C Work Orders + Labour records","textChars":40,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/u18bitsz","slide":6,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/58jah8rm","slide":6,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/47atona1","slide":6,"text":"Sold / Claimed Hours / Actual Productive Hours","textPreview":"Sold / Claimed Hours / Actual Productive Hours","textChars":46,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/361sfi9g","slide":6,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/i5sbmdsv","slide":6,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/dw3ulsri","slide":6,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/sbatsnax","slide":6,"text":"Assign every work order to a technician and record actual work hours.","textPreview":"Assign every work order to a technician and record actual work hours.","textChars":69,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/ah47mp8f","slide":6,"text":"Alternative: claim hours by location if productive hours are unstable.","textPreview":"Alternative: claim hours by location if productive hours are unstable.","textChars":70,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/bid8fup0","slide":6,"text":"Owner: Service Managers","textPreview":"Owner: Service Managers","textChars":23,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/ntki59","slide":6,"text":""}
+{"kind":"slide","id":"sl/evxhav","slide":7,"title":"PRODUCTIVITY 2","textShapes":14}
+{"kind":"shape","id":"sh/u9wvi9k3","slide":7,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/hcnudoju","slide":7,"text":"PRODUCTIVITY 2","textPreview":"PRODUCTIVITY 2","textChars":14,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/gbedkj29","slide":7,"text":"Technician utilisation needs calendar capacity","textPreview":"Technician utilisation needs calendar capacity","textChars":46,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/3e5wfy1k","slide":7,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/2dwvmtkz","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/pg7eh8jq","slide":7,"bbox":[90,245,7,420]}
+{"kind":"textbox","id":"sh/4fedo325","slide":7,"text":"Technician Utilisation","textPreview":"Technician Utilisation","textChars":22,"textLines":1,"bbox":[112,243,1396,34]}
+{"kind":"textbox","id":"sh/ripwjy1w","slide":7,"text":"Target: >90%","textPreview":"Target: >90%","textChars":12,"textLines":1,"bbox":[112,279,360,24]}
+{"kind":"textbox","id":"sh/qhgvqt0b","slide":7,"text":"Source: C4C Labour + Technician calendar","textPreview":"Source: C4C Labour + Technician calendar","textChars":40,"textLines":1,"bbox":[490,279,1000,24]}
+{"kind":"shape","id":"sh/4nqp4nih","slide":7,"bbox":[112,317,1376,1]}
+{"kind":"textbox","id":"sh/poz6dsj2","slide":7,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,331,130,24]}
+{"kind":"textbox","id":"sh/2l872d0b","slide":7,"text":"Productive / Claimed Hours / Available Hours","textPreview":"Productive / Claimed Hours / Available Hours","textChars":44,"textLines":1,"bbox":[245,331,1240,48]}
+{"kind":"textbox","id":"sh/3mhobi1w","slide":7,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,389,130,24]}
+{"kind":"textbox","id":"sh/crqp8nit","slide":7,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,389,1240,30]}
+{"kind":"textbox","id":"sh/dsj6hsjy","slide":7,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,433,130,24]}
+{"kind":"textbox","id":"sh/qp876d0n","slide":7,"text":"Confirm roster / calendar available hours and productive hour logic.","textPreview":"Confirm roster / calendar available hours and productive hour logic.","textChars":68,"textLines":1,"bbox":[245,433,1240,50]}
+{"kind":"textbox","id":"sh/rqhofi18","slide":7,"text":"Alternative: claimed hours / working-day capacity.","textPreview":"Alternative: claimed hours / working-day capacity.","textChars":50,"textLines":1,"bbox":[245,613,738,34]}
+{"kind":"textbox","id":"sh/0fapc7ip","slide":7,"text":"Owner: Service Managers / C4C owner","textPreview":"Owner: Service Managers / C4C owner","textChars":35,"textLines":1,"bbox":[1080,613,385,34]}
+{"kind":"notes","id":"nt/evxhav","slide":7,"text":""}
+{"kind":"slide","id":"sl/hi553r","slide":8,"title":"OPERATIONS 1","textShapes":25}
+{"kind":"shape","id":"sh/ip8365cz","slide":8,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/5cjmhkvq","slide":8,"text":"OPERATIONS 1","textPreview":"OPERATIONS 1","textChars":12,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/4ral8fu5","slide":8,"text":"Rework KPIs need a clear ticket rule","textPreview":"Rework KPIs need a clear ticket rule","textChars":36,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/re143udg","slide":8,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/6ds3apcv","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/tgjm54vm","slide":8,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/sfalczu1","slide":8,"text":"Comeback / Rework Rate","textPreview":"Comeback / Rework Rate","textChars":22,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/nixk7qdc","slide":8,"text":"Target: <5%","textPreview":"Target: <5%","textChars":11,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/mho3ylwr","slide":8,"text":"Source: C4C Tickets","textPreview":"Source: C4C Tickets","textChars":19,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/c7atwfil","slide":8,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/d8ja50z6","slide":8,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/q5sbu50f","slide":8,"text":"Rework Tickets / Completed Repair Orders","textPreview":"Rework Tickets / Completed Repair Orders","textChars":40,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/b61s3ah0","slide":8,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/kvut0fih","slide":8,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/lw3a9kz2","slide":8,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/y9sby50r","slide":8,"text":"Rename comeback to rework and define the rework ticket creation rule.","textPreview":"Rename comeback to rework and define the rework ticket creation rule.","textChars":69,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/zals7ahw","slide":8,"text":"Alternative: detect same vehicle / same issue repeat repairs.","textPreview":"Alternative: detect same vehicle / same issue repeat repairs.","textChars":61,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/gzqtovid","slide":8,"text":"Owner: Service Managers / Lee","textPreview":"Owner: Service Managers / Lee","textChars":29,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/10zaxgzy","slide":8,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/hk7i5sna","slide":8,"text":"Fixed First Time Right","textPreview":"Fixed First Time Right","textChars":22,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/wjyhcn65","slide":8,"text":"Target: >95%","textPreview":"Target: >95%","textChars":12,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/vip03i5k","slide":8,"text":"Source: C4C Tickets","textPreview":"Source: C4C Tickets","textChars":19,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/uhgzadoz","slide":8,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/5ori9snm","slide":8,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/4nihgn61","slide":8,"text":"1 - Rework Rate","textPreview":"1 - Rework Rate","textChars":15,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/jm907i5g","slide":8,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/ilgzedov","slide":8,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/tsridcni","slide":8,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/srihk76x","slide":8,"text":"Use rework tickets as the failure signal.","textPreview":"Use rework tickets as the failure signal.","textChars":41,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/qxcfe94f","slide":8,"text":"Alternative: same-issue repeat repair detection.","textPreview":"Alternative: same-issue repeat repair detection.","textChars":48,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/bylw7ul0","slide":8,"text":"Owner: Dashboard owner / Service Managers","textPreview":"Owner: Dashboard owner / Service Managers","textChars":41,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/hi553r","slide":8,"text":""}
+{"kind":"slide","id":"sl/dr55kb","slide":9,"title":"OPERATIONS 2","textShapes":25}
+{"kind":"shape","id":"sh/9gvitwba","slide":9,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/mdkzyhcj","slide":9,"text":"OPERATIONS 2","textPreview":"OPERATIONS 2","textChars":12,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/net0rmt4","slide":9,"text":"Quote and appointment KPIs need standard dates","textPreview":"Quote and appointment KPIs need standard dates","textChars":46,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/0b2hwrud","slide":9,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/1cbipwby","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/e9kzuhcn","slide":9,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/zat0nmts","slide":9,"text":"Quotation Approval Rate","textPreview":"Quotation Approval Rate","textChars":23,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/c72hs7uh","slide":9,"text":"Target: >70%","textPreview":"Target: >70%","textChars":12,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/d8bylcb2","slide":9,"text":"Source: C4C Quote / Repair Orders","textPreview":"Source: C4C Quote / Repair Orders","textChars":33,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/9knm14f6","slide":9,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/8je5szel","slide":9,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/7il4zux0","slide":9,"text":"Approved Quotes / Raised Quotes","textPreview":"Approved Quotes / Raised Quotes","textChars":31,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/mhc3qpwv","slide":9,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/lg3mx4fa","slide":9,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/kfulozep","slide":9,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/zul4vux4","slide":9,"text":"Standardise quote statuses into raised, approved and rejected.","textPreview":"Standardise quote statuses into raised, approved and rejected.","textChars":62,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/ytc3mpwj","slide":9,"text":"Alternative: use open repair order quote status.","textPreview":"Alternative: use open repair order quote status.","textChars":48,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/xs3mtkfy","slide":9,"text":"Owner: C4C owner / Service Managers","textPreview":"Owner: C4C owner / Service Managers","textChars":35,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/cralkfed","slide":9,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/ove5gfm9","slide":9,"text":"Service Appointment Lead Time","textPreview":"Service Appointment Lead Time","textChars":29,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/pwnm9knu","slide":9,"text":"Target: 3 to 7 days","textPreview":"Target: 3 to 7 days","textChars":19,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/29wnep4j","slide":9,"text":"Source: C4C Calendar / Tickets","textPreview":"Source: C4C Calendar / Tickets","textChars":30,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/3u547u5o","slide":9,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/g7elcfmd","slide":9,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/18nm5kny","slide":9,"text":"Appointment Date - Booking Request Date","textPreview":"Appointment Date - Booking Request Date","textChars":39,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/u5w3a547","slide":9,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/f6543a5s","slide":9,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/03y5ozmh","slide":9,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/l4rmh4n2","slide":9,"text":"Confirm requested service date capture; short term use ticket created date.","textPreview":"Confirm requested service date capture; short term use ticket created date.","textChars":75,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/vadg32tg","slide":9,"text":"Alternative: created date to appointment calendar date.","textPreview":"Alternative: created date to appointment calendar date.","textChars":55,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/u94zuxsv","slide":9,"text":"Owner: Andy He / Service Managers","textPreview":"Owner: Andy He / Service Managers","textChars":33,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/dr55kb","slide":9,"text":""}
+{"kind":"slide","id":"sl/fu2dvk","slide":10,"title":"OPERATIONS 3","textShapes":25}
+{"kind":"shape","id":"sh/e5wrq98n","slide":10,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/18nqlo7y","slide":10,"text":"OPERATIONS 3","textPreview":"OPERATIONS 3","textChars":12,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/07e9sjqt","slide":10,"text":"Customer and growth KPIs need stable history","textPreview":"Customer and growth KPIs need stable history","textChars":44,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/ri58fupw","slide":10,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/qhw7mp8b","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/d4nqh472","slide":10,"bbox":[90,205,7,300]}
+{"kind":"textbox","id":"sh/cjepozqh","slide":10,"text":"Customer Retention Rate","textPreview":"Customer Retention Rate","textChars":23,"textLines":1,"bbox":[112,203,1396,34]}
+{"kind":"textbox","id":"sh/3el8bup0","slide":10,"text":"Target: >90%","textPreview":"Target: >90%","textChars":12,"textLines":1,"bbox":[112,239,360,24]}
+{"kind":"textbox","id":"sh/idc7ip8f","slide":10,"text":"Source: C4C Service + Sales / Customer data","textPreview":"Source: C4C Service + Sales / Customer data","textChars":43,"textLines":1,"bbox":[490,239,1000,24]}
+{"kind":"shape","id":"sh/8ruh4bm5","slide":10,"bbox":[112,277,1376,1]}
+{"kind":"textbox","id":"sh/9c3ydgnq","slide":10,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,291,130,24]}
+{"kind":"textbox","id":"sh/mpsz214z","slide":10,"text":"Returning Sold Vans / Sold Vans in Service Scope","textPreview":"Returning Sold Vans / Sold Vans in Service Scope","textChars":48,"textLines":1,"bbox":[245,291,1240,48]}
+{"kind":"textbox","id":"sh/nq1gb65k","slide":10,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,349,130,24]}
+{"kind":"textbox","id":"sh/0nax0rmt","slide":10,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,349,1240,30]}
+{"kind":"textbox","id":"sh/lojy9wne","slide":10,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,393,130,24]}
+{"kind":"textbox","id":"sh/ylsfyh4n","slide":10,"text":"Define customer return logic using sold van / local service records.","textPreview":"Define customer return logic using sold van / local service records.","textChars":68,"textLines":1,"bbox":[245,393,1240,50]}
+{"kind":"textbox","id":"sh/zm1g7m58","slide":10,"text":"Alternative: return service rate for sold vans.","textPreview":"Alternative: return service rate for sold vans.","textChars":47,"textLines":1,"bbox":[245,453,738,34]}
+{"kind":"textbox","id":"sh/kjehcvmd","slide":10,"text":"Owner: Business / Service","textPreview":"Owner: Business / Service","textChars":25,"textLines":1,"bbox":[1080,453,385,34]}
+{"kind":"shape","id":"sh/5knyl0ni","slide":10,"bbox":[90,530,7,300]}
+{"kind":"textbox","id":"sh/tozq9wbq","slide":10,"text":"Retail Repair Order Growth Rate","textPreview":"Retail Repair Order Growth Rate","textChars":31,"textLines":1,"bbox":[112,528,1396,34]}
+{"kind":"textbox","id":"sh/snqpgra5","slide":10,"text":"Target: 3% to 6% YOY","textPreview":"Target: 3% to 6% YOY","textChars":20,"textLines":1,"bbox":[112,564,360,24]}
+{"kind":"textbox","id":"sh/7mh87mtk","slide":10,"text":"Source: C4C Repair Orders","textPreview":"Source: C4C Repair Orders","textChars":25,"textLines":1,"bbox":[490,564,1000,24]}
+{"kind":"shape","id":"sh/6l87ehsz","slide":10,"bbox":[112,602,1376,1]}
+{"kind":"textbox","id":"sh/50z65cbe","slide":10,"text":"Formula","textPreview":"Formula","textChars":7,"textLines":1,"bbox":[112,616,130,24]}
+{"kind":"textbox","id":"sh/kz6pc7at","slide":10,"text":"(Current Period Retail ROs - Prior Period Retail ROs) / Prior Period Retail ROs","textPreview":"(Current Period Retail ROs - Prior Period Retail ROs) / Prior Period Retail ROs","textChars":79,"textLines":1,"bbox":[245,616,1240,48]}
+{"kind":"textbox","id":"sh/jyxo3mto","slide":10,"text":"Field","textPreview":"Field","textChars":5,"textLines":1,"bbox":[112,674,130,24]}
+{"kind":"textbox","id":"sh/ixo7ahs3","slide":10,"text":"Field in System: ____________________","textPreview":"Field in System: ____________________","textChars":37,"textLines":1,"bbox":[245,674,1240,30]}
+{"kind":"textbox","id":"sh/xwf61cbi","slide":10,"text":"Next Step","textPreview":"Next Step","textChars":9,"textLines":1,"bbox":[112,718,130,24]}
+{"kind":"textbox","id":"sh/wv6p87ax","slide":10,"text":"Use month-on-month or quarterly trend before full YOY baseline is available.","textPreview":"Use month-on-month or quarterly trend before full YOY baseline is available.","textChars":76,"textLines":1,"bbox":[245,718,1240,50]}
+{"kind":"textbox","id":"sh/m14nid8v","slide":10,"text":"Alternative: MoM / QoQ trend until 2027.","textPreview":"Alternative: MoM / QoQ trend until 2027.","textChars":40,"textLines":1,"bbox":[245,778,738,34]}
+{"kind":"textbox","id":"sh/n2d4bi9g","slide":10,"text":"Owner: BI / Dashboard owner","textPreview":"Owner: BI / Dashboard owner","textChars":27,"textLines":1,"bbox":[1080,778,385,34]}
+{"kind":"notes","id":"nt/fu2dvk","slide":10,"text":""}
+{"kind":"slide","id":"sl/blf06j","slide":11,"title":"IMPLEMENTATION CHECKLIST","textShapes":8}
+{"kind":"shape","id":"sh/m9krqpcf","slide":11,"bbox":[0,0,1600,18]}
+{"kind":"textbox","id":"sh/9cvq1kvq","slide":11,"text":"IMPLEMENTATION CHECKLIST","textPreview":"IMPLEMENTATION CHECKLIST","textChars":24,"textLines":1,"bbox":[80,50,500,28]}
+{"kind":"textbox","id":"sh/obm9szul","slide":11,"text":"Decision points before dashboard build","textPreview":"Decision points before dashboard build","textChars":38,"textLines":1,"bbox":[80,78,1200,62]}
+{"kind":"shape","id":"sh/byd83udw","slide":11,"bbox":[80,150,1440,2]}
+{"kind":"textbox","id":"sh/ax4rupcb","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1460,62,70,34]}
+{"kind":"shape","id":"sh/x0va54v2","slide":11,"bbox":[110,218,20,20]}
+{"kind":"textbox","id":"sh/wzm9wzuh","slide":11,"text":"Fill exact Field in System names for each KPI.","textPreview":"Fill exact Field in System names for each KPI.","textChars":46,"textLines":1,"bbox":[160,210,1220,52]}
+{"kind":"shape","id":"sh/j2ds7ed8","slide":11,"bbox":[110,314,20,20]}
+{"kind":"textbox","id":"sh/y14ry9cn","slide":11,"text":"Confirm whether missing financial fields are SAP, C4C, HR/payroll or manual P&L inputs.","textPreview":"Confirm whether missing financial fields are SAP, C4C, HR/payroll or manual P&L inputs.","textChars":87,"textLines":1,"bbox":[160,306,1220,52]}
+{"kind":"shape","id":"sh/wj2d8je1","slide":11,"bbox":[110,410,20,20]}
+{"kind":"textbox","id":"sh/xkbu14vm","slide":11,"text":"Finish technician setup: people ID, team, assigned work orders and available hours.","textPreview":"Finish technician setup: people ID, team, assigned work orders and available hours.","textChars":83,"textLines":1,"bbox":[160,402,1220,52]}
+{"kind":"shape","id":"sh/axkv69wb","slide":11,"bbox":[110,506,20,20]}
+{"kind":"textbox","id":"sh/bitczedg","slide":11,"text":"Approve interim alternatives for metrics that cannot be automated at launch.","textPreview":"Approve interim alternatives for metrics that cannot be automated at launch.","textChars":76,"textLines":1,"bbox":[160,498,1220,52]}
+{"kind":"shape","id":"sh/kn2dcjud","slide":11,"bbox":[110,602,20,20]}
+{"kind":"textbox","id":"sh/lovu5ovy","slide":11,"text":"Use traffic-light status on the dashboard once targets and sources are signed off.","textPreview":"Use traffic-light status on the dashboard once targets and sources are signed off.","textChars":82,"textLines":1,"bbox":[160,594,1220,52]}
+{"kind":"notes","id":"nt/blf06j","slide":11,"text":""}
