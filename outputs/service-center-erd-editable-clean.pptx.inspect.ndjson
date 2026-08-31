@@ -1,0 +1,82 @@
+{"kind":"deck","id":"pr/vfxoks","name":"Deck"}
+{"kind":"layout","layoutId":"57dc54fd-9622-461e-a409-122fc4eec71a","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"f2d3f77f-c1c8-417e-91eb-10490f4c5dfd","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/wiprsg","slide":1,"title":"Service Center Data Center","textShapes":42}
+{"kind":"textbox","id":"sh/y1g7uhgf","slide":1,"name":"title","text":"Service Center Data Center","textPreview":"Service Center Data Center","textChars":26,"textLines":1,"bbox":[78,50,1100,56]}
+{"kind":"textbox","id":"sh/l4rq5czq","slide":1,"name":"subtitle","text":"7 tables · dashboard serving model with repair order finance KPI inputs","textPreview":"7 tables · dashboard serving model with repair order finance KPI inputs","textChars":71,"textLines":1,"bbox":[80,112,1200,32]}
+{"kind":"shape","id":"sh/k3ipw7yl","slide":1,"name":"legend","bbox":[1740,50,580,140]}
+{"kind":"textbox","id":"sh/byp8z2ho","slide":1,"name":"legend-pk","text":"PK = Primary Key","textPreview":"PK = Primary Key","textChars":16,"textLines":1,"bbox":[1768,72,250,24]}
+{"kind":"textbox","id":"sh/axg7qxg3","slide":1,"name":"legend-fk","text":"FK = Foreign Key","textPreview":"FK = Foreign Key","textChars":16,"textLines":1,"bbox":[2032,72,250,24]}
+{"kind":"textbox","id":"sh/x07q1czu","slide":1,"name":"legend-dim","text":"DIM = Dimension","textPreview":"DIM = Dimension","textChars":15,"textLines":1,"bbox":[1768,110,250,24]}
+{"kind":"textbox","id":"sh/wzyps7y9","slide":1,"name":"legend-fact","text":"FACT = Fact Table","textPreview":"FACT = Fact Table","textChars":17,"textLines":1,"bbox":[2032,110,250,24]}
+{"kind":"textbox","id":"sh/vut8b6h8","slide":1,"name":"legend-sap","text":"SAP = finance source","textPreview":"SAP = finance source","textChars":20,"textLines":1,"bbox":[1768,150,250,24]}
+{"kind":"textbox","id":"sh/ut0721gn","slide":1,"name":"legend-c4c","text":"C4C = service source","textPreview":"C4C = service source","textChars":20,"textLines":1,"bbox":[2032,150,250,24]}
+{"kind":"shape","id":"sh/sv6twz2p","slide":1,"name":"ro-card","bbox":[80,220,580,380]}
+{"kind":"shape","id":"sh/twfup4ja","slide":1,"name":"ro-header","bbox":[80,220,580,52]}
+{"kind":"textbox","id":"sh/6t4bu9kj","slide":1,"name":"ro-badge","text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[94,232,28,28]}
+{"kind":"textbox","id":"sh/7udcne14","slide":1,"name":"ro-title","text":"1. FACT_RO_FINANCE","textPreview":"1. FACT_RO_FINANCE","textChars":18,"textLines":1,"bbox":[134,232,510,30]}
+{"kind":"shape","id":"sh/5svul4jy","slide":1,"name":"ro-note","bbox":[80,614,580,72]}
+{"kind":"textbox","id":"sh/ip4bqpkn","slide":1,"name":"ro-note-text","text":"RO finance fact: finance KPI inputs for ARO, labor rate, gross margin and absorption.","textPreview":"RO finance fact: finance KPI inputs for ARO, labor rate, gross margin and absorption.","textChars":85,"textLines":1,"bbox":[96,628,548,48]}
+{"kind":"shape","id":"sh/jqdcju18","slide":1,"name":"order-card","bbox":[760,220,580,410]}
+{"kind":"shape","id":"sh/wnmtof2h","slide":1,"name":"order-header","bbox":[760,220,580,52]}
+{"kind":"textbox","id":"sh/xovahkj2","slide":1,"name":"order-badge","text":"O","textPreview":"O","textChars":1,"textLines":1,"bbox":[774,232,28,28]}
+{"kind":"textbox","id":"sh/xknalgbq","slide":1,"name":"order-title","text":"2. FACT_SERVICE_ORDER","textPreview":"2. FACT_SERVICE_ORDER","textChars":21,"textLines":1,"bbox":[814,232,510,30]}
+{"kind":"shape","id":"sh/bil8j6t0","slide":1,"name":"order-note","bbox":[760,644,580,72]}
+{"kind":"textbox","id":"sh/ahcra1cf","slide":1,"name":"order-note-text","text":"Service order fact: main grain for volume, status, lead time, total quote amount and comeback KPIs.","textPreview":"Service order fact: main grain for volume, status, lead time, total quote amount and comeback KPIs.","textChars":99,"textLines":1,"bbox":[776,658,548,48]}
+{"kind":"shape","id":"sh/pg3qhgbu","slide":1,"name":"invoice-card","bbox":[1440,220,580,410]}
+{"kind":"shape","id":"sh/ofu98bu9","slide":1,"name":"invoice-header","bbox":[1440,220,580,52]}
+{"kind":"textbox","id":"sh/nel8f6to","slide":1,"name":"invoice-badge","text":"I","textPreview":"I","textChars":1,"textLines":1,"bbox":[1454,232,28,28]}
+{"kind":"textbox","id":"sh/2tcr61c3","slide":1,"name":"invoice-title","text":"6. FACT_INVOICE","textPreview":"6. FACT_INVOICE","textChars":15,"textLines":1,"bbox":[1494,232,510,30]}
+{"kind":"shape","id":"sh/8by9kvud","slide":1,"name":"invoice-note","bbox":[1440,644,580,72]}
+{"kind":"textbox","id":"sh/6x87exsv","slide":1,"name":"invoice-note-text","text":"Invoice fact: header plus margin split for ARO, gross margin, paid amount and absorption KPIs.","textPreview":"Invoice fact: header plus margin split for ARO, gross margin, paid amount and absorption KPIs.","textChars":94,"textLines":1,"bbox":[1456,658,548,48]}
+{"kind":"shape","id":"sh/ryhon29g","slide":1,"name":"tech-card","bbox":[80,700,580,170]}
+{"kind":"shape","id":"sh/szqpg7a1","slide":1,"name":"tech-header","bbox":[80,700,580,52]}
+{"kind":"textbox","id":"sh/dkj6pcrm","slide":1,"name":"tech-badge","text":"T","textPreview":"T","textChars":1,"textLines":1,"bbox":[94,712,28,28]}
+{"kind":"textbox","id":"sh/it8nadsz","slide":1,"name":"tech-title","text":"5. DIM_TECHNICIAN","textPreview":"5. DIM_TECHNICIAN","textChars":17,"textLines":1,"bbox":[134,712,510,30]}
+{"kind":"shape","id":"sh/4vq5cna5","slide":1,"name":"tech-note","bbox":[80,884,580,72]}
+{"kind":"textbox","id":"sh/5wz6lsra","slide":1,"name":"tech-note-text","text":"Technician master: supports productivity, efficiency and utilisation KPI grouping.","textPreview":"Technician master: supports productivity, efficiency and utilisation KPI grouping.","textChars":82,"textLines":1,"bbox":[96,898,548,48]}
+{"kind":"shape","id":"sh/2ps7mhs3","slide":1,"name":"quote-card","bbox":[760,700,580,431]}
+{"kind":"shape","id":"sh/nq1ovm9o","slide":1,"name":"quote-header","bbox":[760,700,580,52]}
+{"kind":"textbox","id":"sh/nihkred4","slide":1,"name":"quote-badge","text":"Q","textPreview":"Q","textChars":1,"textLines":1,"bbox":[774,712,28,28]}
+{"kind":"textbox","id":"sh/mh83i9wj","slide":1,"name":"quote-title","text":"2A. FACT_QUOTE","textPreview":"2A. FACT_QUOTE","textChars":14,"textLines":1,"bbox":[814,712,510,30]}
+{"kind":"shape","id":"sh/8jqlkjep","slide":1,"name":"quote-note","bbox":[760,1145,580,72]}
+{"kind":"textbox","id":"sh/zehkneds","slide":1,"name":"quote-note-text","text":"Quote fact: one Service Order can have multiple quote rows.","textPreview":"Quote fact: one Service Order can have multiple quote rows.","textChars":59,"textLines":1,"bbox":[776,1159,548,48]}
+{"kind":"shape","id":"sh/ydo3e9wn","slide":1,"name":"labour-card","bbox":[1440,700,580,290]}
+{"kind":"shape","id":"sh/lgz2povy","slide":1,"name":"labour-header","bbox":[1440,700,580,52]}
+{"kind":"textbox","id":"sh/0fqlgjed","slide":1,"name":"labour-badge","text":"L","textPreview":"L","textChars":1,"textLines":1,"bbox":[1454,712,28,28]}
+{"kind":"textbox","id":"sh/ja14zydc","slide":1,"name":"labour-title","text":"4. FACT_LABOUR","textPreview":"4. FACT_LABOUR","textChars":14,"textLines":1,"bbox":[1494,712,510,30]}
+{"kind":"shape","id":"sh/gj294bqx","slide":1,"name":"labour-note","bbox":[1440,1004,580,72]}
+{"kind":"textbox","id":"sh/hkbqxg7i","slide":1,"name":"labour-note-text","text":"Labour fact: labour hours plus capacity fields for productivity, efficiency and utilisation.","textPreview":"Labour fact: labour hours plus capacity fields for productivity, efficiency and utilisation.","textChars":92,"textLines":1,"bbox":[1456,1018,548,48]}
+{"kind":"shape","id":"sh/uh0r218r","slide":1,"name":"task-card","bbox":[760,1190,580,340]}
+{"kind":"shape","id":"sh/fit8v6pc","slide":1,"name":"task-header","bbox":[760,1190,580,52]}
+{"kind":"textbox","id":"sh/47298bq9","slide":1,"name":"task-badge","text":"R","textPreview":"R","textChars":1,"textLines":1,"bbox":[774,1202,28,28]}
+{"kind":"textbox","id":"sh/p8bq1g7e","slide":1,"name":"task-title","text":"3. FACT_SERVICE_TASK","textPreview":"3. FACT_SERVICE_TASK","textChars":20,"textLines":1,"bbox":[814,1202,510,30]}
+{"kind":"shape","id":"sh/3mt8z6po","slide":1,"name":"merged-fields","bbox":[80,1060,580,330]}
+{"kind":"textbox","id":"sh/cbm9cvq5","slide":1,"name":"merged-title","text":"Merged Fields","textPreview":"Merged Fields","textChars":13,"textLines":1,"bbox":[112,1086,500,34]}
+{"kind":"textbox","id":"sh/dcva507q","slide":1,"name":"merged-body","text":"Quote outcome is summarized on Service Order as Total QuoteAmount.\nQuote detail is stored in 2A. FACT_QUOTE with 1:N from Service Order.\nTechnician links directly to FACT_SERVICE_TASK through AssignedTechnicianID.\nFinancial KPI inputs stay in FACT_RO_FINANCE.","textPreview":"Quote outcome is summarized on Service Order as Total QuoteAmount. | Quote detail is stored in 2A. FACT_QUOTE with 1:N from Service Order...","textChars":259,"textLines":4,"bbox":[112,1136,500,190]}
+{"kind":"shape","id":"sh/lsrqpgzu","slide":1,"bbox":[660,410,100,15]}
+{"kind":"textbox","id":"sh/0ri9gvi9","slide":1,"name":"1-number","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[674,360,34,28]}
+{"kind":"textbox","id":"sh/z698nqho","slide":1,"name":"1-cardinality","text":"1:N","textPreview":"1:N","textChars":3,"textLines":1,"bbox":[716,361,48,28]}
+{"kind":"shape","id":"sh/y50rel03","slide":1,"bbox":[1340,425,100,0]}
+{"kind":"textbox","id":"sh/9wbqt0zq","slide":1,"name":"6-number","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1352,360,34,28]}
+{"kind":"textbox","id":"sh/8vi9kvil","slide":1,"name":"6-cardinality","text":"1:N","textPreview":"1:N","textChars":3,"textLines":1,"bbox":[1394,361,48,28]}
+{"kind":"shape","id":"sh/nu98rqh0","slide":1,"bbox":[1050,630,0,70]}
+{"kind":"textbox","id":"sh/mt0ril0f","slide":1,"name":"2A-number","text":"2A","textPreview":"2A","textChars":2,"textLines":1,"bbox":[1350,650,34,28]}
+{"kind":"textbox","id":"sh/p07qhwzm","slide":1,"name":"2A-cardinality","text":"1:N","textPreview":"1:N","textChars":3,"textLines":1,"bbox":[1392,651,48,28]}
+{"kind":"shape","id":"sh/ozyp8bi1","slide":1,"bbox":[1050,1131,0,59]}
+{"kind":"textbox","id":"sh/e5wnixgz","slide":1,"name":"3-number","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1350,1140,34,28]}
+{"kind":"textbox","id":"sh/f65or2xk","slide":1,"name":"3-cardinality","text":"1:N","textPreview":"1:N","textChars":3,"textLines":1,"bbox":[1392,1141,48,28]}
+{"kind":"shape","id":"sh/g7e5k7y5","slide":1,"bbox":[660,785,100,575]}
+{"kind":"textbox","id":"sh/18n6tcfa","slide":1,"name":"T-number","text":"T","textPreview":"T","textChars":1,"textLines":1,"bbox":[674,1010,34,28]}
+{"kind":"textbox","id":"sh/29wnmhgv","slide":1,"name":"T-cardinality","text":"1:N","textPreview":"1:N","textChars":3,"textLines":1,"bbox":[716,1011,48,28]}
+{"kind":"shape","id":"sh/3a5ovmxg","slide":1,"bbox":[1340,990,390,370]}
+{"kind":"textbox","id":"sh/obe5ory1","slide":1,"name":"4-number","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1352,1080,34,28]}
+{"kind":"textbox","id":"sh/pc76xwfm","slide":1,"name":"4-cardinality","text":"1:N","textPreview":"1:N","textChars":3,"textLines":1,"bbox":[1394,1081,48,28]}
+{"kind":"table","id":"tb/z2d8j6tg","slide":1,"name":"","rows":11,"cols":3,"preview":"Field | Source | Key","bbox":[94,286,552,330]}
+{"kind":"table","id":"tb/32hsfudk","slide":1,"name":"","rows":12,"cols":3,"preview":"Field | Source | Key","bbox":[774,286,552,360]}
+{"kind":"table","id":"tb/69ore5cr","slide":1,"name":"","rows":12,"cols":3,"preview":"Field | Source | Key","bbox":[1454,286,552,360]}
+{"kind":"table","id":"tb/0zadgjed","slide":1,"name":"","rows":4,"cols":3,"preview":"Field | Source | Key","bbox":[94,766,552,120]}
+{"kind":"table","id":"tb/6xk3adw7","slide":1,"name":"","rows":14,"cols":3,"preview":"Field | Source | Key","bbox":[774,766,552,378]}
+{"kind":"table","id":"tb/h8r2d8fq","slide":1,"name":"","rows":8,"cols":3,"preview":"Field | Source | Key","bbox":[1454,766,552,240]}
+{"kind":"table","id":"tb/dkf6hwz2","slide":1,"name":"","rows":11,"cols":3,"preview":"Field | Source | Key","bbox":[774,1256,552,286]}
+{"kind":"notes","id":"nt/wiprsg","slide":1,"text":""}

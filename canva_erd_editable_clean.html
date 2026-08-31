@@ -1,0 +1,352 @@
+<!doctype html>
+<html data-document-role="page" data-label="Service Center ERD">
+<head>
+  <meta charset="utf-8">
+  <title>Service Center Data Center ERD</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 2400px; height: 1580px; }
+    body {
+      font-family: Aptos, Arial, sans-serif;
+      background: #eef7fd;
+      color: #172033;
+      position: relative;
+      overflow: hidden;
+    }
+    h1 {
+      position: absolute;
+      left: 78px;
+      top: 52px;
+      margin: 0;
+      font-size: 44px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      position: absolute;
+      left: 80px;
+      top: 112px;
+      font-size: 20px;
+      color: #35506e;
+    }
+    .legend {
+      position: absolute;
+      left: 1756px;
+      top: 48px;
+      width: 560px;
+      height: 130px;
+      background: rgba(255,255,255,.72);
+      border-radius: 8px;
+      padding: 18px 22px;
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 28px;
+    }
+    .pill {
+      display: inline-block;
+      min-width: 44px;
+      text-align: center;
+      padding: 2px 8px;
+      margin-right: 8px;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .pk { background: #f6b53f; }
+    .fk { background: #32b56d; }
+    .dim { background: #1478d4; }
+    .fact { background: #df1e21; }
+    .source-sap { color: #c7422b; font-weight: 700; }
+    .source-c4c { color: #14824d; font-weight: 700; }
+    .table {
+      position: absolute;
+      width: 580px;
+      background: #fff;
+      border: 2px solid #de3232;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 0 rgba(16,24,40,.04);
+    }
+    .table.dimtable { border-color: #1976c9; }
+    .header {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 18px;
+      background: #df1e21;
+      color: #fff;
+      font-weight: 800;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    .dimtable .header { background: #1976c9; }
+    .badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: #df1e21;
+      font-size: 15px;
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+    .dimtable .badge { color: #1976c9; }
+    .rows { padding: 12px 16px 14px; }
+    .row {
+      height: 25px;
+      display: grid;
+      grid-template-columns: 230px 1fr 36px;
+      align-items: center;
+      border-bottom: 1px solid #eef1f4;
+      font-size: 17px;
+      line-height: 1.05;
+    }
+    .row:last-child { border-bottom: 0; }
+    .field { font-weight: 500; color: #1f2937; }
+    .src { font-size: 14px; color: #5d6b7a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .key {
+      justify-self: end;
+      min-width: 28px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: 800;
+      text-align: center;
+      font-size: 12px;
+    }
+    .note {
+      position: absolute;
+      background: #fff2f2;
+      border-left: 6px solid #df1e21;
+      color: #8a2525;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+    .note.blue {
+      background: #eef6ff;
+      border-left-color: #1976c9;
+      color: #244a72;
+    }
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2400px;
+      height: 1580px;
+      pointer-events: none;
+    }
+    .rel {
+      stroke: #d62c35;
+      stroke-width: 3.2;
+      fill: none;
+      marker-end: url(#arrow);
+    }
+    .rel.blue {
+      stroke: #1976c9;
+      marker-end: url(#arrowBlue);
+    }
+    .rel-label {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #d62c35;
+      background: #eef7fd;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+    .rel-label.blue { color: #1976c9; }
+    .rel-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      color: #fff;
+      background: #d62c35;
+      font-size: 14px;
+    }
+    .rel-label.blue .rel-num { background: #1976c9; }
+    #ro { left: 80px; top: 220px; height: 390px; }
+    #order { left: 760px; top: 220px; height: 390px; }
+    #invoice { left: 1440px; top: 220px; height: 390px; }
+    #tech { left: 80px; top: 700px; height: 260px; }
+    #quote { left: 760px; top: 680px; height: 410px; }
+    #labour { left: 1440px; top: 700px; height: 360px; }
+    #task { left: 760px; top: 1170px; height: 330px; }
+    #merged { left: 80px; top: 1050px; width: 580px; height: 360px; }
+  </style>
+</head>
+<body>
+  <h1>Service Center Data Center</h1>
+  <div class="subtitle">7 tables · dashboard serving model with repair order finance KPI inputs</div>
+  <div class="legend">
+    <div><span class="pill pk">PK</span>Primary Key</div>
+    <div><span class="pill fk">FK</span>Foreign Key</div>
+    <div><span class="pill dim">DIM</span>Dimension</div>
+    <div><span class="pill fact">FACT</span>Fact Table</div>
+    <div><span class="source-sap">SAP</span> = finance source</div>
+    <div><span class="source-c4c">C4C</span> = service source</div>
+  </div>
+
+  <svg aria-hidden="true">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L12,6 L0,12 z" fill="#d62c35"></path>
+      </marker>
+      <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L12,6 L0,12 z" fill="#1976c9"></path>
+      </marker>
+    </defs>
+    <path class="rel" d="M760 370 L660 370"></path>
+    <path class="rel" d="M1340 370 L1440 370"></path>
+    <path class="rel" d="M1050 610 L1050 680"></path>
+    <path class="rel" d="M1050 1090 L1050 1170"></path>
+    <path class="rel blue" d="M660 830 L760 1260"></path>
+    <path class="rel" d="M1340 1320 L1440 900"></path>
+    <path class="rel" d="M360 610 L360 700"></path>
+  </svg>
+
+  <div class="rel-label" style="left:668px;top:342px;"><span class="rel-num">1</span>1:N</div>
+  <div class="rel-label" style="left:1352px;top:342px;"><span class="rel-num">6</span>1:N</div>
+  <div class="rel-label" style="left:1064px;top:625px;"><span class="rel-num">2A</span>1:N</div>
+  <div class="rel-label" style="left:1064px;top:1110px;"><span class="rel-num">3</span>1:N</div>
+  <div class="rel-label blue" style="left:650px;top:1010px;"><span class="rel-num">T</span>1:N</div>
+  <div class="rel-label" style="left:1356px;top:1086px;"><span class="rel-num">4</span>1:N</div>
+
+  <section class="table" id="ro">
+    <div class="header"><span class="badge">F</span>1. FACT_RO_FINANCE</div>
+    <div class="rows">
+      <div class="row"><span class="field">ROFinanceID</span><span class="src"></span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">ServiceOrderID</span><span class="src source-c4c">C4C</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">InvoiceID</span><span class="src source-sap">SAP</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">OrderRevenue</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">LaborRevenue</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">PartsRevenue</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">LabourCostAmount</span><span class="src">HR Payslip</span><span></span></div>
+      <div class="row"><span class="field">PartsCost</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">SoldHours</span><span class="src source-c4c">C4C ClaimHours</span><span></span></div>
+      <div class="row"><span class="field">PostedLaborRate</span><span class="src source-c4c">C4C</span><span></span></div>
+    </div>
+  </section>
+
+  <section class="table" id="order">
+    <div class="header"><span class="badge">O</span>2. FACT_SERVICE_ORDER</div>
+    <div class="rows">
+      <div class="row"><span class="field">ServiceOrderID</span><span class="src source-c4c">C4C Ticket ID</span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">VehicleID</span><span class="src source-c4c">C4C Chassis number</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">DealerYard</span><span class="src source-c4c">C4C Warranty Handling Dealer</span><span></span></div>
+      <div class="row"><span class="field">ServiceType</span><span class="src source-c4c">C4C Type</span><span></span></div>
+      <div class="row"><span class="field">CreatedDate</span><span class="src source-c4c">C4C CreatedOn</span><span></span></div>
+      <div class="row"><span class="field">BookingRequestDate</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">AppointmentDateTime</span><span class="src">missing</span><span></span></div>
+      <div class="row"><span class="field">StartDate</span><span class="src">missing</span><span></span></div>
+      <div class="row"><span class="field">CompletionTime</span><span class="src">missing</span><span></span></div>
+      <div class="row"><span class="field">Status</span><span class="src source-c4c">C4C</span><span></span></div>
+      <div class="row"><span class="field">Total QuoteAmount</span><span class="src source-c4c">C4C Repair Total Amount</span><span></span></div>
+    </div>
+  </section>
+
+  <section class="table" id="invoice">
+    <div class="header"><span class="badge">I</span>6. FACT_INVOICE</div>
+    <div class="rows">
+      <div class="row"><span class="field">InvoiceID</span><span class="src source-sap">SAP</span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">ServiceOrderID</span><span class="src source-c4c">C4C</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">InvoiceNo</span><span class="src">SAP / C4C</span><span></span></div>
+      <div class="row"><span class="field">InvoiceType</span><span class="src source-c4c">C4C External or internal</span><span></span></div>
+      <div class="row"><span class="field">InvoiceDate</span><span class="src source-sap">SAP Billing date</span><span></span></div>
+      <div class="row"><span class="field">InvoiceStatus</span><span class="src source-sap">SAP not decline/cancel</span><span></span></div>
+      <div class="row"><span class="field">InvoiceAmount</span><span class="src source-sap">SAP</span><span></span></div>
+      <div class="row"><span class="field">LabourRevenueAmount</span><span class="src">tbc</span><span></span></div>
+      <div class="row"><span class="field">PartsRevenueAmount</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">HoursBilled</span><span class="src source-sap">SAP</span><span></span></div>
+      <div class="row"><span class="field">PaidAmount</span><span class="src source-sap">SAP</span><span></span></div>
+    </div>
+  </section>
+
+  <section class="table dimtable" id="tech">
+    <div class="header"><span class="badge">T</span>5. DIM_TECHNICIAN</div>
+    <div class="rows">
+      <div class="row"><span class="field">TechnicianID</span><span class="src source-c4c">C4C assign to</span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">TechnicianName</span><span class="src source-c4c">C4C assign to</span><span></span></div>
+      <div class="row"><span class="field">ServiceCentre</span><span class="src">missing</span><span></span></div>
+    </div>
+  </section>
+
+  <section class="table" id="quote">
+    <div class="header"><span class="badge">Q</span>2A. FACT_QUOTE</div>
+    <div class="rows">
+      <div class="row"><span class="field">QuoteID</span><span class="src source-c4c">C4C</span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">ServiceOrderID</span><span class="src source-c4c">C4C Ticket ID</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">IssueID</span><span class="src source-c4c">C4C Issue ID</span><span></span></div>
+      <div class="row"><span class="field">IssuesPosition</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">IssuesDescription</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">Subcategory</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">SubcategoryReason</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">RepairItem</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">RepairItemDescription</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">HoursOfLabour</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">UnitPrice</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">PartTotalAmount</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">QuoteAmount</span><span class="src"></span><span></span></div>
+    </div>
+  </section>
+
+  <section class="table" id="labour">
+    <div class="header"><span class="badge">L</span>4. FACT_LABOUR</div>
+    <div class="rows">
+      <div class="row"><span class="field">LabourID</span><span class="src"></span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">TaskID</span><span class="src"></span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">TechnicianID</span><span class="src"></span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">SoldHours</span><span class="src source-c4c">C4C ClaimHours</span><span></span></div>
+      <div class="row"><span class="field">ProductivityHours</span><span class="src">ActualWorkHours</span><span></span></div>
+      <div class="row"><span class="field">AvailableHours</span><span class="src">HR Payslip</span><span></span></div>
+      <div class="row"><span class="field">NonProductiveHours</span><span class="src">missing PH</span><span></span></div>
+    </div>
+  </section>
+
+  <section class="table" id="task">
+    <div class="header"><span class="badge">R</span>3. FACT_SERVICE_TASK</div>
+    <div class="rows">
+      <div class="row"><span class="field">TaskID</span><span class="src"></span><span class="key pk">PK</span></div>
+      <div class="row"><span class="field">ServiceOrderID</span><span class="src source-c4c">C4C</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">TaskCategory</span><span class="src source-c4c">C4C internal/external</span><span></span></div>
+      <div class="row"><span class="field">RepairItem</span><span class="src source-c4c">C4C not into use</span><span></span></div>
+      <div class="row"><span class="field">ProblemDescription</span><span class="src source-c4c">C4C</span><span></span></div>
+      <div class="row"><span class="field">AssignedTechnicianID</span><span class="src">missing</span><span class="key fk">FK</span></div>
+      <div class="row"><span class="field">SoldHours</span><span class="src source-c4c">C4C</span><span></span></div>
+      <div class="row"><span class="field">ActualHours</span><span class="src">missing</span><span></span></div>
+      <div class="row"><span class="field">WaitingReason</span><span class="src"></span><span></span></div>
+      <div class="row"><span class="field">ReworkFlag</span><span class="src">same chassis + fix desc.</span><span></span></div>
+    </div>
+  </section>
+
+  <div class="note blue" id="merged">
+    <strong>Merged Fields</strong><br><br>
+    Quote outcome is summarized on Service Order as <strong>Total QuoteAmount</strong>.<br>
+    Quote detail is stored in <strong>2A. FACT_QUOTE</strong> with 1:N from Service Order.<br>
+    Technician is a dimension and links directly to <strong>FACT_SERVICE_TASK</strong> through AssignedTechnicianID.<br>
+    Financial KPI inputs stay in <strong>FACT_RO_FINANCE</strong>.
+  </div>
+  <div class="note" style="left:1440px;top:1100px;width:580px;">
+    Labour fact: labour hours plus capacity fields for productivity, efficiency and utilisation.
+  </div>
+  <div class="note" style="left:1440px;top:620px;width:580px;">
+    Invoice fact: header plus margin split for ARO, gross margin, paid amount and absorption KPIs.
+  </div>
+  <div class="note" style="left:760px;top:1510px;width:580px;">
+    Task fact: repair jobs under a service order, used for task mix and rework signals.
+  </div>
+</body>
+</html>
