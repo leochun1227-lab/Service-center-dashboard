@@ -900,6 +900,26 @@
       overflow-x: auto;
       padding: 2px 0 12px;
       scroll-snap-type: x proximity;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(126, 162, 195, 0.34) rgba(145, 180, 214, 0.08);
+    }
+
+    .workflow-track::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .workflow-track::-webkit-scrollbar-track {
+      border-radius: 999px;
+      background: rgba(145, 180, 214, 0.08);
+    }
+
+    .workflow-track::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: rgba(126, 162, 195, 0.34);
+    }
+
+    .workflow-track::-webkit-scrollbar-thumb:hover {
+      background: rgba(142, 213, 224, 0.54);
     }
 
     .workflow-step {
@@ -1114,9 +1134,9 @@
         </div>
         <div class="nav-label">Operations</div>
         <div class="nav-group">
+          <button class="nav-item" type="button" data-page="workflow"><span class="nav-icon">WF</span>Workflow</button>
           <button class="nav-item" type="button" data-page="service-orders"><span class="nav-icon">SO</span>Service Orders</button>
           <button class="nav-item" type="button" data-page="technician-labour"><span class="nav-icon">TL</span>Technician & Labour</button>
-          <button class="nav-item" type="button" data-page="workflow"><span class="nav-icon">WF</span>Workflow</button>
         </div>
         <div class="nav-label">Performance</div>
         <div class="nav-group">
