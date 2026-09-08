@@ -1,0 +1,87 @@
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+
+(async () => {
+  const browser = await chromium.launch({ headless: true, channel: 'msedge' });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, acceptDownloads: true });
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    await page.goto('http://127.0.0.1:8765/overview.html');
+    await page.locator('[data-page="service-orders"]').click();
+    await page.screenshot({ path: 'outputs/service-orders-1440.png', fullPage: true });
+    assert.equal(await page.locator('#serviceOrderSearchResults tbody tr').count(), 8);
+    const total = await page.evaluate(() => serviceOrderBaseRows().length);
+    assert.equal(await page.locator('#serviceOrderResultCount').innerText(), `${total.toLocaleString('en-US')} matching tickets`);
+    await page.getByRole('button', { name: 'Next page', exact: true }).click();
+    assert.match(await page.locator('#serviceOrderPageSummary').innerText(), /Showing 9-16/);
+    await page.locator('#serviceOrderDealer').selectOption('Perth');
+    assert.equal(await page.evaluate(() => serviceOrdersState.page), 1);
+    assert(await page.evaluate(() => serviceOrderSearchRows().every(row => row.dealerYard === 'Perth')));
+    const dealerMatches = await page.evaluate(() => serviceOrderSearchRows().length);
+    const dealerDownloadPromise = page.waitForEvent('download');
+    await page.locator('#exportServiceOrderSearch').click();
+    const dealerExport = fs.readFileSync(await (await dealerDownloadPromise).path(), 'utf8');
+    assert(dealerMatches > 8);
+    assert.equal((dealerExport.match(/<Row>/g) || []).length, dealerMatches + 1);
+    const sample = await page.evaluate(() => serviceOrderSearchRows().find(row => row.chassisNumber && row.invoiceNo));
+    assert(sample);
+    await page.locator('#serviceOrderSearch').fill(String(sample.ticketId || sample.serviceOrderId));
+    assert(await page.evaluate(id => serviceOrderSearchRows().some(row => String(row.ticketId || row.serviceOrderId) === id), String(sample.ticketId || sample.serviceOrderId)));
+    await page.locator('#serviceOrderSearch').fill(sample.chassisNumber);
+    assert(await page.evaluate(vin => serviceOrderSearchRows().every(row => JSON.stringify(row).toLowerCase().includes(vin.toLowerCase())), sample.chassisNumber));
+    await page.locator('#clearServiceOrderSearch').click();
+    await page.locator('#serviceOrderType').selectOption(sample.serviceType);
+    await page.locator('#serviceOrderStatus').selectOption(sample.status);
+    await page.locator('#serviceOrderTechnician').selectOption(sample.workerName);
+    await page.locator('#serviceOrderMonth').selectOption(sample.period);
+    await page.locator('#serviceOrderInvoice').selectOption('Has invoice');
+    const matched = await page.evaluate(() => serviceOrderSearchRows());
+    assert(matched.length > 0);
+    assert(matched.every(row => row.dealerYard === 'Perth' && row.serviceType === sample.serviceType && row.status === sample.status && row.workerName === sample.workerName && row.period === sample.period && row.invoiceNo));
+    await page.locator('[data-order-details]').first().click();
+    assert(await page.locator('#serviceOrderDetails').isVisible());
+    assert.match(await page.locator('#serviceOrderDetails').innerText(), /ClaimHours \(TotalLabourHours\)/);
+    await page.keyboard.press('Escape');
+    assert(!(await page.locator('#serviceOrderDetails').isVisible()));
+    const downloadPromise = page.waitForEvent('download');
+    await page.locator('#exportServiceOrderSearch').click();
+    const download = await downloadPromise;
+    const exported = fs.readFileSync(await download.path(), 'utf8');
+    assert(exported.includes('ClaimHours (TotalLabourHours)'));
+    assert(exported.includes('lastchangedtime'));
+    assert(exported.includes('CustomerBP'));
+    assert(!exported.includes('ChangeOnDateTime'));
+    assert.equal((exported.match(/<Row>/g) || []).length, matched.length + 1);
+    const allDownloadPromise = page.waitForEvent('download');
+    await page.locator('#exportAllServiceOrders').click();
+    const allExported = fs.readFileSync(await (await allDownloadPromise).path(), 'utf8');
+    const perthTotal = await page.evaluate(() => serviceOrderBaseRows().filter(row => row.dealerYard === 'Perth').length);
+    assert.equal((allExported.match(/<Row>/g) || []).length, perthTotal + 1);
+    await page.locator('#resetServiceOrderFilters').click();
+    await page.locator('#serviceOrderSearch').fill('NO-MATCH-TEST-XYZ');
+    assert.match(await page.locator('#serviceOrderPageSummary').innerText(), /Showing 0-0/);
+    assert(await page.locator('#exportServiceOrderSearch').isDisabled());
+    await page.locator('#resetServiceOrderFilters').click();
+    const descending = await page.evaluate(() => serviceOrderSearchRows().map(row => row.ticketId || row.serviceOrderId));
+    await page.locator('[data-orders-sort]').click();
+    assert.deepEqual(await page.evaluate(() => serviceOrderSearchRows().map(row => row.ticketId || row.serviceOrderId)), descending.reverse());
+    await page.locator('#resetServiceOrderFilters').click();
+    for (const [width, height] of [[1920, 1080], [1440, 900], [390, 844]]) {
+      await page.setViewportSize({ width, height });
+      await page.screenshot({ path: `outputs/service-orders-${width}.png`, fullPage: true });
+      const bounds = await page.evaluate(() => ({ body: document.documentElement.scrollWidth, width: innerWidth, results: document.querySelector('.orders-results').getBoundingClientRect().bottom, table: document.querySelector('.orders-results .table-wrap').scrollWidth, tableWidth: document.querySelector('.orders-results .table-wrap').clientWidth }));
+      assert(bounds.body <= width, JSON.stringify(bounds));
+      if (width >= 1440) { assert(bounds.results <= height, JSON.stringify(bounds)); assert(bounds.table <= bounds.tableWidth, JSON.stringify(bounds)); }
+      console.log('Viewport:', width, bounds);
+    }
+    await page.locator('[data-page="workflow"]').click();
+    assert.equal(await page.locator('.workflow-section').count(), 2);
+    assert(!(await page.locator('#ordersHeaderActions').isVisible()));
+    await page.locator('[data-page="overview"]').click();
+    assert(await page.locator('#overviewView').isVisible());
+    assert.deepEqual(errors, []);
+    console.log('PASS: search, compound filters, paging, sort, details, filtered/all-dealer exports, empty state, responsive layout, navigation. Total:', total, 'Filtered:', matched.length);
+  } finally { await browser.close(); }
+})().catch(error => { console.error(error); process.exitCode = 1; });

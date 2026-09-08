@@ -149,7 +149,7 @@
 
     .filters {
       display: grid;
-      grid-template-columns: 190px 104px 104px 104px;
+      grid-template-columns: 170px 150px minmax(360px, 1.1fr) minmax(330px, 0.9fr);
       gap: 10px;
       align-items: end;
       padding: 12px 14px;
@@ -177,6 +177,50 @@
       padding: 0 11px;
       font: inherit;
       font-size: 12px;
+    }
+
+    .filter-group {
+      display: grid;
+      gap: 6px;
+      color: #e8f1fa;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .filter-buttons {
+      min-height: 33px;
+      display: grid;
+      grid-template-columns: repeat(var(--filter-columns, 3), minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .filter-button {
+      min-width: 0;
+      min-height: 33px;
+      border: 1px solid rgba(155, 181, 210, 0.28);
+      border-radius: 5px;
+      background: rgba(6, 18, 31, 0.86);
+      color: #dbe8f5;
+      padding: 0 9px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 750;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .16s ease, border-color .16s ease, color .16s ease, box-shadow .16s ease;
+    }
+
+    .filter-button:hover {
+      border-color: rgba(142, 213, 224, 0.55);
+      color: #ffffff;
+      background: rgba(11, 38, 63, 0.92);
+    }
+
+    .filter-button.active {
+      border-color: rgba(142, 213, 224, 0.82);
+      background: linear-gradient(135deg, #1f6feb, #15806d);
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(31, 111, 235, 0.22);
     }
 
     .refresh {
@@ -337,6 +381,25 @@
     }
 
     .panel-body { padding: 8px 14px 14px; }
+
+    .panel-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .clickable-row,
+    .donut.clickable {
+      cursor: pointer;
+    }
+
+    .clickable-row:hover,
+    .donut-line.clickable-row:hover,
+    .bar-row.clickable-row:hover,
+    .side-stat.clickable-row:hover {
+      background: rgba(142, 213, 224, 0.08);
+    }
+
     .span-2 { grid-column: span 2; }
     .span-3 { grid-column: span 3; }
     .span-4 { grid-column: span 4; }
@@ -511,6 +574,23 @@
     }
 
     .side-stat:last-child { border-bottom: 0; }
+
+    .risk-table td:first-child,
+    .drilldown-table td:first-child {
+      color: #f7fbff;
+      font-weight: 800;
+    }
+
+    .drilldown-panel {
+      scroll-margin-top: 16px;
+    }
+
+    .drilldown-summary {
+      color: #aebfd1;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
     .workload-bar {
       width: 54px;
       height: 17px;
@@ -724,6 +804,196 @@
       white-space: pre-line;
     }
 
+    .service-orders-tool {
+      grid-column: 1 / -1;
+      min-height: auto;
+      display: grid;
+      gap: 12px;
+      padding: 14px;
+    }
+
+    body.service-orders-mode .topbar { grid-template-columns: 1fr auto; align-items: center; margin-bottom: 12px; }
+    body.service-orders-mode .module-grid { gap: 10px; }
+    .orders-header-actions { display: flex; gap: 18px; align-items: center; }
+    .orders-refresh { color: #b0c5d8; font-size: 11px; line-height: 1.6; }
+    .orders-refresh strong { display: block; color: #e3edf6; font-weight: 500; }
+    .orders-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 34px; padding: 7px 12px; border: 1px solid #315775; border-radius: 6px; background: #102e47; color: #edf6ff; font: inherit; font-size: 12px; cursor: pointer; }
+    .orders-button.primary { background: #176be5; border-color: #3283f2; }
+    .orders-button:hover { filter: brightness(1.16); }
+    .orders-button:disabled { opacity: .4; cursor: default; }
+    .orders-button:focus-visible, .orders-filters :focus-visible { outline: 2px solid #6fcfd9; outline-offset: 2px; }
+    .orders-icon { width: 18px; height: 18px; flex: 0 0 auto; vertical-align: middle; }
+    .orders-metrics { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+    .orders-metric { min-width: 0; border: 1px solid #284860; border-radius: 8px; background: #0b2337; padding: 10px; }
+    .orders-metric-head { display: flex; gap: 8px; align-items: center; min-height: 32px; color: #d9e7f3; font-size: 11px; line-height: 1.4; }
+    .orders-metric .orders-icon { color: var(--metric-color); }
+    .orders-metric-value { margin-top: 4px; font-size: 25px; font-weight: 750; line-height: 1.2; overflow-wrap: anywhere; }
+    .orders-metric:nth-child(4) .orders-metric-value { font-size: 20px; line-height: 1.5; }
+    .orders-metric-note { color: #9fb9ce; font-size: 10px; margin-top: 5px; min-height: 14px; }
+    .orders-panel { grid-column: 1 / -1; min-width: 0; padding: 10px 0; border-top: 1px solid #29485f; }
+    .orders-section-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .orders-section-head h2 { display: flex; align-items: center; gap: 9px; margin: 0; font-size: 17px; }
+    .orders-section-head h2 .orders-icon { color: #4798ff; }
+    .orders-result-count { color: #9fb9ce; margin-top: 5px; font-size: 12px; }
+    .orders-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) 110px; gap: 10px 16px; }
+    .orders-filters label { display: grid; gap: 4px; color: #dce8f5; font-size: 12px; min-width: 0; }
+    .orders-filters .orders-keyword { grid-column: span 2; }
+    .orders-filters input, .orders-filters select { width: 100%; min-width: 0; height: 36px; border: 1px solid #3a5971; border-radius: 6px; color: #e7f0f9; background: #0a2236; padding: 0 10px; font: inherit; }
+    .orders-filters input::placeholder { color: #8ca9c0; }
+    .orders-filter-action { align-self: end; }
+    .orders-results .table-wrap { overflow-x: auto; }
+    .orders-results table { min-width: 940px; table-layout: fixed; }
+    .orders-results th { padding: 10px 7px; background: #0a2235; font-size: 10px; font-weight: 650; }
+    .orders-results .service-orders-results td { padding: 5px 7px; height: 39px; white-space: normal; overflow-wrap: anywhere; font-size: 12px; }
+    .orders-results tbody tr:nth-child(odd) { background: rgba(55, 102, 135, .12); }
+    .orders-results tbody tr:hover { background: rgba(55, 102, 135, .25); }
+    .orders-status { display: inline-block; padding: 3px 6px; border-radius: 4px; font-size: 10px; color: var(--status-color); border: 1px solid color-mix(in srgb, var(--status-color) 45%, transparent); background: color-mix(in srgb, var(--status-color) 9%, transparent); line-height: 1.35; }
+    .orders-sort { border: 0; background: none; color: inherit; padding: 0; display: inline-flex; align-items: center; gap: 3px; font: inherit; cursor: pointer; text-transform: uppercase; }
+    .orders-sort .orders-icon { width: 13px; height: 13px; }
+    .orders-row-action { min-height: 28px; width: 30px; padding: 4px; background: transparent; border-color: transparent; }
+    .orders-pagination { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 14px; color: #a9c3d9; font-size: 12px; }
+    .orders-pages { display: flex; gap: 5px; align-items: center; }
+    .orders-pages .orders-button { width: 32px; min-height: 32px; padding: 4px; }
+    .orders-dialog { width: min(760px, calc(100vw - 32px)); max-height: 85vh; overflow: auto; padding: 20px; border: 1px solid #476c86; border-radius: 8px; color: #edf6ff; background: #0a2033; }
+    .orders-dialog::backdrop { background: rgba(0, 9, 17, .65); }
+    .orders-detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; }
+    .orders-detail-grid dt { color: #9fb9ce; font-size: 11px; margin-bottom: 5px; }
+    .orders-detail-grid dd { margin: 0; font-size: 13px; overflow-wrap: anywhere; }
+    @media (max-width: 1200px) {
+      .orders-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .orders-filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .orders-filter-action { grid-column: span 2; order: 1; }
+    }
+    @media (max-width: 820px) {
+      body.service-orders-mode .topbar { grid-template-columns: 1fr; }
+      .orders-metrics, .orders-filters, .orders-detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .orders-filter-action { grid-column: auto; }
+      .orders-pagination { flex-wrap: wrap; }
+    }
+
+    .service-orders-search {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .service-orders-search input {
+      min-height: 34px;
+      border: 1px solid rgba(145, 180, 214, 0.28);
+      border-radius: 6px;
+      background: rgba(6, 18, 31, 0.76);
+      color: #f3f8ff;
+      padding: 0 11px;
+      font: inherit;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .service-orders-search input:focus {
+      border-color: rgba(142, 213, 224, 0.72);
+      box-shadow: 0 0 0 3px rgba(34, 199, 189, 0.12);
+    }
+
+    .service-orders-results {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .service-orders-results th {
+      color: #91abc2;
+      font-size: 10px;
+      font-weight: 850;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 0 8px 7px;
+      border-bottom: 1px solid rgba(145, 180, 214, 0.20);
+    }
+
+    .service-orders-results td {
+      padding: 8px;
+      border-bottom: 1px solid rgba(145, 180, 214, 0.12);
+      color: #dce8f5;
+      white-space: nowrap;
+    }
+
+    .service-orders-results tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .service-orders-functions {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .service-order-function {
+      min-height: auto;
+      padding: 13px;
+    }
+
+    .service-order-function.ready {
+      border-color: rgba(73, 209, 125, 0.28);
+    }
+
+    .service-order-function.tbc {
+      border-color: rgba(245, 191, 47, 0.22);
+    }
+
+    .service-order-function-head {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .service-order-function h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.28;
+    }
+
+    .service-order-status {
+      flex: 0 0 auto;
+      color: #8ed5e0;
+      font-size: 10px;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .service-order-function.tbc .service-order-status {
+      color: #f5bf2f;
+    }
+
+    .service-order-value {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 850;
+      line-height: 1.05;
+    }
+
+    .service-order-detail {
+      margin-top: 5px;
+      color: #a9bbcd;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .service-order-rule {
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px solid rgba(145, 180, 214, 0.13);
+      color: #dce8f5;
+      font-size: 11px;
+      line-height: 1.4;
+      white-space: pre-line;
+    }
+
     .mapping-card {
       min-height: auto;
     }
@@ -785,46 +1055,40 @@
     .workflow-section {
       grid-column: 1 / -1;
       display: grid;
-      gap: 12px;
-      padding: 16px 0 2px;
+      gap: 16px;
+      padding: 18px;
+      border: 1px solid rgba(70, 140, 190, 0.22);
+      border-radius: 10px;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(47, 128, 237, 0.12), transparent 34%),
+        linear-gradient(135deg, rgba(8, 31, 51, 0.96), rgba(6, 23, 39, 0.94));
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.035);
     }
+
+    body.workflow-mode .topbar {
+      grid-template-columns: 180px minmax(0, 1fr);
+      align-items: start;
+      gap: 24px;
+    }
+
+    #workflowHeaderControls { min-width: 0; }
 
     .workflow-controls {
-      grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 230px minmax(0, 1fr);
-      gap: 18px;
+      grid-template-columns: 1fr;
       align-items: center;
-      padding: 14px;
-      border: 1px solid rgba(145, 180, 214, 0.20);
-      border-radius: 8px;
-      background: rgba(9, 27, 45, 0.66);
-    }
-
-    .workflow-controls-title {
-      margin: 0;
-      color: #ffffff;
-      font-size: 15px;
-      font-weight: 850;
-    }
-
-    .workflow-controls-copy {
-      margin-top: 4px;
-      color: #a9bbcd;
-      font-size: 12px;
-      line-height: 1.45;
     }
 
     .workflow-dealer-buttons {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 10px;
+      gap: 8px;
     }
 
     .workflow-dealer-button {
-      min-height: 34px;
+      min-height: 32px;
       border: 1px solid rgba(145, 180, 214, 0.28);
-      border-radius: 7px;
+      border-radius: 6px;
       background: rgba(6, 18, 31, 0.76);
       color: #dbe8f6;
       font: inherit;
@@ -850,52 +1114,93 @@
     .workflow-section-head {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .workflow-heading {
+      min-width: 0;
+      display: flex;
       gap: 14px;
-      align-items: end;
+      align-items: center;
+    }
+
+    .workflow-section-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(142, 213, 224, 0.22);
+      border-radius: 9px;
+      background: linear-gradient(135deg, rgba(47, 128, 237, 0.22), rgba(32, 197, 199, 0.10));
+      color: #8ed5e0;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
 
     .workflow-section-title {
       margin: 0;
       color: #ffffff;
-      font-size: 18px;
-      font-weight: 850;
+      font-size: 22px;
+      font-weight: 800;
       line-height: 1.25;
     }
 
     .workflow-section-subtitle {
-      margin-top: 4px;
-      color: #a9bbcd;
+      margin-top: 5px;
+      color: #b5c8db;
       font-size: 13px;
+      line-height: 1.35;
     }
 
     .workflow-summary {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(145px, 1fr));
+      justify-content: end;
+      gap: 12px;
     }
 
     .workflow-pill {
-      min-width: 90px;
-      padding: 7px 9px;
+      min-width: 145px;
+      min-height: 58px;
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      padding: 9px 12px;
       border: 1px solid rgba(145, 180, 214, 0.22);
-      border-radius: 7px;
-      background: rgba(9, 27, 45, 0.62);
+      border-radius: 8px;
+      background: rgba(16, 42, 67, 0.78);
       color: #a9bbcd;
       font-size: 11px;
-      text-align: right;
+      text-align: left;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
     }
 
     .workflow-pill strong {
       display: block;
       color: #ffffff;
-      font-size: 15px;
+      font-size: 22px;
       line-height: 1.1;
+    }
+
+    .workflow-pill-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(6, 23, 39, 0.56);
+      color: #8ed5e0;
+    }
+
+    .workflow-content {
+      display: grid;
+      gap: 14px;
     }
 
     .workflow-track {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: stretch;
       overflow-x: auto;
       padding: 2px 0 12px;
@@ -925,31 +1230,81 @@
     .workflow-step {
       display: flex;
       align-items: stretch;
-      gap: 12px;
+      gap: 10px;
       flex: 0 0 auto;
     }
 
     .workflow-node {
-      width: 264px;
-      min-height: 250px;
+      width: 236px;
+      min-height: 244px;
       display: grid;
-      grid-template-rows: auto auto 1fr auto;
-      gap: 11px;
+      grid-template-rows: auto auto 1fr auto auto;
+      gap: 10px;
       padding: 14px;
       border: 1px solid rgba(145, 180, 214, 0.20);
       border-top: 3px solid var(--stage-color, #1f6feb);
-      border-radius: 8px;
-      background: rgba(9, 27, 45, 0.78);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.035), var(--shadow);
+      border-radius: 9px;
+      background:
+        linear-gradient(180deg, rgba(11, 34, 56, 0.94), rgba(7, 26, 44, 0.94));
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255,255,255,.035);
       scroll-snap-align: start;
+    }
+
+    .workflow-section.pdi .workflow-track {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      overflow: visible;
+      padding-bottom: 0;
+      scrollbar-width: none;
+    }
+
+    .workflow-section.pdi .workflow-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .workflow-section.pdi .workflow-step {
+      min-width: 0;
+      display: grid;
+      grid-row: span 5;
+      grid-template-rows: subgrid;
+    }
+
+    .workflow-section.pdi .workflow-arrow {
+      display: none;
+    }
+
+    .workflow-section.pdi .workflow-node {
+      width: auto;
+      min-width: 0;
+      grid-row: span 5;
+      grid-template-rows: subgrid;
+    }
+
+    .workflow-node-top {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+    }
+
+    .workflow-stage-icon {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--stage-color, #1f6feb) 86%, white 14%);
+      color: #061727;
+      box-shadow: 0 8px 18px color-mix(in srgb, var(--stage-color, #1f6feb) 24%, transparent);
     }
 
     .workflow-node-title {
       margin: 0;
-      min-height: 42px;
       color: #ffffff;
-      font-size: 15px;
-      font-weight: 850;
+      font-size: 14px;
+      font-weight: 780;
       line-height: 1.28;
     }
 
@@ -960,7 +1315,7 @@
     }
 
     .workflow-metric {
-      padding: 8px;
+      padding: 8px 9px;
       border: 1px solid rgba(145, 180, 214, 0.15);
       border-radius: 6px;
       background: rgba(255,255,255,.035);
@@ -973,7 +1328,7 @@
       display: block;
       margin-top: 3px;
       color: #f8fbff;
-      font-size: 17px;
+      font-size: 21px;
       line-height: 1.05;
     }
 
@@ -992,9 +1347,10 @@
 
     .workflow-aging-row {
       display: grid;
-      grid-template-columns: 46px minmax(86px, 1fr) 64px;
-      gap: 8px;
+      grid-template-columns: 36px minmax(0, 1fr) 88px;
+      gap: 6px;
       align-items: center;
+      min-height: 15px;
     }
 
     .workflow-aging-label {
@@ -1003,10 +1359,10 @@
     }
 
     .workflow-aging-track {
-      height: 16px;
+      height: 10px;
       overflow: hidden;
-      border-radius: 5px;
-      background: rgba(145, 180, 214, 0.10);
+      border-radius: 999px;
+      background: rgba(145, 180, 214, 0.11);
     }
 
     .workflow-aging-fill {
@@ -1015,7 +1371,7 @@
       min-width: var(--bar-min, 0);
       height: 100%;
       border-radius: inherit;
-      background: linear-gradient(90deg, var(--stage-color, #1f6feb), rgba(142, 213, 224, 0.86));
+      background: linear-gradient(90deg, var(--stage-color, #1f6feb), color-mix(in srgb, var(--stage-color, #1f6feb) 42%, white 58%));
     }
 
     .workflow-aging-value {
@@ -1023,22 +1379,73 @@
       text-align: right;
       font-weight: 800;
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
 
     .workflow-raw {
-      min-height: 20px;
       color: #8fa6bd;
       font-size: 11px;
       line-height: 1.35;
     }
 
+    .workflow-node-foot {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: end;
+    }
+
+    .workflow-export {
+      min-width: 58px;
+      min-height: 28px;
+      border: 1px solid rgba(142, 213, 224, 0.42);
+      border-radius: 6px;
+      background: rgba(31, 111, 235, 0.16);
+      color: #eaf6ff;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .workflow-export:hover {
+      border-color: rgba(142, 213, 224, 0.82);
+      background: rgba(31, 111, 235, 0.28);
+    }
+
     .workflow-arrow {
-      width: 34px;
+      width: 24px;
       display: grid;
       place-items: center;
       color: #7fa2c3;
-      font-size: 23px;
+      font-size: 22px;
       font-weight: 650;
+    }
+
+    .workflow-share {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      color: #f4f8fc;
+      font-size: 12px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .workflow-share-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(145, 180, 214, 0.11);
+    }
+
+    .workflow-share-fill {
+      display: block;
+      width: var(--share-width, 0%);
+      min-width: var(--share-min, 0);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--stage-color, #1f6feb), color-mix(in srgb, var(--stage-color, #1f6feb) 42%, white 58%));
     }
 
     .workflow-note {
@@ -1091,26 +1498,37 @@
       font-size: 18px;
     }
 
+    @media (max-width: 1500px) {
+      .topbar { grid-template-columns: 1fr; }
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (max-width: 1280px) {
       .app { grid-template-columns: 210px 1fr; }
-      .topbar { grid-template-columns: 1fr; }
-      .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .module-grid { grid-template-columns: 1fr; }
+      .service-orders-functions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .workflow-controls { grid-template-columns: 1fr; }
-      .workflow-dealer-buttons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .workflow-section.pdi .workflow-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .workflow-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .workflow-section-head { grid-template-columns: 1fr; align-items: start; }
       .workflow-summary { justify-content: flex-start; }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7 { grid-column: span 6; }
     }
 
     @media (max-width: 820px) {
+      body.workflow-mode .topbar { grid-template-columns: 1fr; gap: 12px; }
       .app { grid-template-columns: 1fr; }
       .sidebar { position: static; height: auto; }
       .kpis, .filters { grid-template-columns: 1fr; }
+      .service-orders-search,
+      .service-orders-functions { grid-template-columns: 1fr; }
+      .filter-buttons.service-to,
+      .filter-buttons.work-type { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .module-header, .module-fields, .module-meta { grid-template-columns: 1fr; }
       .module-field.wide { grid-column: auto; }
       .workflow-dealer-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .workflow-section.pdi .workflow-track { grid-template-columns: 1fr; }
       .workflow-node { width: min(224px, calc(100vw - 58px)); }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-12 { grid-column: span 12; }
       .donut-wrap { grid-template-columns: 1fr; }
@@ -1159,23 +1577,31 @@
       <section class="topbar">
         <div>
           <h1 id="pageTitle">Service Center Dashboard</h1>
-          <div class="subtitle" id="pageSubtitle">Operations &middot; Labour &middot; Finance</div>
+          <div class="subtitle" id="pageSubtitle"></div>
         </div>
         <div class="filters">
-          <label>Date Range <select id="dateRange"></select></label>
-          <label>Service Center <select id="serviceCenter"></select></label>
+          <label>Month <select id="dateRange"></select></label>
           <label>Dealer / Yard <select id="dealerYard"></select></label>
-          <label>Service Type <select id="serviceType"></select></label>
+          <div class="filter-group">
+            <span>Service To</span>
+            <div class="filter-buttons service-to" id="serviceToButtons" role="group" aria-label="Service To"></div>
+          </div>
+          <div class="filter-group">
+            <span>Work Type</span>
+            <div class="filter-buttons work-type" id="workTypeButtons" role="group" aria-label="Work Type"></div>
+          </div>
         </div>
         <div class="refresh"><span class="muted">Last Refresh</span><br><span id="lastRefresh">--</span></div>
         <button class="export" id="exportCsv" type="button">Export v</button>
+        <div id="ordersHeaderActions" class="orders-header-actions" hidden></div>
+        <div id="workflowHeaderControls" hidden></div>
       </section>
 
       <section id="overviewView">
       <section class="kpis" id="kpis"></section>
 
       <section class="grid">
-        <article class="panel span-4 data-muted-panel">
+        <article class="panel span-4">
           <div class="panel-head"><h2 class="panel-title">Service Orders Trend</h2><select><option>By Month</option></select></div>
           <div class="panel-body">
             <div class="legend"><span><i class="dot" style="background:#2f7df6"></i>Created</span><span><i class="dot" style="background:#49d17d"></i>Completed</span></div>
@@ -1218,7 +1644,7 @@
           </div>
         </article>
 
-        <article class="panel span-3 data-muted-panel">
+        <article class="panel span-3">
           <div class="panel-head"><h2 class="panel-title">Technician Workload Overview</h2></div>
           <div class="panel-body table-wrap"><table id="techTable"></table></div>
         </article>
@@ -1237,13 +1663,27 @@
         </article>
 
         <article class="panel span-7">
-          <div class="panel-head"><h2 class="panel-title">Recent Service Orders</h2></div>
-          <div class="panel-body table-wrap"><table id="recentTable"></table></div>
+          <div class="panel-head"><h2 class="panel-title">Aging Risk List</h2><button class="panel-action" id="exportRisk" type="button">Export</button></div>
+          <div class="panel-body table-wrap"><table id="riskTable" class="risk-table"></table></div>
         </article>
 
         <article class="panel alert-panel span-5">
           <div class="panel-head"><h2 class="panel-title alert-title">Exceptions / Alerts</h2><button class="panel-action" id="exportAlerts" type="button">Export</button></div>
           <div class="panel-body table-wrap"><table id="alertTable" class="alert-table"></table></div>
+        </article>
+
+        <article class="panel span-12 drilldown-panel" id="drilldownPanel" hidden>
+          <div class="panel-head">
+            <div>
+              <h2 class="panel-title" id="drilldownTitle">Ticket Details</h2>
+              <div class="drilldown-summary" id="drilldownSummary"></div>
+            </div>
+            <div class="panel-actions">
+              <button class="panel-action" id="exportDrilldown" type="button">Export</button>
+              <button class="panel-action" id="closeDrilldown" type="button">Close</button>
+            </div>
+          </div>
+          <div class="panel-body table-wrap"><table id="drilldownTable" class="drilldown-table"></table></div>
         </article>
       </section>
       <div class="footnote">All amounts in AUD. Data integrated from C4C Service and SAP S/4HANA Finance exports.</div>
@@ -1263,7 +1703,8 @@
     </main>
   </div>
 
-  <script src="./dashboard-data.js?v=20260826_161133"></script>
+  <script src="./assets/service-order-icons.js"></script>
+  <script src="./dashboard-data.js?v=20260907_161000"></script>
   <script>
     const data = window.serviceCentreData;
     const page = data.pages.overview;
@@ -1271,24 +1712,149 @@
     const money = (n) => n >= 1000000 ? "$" + (n / 1000000).toFixed(1) + "M" : n >= 1000 ? "$" + (n / 1000).toFixed(1) + "K" : "$" + Math.round(n);
     const num = (n) => fmt.format(Math.round(n || 0));
     const pct = (n, d) => d ? (n / d * 100).toFixed(1) + "%" : "0%";
-    const defaultMonth = data.meta.currentMonth || page.trend.at(-1).monthFull;
+    const dayMs = 24 * 60 * 60 * 1000;
+
+    function parseDashboardDate(value) {
+      const text = String(value || "").trim();
+      if (!text) return null;
+      const [datePart, timePart = ""] = text.split(/\s+/);
+      let year, month, day;
+      if (/^\d{4}[-/]\d{1,2}[-/]\d{1,2}$/.test(datePart)) {
+        [year, month, day] = datePart.split(/[-/]/).map(Number);
+      } else if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(datePart)) {
+        [day, month, year] = datePart.split("/").map(Number);
+      } else {
+        const parsed = new Date(text);
+        return Number.isNaN(parsed.getTime()) ? null : parsed;
+      }
+      const [hour = 0, minute = 0, second = 0] = timePart.split(":").map(Number);
+      return new Date(year, month - 1, day, hour || 0, minute || 0, second || 0);
+    }
+
+    function periodEndDate(period) {
+      const label = data.meta.periodLabels?.[period] || "";
+      const rangeMatch = label.match(/-\s*(\d{1,2}\/\d{1,2}\/\d{4})/);
+      if (rangeMatch) {
+        const end = parseDashboardDate(rangeMatch[1]);
+        if (end) {
+          end.setHours(23, 59, 59, 999);
+          return end;
+        }
+      }
+      if (/^\d{4}$/.test(period || "")) {
+        return new Date(Number(period), 11, 31, 23, 59, 59, 999);
+      }
+      const start = new Date(`1 ${period}`);
+      if (Number.isNaN(start.getTime())) return new Date();
+      const end = new Date(start.getFullYear(), start.getMonth() + 1, 0, 23, 59, 59, 999);
+      const today = new Date();
+      if (start.getFullYear() === today.getFullYear() && start.getMonth() === today.getMonth()) return today;
+      return end;
+    }
+
+    function rowMatchesScope(row, yard = state.yard, type = state.type) {
+      const inYard = yard === "All" || row.dealerYard === yard;
+      const inType = type === "All Ticket Types" || row.serviceType === type;
+      return inYard && inType;
+    }
+
+    function rowInPeriod(row, dateKey, period = state.month) {
+      const value = parseDashboardDate(row[dateKey]);
+      if (!value) return false;
+      if (/^\d{4}$/.test(period || "")) return String(value.getFullYear()) === period;
+      const end = periodEndDate(period);
+      return value.getFullYear() === end.getFullYear() && value.getMonth() === end.getMonth();
+    }
+
+    function isOpenDetailRow(row) {
+      const status = String(row.rawStatus || row.status || "").trim().toLowerCase();
+      const type = String(row.serviceType || "").trim().toLowerCase();
+      if (type === "pdi ticket") return !["claim time ticket", "cancel"].includes(status);
+      if (type === "repair ticket") return !["cancel", "create invoice"].includes(status);
+      return !["cancel", "cancel invoice", "create invoice", "claim time ticket"].includes(status);
+    }
+
+    function openDetailRows(period = state.month, yard = state.yard, type = state.type) {
+      const end = periodEndDate(period);
+      return (page.ticketDetails || []).filter(row => {
+        const created = parseDashboardDate(row.createdDate);
+        return created && created <= end && rowMatchesScope(row, yard, type) && isOpenDetailRow(row);
+      });
+    }
+
+    function completedDetailRows(period = state.month, yard = state.yard, type = state.type) {
+      return (page.ticketDetails || []).filter(row => rowMatchesScope(row, yard, type) && rowInPeriod(row, "completedDate", period));
+    }
+
+    function agingDays(row) {
+      const start = parseDashboardDate(row.lastchangedtime || row.createdDate);
+      if (!start) return 0;
+      const today = new Date();
+      const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const startDay = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+      return Math.max(0, Math.floor((todayStart - startDay) / dayMs));
+    }
+
+    function inAgingBucket(row, bucket) {
+      const days = agingDays(row);
+      if (bucket === "0-7 days") return days <= 7;
+      if (bucket === "8-30 days") return days >= 8 && days <= 30;
+      if (bucket === "31-60 days") return days >= 31 && days <= 60;
+      if (bucket === "60+ days") return days >= 61;
+      return true;
+    }
+
+    function ticketDetailsFor(month, yard = "All", type = "All Ticket Types") {
+      const rows = page.ticketDetails || [];
+      return rows.filter(row => {
+        const inPeriod = month?.length === 4 ? row.year === month : row.period === month;
+        const inYard = yard === "All" || row.dealerYard === yard;
+        const inType = type === "All Ticket Types" || row.serviceType === type;
+        return inPeriod && inYard && inType;
+      });
+    }
+
+    function firstMonthWithTicketDetails(yard = "All", type = "All Ticket Types") {
+      const options = data.meta.months || [];
+      return options.find(month => month.length !== 4 && ticketDetailsFor(month, yard, type).length)
+        || options.find(month => ticketDetailsFor(month, yard, type).length)
+        || data.meta.currentMonth
+        || page.trend.at(-1)?.monthFull
+        || "";
+    }
+
+    const defaultMonth = firstMonthWithTicketDetails();
+    const serviceToOptions = ["Retail", "Internal Sales", "Warranty"];
+    const workTypeByServiceTo = {
+      "Retail": ["Service", "Repair", "Parts+Accessories"],
+      "Internal Sales": ["Internal PDI", "Outbound PDI"],
+      "Warranty": ["Infield Warranty", "Pre delivery Warranty"]
+    };
     const state = {
       month: defaultMonth,
       yard: "All",
       type: "All Ticket Types",
+      serviceTo: "Retail",
+      workType: "Service",
       workflowDealer: "Perth"
     };
+    const drilldownState = {
+      rows: [],
+      title: "Ticket Details",
+      filename: "service-center-ticket-details.xls"
+    };
+    const serviceOrdersState = { query: "", month: "", yard: "All", type: "All Ticket Types", status: "", technician: "", invoice: "", page: 1, ascending: false };
     const overviewTitle = "Service Center Dashboard";
-    const overviewSubtitle = "Operations &middot; Labour &middot; Finance";
+    const overviewSubtitle = "";
     const workflowDealers = ["Perth", "Traralgon", "Launceston", "Geelong", "Frankston"];
     const kpiNextSteps = [
       { functionName: "New Service Orders", formula: "C4C CreatedOn", field: "C4C CreatedOn", nextStep: "Ready", stage: "", target: "New Orders by DMY", owner: "", dueDate: "" },
-      { functionName: "Complete Orders", formula: "Repair: Status == Create Invoice\nPDI: Status == Claim Ticket Time", field: "Missing\nTickets Status last Change Time", nextStep: "Add a new field\nTickets Status last Change Time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
-      { functionName: "Open Service Orders", formula: "Not Complete Orders", field: "Missing\nTickets Status last Change Time", nextStep: "Add a new field\nTickets Status last Change Time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
+      { functionName: "Complete Orders", formula: "Repair: Status == Create Invoice\nPDI: Status == Claim Time Ticket\nCompletion date: lastchangedtime", field: "History API lastchangedtime", nextStep: "Ready", stage: "", target: "Track completed tickets by last status change", owner: "C4C", dueDate: "" },
+      { functionName: "Open Service Orders", formula: "Not Complete Orders\nAge: today - lastchangedtime\nNew open with no lastchangedtime: today - CreatedOn", field: "History API lastchangedtime\nC4C CreatedOn fallback", nextStep: "Ready", stage: "", target: "Track current backlog and age", owner: "C4C", dueDate: "" },
       { functionName: "Turnaround Time", formula: "Arrival / start / completion timestamps", field: "Missing\nArrival / start / completion time", nextStep: "Add a new field\nArrival / start / completion time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
-      { functionName: "Service Orders Trend", formula: "Status Change Date (Missing)", field: "Missing\nStatus Change Date", nextStep: "Add a new field\nStatus Change Date", stage: "", target: "Month To Month", owner: "C4C", dueDate: "" },
+      { functionName: "Service Orders Trend", formula: "CreatedOn + lastchangedtime", field: "C4C CreatedOn\nHistory API lastchangedtime", nextStep: "Ready", stage: "", target: "Month To Month", owner: "C4C", dueDate: "" },
       { functionName: "Technician Workload Overview", formula: "Technician ID/Name + Productive Hour", field: "Missing\nTechnician ID/Name + Productive Hour", nextStep: "Add new fields\nTechnician ID/Name + Productive Hour", stage: "", target: "Worker Perfomance", owner: "", dueDate: "" },
-      { functionName: "Technician Productivity", formula: "Sold / Available Hours", field: "Sold (ClaimHours from C4C), Available hours from HR Payslip", nextStep: "Provide HR Payslip", stage: "", target: "110% to 130%", owner: "C4C", dueDate: "" },
+      { functionName: "Technician Productivity", formula: "Sold / Available Hours", field: "Sold hours from TotalLabourHours, available hours from HR Payslip", nextStep: "Provide HR Payslip", stage: "", target: "110% to 130%", owner: "C4C", dueDate: "" },
       { functionName: "Technician Efficiency", formula: "Sold / Productive Hours", field: "Missing\nProductive hours", nextStep: "Add a new field\nProductive Hours + Technician ID / Name", stage: "", target: ">110%", owner: "C4C", dueDate: "" },
       { functionName: "Technician Utilisation", formula: "Productive / Available Hours", field: "Missing\nProductive hours", nextStep: "Add a new field\nProductive hours", stage: "", target: ">90%", owner: "C4C", dueDate: "" },
       { functionName: "Comeback / Rework Rate", formula: "Rework Tickets / Completed Repair Orders", field: "Rework can tell by same chassis number and description but looking forward a mark in system", nextStep: "Add a new field to mark rework.", stage: "", target: "<5%", owner: "C4C", dueDate: "" },
@@ -1298,7 +1864,7 @@
       { functionName: "Customer Retention Rate", formula: "Returning Sold Vans / Sold Vans in Service Scope", field: "Chassis number in C4C", nextStep: "Define customer return logic using sold van / local service records in system. Chassis? Rego?", stage: "", target: ">90%", owner: "", dueDate: "" },
       { functionName: "Retail Repair Order Growth Rate", formula: "(Current Period Retail ROs - Prior Period Retail ROs) / Prior Period Retail ROs", field: "RO ID in C4C, but missing status change time by date", nextStep: "Add a new field to record the status last change time.", stage: "", target: "3% to 6% YOY", owner: "C4C", dueDate: "" },
       { functionName: "Average Repair Order Amount", formula: "Total Repair Order Revenue / Number of Repair Orders", field: "Total Repair Order Revenue:\nNumber of Repair Orders: C4C OrderID sum up", nextStep: "", stage: "", target: "Benchmark: confirm with Finance", owner: "", dueDate: "" },
-      { functionName: "Effective Labor Rate", formula: "Total Labor Revenue / Labor Hours Sold", field: "Total Labour Revenue:\nLabor Hours Sold: ClaimHour from C4C (TotalHour)", nextStep: "Confirm labour revenue and labour hours sold source.", stage: "", target: ">90% of posted rate", owner: "", dueDate: "" },
+      { functionName: "Effective Labor Rate", formula: "Total Labor Revenue / Labor Hours Sold", field: "Total Labour Revenue:\nLabor Hours Sold: TotalLabourHours from C4C", nextStep: "Confirm labour revenue and labour hours sold source.", stage: "", target: ">90% of posted rate", owner: "", dueDate: "" },
       { functionName: "Gross Profit Margin", formula: "(Parts Revenue + Labor Revenue - Parts Cost - Labor Cost) / Revenue", field: "", nextStep: "", stage: "", target: "58% to 65%", owner: "", dueDate: "" },
       { functionName: "Service Gross %", formula: "(Labor Sales - Direct Labor Cost) / Labor Sales", field: "", nextStep: "", stage: "", target: "65% to 75%", owner: "", dueDate: "" },
       { functionName: "Parts Gross %", formula: "(Parts Sales - Parts Cost) / Parts Sales", field: "", nextStep: "Confirm parts sales and parts cost fields.", stage: "", target: "35% to 45%", owner: "", dueDate: "" },
@@ -1309,6 +1875,7 @@
         group: "Operations",
         title: "Service Orders",
         subtitle: "Order volume, completion, backlog, turnaround, trend, quote approval, and appointment lead time.",
+        kind: "service-orders",
         functions: ["New Service Orders", "Complete Orders", "Open Service Orders", "Turnaround Time", "Service Orders Trend", "Quotation Approval Rate", "Service Appointment Lead Time"]
       },
       "workflow": {
@@ -1365,41 +1932,61 @@
     };
     const kpiMappings = [
       ["New Service Orders", "C4C CreatedOn", "Counts tickets created in the selected period."],
-      ["Complete Orders", "Repair: Create Invoice. PDI: Claim Time Ticket.", "Current completion proxy until status-change timestamp is available."],
-      ["Open Service Orders", "Not completed orders", "Open backlog is any ticket not in the completion proxy."],
-      ["Service Orders Trend", "CreatedOn now; Status Change Date later", "Created trend is ready. Completion trend needs a reliable status-change date."],
+      ["Complete Orders", "Repair: Create Invoice. PDI: Claim Time Ticket. Date from lastchangedtime.", "Completed tickets are counted by the final status change date."],
+      ["Open Service Orders", "Not completed orders. Age from lastchangedtime, or CreatedOn when lastchangedtime is blank.", "Open backlog is current PDI/Repair tickets that have not reached the completion status."],
+      ["Service Orders Trend", "CreatedOn + lastchangedtime", "Created trend and completion trend are ready from C4C plus history API status-change time."],
       ["Quotation Approval Rate", "Approved Quotes / Raised Quotes", "Needs a cleaner quote rejected / quote approved status split."],
       ["Technician Productivity", "Sold Hours / Available Hours", "Sold hours can use C4C claim hours; available hours should come from HR payslip."],
       ["Average Repair Order Amount", "Repair Order Revenue / Repair Order Count", "Revenue comes from SAP invoice enrichment; order count comes from C4C TicketID."]
     ];
     const sourceMappings = [
-      ["ServiceOrderID", "TicketID", "C4C", "Primary key used by the dashboard."],
+      ["TicketID", "TicketID", "C4C", "Primary key used by the dashboard."],
       ["Service Type", "TicketType / TicketTypeText", "C4C", "Repair vs PDI split."],
       ["Dashboard Status", "TicketStatus / TicketStatusText + workflow logic", "C4C", "Raw status is renamed into business workflow labels."],
       ["Quote Amount", "AmountIncludingTax", "C4C", "Open quote value and quote amount context."],
+      ["Customer", "Customer / Role_1001_InvolvedPartyName", "C4C", "Customer from InvolvedParties where InvolvedPartyRoleID = 1001."],
       ["Invoice No.", "ERPInvoiceNumber", "C4C + SAP", "C4C stores the invoice number used to enrich SAP finance data."],
       ["Invoice Amount", "ERPInvoiceNumberPrice", "SAP", "Invoice amount pulled through SAP/HANA enrichment."],
-      ["Labour Hours", "LabourHours / TotalLabourHours", "C4C + SAP", "Claimed and patched labour-hour values used for labour KPIs."],
+      ["ClaimHours (TotalLabourHours)", "TotalLabourHours", "C4C", "Claimed labour hours from the ticket API."],
       ["Technician Name", "Role_40_InvolvedPartyName / Worker", "C4C", "Current worker display proxy until technician assignment is confirmed."]
     ];
 
     document.getElementById("lastRefresh").textContent = data.meta.lastUpdated;
     document.getElementById("dataAsOf").textContent = data.meta.lastUpdated.replace(",", "");
-    fillSelect("dateRange", data.meta.months.map(month => ({ label: data.meta.periodLabels?.[month] || month, value: month })), defaultMonth);
-    fillSelect("serviceCenter", ["All"], "All");
+    fillSelect("dateRange", data.meta.months.map(month => ({ label: month, value: month })), defaultMonth);
     fillSelect("dealerYard", data.meta.yards.map(y => ({ label: y === "All Dealers" ? "All" : y, value: y === "All Dealers" ? "All" : y })), "All");
-    fillSelect("serviceType", data.meta.ticketTypes.map(t => ({ label: t === "All Ticket Types" ? "All" : t.replace(" ticket", ""), value: t })), "All Ticket Types");
+    renderServiceToFilters();
 
-    ["dateRange", "dealerYard", "serviceType"].forEach(id => {
+    ["dateRange", "dealerYard"].forEach(id => {
       document.getElementById(id).addEventListener("change", event => {
         if (id === "dateRange") state.month = event.target.value;
         if (id === "dealerYard") state.yard = event.target.value;
-        if (id === "serviceType") state.type = event.target.value;
+        closeDrilldown();
         renderDashboard();
       });
     });
+    document.getElementById("serviceToButtons").addEventListener("click", event => {
+      const button = event.target.closest(".filter-button");
+      if (!button) return;
+      state.serviceTo = button.dataset.value;
+      state.workType = availableWorkTypes()[0];
+      closeDrilldown();
+      renderServiceToFilters();
+      renderDashboard();
+    });
+    document.getElementById("workTypeButtons").addEventListener("click", event => {
+      const button = event.target.closest(".filter-button");
+      if (!button) return;
+      state.workType = button.dataset.value;
+      closeDrilldown();
+      setActiveFilterButton("workTypeButtons", state.workType);
+      renderDashboard();
+    });
     document.getElementById("exportCsv").addEventListener("click", exportCurrentView);
     document.getElementById("exportAlerts").addEventListener("click", exportAlerts);
+    document.getElementById("exportRisk").addEventListener("click", exportRiskList);
+    document.getElementById("exportDrilldown").addEventListener("click", exportDrilldown);
+    document.getElementById("closeDrilldown").addEventListener("click", closeDrilldown);
     document.querySelectorAll(".nav-item").forEach(item => {
       item.addEventListener("click", () => setActivePage(item.dataset.page || "overview"));
     });
@@ -1407,6 +1994,10 @@
     renderDashboard();
 
     function setActivePage(pageId) {
+      document.body.classList.toggle("workflow-mode", pageId === "workflow");
+      document.getElementById("workflowHeaderControls").hidden = pageId !== "workflow";
+      document.body.classList.toggle("service-orders-mode", pageId === "service-orders");
+      document.getElementById("ordersHeaderActions").hidden = pageId !== "service-orders";
       document.querySelectorAll(".nav-item").forEach(item => item.classList.toggle("active", item.dataset.page === pageId));
       const isOverview = pageId === "overview";
       document.body.classList.toggle("module-mode", !isOverview);
@@ -1431,6 +2022,10 @@
         renderWorkflowPage(config);
         return;
       }
+      if (config.kind === "service-orders") {
+        renderServiceOrdersPage(config);
+        return;
+      }
       document.getElementById("moduleHeader").hidden = false;
       const items = config.functions.map(name => kpiNextSteps.find(item => item.functionName === name)).filter(Boolean);
       document.getElementById("pageTitle").textContent = config.title;
@@ -1441,6 +2036,268 @@
       document.getElementById("moduleCount").textContent = items.length || "TBC";
       document.getElementById("moduleCountLabel").textContent = "Functions";
       document.getElementById("moduleGrid").innerHTML = items.length ? items.map(moduleCard).join("") : emptyModule(config);
+    }
+
+    function renderServiceOrdersPage(config) {
+      document.getElementById("moduleHeader").hidden = true;
+      document.getElementById("pageTitle").textContent = config.title;
+      document.getElementById("pageSubtitle").textContent = "PDI / Repair";
+      document.getElementById("ordersHeaderActions").innerHTML = `<div class="orders-refresh">Last refreshed<strong>${htmlText(data.meta.lastUpdated || "--")}</strong></div><button type="button" class="orders-button primary" id="exportAllServiceOrders">${ordersIcon("Download")} Export All</button>`;
+      document.getElementById("moduleGrid").innerHTML = `<div class="orders-metrics" id="serviceOrderMetrics"></div>` + renderServiceOrdersTool();
+      attachServiceOrdersTool();
+    }
+
+    function serviceOrderFunctionItems(config) {
+      const createdRows = getTicketDetails();
+      const completedRows = completedDetailRows(state.month, state.yard, state.type);
+      const openRows = openDetailRows(state.month, state.yard, state.type);
+      const trendRows = getTrendRows();
+      const latestTrend = trendRows.at(-1) || {};
+      const baseItems = config.functions.map(name => kpiNextSteps.find(item => item.functionName === name)).filter(Boolean);
+      const dataByName = {
+        "New Service Orders": {
+          status: "Ready",
+          value: num(createdRows.length),
+          detail: `${state.month} / ${state.yard} / ${state.type}`,
+          rows: createdRows
+        },
+        "Complete Orders": {
+          status: "Ready",
+          value: num(completedRows.length),
+          detail: `${pct(completedRows.length, createdRows.length)} of created tickets`,
+          rows: completedRows
+        },
+        "Open Service Orders": {
+          status: "Ready",
+          value: num(openRows.length),
+          detail: `${money(getOpenQuoteAmount())} open quote value`,
+          rows: openRows
+        },
+        "Service Orders Trend": {
+          status: "Ready",
+          value: `${num(latestTrend.newTickets || 0)} / ${num(latestTrend.completedTickets || 0)}`,
+          detail: "Created / Completed in latest trend month",
+          rows: createdRows
+        }
+      };
+      return baseItems.map(item => ({
+        ...item,
+        ...(dataByName[item.functionName] || { status: "TBC", value: "TBC", detail: item.nextStep || "TBC", rows: [] })
+      }));
+    }
+
+    function renderServiceOrdersTool() {
+      const options = (values, selected, allLabel = "All") => `<option value="">${allLabel}</option>` + values.map(value => `<option value="${attrText(value)}" ${value === selected ? "selected" : ""}>${htmlText(value)}</option>`).join("");
+      const unique = key => [...new Set(serviceOrderBaseRows().map(row => row[key]).filter(Boolean))].sort();
+      const months = [...new Set([...(data.meta.months || []).filter(month => month.length !== 4), ...unique("period")])].sort((a, b) => new Date(`1 ${b}`) - new Date(`1 ${a}`));
+      return `
+        <section class="orders-panel" aria-labelledby="ordersFilterTitle">
+          <div class="orders-section-head"><h2 id="ordersFilterTitle">${ordersIcon("Search")} Search & Filter</h2><button class="orders-button" id="resetServiceOrderFilters" type="button">${ordersIcon("RotateCcw")} Reset Filters</button></div>
+          <form class="orders-filters" id="serviceOrderFilters">
+            <label class="orders-keyword">Search<input id="serviceOrderSearch" type="search" value="${attrText(serviceOrdersState.query)}" placeholder="TicketID, VIN, customer, dealer, tech, invoice, BP..." autocomplete="off"></label>
+            <label>Month<select id="serviceOrderMonth">${options(months, serviceOrdersState.month, "All months")}</select></label>
+            <label>Ticket Type<select id="serviceOrderType">${options(["PDI ticket", "Repair ticket"], serviceOrdersState.type)}</select></label>
+            <button class="orders-button primary orders-filter-action" type="submit">${ordersIcon("Search")} Search</button>
+            <label>Status<select id="serviceOrderStatus">${options(unique("status"), serviceOrdersState.status)}</select></label>
+            <label>Dealer<select id="serviceOrderDealer">${options(unique("dealerYard"), serviceOrdersState.yard, "All dealers")}</select></label>
+            <label>Technician<select id="serviceOrderTechnician">${options(unique("workerName"), serviceOrdersState.technician)}</select></label>
+            <label>Invoice<select id="serviceOrderInvoice">${options(["Has invoice", "No invoice"], serviceOrdersState.invoice)}</select></label>
+            <button class="orders-button orders-filter-action" id="clearServiceOrderSearch" type="button">Clear</button>
+          </form>
+        </section>
+        <section class="orders-panel orders-results" aria-labelledby="ordersResultsTitle">
+          <div class="orders-section-head"><div><h2 id="ordersResultsTitle">${ordersIcon("ListFilter")} Ticket Results</h2><div class="orders-result-count" id="serviceOrderResultCount" aria-live="polite"></div></div><button class="orders-button primary" id="exportServiceOrderSearch" type="button">${ordersIcon("Download")} Export</button></div>
+          <div class="table-wrap"><table class="service-orders-results" id="serviceOrderSearchResults" aria-label="Service order tickets"></table></div>
+          <div class="orders-pagination"><span id="serviceOrderPageSummary"></span><nav class="orders-pages" id="serviceOrderPagination" aria-label="Ticket result pages"></nav></div>
+        </section>
+        <dialog class="orders-dialog" id="serviceOrderDetails" aria-labelledby="serviceOrderDetailTitle"></dialog>`;
+    }
+
+    function serviceOrderFunctionCard(item) {
+      return `
+        <article class="module-card service-order-function ${item.status === "Ready" ? "ready" : "tbc"}">
+          <div class="service-order-function-head">
+            <h3>${htmlText(item.functionName)}</h3>
+            <span class="service-order-status">${htmlText(item.status)}</span>
+          </div>
+          <div class="service-order-value">${htmlText(item.value)}</div>
+          <div class="service-order-detail">${htmlText(item.detail)}</div>
+          <div class="service-order-rule">${htmlText(item.formula || "TBC")}</div>
+        </article>`;
+    }
+
+    function attachServiceOrdersTool() {
+      const input = document.getElementById("serviceOrderSearch");
+      document.getElementById("exportServiceOrderSearch").addEventListener("click", exportServiceOrderSearch);
+      document.getElementById("exportAllServiceOrders").addEventListener("click", () => {
+        const rows = serviceOrderBaseRows().filter(row => serviceOrdersState.yard === "All" || row.dealerYard === serviceOrdersState.yard);
+        downloadWorkbook(buildTicketDetailSheet(rows), `service-orders-${slug(serviceOrdersState.yard)}-all.xls`);
+      });
+      const update = () => {
+        Object.assign(serviceOrdersState, {
+          query: input.value,
+          month: document.getElementById("serviceOrderMonth").value,
+          type: document.getElementById("serviceOrderType").value || "All Ticket Types",
+          yard: document.getElementById("serviceOrderDealer").value || "All",
+          status: document.getElementById("serviceOrderStatus").value,
+          technician: document.getElementById("serviceOrderTechnician").value,
+          invoice: document.getElementById("serviceOrderInvoice").value,
+          page: 1
+        });
+        renderServiceOrderSearchResults();
+      };
+      document.getElementById("serviceOrderFilters").addEventListener("submit", event => { event.preventDefault(); update(); });
+      document.querySelectorAll("#serviceOrderFilters select").forEach(select => select.addEventListener("change", update));
+      document.getElementById("resetServiceOrderFilters").addEventListener("click", () => {
+        input.value = "";
+        document.querySelectorAll("#serviceOrderFilters select").forEach(select => { select.value = ""; });
+        serviceOrdersState.ascending = false;
+        update();
+      });
+      document.getElementById("clearServiceOrderSearch").addEventListener("click", () => {
+        input.value = "";
+        update();
+        input.focus();
+      });
+      input.addEventListener("input", update);
+      document.getElementById("serviceOrderPagination").addEventListener("click", event => {
+        const button = event.target.closest("button[data-page]");
+        if (!button || button.disabled) return;
+        serviceOrdersState.page = Number(button.dataset.page);
+        renderServiceOrderSearchResults();
+      });
+      document.getElementById("serviceOrderSearchResults").addEventListener("click", event => {
+        if (event.target.closest("[data-orders-sort]")) {
+          serviceOrdersState.ascending = !serviceOrdersState.ascending;
+          serviceOrdersState.page = 1;
+          renderServiceOrderSearchResults();
+        }
+        const action = event.target.closest("[data-order-details]");
+        if (action) showServiceOrderDetails(action.dataset.orderDetails);
+      });
+      renderServiceOrderSearchResults();
+    }
+
+    function serviceOrderBaseRows() {
+      return (page.ticketDetails || []).filter(row => ["PDI ticket", "Repair ticket"].includes(row.serviceType));
+    }
+
+    function serviceOrderSearchRows(includeMonth = true) {
+      const query = serviceOrdersState.query.trim().toLowerCase();
+      const tokens = query.split(/\s+/).filter(Boolean);
+      const rows = serviceOrderBaseRows().filter(row => {
+        const scope = serviceOrdersState;
+        if (!rowMatchesScope(row, scope.yard, scope.type)) return false;
+        if (includeMonth && scope.month && row.period !== scope.month) return false;
+        if (scope.status && row.status !== scope.status) return false;
+        if (scope.technician && row.workerName !== scope.technician) return false;
+        const hasInvoice = Boolean(String(row.invoiceNo || "").trim());
+        if (scope.invoice === "Has invoice" && !hasInvoice) return false;
+        if (scope.invoice === "No invoice" && hasInvoice) return false;
+        if (!tokens.length) return true;
+        const haystack = [
+          row.ticketId,
+          row.serviceOrderId,
+          row.vehicle,
+          row.chassisNumber,
+          row.customer,
+          row.dealerYard,
+          row.dealerName,
+          row.workerName,
+          row.invoiceNo,
+          row.customerBP,
+          row.technicianBP,
+          row.role43BP,
+          row.status,
+          row.rawStatus,
+          row.ticketName
+        ].join(" ").toLowerCase();
+        return tokens.every(token => haystack.includes(token));
+      });
+      return rows.sort((a, b) => {
+        const dateA = parseDashboardDate(a.createdDate)?.getTime() || 0;
+        const dateB = parseDashboardDate(b.createdDate)?.getTime() || 0;
+        const order = dateB - dateA || String(a.ticketId || a.serviceOrderId).localeCompare(String(b.ticketId || b.serviceOrderId));
+        return serviceOrdersState.ascending ? -order : order;
+      });
+    }
+
+    function renderServiceOrderSearchResults() {
+      const rows = serviceOrderSearchRows();
+      const pageCount = Math.max(1, Math.ceil(rows.length / 8));
+      serviceOrdersState.page = Math.min(serviceOrdersState.page, pageCount);
+      const start = (serviceOrdersState.page - 1) * 8;
+      const previewRows = rows.slice(start, start + 8);
+      document.getElementById("serviceOrderSearchResults").innerHTML = `
+        <colgroup><col style="width:7%"><col style="width:6%"><col style="width:18%"><col style="width:10%"><col style="width:9%"><col style="width:10%"><col style="width:15%"><col style="width:10%"><col style="width:9%"><col style="width:6%"></colgroup>
+        <thead><tr><th>Ticket</th><th>Type</th><th>Status</th><th>Dealer</th><th>Tech</th><th aria-sort="${serviceOrdersState.ascending ? "ascending" : "descending"}"><button class="orders-sort" data-orders-sort title="Sort by created date">Created ${ordersIcon(serviceOrdersState.ascending ? "ArrowUp" : "ArrowDown")}</button></th><th>lastchangedtime</th><th>Invoice</th><th class="num" title="ClaimHours (TotalLabourHours)">Claim Hours</th><th>Details</th></tr></thead>
+        <tbody>
+          ${previewRows.map(row => `<tr><td><strong>${htmlText(row.ticketId || row.serviceOrderId)}</strong></td><td>${htmlText(serviceTypeText(row))}</td><td><span class="orders-status" style="--status-color:${serviceOrderStatusColor(row.status)}" title="${attrText(row.rawStatus || row.status)}">${htmlText(shortName(row.status || ""))}</span></td><td>${htmlText(row.dealerYard)}</td><td title="${attrText(row.workerName)}">${htmlText(shortWorker(row.workerName))}</td><td>${htmlText(row.createdDate)}</td><td>${htmlText(row.lastchangedtime || "-")}</td><td>${htmlText(row.invoiceNo || "-")}</td><td class="num">${numberIfAvailable(row.labourHours)}</td><td><button class="orders-button orders-row-action" data-order-details="${attrText(row.ticketId || row.serviceOrderId)}" title="View ticket ${attrText(row.ticketId || row.serviceOrderId)}" aria-label="View ticket ${attrText(row.ticketId || row.serviceOrderId)}">${ordersIcon("Ellipsis")}</button></td></tr>`).join("")}
+          ${previewRows.length ? "" : `<tr><td colspan="10">No matching tickets</td></tr>`}
+        </tbody>`;
+      document.getElementById("serviceOrderResultCount").textContent = `${num(rows.length)} matching tickets`;
+      document.getElementById("serviceOrderPageSummary").textContent = `Showing ${rows.length ? start + 1 : 0}-${Math.min(start + 8, rows.length)} of ${num(rows.length)} tickets`;
+      const current = serviceOrdersState.page;
+      const pages = [...new Set([1, current - 1, current, current + 1, pageCount])].filter(n => n >= 1 && n <= pageCount).sort((a, b) => a - b);
+      document.getElementById("serviceOrderPagination").innerHTML = `<button class="orders-button" data-page="${current - 1}" ${current === 1 ? "disabled" : ""} title="Previous page" aria-label="Previous page">${ordersIcon("ChevronLeft")}</button>` + pages.map((n, i) => `${i && n - pages[i - 1] > 1 ? "<span>...</span>" : ""}<button class="orders-button ${n === current ? "primary" : ""}" data-page="${n}" ${n === current ? 'aria-current="page"' : ""} aria-label="Page ${n}">${n}</button>`).join("") + `<button class="orders-button" data-page="${current + 1}" ${current === pageCount ? "disabled" : ""} title="Next page" aria-label="Next page">${ordersIcon("ChevronRight")}</button>`;
+      document.getElementById("exportServiceOrderSearch").disabled = !rows.length;
+      document.getElementById("exportAllServiceOrders").title = `Export all PDI / Repair tickets: ${serviceOrdersState.yard === "All" ? "All dealers" : serviceOrdersState.yard}`;
+      renderServiceOrderMetrics(rows);
+    }
+
+    function exportServiceOrderSearch() {
+      const query = serviceOrdersState.query.trim();
+      const rows = serviceOrderSearchRows();
+      downloadWorkbook(
+        buildTicketDetailSheet(rows),
+        `service-orders-${slug(serviceOrdersState.yard)}-${query ? "search-" + slug(query) : "filtered"}.xls`
+      );
+    }
+
+    function ordersIcon(name) {
+      const nodes = window.serviceOrderIcons?.[name] || [];
+      return `<svg class="orders-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${nodes.map(([tag, attrs]) => `<${tag} ${Object.entries(attrs).map(([key, value]) => `${key}="${attrText(value)}"`).join(" ")}></${tag}>`).join("")}</svg>`;
+    }
+
+    function serviceOrderStatusColor(status = "") {
+      if (/cancel/i.test(status)) return "#fa7b88";
+      if (/completed|invoiced/i.test(status)) return "#55d89b";
+      if (/quote approval/i.test(status)) return "#ffb665";
+      if (/progress/i.test(status)) return "#f0cd66";
+      if (/time claim/i.test(status)) return "#58cecb";
+      return "#77b6ff";
+    }
+
+    function renderServiceOrderMetrics(createdRows) {
+      const scope = serviceOrdersState;
+      const base = serviceOrderSearchRows(false);
+      const isCompleted = row => (row.serviceType === "Repair ticket" && String(row.rawStatus).toLowerCase() === "create invoice") || (row.serviceType === "PDI ticket" && String(row.rawStatus).toLowerCase() === "claim time ticket");
+      const completed = base.filter(row => isCompleted(row) && (!scope.month || rowInPeriod(row, "lastchangedtime", scope.month)));
+      const open = base.filter(row => isOpenDetailRow(row) && (!scope.month || parseDashboardDate(row.createdDate) <= periodEndDate(scope.month)));
+      const trendMonth = scope.month || data.meta.currentMonth;
+      const trendCreated = base.filter(row => row.period === trendMonth).length;
+      const trendCompleted = base.filter(row => isCompleted(row) && rowInPeriod(row, "lastchangedtime", trendMonth)).length;
+      const metrics = [
+        ["New Service Orders", num(createdRows.length), scope.month || "All months", "FileText", "#77b6ff"],
+        ["Complete Orders", num(completed.length), scope.month || "All months", "CircleCheck", "#55d89b"],
+        ["Open Service Orders", num(open.length), "Current status", "Wrench", "#58cecb"],
+        ["Service Orders Trend", `${num(trendCreated)} / ${num(trendCompleted)}`, `${trendMonth} · Created / Completed`, "ChartNoAxesCombined", "#77b6ff"],
+        ["Turnaround Time", "TBC", "", "Clock", "#ffb665"],
+        ["Quotation Approval Rate", "TBC", "", "BadgeCheck", "#b49aef"],
+        ["Service Appointment Lead Time", "TBC", "", "CalendarDays", "#fa7b88"]
+      ];
+      document.getElementById("serviceOrderMetrics").innerHTML = metrics.map(([label, value, note, icon, color]) => `<article class="orders-metric" style="--metric-color:${color}"><div class="orders-metric-head">${ordersIcon(icon)}<span>${label}</span></div><div class="orders-metric-value">${htmlText(value)}</div><div class="orders-metric-note">${htmlText(note)}</div></article>`).join("");
+    }
+
+    function showServiceOrderDetails(id) {
+      const row = serviceOrderBaseRows().find(item => String(item.ticketId || item.serviceOrderId) === id);
+      if (!row) return;
+      const dialog = document.getElementById("serviceOrderDetails");
+      const [headers, values] = ticketDetailRows([row]);
+      dialog.innerHTML = `<div class="orders-section-head"><h2 id="serviceOrderDetailTitle">Ticket ${htmlText(id)}</h2><div><button class="orders-button" id="exportServiceOrderDetail">${ordersIcon("Download")} Export</button> <button class="orders-button" id="closeServiceOrderDetail" title="Close ticket details" aria-label="Close ticket details">${ordersIcon("X")}</button></div></div><dl class="orders-detail-grid">${headers.map((header, index) => `<div><dt>${htmlText(header)}</dt><dd>${htmlText(String(values[index] ?? "") || "-")}</dd></div>`).join("")}</dl>`;
+      document.getElementById("closeServiceOrderDetail").onclick = () => dialog.close();
+      document.getElementById("exportServiceOrderDetail").onclick = () => downloadWorkbook(buildTicketDetailSheet([row]), `ticket-${slug(id)}.xls`);
+      dialog.showModal();
     }
 
     function renderMappingPage(config) {
@@ -1545,21 +2402,17 @@
       document.getElementById("moduleSubtitle").textContent = config.subtitle;
       document.getElementById("moduleCount").textContent = nodeCount;
       document.getElementById("moduleCountLabel").textContent = "Stages";
-      document.getElementById("moduleGrid").innerHTML = renderWorkflowControls() + sections.map(renderWorkflowSection).join("") +
-        `<div class="workflow-note">Avg age is estimated from the current aging buckets and can be refined after the workflow timestamps are confirmed.</div>`;
+      document.getElementById("workflowHeaderControls").innerHTML = renderWorkflowControls();
+      document.getElementById("moduleGrid").innerHTML = sections.map(renderWorkflowSection).join("");
       attachWorkflowControls();
     }
 
     function renderWorkflowControls() {
       const buttons = workflowDealers.map(dealer => `
-        <button class="workflow-dealer-button ${dealer === state.workflowDealer ? "active" : ""}" type="button" data-dealer="${htmlText(dealer)}">${htmlText(dealer)}</button>
+        <button class="workflow-dealer-button ${dealer === state.workflowDealer ? "active" : ""}" type="button" data-dealer="${htmlText(dealer)}" aria-pressed="${dealer === state.workflowDealer}">${htmlText(dealer)}</button>
       `).join("");
       return `
         <div class="workflow-controls">
-          <div>
-            <h3 class="workflow-controls-title">Dealer Scope</h3>
-            <div class="workflow-controls-copy">Choose one dealer to see that dealer's Repair and PDI status aging flow.</div>
-          </div>
           <div class="workflow-dealer-buttons" role="group" aria-label="Dealer / Yard">${buttons}</div>
         </div>`;
     }
@@ -1569,6 +2422,12 @@
         button.addEventListener("click", event => {
           state.workflowDealer = event.currentTarget.dataset.dealer;
           renderWorkflowPage(modulePages.workflow);
+        });
+      });
+      document.querySelectorAll(".workflow-export").forEach(button => {
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+          exportWorkflowStage(event.currentTarget.dataset.workflowType, event.currentTarget.dataset.workflowStage);
         });
       });
     }
@@ -1617,6 +2476,7 @@
             qty: 0,
             quoteAmount: 0,
             rawStatuses: new Set(),
+            ticketIds: new Set(),
             agingMap: new Map(),
             color: stage.color || "#7890a5"
           });
@@ -1626,6 +2486,7 @@
         target.quoteAmount += stage.quoteAmount || 0;
         target.color = target.color || stage.color || "#7890a5";
         (stage.rawStatuses || []).forEach(status => target.rawStatuses.add(status));
+        (stage.ticketIds || []).forEach(id => target.ticketIds.add(String(id)));
         (stage.aging || []).forEach(item => target.agingMap.set(item.label, (target.agingMap.get(item.label) || 0) + (item.qty || 0)));
       });
       return order.map(name => {
@@ -1637,6 +2498,7 @@
           quoteAmount: stage.quoteAmount,
           quoteAmountLabel: money(stage.quoteAmount),
           rawStatuses: [...stage.rawStatuses],
+          ticketIds: [...stage.ticketIds],
           aging,
           avgAge: avgAgeFromBuckets(aging),
           color: stage.color
@@ -1645,29 +2507,50 @@
     }
 
     function renderWorkflowSection(section) {
+      const isPdi = section.type === "PDI ticket";
       return `
-        <section class="workflow-section">
+        <section class="workflow-section ${isPdi ? "pdi" : "repair"}">
           <div class="workflow-section-head">
-            <div>
+            <div class="workflow-heading">
+              <div class="workflow-section-icon">${workflowSectionIcon(section.type)}</div>
+              <div>
               <h3 class="workflow-section-title">${htmlText(section.title)} Workflow</h3>
-              <div class="workflow-section-subtitle">${htmlText(section.subtitle)}</div>
+                <div class="workflow-section-subtitle">${htmlText(workflowSectionSubtitle(section.type))}</div>
+              </div>
             </div>
             <div class="workflow-summary">
-              <span class="workflow-pill">Total<strong>${num(section.metrics.total)}</strong></span>
-              <span class="workflow-pill">Active<strong>${num(section.metrics.active)}</strong></span>
-              <span class="workflow-pill">Avg Age<strong>${section.metrics.avgAge}</strong></span>
+              ${workflowSummaryCard("Total Tickets", num(section.metrics.total), workflowSummaryIcon("total"))}
+              ${workflowSummaryCard("Active Tickets", num(section.metrics.active), workflowSummaryIcon("active"))}
+              ${workflowSummaryCard("Avg Age (days)", section.metrics.avgAge, workflowSummaryIcon("age"))}
             </div>
           </div>
-          <div class="workflow-track">
-            ${section.pipeline.map((stage, index) => workflowNode(stage, index, section.pipeline.length)).join("")}
+          <div class="workflow-content">
+            <div class="workflow-track">
+              ${section.pipeline.map((stage, index) => workflowNode(stage, index, section.pipeline.length, section.type, section.metrics.total)).join("")}
+            </div>
           </div>
         </section>`;
     }
 
-    function workflowNode(stage, index, count) {
+    function workflowSummaryCard(label, value, icon) {
+      return `
+        <span class="workflow-pill">
+          <span class="workflow-pill-icon">${icon}</span>
+          <span>${htmlText(label)}<strong>${htmlText(value)}</strong></span>
+        </span>`;
+    }
+
+    function workflowSectionSubtitle(type) {
+      return type === "PDI ticket"
+        ? "From PDI start to completion. Track ticket status and aging."
+        : "From quote request to invoice. Track where tickets are in the repair process.";
+    }
+
+    function workflowNode(stage, index, count, type, sectionTotal) {
       const total = stage.qty || 0;
       const aging = stage.aging || [];
       const maxAging = Math.max(...aging.map(item => item.qty || 0), 1);
+      const stageShare = sectionTotal ? stage.qty / sectionTotal * 100 : 0;
       const bars = aging.map(item => {
         const qty = item.qty || 0;
         const width = qty ? Math.max(6, qty / maxAging * 100) : 0;
@@ -1682,7 +2565,10 @@
       return `
         <div class="workflow-step">
           <article class="workflow-node" style="--stage-color:${stage.color || "#7890a5"}">
-            <h4 class="workflow-node-title">${htmlText(stage.status)}</h4>
+            <div class="workflow-node-top">
+              <span class="workflow-stage-icon">${workflowStageIcon(type, stage.status, index)}</span>
+              <h4 class="workflow-node-title">${htmlText(stage.status)}</h4>
+            </div>
             <div class="workflow-node-metrics">
               <div class="workflow-metric">Tickets<strong>${num(stage.qty)}</strong></div>
               <div class="workflow-metric">Avg Age<strong>${stage.avgAge}</strong></div>
@@ -1690,10 +2576,51 @@
             <div class="workflow-aging">
               <div class="workflow-aging-chart">${bars}</div>
             </div>
-            <div class="workflow-raw">C4C: ${htmlText((stage.rawStatuses || []).join(", ") || "No current tickets")}</div>
+            <div class="workflow-share">
+              <span class="workflow-share-track"><span class="workflow-share-fill" style="--share-width:${stageShare}%;--share-min:${stageShare ? "6px" : "0"}"></span></span>
+              <span>${stageShare.toFixed(1)}%</span>
+            </div>
+            <div class="workflow-node-foot">
+              <div class="workflow-raw">C4C: ${htmlText((stage.rawStatuses || []).join(", ") || "No current tickets")}</div>
+              <button class="workflow-export" type="button" data-workflow-type="${attrText(type)}" data-workflow-stage="${attrText(stage.status)}">Export</button>
+            </div>
           </article>
           ${index < count - 1 ? `<div class="workflow-arrow">-&gt;</div>` : ""}
         </div>`;
+    }
+
+    function workflowSectionIcon(type) {
+      if (type === "PDI ticket") {
+        return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 15h14l-1.4-4.8A3 3 0 0 0 14.8 8H9.2a3 3 0 0 0-2.8 2.2L5 15Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M6 15v3M18 15v3M8 18h.1M16 18h.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>`;
+      }
+      return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.7 5.3a4.2 4.2 0 0 0-5 5L4.8 15.2a2.1 2.1 0 1 0 3 3l4.9-4.9a4.2 4.2 0 0 0 5-5l-2.9 2.9-2-2 2.9-2.9Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg>`;
+    }
+
+    function workflowSummaryIcon(kind) {
+      if (kind === "active") {
+        return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7h10v10H7V7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 4v3M15 4v3M9 17v3M15 17v3M4 9h3M4 15h3M17 9h3M17 15h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`;
+      }
+      if (kind === "age") {
+        return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`;
+      }
+      return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h7l4 4v14H7V3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v5h5M9.5 13h5M9.5 17h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`;
+    }
+
+    function workflowStageIcon(type, status, index) {
+      const text = String(status || "");
+      if (/cancel/i.test(text)) {
+        return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`;
+      }
+      if (/approved|completed|invoice|claimed/i.test(text)) {
+        return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6.5 12.5 3.2 3.2 7.8-8.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      }
+      if (/progress|repair/i.test(text) && type === "Repair ticket") {
+        return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+      }
+      if (type === "PDI ticket" && index === 0) {
+        return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l10-7L8 5Z" fill="currentColor"/></svg>`;
+      }
+      return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4h8v4H8V4Z" stroke="currentColor" stroke-width="1.9"/><path d="M7 8h10v12H7V8Z" stroke="currentColor" stroke-width="1.9"/><path d="M10 13h4M10 16h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>`;
     }
 
     function avgAgeFromBuckets(aging) {
@@ -1773,13 +2700,14 @@
       ]);
 
       const statusMix = getStatusMix();
-      renderDonut("statusDonut", "statusLegend", statusMix.segments.slice(0, 5), "qty", "qty");
+      renderDonut("statusDonut", "statusLegend", statusMix.segments.slice(0, 5), "qty", "qty", "status");
       document.getElementById("statusTotal").textContent = statusMix.total;
       const typeRows = ticketTypeRows();
       renderDonut("typeDonut", "typeLegend", typeRows, "value", "label");
       document.getElementById("typeTotal").textContent = num(typeRows.reduce((a, b) => a + b.value, 0));
       renderYardTable();
       renderAging();
+      renderRiskTable();
       renderTechTable();
       renderDonut("labourDonut", "labourLegend", [
         { name: "Repair", value: labour.repair, label: labour.repair.toFixed(1) + " (" + pct(labour.repair, labour.total) + ")", color: "#2f7df6" },
@@ -1788,7 +2716,6 @@
       ], "value", "label");
       document.getElementById("labourTotal").textContent = labour.total.toLocaleString("en-AU", { maximumFractionDigits: 1 });
       renderInvoice();
-      renderRecent();
       renderAlerts();
     }
 
@@ -1797,6 +2724,30 @@
         const item = typeof option === "string" ? { label: option, value: option } : option;
         return `<option value="${item.value}" ${item.value === selected ? "selected" : ""}>${item.label}</option>`;
       }).join("");
+    }
+
+    function availableWorkTypes() {
+      return workTypeByServiceTo[state.serviceTo] || [];
+    }
+
+    function renderServiceToFilters() {
+      const workTypes = availableWorkTypes();
+      if (!workTypes.includes(state.workType)) state.workType = workTypes[0] || "";
+      renderFilterButtons("serviceToButtons", serviceToOptions, state.serviceTo);
+      renderFilterButtons("workTypeButtons", workTypes, state.workType);
+    }
+
+    function renderFilterButtons(id, options, selected) {
+      document.getElementById(id).style.setProperty("--filter-columns", Math.max(options.length, 1));
+      document.getElementById(id).innerHTML = options.map(option => `
+        <button class="filter-button ${option === selected ? "active" : ""}" type="button" data-value="${htmlText(option)}">${htmlText(option)}</button>
+      `).join("");
+    }
+
+    function setActiveFilterButton(id, selected) {
+      document.querySelectorAll(`#${id} .filter-button`).forEach(button => {
+        button.classList.toggle("active", button.dataset.value === selected);
+      });
     }
 
     function delta(now, prev) {
@@ -1989,7 +2940,7 @@
       }).concat([{ name: "Other", value: 0, label: "0 (0%)", color: "#8f5cf6" }]);
     }
 
-    function renderDonut(donutId, legendId, rows, valueKey, labelKey) {
+    function renderDonut(donutId, legendId, rows, valueKey, labelKey, drilldownType = "") {
       const total = rows.reduce((a, r) => a + Number(r[valueKey] || 0), 0) || 1;
       let start = 0;
       const stops = rows.map(r => {
@@ -1998,10 +2949,17 @@
         start = end;
         return part;
       }).join(", ");
-      document.getElementById(donutId).style.background = `conic-gradient(${stops})`;
-      document.getElementById(legendId).innerHTML = rows.map(r => `
-        <div class="donut-line"><span><i class="dot" style="background:${r.color || "#7890a5"}"></i>${r.name}</span><strong>${typeof r[labelKey] === "number" ? num(r[labelKey]) : r[labelKey]}</strong></div>
+      const donut = document.getElementById(donutId);
+      const legend = document.getElementById(legendId);
+      donut.style.background = `conic-gradient(${stops})`;
+      legend.innerHTML = rows.map(r => `
+        <div class="donut-line ${drilldownType === "status" ? "clickable-row" : ""}" data-status="${attrText(r.name)}"><span><i class="dot" style="background:${r.color || "#7890a5"}"></i>${r.name}</span><strong>${typeof r[labelKey] === "number" ? num(r[labelKey]) : r[labelKey]}</strong></div>
       `).join("");
+      if (drilldownType === "status") {
+        legend.querySelectorAll(".donut-line").forEach(line => {
+          line.addEventListener("click", () => showStatusDrilldown(line.dataset.status));
+        });
+      }
     }
 
     function drawLineChart(id, rows, series) {
@@ -2071,16 +3029,34 @@
         tooltip.style.transform = "translateY(-110%)";
       };
 
-      svg.onmousemove = event => {
+      const pointIndexFromEvent = event => {
         const box = svg.getBoundingClientRect();
         const localX = ((event.clientX - box.left) / box.width) * geom.w;
         const clampedX = Math.max(geom.pad.l, Math.min(geom.w - geom.pad.r, localX));
         const usable = geom.w - geom.pad.l - geom.pad.r;
         const ratio = usable ? (clampedX - geom.pad.l) / usable : 0;
-        const index = Math.max(0, Math.min(rows.length - 1, Math.round(ratio * (rows.length - 1))));
+        return Math.max(0, Math.min(rows.length - 1, Math.round(ratio * (rows.length - 1))));
+      };
+
+      const seriesFromEvent = (event, index) => {
+        const box = svg.getBoundingClientRect();
+        const localY = ((event.clientY - box.top) / box.height) * geom.h;
+        return series.reduce((best, item) => {
+          const distance = Math.abs(geom.y(rows[index][item.key] || 0) - localY);
+          return distance < best.distance ? { item, distance } : best;
+        }, { item: series[0], distance: Infinity }).item;
+      };
+
+      svg.onmousemove = event => {
+        const index = pointIndexFromEvent(event);
         showPoint(index);
         tooltip.classList.add("show");
         positionTooltip(index);
+      };
+
+      svg.onclick = event => {
+        const index = pointIndexFromEvent(event);
+        showTrendDrilldown(rows[index], seriesFromEvent(event, index));
       };
 
       svg.onmouseleave = () => {
@@ -2100,8 +3076,19 @@
       const rows = [...getDealerRows()].sort((a, b) => b.newTickets - a.newTickets).slice(0, 5);
       const total = rows.reduce((a, r) => a + r.newTickets, 0);
       document.getElementById("yardTable").innerHTML = `<thead><tr><th>Dealer / Yard</th><th class="num">Orders</th><th class="num">%</th></tr></thead><tbody>` +
-        rows.map(r => `<tr><td>${r.yard}</td><td class="num">${r.newTickets}</td><td class="num">${pct(r.newTickets, getCreatedTotal())}</td></tr>`).join("") +
+        rows.map(r => `<tr class="clickable-row" data-yard="${attrText(r.yard)}"><td>${r.yard}</td><td class="num">${r.newTickets}</td><td class="num">${pct(r.newTickets, getCreatedTotal())}</td></tr>`).join("") +
         `<tr class="total-row"><td>Total</td><td class="num">${total}</td><td class="num">${pct(total, getCreatedTotal())}</td></tr></tbody>`;
+      document.querySelectorAll("#yardTable tr[data-yard]").forEach(row => {
+        row.addEventListener("click", () => {
+          const yard = row.dataset.yard;
+          showDrilldown(
+            `Created Service Orders - ${yard}`,
+            `${state.month} / ${state.type}`,
+            ticketDetailsFor(state.month, yard, state.type),
+            `created-${state.month}-${yard}-${state.type}`
+          );
+        });
+      });
     }
 
     function renderAging() {
@@ -2111,14 +3098,37 @@
       document.getElementById("agingBars").innerHTML = rows.map(r => {
         const total = r.qty || 1;
         const segs = (r.aging || []).map(a => `<span class="bar-seg" style="width:${a.qty / total * 100}%;background:${colors[a.label] || "#7890a5"}"></span>`).join("");
-        return `<div class="bar-row"><span>${shortName(r.name)}</span><div class="bar-track" style="max-width:${Math.max(12, r.qty / max * 100)}%">${segs}</div><strong>${r.qty}</strong></div>`;
+        return `<div class="bar-row clickable-row" data-status="${attrText(r.name)}"><span>${shortName(r.name)}</span><div class="bar-track" style="max-width:${Math.max(12, r.qty / max * 100)}%">${segs}</div><strong>${r.qty}</strong></div>`;
       }).join("");
       const aging = aggregateAging();
-      document.getElementById("agingStats").innerHTML = Object.entries(aging).map(([k, v]) => `<div class="side-stat"><span>${k}</span><strong>${v}</strong></div>`).join("");
+      document.getElementById("agingStats").innerHTML = Object.entries(aging).map(([k, v]) => `<div class="side-stat clickable-row" data-aging="${attrText(k)}"><span>${k}</span><strong>${v}</strong></div>`).join("");
+      document.querySelectorAll("#agingBars .bar-row[data-status]").forEach(row => row.addEventListener("click", () => showStatusDrilldown(row.dataset.status)));
+      document.querySelectorAll("#agingStats .side-stat[data-aging]").forEach(row => row.addEventListener("click", () => showAgingDrilldown(row.dataset.aging)));
+    }
+
+    function renderRiskTable() {
+      const rows = agingRiskRows().slice(0, 5);
+      document.getElementById("riskTable").innerHTML = `<thead><tr><th>Ticket</th><th class="num">Age</th><th>Status</th><th>Dealer</th><th>Tech</th><th class="num">Quote</th></tr></thead><tbody>` +
+        rows.map(row => `<tr class="clickable-row" data-ticket-id="${attrText(row.serviceOrderId)}"><td>${htmlText(row.serviceOrderId)}</td><td class="num">${agingDays(row)}d</td><td>${htmlText(shortName(row.status))}</td><td>${htmlText(row.dealerYard)}</td><td>${htmlText(shortWorker(row.workerName))}</td><td class="num">${htmlText(row.quoteAmountLabel)}</td></tr>`).join("") +
+        (rows.length ? "" : `<tr><td colspan="6"><span class="tbc">TBC</span></td></tr>`) +
+        `</tbody>`;
+      document.querySelectorAll("#riskTable tr[data-ticket-id]").forEach(row => {
+        row.addEventListener("click", () => showDrilldown(
+          `Aging Risk - ${row.dataset.ticketId}`,
+          `${state.month} / ${state.yard} / ${state.type}`,
+          agingRiskRows().filter(item => item.serviceOrderId === row.dataset.ticketId),
+          `aging-risk-${row.dataset.ticketId}`
+        ));
+      });
     }
 
     function shortName(name) {
       return name.replace("PDI Complete, Awaiting Time Claim", "PDI done").replace("Awaiting Quote Approval", "Quote approval").replace("Approved, Awaiting Repair", "Repair ready").replace("Awaiting PDI Start", "PDI start").replace("Repair In Progress", "In progress");
+    }
+
+    function shortWorker(name) {
+      const text = String(name || "").trim();
+      return text ? text.split(/\s+/)[0] : "";
     }
 
     function renderTechTable() {
@@ -2150,14 +3160,6 @@
       document.getElementById("invoiceSummary").innerHTML = rows.map(r => `<div class="invoice-row"><span>${r[0]}</span><strong>${r[1]}</strong></div>`).join("");
     }
 
-    function renderRecent() {
-      const rows = getTicketDetails().slice(0, 5);
-      document.getElementById("recentTable").innerHTML = `<thead><tr><th>ServiceOrderID</th><th>Created Date</th><th>Vehicle (VIN)</th><th>Dealer / Yard</th><th>Service Type</th><th>Status</th><th class="num">Quote Amount</th><th>Invoice No.</th><th class="num">Invoice Amount</th></tr></thead><tbody>` +
-        rows.map(row => `<tr><td>${htmlText(row.serviceOrderId)}</td><td>${htmlText(row.createdDate)}</td><td>${htmlText(row.vehicle)}</td><td>${htmlText(row.dealerYard)}</td><td>${htmlText(row.serviceType.replace(" ticket", ""))}</td><td>${htmlText(row.status)}</td><td class="num">${htmlText(row.quoteAmountLabel)}</td><td>${htmlText(row.invoiceNo)}</td><td class="num">${htmlText(row.invoiceAmountLabel)}</td></tr>`).join("") +
-        (rows.length ? "" : `<tr><td colspan="9"><span class="tbc">TBC</span></td></tr>`) +
-        `</tbody>`;
-    }
-
     function renderAlerts() {
       const rows = getTicketDetails();
       const abnormalExample = rows.find(row => row.abnormalReason);
@@ -2172,11 +3174,93 @@
         top.map(r => `<tr><td><span class="alert-badge">!</span>${r.name}</td><td class="num">${r.qty}</td><td>${r.example ? htmlText(r.example) : ""}</td></tr>`).join("") + `</tbody>`;
     }
 
+    function showTrendDrilldown(row, series) {
+      if (!row || !series) return;
+      const period = row.monthFull || state.month;
+      let rows = [];
+      if (series.key === "newTickets") rows = ticketDetailsFor(period, state.yard, state.type);
+      if (series.key === "completedTickets") rows = completedDetailRows(period, state.yard, state.type);
+      if (series.key === "openTickets") rows = openDetailRows(period, state.yard, state.type);
+      showDrilldown(
+        `Trend - ${series.name}`,
+        `${period} / ${state.yard} / ${state.type}`,
+        rows,
+        `trend-${series.name}-${period}-${state.yard}-${state.type}`
+      );
+    }
+
+    function showStatusDrilldown(status) {
+      const rows = openDetailRows().filter(row => row.status === status);
+      showDrilldown(
+        `Open Status - ${status}`,
+        `${state.month} / ${state.yard} / ${state.type}`,
+        rows,
+        `open-status-${state.month}-${state.yard}-${state.type}-${status}`
+      );
+    }
+
+    function showAgingDrilldown(bucket) {
+      const rows = openDetailRows().filter(row => inAgingBucket(row, bucket));
+      showDrilldown(
+        `Aging - ${bucket}`,
+        `${state.month} / ${state.yard} / ${state.type}`,
+        rows,
+        `aging-${state.month}-${state.yard}-${state.type}-${bucket}`
+      );
+    }
+
+    function agingRiskRows() {
+      return openDetailRows()
+        .map(row => ({ ...row, agingDays: agingDays(row) }))
+        .filter(row => row.agingDays >= 30)
+        .sort((a, b) => b.agingDays - a.agingDays || String(a.serviceOrderId).localeCompare(String(b.serviceOrderId)));
+    }
+
+    function showDrilldown(title, subtitle, rows, filenameStem) {
+      drilldownState.rows = rows || [];
+      drilldownState.title = title || "Ticket Details";
+      drilldownState.filename = `service-center-${slug(filenameStem || title)}.xls`;
+      document.getElementById("drilldownTitle").textContent = drilldownState.title;
+      document.getElementById("drilldownSummary").textContent = `${num(drilldownState.rows.length)} tickets | ${subtitle || ""}`;
+      renderDrilldownTable(drilldownState.rows);
+      const panel = document.getElementById("drilldownPanel");
+      panel.hidden = false;
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function closeDrilldown() {
+      document.getElementById("drilldownPanel").hidden = true;
+      drilldownState.rows = [];
+    }
+
+    function exportDrilldown() {
+      downloadWorkbook(buildTicketDetailSheet(drilldownState.rows), drilldownState.filename);
+    }
+
+    function exportRiskList() {
+      const rows = agingRiskRows();
+      downloadWorkbook(buildTicketDetailSheet(rows), `service-center-aging-risk-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`);
+    }
+
+    function renderDrilldownTable(rows) {
+      const visibleRows = (rows || []).slice(0, 120);
+      document.getElementById("drilldownTable").innerHTML = `<thead><tr><th>Ticket</th><th>Created</th><th>lastchangedtime</th><th class="num">Age</th><th>Dealer</th><th>Status</th><th>Tech</th><th class="num">Quote</th><th>Invoice</th></tr></thead><tbody>` +
+        visibleRows.map(row => `<tr><td>${htmlText(row.serviceOrderId)}</td><td>${htmlText(row.createdDate)}</td><td>${htmlText(row.lastchangedtime)}</td><td class="num">${agingDays(row)}d</td><td>${htmlText(row.dealerYard)}</td><td>${htmlText(row.status)}</td><td>${htmlText(shortWorker(row.workerName))}</td><td class="num">${htmlText(row.quoteAmountLabel)}</td><td>${htmlText(row.invoiceNo)}</td></tr>`).join("") +
+        (rows?.length ? "" : `<tr><td colspan="9"><span class="tbc">No tickets in this selection</span></td></tr>`) +
+        ((rows || []).length > visibleRows.length ? `<tr><td colspan="9">Showing first ${visibleRows.length} rows. Export includes all ${rows.length} tickets.</td></tr>` : "") +
+        `</tbody>`;
+    }
+
     function exportCurrentView() {
-      const ticketRows = getTicketDetails();
+      let exportMonth = state.month;
+      let ticketRows = getTicketDetails();
+      if (!ticketRows.length) {
+        exportMonth = firstMonthWithTicketDetails(state.yard, state.type);
+        ticketRows = ticketDetailsFor(exportMonth, state.yard, state.type);
+      }
       downloadWorkbook(
         buildTicketDetailSheet(ticketRows),
-        `service-center-ticket-details-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`
+        `service-center-ticket-details-${slug(exportMonth)}-${slug(state.yard)}-${slug(state.type)}.xls`
       );
     }
 
@@ -2188,14 +3272,44 @@
       );
     }
 
+    function exportWorkflowStage(type, stageName) {
+      const period = workflowPeriod();
+      const dealer = workflowDealer();
+      const section = workflowSection(type, period);
+      const stage = section.pipeline.find(item => item.status === stageName);
+      const ticketRows = workflowStageTicketRows(stage);
+      downloadWorkbook(
+        buildWorkflowStageSheet(ticketRows, period, dealer, type, stageName),
+        `service-center-workflow-${slug(period)}-${slug(dealer)}-${slug(type)}-${slug(stageName)}.xls`
+      );
+    }
+
+    function workflowStageTicketRows(stage) {
+      if (!stage) return [];
+      const ids = new Set((stage.ticketIds || []).map(id => String(id)));
+      if (!ids.size) return [];
+      const rowsById = new Map((page.ticketDetails || []).map(row => [String(row.serviceOrderId), row]));
+      return [...ids].map(id => rowsById.get(id)).filter(Boolean);
+    }
+
+    function buildWorkflowStageSheet(ticketRows, period, dealer, type, stageName) {
+      return [
+        {
+          name: "Workflow_Stage",
+          rows: [
+            ["Period", "DealerYard", "ServiceType", "WorkflowStage", "TicketCount"],
+            [exportText(period), exportText(dealer), serviceTypeText({ serviceType: type }), exportText(stageName), ticketRows.length]
+          ]
+        },
+        {
+          name: shortSheetName(stageName || "Tickets"),
+          rows: ticketDetailRows(ticketRows)
+        }
+      ];
+    }
+
     function getTicketDetails() {
-      const rows = page.ticketDetails || [];
-      return rows.filter(row => {
-        const inPeriod = state.month.length === 4 ? row.year === state.month : row.period === state.month;
-        const inYard = state.yard === "All" || row.dealerYard === state.yard;
-        const inType = state.type === "All Ticket Types" || row.serviceType === state.type;
-        return inPeriod && inYard && inType;
-      });
+      return ticketDetailsFor(state.month, state.yard, state.type);
     }
 
     function buildTicketDetailSheet(ticketRows) {
@@ -2210,12 +3324,15 @@
     function ticketDetailRows(ticketRows) {
       return [
         [
-          "ServiceOrderID",
+          "TicketID",
           "CreatedDate",
           "CompletedDate",
+          "lastchangedtime",
           "BillingDate",
           "DealerYard",
           "DealerName",
+          "Customer",
+          "CustomerBP",
           "ServiceType",
           "Status",
           "Priority",
@@ -2226,11 +3343,11 @@
           "InvoiceNo",
           "InvoiceScope",
           "InvoiceAmount",
-          "LabourHours",
-          "ClaimHours",
-          "ActualWorkHours",
+          "ClaimHours (TotalLabourHours)",
           "InvoicePaidHours",
           "WorkerName",
+          "TechnicianBP",
+          "Role43BP",
           "Source",
           "Period"
         ],
@@ -2240,12 +3357,15 @@
 
     function ticketDetailValues(row) {
       return [
-        exportText(row.serviceOrderId),
+        exportText(row.ticketId || row.serviceOrderId),
         exportText(row.createdDate),
         exportText(row.completedDate),
+        exportText(row.lastchangedtime),
         exportText(row.billingDate),
         exportText(row.dealerYard),
         exportText(row.dealerName),
+        exportText(row.customer),
+        exportText(row.customerBP),
         serviceTypeText(row),
         exportText(row.rawStatus || row.status),
         exportText(row.priority),
@@ -2257,10 +3377,10 @@
         exportText(row.invoiceScope),
         numberIfAvailable(row.invoiceAmount),
         numberIfAvailable(row.labourHours),
-        numberIfAvailable(row.claimHours),
-        numberIfAvailable(row.actualWorkHours),
         numberIfAvailable(row.invoicePaidHours),
         exportText(row.workerName),
+        exportText(row.technicianBP),
+        exportText(row.role43BP),
         exportText(row.source),
         exportText(row.period)
       ];
@@ -2370,6 +3490,14 @@ ${sheet.rows.map((row, rowIndex) => `<Row>${row.map(value => excelCell(value, ro
     function htmlText(value) {
       const text = String(value == null ? "" : value);
       return text === "TBC" ? `<span class="tbc">TBC</span>` : text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function attrText(value) {
+      return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
     }
 
     function slug(value) {

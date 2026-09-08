@@ -1,2 +1,43 @@
-[Wed 26/08/2026 16:11:33.90] Rebuilding dashboard-data.js 
+[Mon 07/09/2026 10:34:38.02] Refreshing lastchangedtime from C4C status history 
+[RUN] Fetching status history for 3564 tickets (scope=all)...
+[INFO] History progress: 100/3564
+[INFO] History progress: 200/3564
+[INFO] History progress: 300/3564
+[INFO] History progress: 400/3564
+[INFO] History progress: 500/3564
+[INFO] History progress: 600/3564
+[INFO] History progress: 700/3564
+[INFO] History progress: 800/3564
+[INFO] History progress: 900/3564
+[INFO] History progress: 1000/3564
+[INFO] History progress: 1100/3564
+[INFO] History progress: 1200/3564
+[INFO] History progress: 1300/3564
+[INFO] History progress: 1400/3564
+[INFO] History progress: 1500/3564
+[INFO] History progress: 1600/3564
+[INFO] History progress: 1700/3564
+[INFO] History progress: 1800/3564
+[INFO] History progress: 1900/3564
+[INFO] History progress: 2000/3564
+[INFO] History progress: 2100/3564
+[INFO] History progress: 2200/3564
+[INFO] History progress: 2300/3564
+[INFO] History progress: 2400/3564
+[INFO] History progress: 2500/3564
+[INFO] History progress: 2600/3564
+[INFO] History progress: 2700/3564
+[INFO] History progress: 2800/3564
+[INFO] History progress: 2900/3564
+[INFO] History progress: 3000/3564
+[INFO] History progress: 3100/3564
+[INFO] History progress: 3200/3564
+[INFO] History progress: 3300/3564
+[INFO] History progress: 3400/3564
+[INFO] History progress: 3500/3564
+[INFO] History progress: 3564/3564
+[OK] History complete in 603.9s; populated=3004, blank=560, failures=0
+[OK] Workbook updated: C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\c4c_ticket_table_z007_z010_checked_hana_final.xlsx (sheets=2, updatedCells=3004)
+
+[Mon 07/09/2026 10:44:46.42] Rebuilding dashboard-data.js 
 Dashboard data written: C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\dashboard-data.js

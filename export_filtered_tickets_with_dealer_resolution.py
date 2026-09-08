@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
+import re
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -22,6 +24,7 @@ BASE_URL = os.getenv(
     "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn",
 )
 PATH = os.getenv("C4C_API_PATH", "/http/PC4C/Ticket/queryOdataBatch")
+HISTORY_PATH = os.getenv("C4C_HISTORY_API_PATH", "/http/PC4C/Ticket/getChangeHistory")
 
 USERNAME = os.getenv("C4C_USERNAME", "XIEYONGDONG@newgonow.cn")
 PASSWORD = os.getenv("C4C_PASSWORD", "Max@sap2022")
@@ -33,6 +36,10 @@ TIMEOUT = int(os.getenv("C4C_TIMEOUT", "60"))
 VERIFY_SSL = os.getenv("C4C_VERIFY_SSL", "true").lower() in {"1", "true", "yes", "y"}
 MAX_WORKERS = int(os.getenv("C4C_MAX_WORKERS", "12"))
 ROLE_WORKERS = min(max(1, len(ROLE_CODES)), 3)
+HISTORY_PAGE_SIZE = int(os.getenv("C4C_HISTORY_PAGE_SIZE", "500"))
+HISTORY_MAX_PAGES = int(os.getenv("C4C_HISTORY_MAX_PAGES", "20"))
+HISTORY_WORKERS = int(os.getenv("C4C_HISTORY_WORKERS", "8"))
+FETCH_HISTORY = os.getenv("C4C_FETCH_HISTORY", "true").lower() in {"1", "true", "yes", "y"}
 
 OUTPUT_FILE = os.getenv(
     "OUTPUT_FILE",
@@ -52,11 +59,22 @@ ROLE_VARYING_FIELDS = {
     "requested_skip",
 }
 
+INVOLVED_PARTY_CONTAINER_KEYS = (
+    "InvolvedParties",
+    "InvolvedParty",
+    "InvolvedPartyCollection",
+)
+
 REQUEST_META_FIELDS = {
     "requested_role_code",
     "requested_role_name",
     "requested_skip",
 }
+
+DEPRECATED_CHANGE_COLUMNS = {"ChangeOnDateTime"}
+STATUS_CHANGE_FIELD = "Status/ServiceRequestLifeCycleStatusCode"
+C4C_DATE_RE = re.compile(r"/Date\((-?\d+)\)/")
+ROOT_NODE_RE = re.compile(r"^Root\([^)]+\)$")
 
 MANUAL_WARRANTY_DEALER_MAPPING = {
     "3113": "Regent RV Pty Ltd",
@@ -126,6 +144,74 @@ def normalize_value(value: Any) -> Any:
     return value
 
 
+def clean_text(value: Any) -> str:
+    value = normalize_value(value)
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
+def normalize_role_id(value: Any) -> str:
+    text = clean_text(value)
+    return text[:-2] if text.endswith(".0") else text
+
+
+def unwrap_party_payload(value: Any) -> List[Dict[str, Any]]:
+    if value is None:
+        return []
+
+    if isinstance(value, str):
+        text = value.strip()
+        if not text:
+            return []
+        try:
+            value = json.loads(text)
+        except json.JSONDecodeError:
+            return []
+
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, dict)]
+
+    if isinstance(value, dict):
+        for key in ("results", "data", "items", "InvolvedParties", "InvolvedParty"):
+            nested = value.get(key)
+            parties = unwrap_party_payload(nested)
+            if parties:
+                return parties
+        if "InvolvedPartyRoleID" in value:
+            return [value]
+
+    return []
+
+
+def involved_parties_from_row(row: Dict[str, Any]) -> List[Dict[str, Any]]:
+    parties: List[Dict[str, Any]] = []
+    for key in INVOLVED_PARTY_CONTAINER_KEYS:
+        parties.extend(unwrap_party_payload(row.get(key)))
+    return parties
+
+
+def apply_involved_party_fields(record: Dict[str, Any], row: Dict[str, Any]) -> None:
+    for party in involved_parties_from_row(row):
+        role_id = normalize_role_id(party.get("InvolvedPartyRoleID"))
+        if not role_id:
+            continue
+        for field in ROLE_VARYING_FIELDS:
+            if field == "requested_skip":
+                continue
+            value = normalize_value(party.get(field))
+            if value not in (None, ""):
+                record.setdefault(f"Role_{role_id}_{field}", value)
+
+
+def apply_customer_field(record: Dict[str, Any]) -> None:
+    customer = clean_text(record.get("Customer"))
+    if not customer:
+        customer = clean_text(record.get("Role_1001_InvolvedPartyName"))
+    if customer:
+        record["Customer"] = customer
+
+
 def build_url(role_code: str, top: int, skip: int) -> str:
     filter_text = f"(CCSRQ_DPY_ROLE_CD eq '{role_code}')"
     filter_value = quote(filter_text, safe="()'")
@@ -134,6 +220,10 @@ def build_url(role_code: str, top: int, skip: int) -> str:
         + PATH
         + f"?$top={top}&$skip={skip}&$filter={filter_value}"
     )
+
+
+def build_history_url() -> str:
+    return BASE_URL.rstrip("/") + HISTORY_PATH
 
 
 def fetch_role_page(role_code: str, top: int, skip: int) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
@@ -163,6 +253,125 @@ def fetch_role_page(role_code: str, top: int, skip: int) -> Tuple[List[Dict[str,
 def fetch_role_page_task(role_code: str, skip: int):
     rows, meta = fetch_role_page(role_code, API_TOP, skip)
     return skip, rows, meta
+
+
+def fetch_ticket_history_page(ticket_id: str, skip: int) -> List[Dict[str, Any]]:
+    response = get_thread_session().get(
+        build_history_url(),
+        params={"srId": ticket_id, "pageSize": HISTORY_PAGE_SIZE, "skip": skip},
+        auth=HTTPBasicAuth(USERNAME, PASSWORD),
+        headers={"Accept": "application/json"},
+        timeout=TIMEOUT,
+        verify=VERIFY_SSL,
+    )
+
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"History API failed: ticket={ticket_id}, skip={skip}, "
+            f"HTTP={response.status_code}, body={response.text[:500]}"
+        )
+
+    payload = response.json()
+    return list(payload.get("d", {}).get("results", []))
+
+
+def fetch_ticket_history(ticket_id: str) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    skip = 0
+    for _ in range(HISTORY_MAX_PAGES):
+        page = fetch_ticket_history_page(ticket_id, skip)
+        rows.extend(page)
+        if len(page) < HISTORY_PAGE_SIZE:
+            break
+        skip += HISTORY_PAGE_SIZE
+    return rows
+
+
+def fetch_ticket_history_task(ticket_id: str) -> Tuple[str, List[Dict[str, Any]], str | None]:
+    try:
+        return ticket_id, fetch_ticket_history(ticket_id), None
+    except Exception as exc:
+        return ticket_id, [], str(exc)
+
+
+def parse_c4c_change_datetime(value: Any) -> pd.Timestamp | pd.NaT:
+    text = clean_text(value)
+    match = C4C_DATE_RE.search(text)
+    if not match:
+        return pd.NaT
+    try:
+        timestamp = pd.to_datetime(int(match.group(1)), unit="ms", utc=True)
+    except (TypeError, ValueError, OverflowError):
+        return pd.NaT
+    return timestamp.tz_convert(None)
+
+
+def is_root_lifecycle_status_update(record: Dict[str, Any]) -> bool:
+    return (
+        clean_text(record.get("ObjectNodeElementName")) == STATUS_CHANGE_FIELD
+        and clean_text(record.get("ObjectNodeElementModificationTypeCode")).lower() == "update"
+        and bool(ROOT_NODE_RE.match(clean_text(record.get("CompleteNodeHierarchy"))))
+    )
+
+
+def last_lifecycle_status_change(history_rows: List[Dict[str, Any]]) -> str:
+    status_changes = [
+        parse_c4c_change_datetime(row.get("ChangeDateTime"))
+        for row in history_rows
+        if is_root_lifecycle_status_update(row)
+    ]
+    status_changes = [value for value in status_changes if pd.notna(value)]
+    if not status_changes:
+        return ""
+    return max(status_changes).strftime("%Y-%m-%d %H:%M:%S")
+
+
+def remove_deprecated_change_columns(df: pd.DataFrame) -> pd.DataFrame:
+    return df.drop(columns=[col for col in DEPRECATED_CHANGE_COLUMNS if col in df.columns])
+
+
+def enrich_lastchangedtime(df: pd.DataFrame) -> pd.DataFrame:
+    df = remove_deprecated_change_columns(df.copy())
+    if "lastchangedtime" not in df.columns:
+        df["lastchangedtime"] = ""
+    if not FETCH_HISTORY or df.empty or "TicketID" not in df.columns:
+        return df
+
+    ticket_ids = [
+        ticket_id
+        for ticket_id in df["TicketID"].map(clean_text).drop_duplicates().tolist()
+        if ticket_id
+    ]
+    if not ticket_ids:
+        return df
+
+    logger.info("Fetching status change history for %s tickets", len(ticket_ids))
+    lastchanged_by_ticket: Dict[str, str] = {}
+    failures = 0
+    workers = min(max(1, HISTORY_WORKERS), max(1, len(ticket_ids)))
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(fetch_ticket_history_task, ticket_id): ticket_id
+            for ticket_id in ticket_ids
+        }
+        for future in as_completed(futures):
+            ticket_id, history_rows, error = future.result()
+            if error:
+                failures += 1
+                logger.warning("ticket=%s history fetch skipped: %s", ticket_id, error)
+                continue
+            lastchanged_by_ticket[ticket_id] = last_lifecycle_status_change(history_rows)
+
+    df["lastchangedtime"] = df["TicketID"].map(
+        lambda value: lastchanged_by_ticket.get(clean_text(value), "")
+    )
+    logger.info(
+        "Status history complete: populated=%s blank=%s failures=%s",
+        int(df["lastchangedtime"].map(clean_text).ne("").sum()),
+        int(df["lastchangedtime"].map(clean_text).eq("").sum()),
+        failures,
+    )
+    return df
 
 
 def fetch_all_rows_for_role(role_code: str) -> List[Dict[str, Any]]:
@@ -230,6 +439,7 @@ def merge_rows_to_ticket_table(rows_by_role: Dict[str, List[Dict[str, Any]]]) ->
                 continue
 
             record = tickets.setdefault(ticket_id, {"TicketID": ticket_id})
+            apply_involved_party_fields(record, row)
 
             for key, value in row.items():
                 if key in REQUEST_META_FIELDS or key == "TicketID":
@@ -241,6 +451,8 @@ def merge_rows_to_ticket_table(rows_by_role: Dict[str, List[Dict[str, Any]]]) ->
                         record[f"Role_{role_code}_{key}"] = clean_value
                 elif key not in record or record.get(key) in (None, ""):
                     record[key] = clean_value
+
+            apply_customer_field(record)
 
     if not tickets:
         return pd.DataFrame()
@@ -255,6 +467,7 @@ def merge_rows_to_ticket_table(rows_by_role: Dict[str, List[Dict[str, Any]]]) ->
         "TicketType",
         "TicketTypeText",
         "CreatedOn",
+        "Customer",
         "TicketStatus",
         "TicketStatusText",
         "AmountIncludingTax",
@@ -305,7 +518,7 @@ def apply_filters_and_resolution(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Dat
         empty = pd.DataFrame()
         return empty, empty, empty, empty
 
-    filtered = df.copy()
+    filtered = remove_deprecated_change_columns(df.copy())
     filtered["TicketType"] = filtered.get("TicketType", "").fillna("").astype(str).str.strip().str.upper()
     filtered = filtered[filtered["TicketType"].isin(TARGET_TICKET_TYPES)].copy()
 
@@ -398,6 +611,7 @@ def apply_filters_and_resolution(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Dat
         "TicketTypeText",
         "DealerID",
         "DealerName",
+        "Customer",
         "ERPInvoiceNumber",
         "ERPInvoiceNumberPrice",
         "Billing date",
@@ -405,9 +619,9 @@ def apply_filters_and_resolution(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Dat
         "TotalLabourHours",
         "WarrantyHandlingDealerID",
         "CreatedOn",
+        "lastchangedtime",
         "TicketStatus",
         "TicketStatusText",
-        "ERPFreeOrder",
         "Role_40_InvolvedPartyName",
         "Role_43_InvolvedPartyName",
         "TicketName",
@@ -496,6 +710,8 @@ def main() -> None:
             ticket_df = merge_rows_to_ticket_table(rows_by_role)
 
         tickets_df, not_assigned_df, summary_df, mapping_df = apply_filters_and_resolution(ticket_df)
+        tickets_df = enrich_lastchangedtime(tickets_df)
+        not_assigned_df = enrich_lastchangedtime(not_assigned_df)
         export_excel(tickets_df, not_assigned_df, summary_df, mapping_df)
         logger.info(
             "Done. Ticket rows=%s not_assigned=%s elapsed=%.1fs",

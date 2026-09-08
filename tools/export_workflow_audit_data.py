@@ -49,10 +49,15 @@ def prepare_tickets(gen) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.D
     tickets = pd.read_excel(SOURCE_WORKBOOK, sheet_name="Tickets", dtype=str).fillna("")
     created = pd.to_datetime(tickets["CreatedOn"], errors="coerce", format="mixed", dayfirst=True)
     billing = pd.to_datetime(tickets["Billing date"], errors="coerce", format="mixed", dayfirst=True)
-    changed = pd.to_datetime(tickets["ChangeOnDateTime"], errors="coerce", format="mixed", dayfirst=True)
+    lastchanged_source = (
+        tickets["lastchangedtime"]
+        if "lastchangedtime" in tickets.columns
+        else pd.Series("", index=tickets.index, dtype="object")
+    )
+    lastchanged = pd.to_datetime(lastchanged_source, errors="coerce", format="mixed", dayfirst=True)
     tickets["CreatedDate"] = created
     tickets["BillingDate"] = billing
-    tickets["ChangeDate"] = changed
+    tickets["LastChangedDate"] = lastchanged
     tickets["CreatedMonth"] = created.dt.to_period("M").astype(str).where(created.notna(), "")
     tickets["CreatedYear"] = created.dt.year.astype("Int64").astype(str).where(created.notna(), "")
     tickets["BillingMonth"] = billing.dt.to_period("M").astype(str).where(billing.notna(), "")
@@ -163,7 +168,7 @@ def detail_rows(tickets: pd.DataFrame) -> list[dict[str, Any]]:
         "InvoiceAmount",
         "Billing date",
         "BillingMonth",
-        "ChangeOnDateTime",
+        "lastchangedtime",
         "TotalLabourHours",
         "LabourHours",
         "Role_1001_InvolvedPartyID",
@@ -174,7 +179,7 @@ def detail_rows(tickets: pd.DataFrame) -> list[dict[str, Any]]:
     ]
     columns = [col for col in preferred if col in tickets.columns]
     output = tickets[columns].copy()
-    for col in ["CreatedOn", "Billing date", "ChangeOnDateTime"]:
+    for col in ["CreatedOn", "Billing date", "lastchangedtime"]:
         if col in output.columns:
             output[col] = output[col].map(lambda value: "" if pd.isna(value) else str(value))
     return output.to_dict(orient="records")

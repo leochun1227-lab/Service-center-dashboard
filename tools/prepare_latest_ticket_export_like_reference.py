@@ -9,6 +9,7 @@ import pandas as pd
 REFERENCE_WORKBOOK = Path(r"C:\Users\Leo.Li\Desktop\c4c_ticket_table_z007_z010_with_invoice_layout_checked.xlsx")
 CURRENT_WORKBOOK = Path(r"C:\Users\Leo.Li\Documents\ChatGPT\Service centre dashboard\c4c_ticket_table_z007_z010_checked_hana_final.xlsx")
 OUTPUT_JSON = Path(r"C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\outputs\latest_ticket_export_like_reference.json")
+DEPRECATED_CHANGE_COLUMNS = {"ChangeOnDateTime"}
 
 
 def clean_cell(value):
@@ -21,7 +22,11 @@ def clean_cell(value):
 
 def reference_columns(sheet_name: str) -> list[str]:
     frame = pd.read_excel(REFERENCE_WORKBOOK, sheet_name=sheet_name, dtype=str, nrows=0)
-    columns = list(frame.columns)
+    columns = [column for column in frame.columns if column not in DEPRECATED_CHANGE_COLUMNS]
+    if sheet_name in {"Tickets", "NotAssigned"} and "lastchangedtime" not in columns:
+        insert_after = "CreatedOn"
+        idx = columns.index(insert_after) + 1 if insert_after in columns else len(columns)
+        columns = [*columns[:idx], "lastchangedtime", *columns[idx:]]
     if sheet_name in {"Tickets", "NotAssigned"} and "TotalLabourHours" not in columns:
         insert_after = "AmountIncludingTax"
         idx = columns.index(insert_after) + 1 if insert_after in columns else len(columns)
@@ -31,6 +36,7 @@ def reference_columns(sheet_name: str) -> list[str]:
 
 def load_sheet(sheet_name: str) -> dict:
     current = pd.read_excel(CURRENT_WORKBOOK, sheet_name=sheet_name, dtype=str).fillna("")
+    current = current.drop(columns=[col for col in DEPRECATED_CHANGE_COLUMNS if col in current.columns])
     columns = reference_columns(sheet_name)
     for column in columns:
         if column not in current.columns:

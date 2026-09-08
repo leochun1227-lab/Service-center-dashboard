@@ -27,7 +27,7 @@ KEY_COLUMNS = [
     "CreatedOn",
     "TicketStatus",
     "TicketStatusText",
-    "ChangeOnDateTime",
+    "lastchangedtime",
     "Role_1001_InvolvedPartyID",
     "Role_1001_InvolvedPartyName",
     "Role_40_InvolvedPartyName",

@@ -82,7 +82,7 @@ def fetch_invoice_map(invoice_numbers: list[str]) -> pd.DataFrame:
 
 
 def enrich_sheet(df: pd.DataFrame, invoice_map: pd.DataFrame) -> pd.DataFrame:
-    out = df.copy()
+    out = df.drop(columns=[c for c in ["ChangeOnDateTime"] if c in df.columns]).copy()
     out["ERPInvoiceNumber"] = out.get("ERPInvoiceNumber", "").fillna("").astype(str).str.strip()
     out = out.drop(columns=[c for c in ["ERPInvoiceNumberPrice", "Billing date"] if c in out.columns])
     out = out.merge(invoice_map, how="left", on="ERPInvoiceNumber")
@@ -102,9 +102,9 @@ def enrich_sheet(df: pd.DataFrame, invoice_map: pd.DataFrame) -> pd.DataFrame:
         "TotalLabourHours",
         "WarrantyHandlingDealerID",
         "CreatedOn",
+        "lastchangedtime",
         "TicketStatus",
         "TicketStatusText",
-        "ERPFreeOrder",
         "Role_40_InvolvedPartyName",
         "Role_43_InvolvedPartyName",
         "TicketName",

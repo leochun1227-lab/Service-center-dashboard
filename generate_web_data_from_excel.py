@@ -100,6 +100,19 @@ def clean(value: Any) -> str:
     return text
 
 
+def parse_dashboard_datetime(series: pd.Series) -> pd.Series:
+    source = series.fillna("").astype(str).str.strip()
+    parsed = pd.Series(pd.NaT, index=source.index, dtype="datetime64[ns]")
+    iso_mask = source.str.match(r"^\d{4}[-/]\d{1,2}[-/]\d{1,2}(?:\D|$)", na=False)
+    parsed.loc[iso_mask] = pd.to_datetime(
+        source.loc[iso_mask], errors="coerce", format="mixed", dayfirst=False
+    )
+    parsed.loc[~iso_mask] = pd.to_datetime(
+        source.loc[~iso_mask], errors="coerce", format="mixed", dayfirst=True
+    )
+    return parsed
+
+
 def parse_amount(series: pd.Series) -> pd.Series:
     cleaned = (
         series.fillna("")
@@ -124,7 +137,11 @@ def money(value: float) -> str:
 
 
 def party_name_normalized(row: pd.Series) -> str:
-    return clean(row.get("Role_1001_InvolvedPartyName", "")).upper()
+    return customer_name(row).upper()
+
+
+def customer_name(row: pd.Series) -> str:
+    return clean(row.get("Customer", "")) or clean(row.get("Role_1001_InvolvedPartyName", ""))
 
 
 def is_internal_party(row: pd.Series) -> bool:
@@ -223,8 +240,16 @@ def stage_color(stage: str, index: int) -> str:
 def build_aging_counts(rows: pd.DataFrame) -> list[dict[str, Any]]:
     if rows.empty:
         return [{"label": label, "qty": 0} for label, _, _ in AGING_BUCKETS]
+    if "WorkflowAgeStartDate" in rows.columns:
+        age_start = rows["WorkflowAgeStartDate"]
+    elif "LastChangedDate" in rows.columns:
+        age_start = rows["LastChangedDate"]
+        if "CreatedDate" in rows.columns:
+            age_start = age_start.where(age_start.notna(), rows["CreatedDate"])
+    else:
+        age_start = rows["CreatedDate"]
     today = pd.Timestamp.now().normalize()
-    ages = (today - rows["CreatedDate"].dt.normalize()).dt.days.fillna(0)
+    ages = (today - age_start.dt.normalize()).dt.days.fillna(0).clip(lower=0)
     buckets = []
     for label, start, end in AGING_BUCKETS:
         if end is None:
@@ -456,6 +481,12 @@ def date_label(value: Any) -> str:
     return pd.Timestamp(value).strftime("%d/%m/%Y")
 
 
+def datetime_label(value: Any) -> str:
+    if pd.isna(value):
+        return ""
+    return pd.Timestamp(value).strftime("%d/%m/%Y %H:%M:%S")
+
+
 def period_label(period: str) -> str:
     if not period:
         return ""
@@ -491,11 +522,11 @@ def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
         quote_amount = float(row.get("NewTicketQuoteAmount", 0) or 0)
         invoice_amount = float(row.get("InvoiceAmount", 0) or 0)
         labour_hours = float(row.get("LabourHours", 0) or 0)
-        claim_hours = numeric_value(row.get("Z1Z8TimeConsumed", ""))
         completed = completed_date(row)
         created_month = clean(row.get("CreatedMonth", ""))
         details.append(
             {
+                "ticketId": clean(row.get("TicketID", "")) or "TBC",
                 "serviceOrderId": clean(row.get("TicketID", "")) or "TBC",
                 "source": "C4C",
                 "period": period_label(created_month),
@@ -503,8 +534,13 @@ def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
                 "year": clean(row.get("CreatedYear", "")),
                 "createdDate": date_label(row.get("CreatedDate")) or "TBC",
                 "completedDate": date_label(completed) or "TBC",
+                "lastchangedtime": datetime_label(row.get("LastChangedDate")) or "",
                 "dealerYard": clean(row.get("DealerBucket", "")) or "Other",
                 "dealerName": clean(row.get("DealerName", "")) or "TBC",
+                "customer": customer_name(row) or "TBC",
+                "customerBP": clean(row.get("Role_1001_InvolvedPartyBusinessPartnerID", "")),
+                "technicianBP": clean(row.get("Role_40_InvolvedPartyBusinessPartnerID", "")),
+                "role43BP": clean(row.get("Role_43_InvolvedPartyBusinessPartnerID", "")),
                 "serviceType": clean(row.get("TicketTypeBucket", "")) or "TBC",
                 "ticketTypeCode": clean(row.get("TicketType", "")) or "TBC",
                 "status": workflow_stage(row) or "TBC",
@@ -519,10 +555,6 @@ def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
                 "invoiceScope": clean(row.get("InvoiceScope", "")) or "TBC",
                 "labourHours": round(labour_hours, 2),
                 "labourHoursLabel": hours_label(labour_hours) if labour_hours else "",
-                "claimHours": round(claim_hours, 2),
-                "claimHoursLabel": hours_label(claim_hours) if claim_hours else "",
-                "actualWorkHours": round(labour_hours, 2),
-                "actualWorkHoursLabel": hours_label(labour_hours) if labour_hours else "",
                 "invoicePaidHours": "Missing",
                 "workerName": clean(row.get("WorkerName", "")) or "TBC",
                 "vehicle": clean(row.get("SerialID", "")) or clean(row.get("ChassisNumber", "")) or "TBC",
@@ -555,9 +587,9 @@ def completed_date(row: pd.Series) -> pd.Timestamp | pd.NaT:
     is_pdi = ticket_type == "Z010" or ticket_type_text == "pdi"
     is_repair = ticket_type == "Z007" or ticket_type_text == "repair ticket"
     if is_repair and status == CREATE_INVOICE_STATUS:
-        return row.get("BillingDate") if pd.notna(row.get("BillingDate")) else row.get("ChangeDate")
+        return row.get("BillingDate") if pd.notna(row.get("BillingDate")) else row.get("LastChangedDate")
     if is_pdi and status in {"repair completed", "claim time ticket"}:
-        return row.get("ChangeDate") if pd.notna(row.get("ChangeDate")) else row.get("CreatedDate")
+        return row.get("LastChangedDate")
     return pd.NaT
 
 
@@ -578,6 +610,7 @@ def build_status_pipeline(rows: pd.DataFrame, ticket_type_filter: str | None = N
                 "quote_amount": float(stage_group["NewTicketQuoteAmount"].sum()),
                 "raw_statuses": sorted(set(stage_group["RawTicketStatus"])),
                 "aging": build_aging_counts(stage_group),
+                "ticket_ids": sorted(set(stage_group["TicketID"].map(clean))),
             }
     stage_order = workflow_stages_for_type(ticket_type_filter)
     if not stage_order:
@@ -593,6 +626,7 @@ def build_status_pipeline(rows: pd.DataFrame, ticket_type_filter: str | None = N
             "quoteAmountLabel": money(float(grouped.get(stage, {}).get("quote_amount", 0))),
             "rawStatuses": grouped.get(stage, {}).get("raw_statuses", []),
             "aging": grouped.get(stage, {}).get("aging", build_aging_counts(pd.DataFrame(columns=rows.columns))),
+            "ticketIds": grouped.get(stage, {}).get("ticket_ids", []),
             "color": stage_color(stage, idx),
         }
         for idx, stage in enumerate(stage_order)
@@ -683,6 +717,7 @@ def write_abnormal_workbook(abnormal: pd.DataFrame) -> None:
         "AmountIncludingTax",
         "CreatedOn",
         "TicketStatusText",
+        "Customer",
         "Role_1001_InvolvedPartyID",
         "Role_1001_InvolvedPartyName",
         "Role_40_InvolvedPartyName",
@@ -695,7 +730,16 @@ def write_abnormal_workbook(abnormal: pd.DataFrame) -> None:
     columns += [col for col in export.columns if col not in columns]
     export = export[columns]
 
-    with pd.ExcelWriter(ABNORMAL_WORKBOOK, engine="openpyxl") as writer:
+    output_path = ABNORMAL_WORKBOOK
+    try:
+        writer_context = pd.ExcelWriter(output_path, engine="openpyxl")
+    except OSError:
+        fallback_dir = BASE_DIR / "outputs"
+        fallback_dir.mkdir(parents=True, exist_ok=True)
+        output_path = fallback_dir / f"abnormal_tickets_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+        writer_context = pd.ExcelWriter(output_path, engine="openpyxl")
+
+    with writer_context as writer:
         export.to_excel(writer, index=False, sheet_name="AbnormalTickets")
         ws = writer.book["AbnormalTickets"]
         ws.freeze_panes = "A2"
@@ -725,12 +769,18 @@ def build_dashboard_payload() -> dict[str, Any]:
         .drop_duplicates(subset=["TicketID"], keep="first")
         .reset_index(drop=True)
     )
-    created = pd.to_datetime(tickets["CreatedOn"], errors="coerce", format="mixed", dayfirst=True)
-    billing = pd.to_datetime(tickets["Billing date"], errors="coerce", format="mixed", dayfirst=True)
-    changed = pd.to_datetime(tickets["ChangeOnDateTime"], errors="coerce", format="mixed", dayfirst=True)
+    created = parse_dashboard_datetime(tickets["CreatedOn"])
+    billing = parse_dashboard_datetime(tickets["Billing date"])
+    lastchanged_source = (
+        tickets["lastchangedtime"]
+        if "lastchangedtime" in tickets.columns
+        else pd.Series("", index=tickets.index, dtype="object")
+    )
+    lastchanged = parse_dashboard_datetime(lastchanged_source)
     tickets["CreatedDate"] = created
     tickets["BillingDate"] = billing
-    tickets["ChangeDate"] = changed
+    tickets["LastChangedDate"] = lastchanged
+    tickets["WorkflowAgeStartDate"] = lastchanged.where(lastchanged.notna(), created)
     tickets["CreatedMonth"] = created.dt.to_period("M").astype(str).where(created.notna(), "")
     tickets["CreatedYear"] = created.dt.year.astype("Int64").astype(str).where(created.notna(), "")
     tickets["BillingMonth"] = billing.dt.to_period("M").astype(str).where(billing.notna(), "")
@@ -740,6 +790,9 @@ def build_dashboard_payload() -> dict[str, Any]:
     tickets["LabourHours"] = parse_hours(tickets["TotalLabourHours"]) if "TotalLabourHours" in tickets.columns else 0.0
     tickets["TicketTypeBucket"] = tickets.apply(ticket_type_bucket, axis=1)
     tickets["WorkerName"] = tickets.get("Role_40_InvolvedPartyName", pd.Series(dtype="object")).map(lambda value: clean(value) or "Unassigned")
+    if "Customer" not in tickets.columns:
+        tickets["Customer"] = ""
+    tickets["Customer"] = tickets.apply(customer_name, axis=1)
     tickets["AbnormalParty"] = tickets.apply(is_abnormal_party, axis=1)
     tickets["InvoiceScope"] = tickets.apply(invoice_scope, axis=1)
     tickets["AbnormalReason"] = tickets.apply(lambda row: "; ".join(abnormal_reasons(row)), axis=1)
@@ -893,7 +946,7 @@ def build_dashboard_payload() -> dict[str, Any]:
 
     generated_at = pd.Timestamp.now().strftime("%d %b %Y, %I:%M %p")
     created_dates = tickets["CreatedDate"].dropna()
-    changed_dates = tickets["ChangeDate"].dropna()
+    changed_dates = tickets["LastChangedDate"].dropna()
     period_labels = {
         label: source_date_range_label(created_dates, label)
         for label in months
