@@ -251,56 +251,96 @@
       display: none;
     }
 
+    body:not(.module-mode) .topbar {
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      grid-template-areas: "title refresh export" "filters filters filters";
+      gap: 16px 20px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    body:not(.module-mode) .topbar > div:first-child { grid-area: title; min-width: 0; }
+    body:not(.module-mode) #pageTitle { font-size: 28px; font-weight: 750; line-height: 1.2; }
+    body:not(.module-mode) #pageSubtitle:empty { display: none; }
+    body:not(.module-mode) .refresh { grid-area: refresh; padding: 0; font-size: 11px; line-height: 1.6; }
+    body:not(.module-mode) .export {
+      grid-area: export;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 36px;
+      padding: 0 14px;
+      border: 1px solid #4a8de7;
+      border-radius: 6px;
+      background: #2169d1;
+      box-shadow: none;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    body:not(.module-mode) .filters {
+      grid-area: filters;
+      grid-template-columns: minmax(120px, .65fr) minmax(130px, .7fr) minmax(0, 1.45fr) minmax(0, 1.4fr);
+      gap: 16px;
+      padding: 12px 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    body:not(.module-mode) .filters label, body:not(.module-mode) .filter-group { min-width: 0; color: #a9bed0; font-size: 11px; font-weight: 550; }
+    body:not(.module-mode) .filters select { height: 36px; background: #0b2235; border-color: #35516a; }
+    body:not(.module-mode) .filter-buttons { gap: 2px; padding: 3px; background: #081c2c; border: 1px solid #304a60; border-radius: 6px; }
+    body:not(.module-mode) .filter-button { min-height: 28px; padding: 0 6px; border: 1px solid transparent; border-radius: 4px; background: transparent; font-size: 11px; font-weight: 600; }
+    body:not(.module-mode) .filter-button.active { border-color: #377b9a; background: #15465b; box-shadow: none; color: #e0fbff; }
+    body:not(.module-mode) .filter-button:hover { background: #12344a; }
+    body:not(.module-mode) .filter-button:focus-visible, body:not(.module-mode) .export:focus-visible { outline: 2px solid #8ed5e0; outline-offset: 2px; }
+
     .kpis {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 14px;
+      gap: 10px;
       margin-bottom: 16px;
     }
 
     .kpi {
-      min-height: 114px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      padding: 17px 16px;
-      box-shadow: var(--shadow);
-      isolation: isolate;
+      min-height: 132px;
+      min-width: 0;
+      display: grid;
+      grid-template-rows: 34px auto 1fr;
+      gap: 8px;
+      border: 1px solid rgba(145, 180, 214, .20);
+      border-top: 2px solid var(--kpi-accent);
+      border-radius: 6px;
+      padding: 12px;
+      background: #0b2235;
     }
 
-    .kpi::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,0));
-      z-index: -1;
-    }
+    .kpi.blue { --kpi-accent: #599af7; }
+    .kpi.teal { --kpi-accent: #49c5c2; background: #0c2932; }
+    .kpi.purple { --kpi-accent: #ad93e8; }
+    .kpi.yellow { --kpi-accent: #d9b85d; background: #242a2c; }
+    .kpi.navy { --kpi-accent: #63b8e2; }
+    .kpi.green { --kpi-accent: #59cd99; background: #102d2d; }
 
-    .kpi.blue { background: linear-gradient(135deg, #164cae, #0c2e70); }
-    .kpi.teal { background: linear-gradient(135deg, #046d70, #0a3b46); }
-    .kpi.purple { background: linear-gradient(135deg, #45328f, #291d5c); }
-    .kpi.yellow { background: linear-gradient(135deg, #9a7412, #5a4109); }
-    .kpi.navy { background: linear-gradient(135deg, #175fad, #0d376c); }
-    .kpi.green { background: linear-gradient(135deg, #12683e, #0b3b28); }
-
-    .kpi-title { font-size: 14px; color: #f4f8ff; margin-bottom: 10px; }
-    .kpi-value { font-size: 29px; font-weight: 850; letter-spacing: 0; }
+    .kpi-heading { display: flex; align-items: center; gap: 8px; min-width: 0; }
+    .kpi-title { font-size: 12px; line-height: 1.4; font-weight: 550; color: #dce8f2; min-width: 0; }
+    .kpi-value { font-size: 28px; line-height: 1.1; font-weight: 750; letter-spacing: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
     .kpi-small { font-size: 15px; font-weight: 700; margin-left: 2px; }
-    .kpi-foot { margin-top: 11px; font-size: 12px; color: #dbe7f5; }
+    .kpi-foot { display: flex; flex-wrap: wrap; gap: 3px 5px; align-content: end; font-size: 10px; line-height: 1.4; color: #a7bdcd; }
+    .kpi-foot .up, .kpi-foot .down { margin-left: 0; font-weight: 650; white-space: nowrap; }
     .up { color: #66e58c; font-weight: 800; margin-left: 4px; }
     .down { color: #61e0cd; font-weight: 800; margin-left: 4px; }
 
     .kpi-icon {
-      position: absolute;
-      right: 14px;
-      top: 50%;
-      transform: translateY(-34%);
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.18);
-      box-shadow: inset 0 0 22px rgba(255, 255, 255, 0.10);
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      background: color-mix(in srgb, var(--kpi-accent) 13%, transparent);
+      color: var(--kpi-accent);
     }
+    .kpi-icon .orders-icon { width: 18px; height: 18px; }
 
     .grid {
       display: grid;
@@ -1055,15 +1095,13 @@
     .workflow-section {
       grid-column: 1 / -1;
       display: grid;
-      gap: 16px;
-      padding: 18px;
-      border: 1px solid rgba(70, 140, 190, 0.22);
-      border-radius: 10px;
-      background:
-        radial-gradient(circle at 12% 0%, rgba(47, 128, 237, 0.12), transparent 34%),
-        linear-gradient(135deg, rgba(8, 31, 51, 0.96), rgba(6, 23, 39, 0.94));
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.035);
+      gap: 12px;
+      padding: 14px 0 0;
+      border-top: 1px solid rgba(145, 180, 214, 0.20);
     }
+
+    body.workflow-mode .module-grid { gap: 18px; }
+    body.workflow-mode .topbar { margin-bottom: 12px; }
 
     body.workflow-mode .topbar {
       grid-template-columns: 180px minmax(0, 1fr);
@@ -1086,14 +1124,14 @@
     }
 
     .workflow-dealer-button {
-      min-height: 32px;
+      min-height: 36px;
       border: 1px solid rgba(145, 180, 214, 0.28);
       border-radius: 6px;
       background: rgba(6, 18, 31, 0.76);
       color: #dbe8f6;
       font: inherit;
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 650;
       cursor: pointer;
       transition: background .16s ease, border-color .16s ease, color .16s ease;
     }
@@ -1105,9 +1143,8 @@
     }
 
     .workflow-dealer-button.active {
-      border-color: rgba(173, 207, 244, 0.36);
-      background: linear-gradient(135deg, #2874ef, #1c5fd2);
-      box-shadow: 0 8px 18px rgba(39, 116, 239, 0.28);
+      border-color: #5599f0;
+      background: #2169d1;
       color: #ffffff;
     }
 
@@ -1126,13 +1163,13 @@
     }
 
     .workflow-section-icon {
-      width: 48px;
-      height: 48px;
+      width: 36px;
+      height: 36px;
       display: grid;
       place-items: center;
       border: 1px solid rgba(142, 213, 224, 0.22);
-      border-radius: 9px;
-      background: linear-gradient(135deg, rgba(47, 128, 237, 0.22), rgba(32, 197, 199, 0.10));
+      border-radius: 6px;
+      background: rgba(45, 126, 174, 0.12);
       color: #8ed5e0;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
@@ -1140,56 +1177,52 @@
     .workflow-section-title {
       margin: 0;
       color: #ffffff;
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 19px;
+      font-weight: 700;
       line-height: 1.25;
     }
 
     .workflow-section-subtitle {
-      margin-top: 5px;
-      color: #b5c8db;
-      font-size: 13px;
+      margin-top: 3px;
+      color: #8faac0;
+      font-size: 11px;
       line-height: 1.35;
     }
 
     .workflow-summary {
       display: grid;
-      grid-template-columns: repeat(3, minmax(145px, 1fr));
+      grid-template-columns: repeat(3, minmax(118px, 1fr));
       justify-content: end;
-      gap: 12px;
+      gap: 0;
     }
 
     .workflow-pill {
-      min-width: 145px;
-      min-height: 58px;
+      min-width: 0;
+      min-height: 40px;
       display: grid;
-      grid-template-columns: 38px minmax(0, 1fr);
-      gap: 10px;
+      grid-template-columns: 20px minmax(0, 1fr);
+      gap: 8px;
       align-items: center;
-      padding: 9px 12px;
-      border: 1px solid rgba(145, 180, 214, 0.22);
-      border-radius: 8px;
-      background: rgba(16, 42, 67, 0.78);
+      padding: 0 14px;
+      border-left: 1px solid rgba(145, 180, 214, 0.18);
       color: #a9bbcd;
       font-size: 11px;
       text-align: left;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
     }
 
     .workflow-pill strong {
       display: block;
       color: #ffffff;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1.1;
+      margin-top: 3px;
     }
 
     .workflow-pill-icon {
-      width: 36px;
-      height: 36px;
+      width: 20px;
+      height: 20px;
       display: grid;
       place-items: center;
-      border-radius: 8px;
-      background: rgba(6, 23, 39, 0.56);
       color: #8ed5e0;
     }
 
@@ -1199,11 +1232,12 @@
     }
 
     .workflow-track {
-      display: flex;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
       align-items: stretch;
-      overflow-x: auto;
-      padding: 2px 0 12px;
+      overflow: visible;
+      padding: 0;
       scroll-snap-type: x proximity;
       scrollbar-width: thin;
       scrollbar-color: rgba(126, 162, 195, 0.34) rgba(145, 180, 214, 0.08);
@@ -1228,32 +1262,40 @@
     }
 
     .workflow-step {
-      display: flex;
+      display: grid;
+      grid-row: span 5;
+      grid-template-rows: subgrid;
+      min-width: 0;
       align-items: stretch;
-      gap: 10px;
+      gap: 6px;
       flex: 0 0 auto;
     }
 
     .workflow-node {
-      width: 236px;
-      min-height: 244px;
+      width: auto;
+      min-width: 0;
+      min-height: 208px;
       display: grid;
-      grid-template-rows: auto auto 1fr auto auto;
-      gap: 10px;
-      padding: 14px;
+      grid-row: span 5;
+      grid-template-rows: subgrid;
+      gap: 6px;
+      padding: 10px 12px;
       border: 1px solid rgba(145, 180, 214, 0.20);
-      border-top: 3px solid var(--stage-color, #1f6feb);
-      border-radius: 9px;
-      background:
-        linear-gradient(180deg, rgba(11, 34, 56, 0.94), rgba(7, 26, 44, 0.94));
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.20), inset 0 1px 0 rgba(255,255,255,.035);
+      border-top: 2px solid var(--stage-color, #1f6feb);
+      border-radius: 6px;
+      background: #0b2235;
+      transition: border-color .15s ease, background .15s ease;
       scroll-snap-align: start;
     }
+
+    .workflow-node:hover { border-color: color-mix(in srgb, var(--stage-color) 55%, #31485b); background: #0d273b; }
+    .workflow-stage-number { color: #7f9aaf; font-size: 10px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .workflow-export:focus-visible, .workflow-dealer-button:focus-visible { outline: 2px solid #8ed5e0; outline-offset: 3px; }
 
     .workflow-section.pdi .workflow-track {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
+      gap: 10px;
       overflow: visible;
       padding-bottom: 0;
       scrollbar-width: none;
@@ -1284,28 +1326,27 @@
     .workflow-node-top {
       min-width: 0;
       display: grid;
-      grid-template-columns: 34px minmax(0, 1fr);
-      gap: 10px;
+      grid-template-columns: 26px minmax(0, 1fr) auto;
+      gap: 8px;
       align-items: center;
     }
 
     .workflow-stage-icon {
-      width: 32px;
-      height: 32px;
+      width: 26px;
+      height: 26px;
       display: grid;
       place-items: center;
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--stage-color, #1f6feb) 86%, white 14%);
-      color: #061727;
-      box-shadow: 0 8px 18px color-mix(in srgb, var(--stage-color, #1f6feb) 24%, transparent);
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--stage-color, #1f6feb) 16%, transparent);
+      color: color-mix(in srgb, var(--stage-color, #1f6feb) 65%, white 35%);
     }
 
     .workflow-node-title {
       margin: 0;
       color: #ffffff;
-      font-size: 14px;
-      font-weight: 780;
-      line-height: 1.28;
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.4;
     }
 
     .workflow-node-metrics {
@@ -1315,10 +1356,10 @@
     }
 
     .workflow-metric {
-      padding: 8px 9px;
-      border: 1px solid rgba(145, 180, 214, 0.15);
-      border-radius: 6px;
-      background: rgba(255,255,255,.035);
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 3px;
+      padding: 0;
       color: #9fb2c5;
       font-size: 11px;
       line-height: 1.25;
@@ -1326,7 +1367,7 @@
 
     .workflow-metric strong {
       display: block;
-      margin-top: 3px;
+      margin-top: 0;
       color: #f8fbff;
       font-size: 21px;
       line-height: 1.05;
@@ -1340,7 +1381,7 @@
 
     .workflow-aging-chart {
       display: grid;
-      gap: 7px;
+      gap: 4px;
       color: #b9cadc;
       font-size: 11px;
     }
@@ -1359,9 +1400,9 @@
     }
 
     .workflow-aging-track {
-      height: 10px;
+      height: 6px;
       overflow: hidden;
-      border-radius: 999px;
+      border-radius: 3px;
       background: rgba(145, 180, 214, 0.11);
     }
 
@@ -1371,21 +1412,22 @@
       min-width: var(--bar-min, 0);
       height: 100%;
       border-radius: inherit;
-      background: linear-gradient(90deg, var(--stage-color, #1f6feb), color-mix(in srgb, var(--stage-color, #1f6feb) 42%, white 58%));
+      background: color-mix(in srgb, var(--stage-color, #1f6feb) 75%, white 25%);
     }
 
     .workflow-aging-value {
       color: #f5f9ff;
       text-align: right;
-      font-weight: 800;
+      font-weight: 600;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
     }
 
     .workflow-raw {
       color: #8fa6bd;
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.35;
+      overflow-wrap: anywhere;
     }
 
     .workflow-node-foot {
@@ -1393,19 +1435,26 @@
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 8px;
       align-items: end;
+      padding-top: 5px;
+      border-top: 1px solid rgba(145, 180, 214, .12);
     }
 
     .workflow-export {
-      min-width: 58px;
-      min-height: 28px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      min-width: 68px;
+      min-height: 26px;
       border: 1px solid rgba(142, 213, 224, 0.42);
-      border-radius: 6px;
-      background: rgba(31, 111, 235, 0.16);
+      border-radius: 4px;
+      background: transparent;
       color: #eaf6ff;
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 600;
       cursor: pointer;
     }
+    .workflow-export .orders-icon { width: 13px; height: 13px; }
 
     .workflow-export:hover {
       border-color: rgba(142, 213, 224, 0.82);
@@ -1433,7 +1482,7 @@
     }
 
     .workflow-share-track {
-      height: 10px;
+      height: 4px;
       overflow: hidden;
       border-radius: 999px;
       background: rgba(145, 180, 214, 0.11);
@@ -1445,7 +1494,7 @@
       min-width: var(--share-min, 0);
       height: 100%;
       border-radius: inherit;
-      background: linear-gradient(90deg, var(--stage-color, #1f6feb), color-mix(in srgb, var(--stage-color, #1f6feb) 42%, white 58%));
+      background: color-mix(in srgb, var(--stage-color, #1f6feb) 75%, white 25%);
     }
 
     .workflow-note {
@@ -1504,19 +1553,24 @@
     }
 
     @media (max-width: 1280px) {
+      body:not(.module-mode) .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .app { grid-template-columns: 210px 1fr; }
       .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .module-grid { grid-template-columns: 1fr; }
       .service-orders-functions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .workflow-controls { grid-template-columns: 1fr; }
-      .workflow-section.pdi .workflow-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .workflow-track, .workflow-section.pdi .workflow-track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .workflow-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .workflow-section-head { grid-template-columns: 1fr; align-items: start; }
       .workflow-summary { justify-content: flex-start; }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7 { grid-column: span 6; }
     }
 
     @media (max-width: 820px) {
+      body:not(.module-mode) .topbar { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "title title" "refresh export" "filters filters"; gap: 12px; }
+      body:not(.module-mode) #pageTitle { font-size: 26px; }
+      body:not(.module-mode) .filters { grid-template-columns: 1fr; gap: 12px; }
+      body:not(.module-mode) .filter-buttons { grid-template-columns: repeat(var(--filter-columns, 3), minmax(0, 1fr)); }
+      #overviewView .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       body.workflow-mode .topbar { grid-template-columns: 1fr; gap: 12px; }
       .app { grid-template-columns: 1fr; }
       .sidebar { position: static; height: auto; }
@@ -1528,8 +1582,10 @@
       .module-header, .module-fields, .module-meta { grid-template-columns: 1fr; }
       .module-field.wide { grid-column: auto; }
       .workflow-dealer-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .workflow-section.pdi .workflow-track { grid-template-columns: 1fr; }
-      .workflow-node { width: min(224px, calc(100vw - 58px)); }
+      .workflow-track, .workflow-section.pdi .workflow-track { grid-template-columns: 1fr; }
+      .workflow-section-head { grid-template-columns: 1fr; gap: 12px; }
+      .workflow-pill { padding: 0 8px; grid-template-columns: 1fr; }
+      .workflow-pill-icon { display: none; }
       .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-12 { grid-column: span 12; }
       .donut-wrap { grid-template-columns: 1fr; }
       table { min-width: 620px; }
@@ -1592,7 +1648,7 @@
           </div>
         </div>
         <div class="refresh"><span class="muted">Last Refresh</span><br><span id="lastRefresh">--</span></div>
-        <button class="export" id="exportCsv" type="button">Export v</button>
+        <button class="export" id="exportCsv" type="button">Export</button>
         <div id="ordersHeaderActions" class="orders-header-actions" hidden></div>
         <div id="workflowHeaderControls" hidden></div>
       </section>
@@ -2000,6 +2056,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
     ];
 
     document.getElementById("lastRefresh").textContent = data.meta.lastUpdated;
+    document.getElementById("exportCsv").innerHTML = `${ordersIcon("Download")} Export`;
     document.getElementById("dataAsOf").textContent = data.meta.lastUpdated.replace(",", "");
     fillSelect("dateRange", data.meta.months.map(month => ({ label: month, value: month })), defaultMonth);
     fillSelect("dealerYard", data.meta.yards.map(y => ({ label: y === "All Dealers" ? "All" : y, value: y === "All Dealers" ? "All" : y })), "All");
@@ -2563,7 +2620,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
               <div class="workflow-section-icon">${workflowSectionIcon(section.type)}</div>
               <div>
               <h3 class="workflow-section-title">${htmlText(section.title)} Workflow</h3>
-                <div class="workflow-section-subtitle">${htmlText(workflowSectionSubtitle(section.type))}</div>
+                <div class="workflow-section-subtitle">${section.pipeline.length} stages</div>
               </div>
             </div>
             <div class="workflow-summary">
@@ -2616,6 +2673,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
             <div class="workflow-node-top">
               <span class="workflow-stage-icon">${workflowStageIcon(type, stage.status, index)}</span>
               <h4 class="workflow-node-title">${htmlText(stage.status)}</h4>
+              <span class="workflow-stage-number">${String(index + 1).padStart(2, "0")}</span>
             </div>
             <div class="workflow-node-metrics">
               <div class="workflow-metric">Tickets<strong>${num(stage.qty)}</strong></div>
@@ -2624,16 +2682,15 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
             <div class="workflow-aging">
               <div class="workflow-aging-chart">${bars}</div>
             </div>
-            <div class="workflow-share">
+            <div class="workflow-share" title="${attrText(stage.status)}: ${stageShare.toFixed(1)}% of ${num(sectionTotal)} ${serviceTypeText({ serviceType: type })} tickets">
               <span class="workflow-share-track"><span class="workflow-share-fill" style="--share-width:${stageShare}%;--share-min:${stageShare ? "6px" : "0"}"></span></span>
               <span>${stageShare.toFixed(1)}%</span>
             </div>
             <div class="workflow-node-foot">
               <div class="workflow-raw">C4C: ${htmlText((stage.rawStatuses || []).join(", ") || "No current tickets")}</div>
-              <button class="workflow-export" type="button" data-workflow-type="${attrText(type)}" data-workflow-stage="${attrText(stage.status)}">Export</button>
+              <button class="workflow-export" type="button" data-workflow-type="${attrText(type)}" data-workflow-stage="${attrText(stage.status)}" aria-label="Export ${attrText(stage.status)}">${ordersIcon("Download")} Export</button>
             </div>
           </article>
-          ${index < count - 1 ? `<div class="workflow-arrow">-&gt;</div>` : ""}
         </div>`;
     }
 
@@ -2727,19 +2784,18 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const totalOrders = getOpenTotal();
       const labourBadge = state.type === "Repair ticket" ? "Repair scope" : state.type === "PDI ticket" ? "PDI scope" : pct(labour.repair, labour.total) + " repair";
       const kpis = [
-        ["New Service Orders", num(created), "", "vs previous period", delta(created, previous.newTickets), "blue", iconDoc()],
-        ["Open Service Orders", num(totalOrders), "", "Current open backlog", "+ " + money(getOpenQuoteAmount()), "teal", iconClock()],
-        ["Orders Completed", num(completed), "", "Completed / invoiced in scope", pct(completed, created), "purple", iconCheck()],
-        ["Avg Turnaround Time", "TBC", "", "Arrival / start / completion timestamps", "TBC", "yellow", iconHourglass()],
-        ["Total Labour Hours", labour.total.toLocaleString("en-AU", { maximumFractionDigits: 1 }), "", "Repair + PDI claimed", labourBadge, "navy", iconUser()],
-        ["Invoice Amount", invoice.total, "", "vs created quote value", pct(invoice.totalAmount, latest.newAmount), "green", iconDollar()]
+        ["New Service Orders", num(created), "", "vs previous period", delta(created, previous.newTickets), "blue", ordersIcon("FileText")],
+        ["Open Service Orders", num(totalOrders), "", "Current open backlog", "+ " + money(getOpenQuoteAmount()), "teal", ordersIcon("Wrench")],
+        ["Orders Completed", num(completed), "", "Completed / invoiced in scope", pct(completed, created), "purple", ordersIcon("CircleCheck")],
+        ["Avg Turnaround Time", "TBC", "", "Pending validation", "", "yellow", ordersIcon("Clock")],
+        ["Total Labour Hours", labour.total.toLocaleString("en-AU", { maximumFractionDigits: 1 }), "", "Repair + PDI claimed", labourBadge, "navy", ordersIcon("Clock")],
+        ["Invoice Amount", invoice.total, "", "vs created quote value", pct(invoice.totalAmount, latest.newAmount), "green", ordersIcon("FileText")]
       ];
       document.getElementById("kpis").innerHTML = kpis.map(([title, value, small, foot, badge, tone, icon]) => `
         <article class="kpi ${tone}">
-          <div class="kpi-title">${title}</div>
+          <div class="kpi-heading"><div class="kpi-icon">${icon}</div><div class="kpi-title">${title}</div></div>
           <div class="kpi-value">${value}<span class="kpi-small">${small}</span></div>
-          <div class="kpi-foot">${foot} <span class="${badge === "TBC" ? "muted" : badge.startsWith("-") ? "down" : "up"}">${badge}</span></div>
-          <div class="kpi-icon">${icon}</div>
+          <div class="kpi-foot"><span>${foot}</span><span class="${badge === "TBC" ? "muted" : badge.startsWith("-") ? "down" : "up"}">${badge}</span></div>
         </article>`).join("");
 
       drawLineChart("trendChart", getTrendRows(), [
