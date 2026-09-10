@@ -1956,14 +1956,14 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       { functionName: "Complete Orders", formula: "Repair: Status == Create Invoice\nPDI: Status == Claim Time Ticket\nCompletion date: lastchangedtime", field: "History API lastchangedtime", nextStep: "Ready", stage: "", target: "Track completed tickets by last status change", owner: "C4C", dueDate: "" },
       { functionName: "Open Service Orders", formula: "Not Complete Orders\nAge: today - lastchangedtime\nNew open with no lastchangedtime: today - CreatedOn", field: "History API lastchangedtime\nC4C CreatedOn fallback", nextStep: "Ready", stage: "", target: "Track current backlog and age", owner: "C4C", dueDate: "" },
       { functionName: "Turnaround Time", formula: "Arrival / start / completion timestamps", field: "Missing\nArrival / start / completion time", nextStep: "Add a new field\nArrival / start / completion time", stage: "", target: "Track by a field instead of a change log", owner: "", dueDate: "" },
-      { functionName: "Service Orders Trend", formula: "CreatedOn + lastchangedtime", field: "C4C CreatedOn\nHistory API lastchangedtime", nextStep: "Ready", stage: "", target: "Month To Month", owner: "C4C", dueDate: "" },
+      { functionName: "Rejected Rate", formula: "Quote Rejected / Total Repair Tickets × 100%", field: "C4C TicketStatus / TicketStatusText + TicketType", nextStep: "Ready", stage: "", target: "", owner: "C4C", dueDate: "" },
       { functionName: "Technician Workload Overview", formula: "Technician ID/Name + Productive Hour", field: "Missing\nTechnician ID/Name + Productive Hour", nextStep: "Add new fields\nTechnician ID/Name + Productive Hour", stage: "", target: "Worker Perfomance", owner: "", dueDate: "" },
       { functionName: "Technician Productivity", formula: "Sold / Available Hours", field: "Sold hours from TotalLabourHours, available hours from HR Payslip", nextStep: "Provide HR Payslip", stage: "", target: "110% to 130%", owner: "C4C", dueDate: "" },
       { functionName: "Technician Efficiency", formula: "Sold / Productive Hours", field: "Missing\nProductive hours", nextStep: "Add a new field\nProductive Hours + Technician ID / Name", stage: "", target: ">110%", owner: "C4C", dueDate: "" },
       { functionName: "Technician Utilisation", formula: "Productive / Available Hours", field: "Missing\nProductive hours", nextStep: "Add a new field\nProductive hours", stage: "", target: ">90%", owner: "C4C", dueDate: "" },
       { functionName: "Comeback / Rework Rate", formula: "Rework Tickets / Completed Repair Orders", field: "Rework can tell by same chassis number and description but looking forward a mark in system", nextStep: "Add a new field to mark rework.", stage: "", target: "<5%", owner: "C4C", dueDate: "" },
       { functionName: "Fixed First Time Right", formula: "1 - Rework Rate", field: "Once Rework Rate is done", nextStep: "Use rework tickets as the failure signal.", stage: "", target: ">95%", owner: "C4C", dueDate: "" },
-      { functionName: "Quotation Approval Rate", formula: "Approved Quotes / Raised Quotes", field: "Missing quote rejected, having quote approved from C4C using Repair Total Amount", nextStep: "Add a new field for rejection in system instead of sharing with cancel.\nProvide Repair Total Amount Trigger", stage: "", target: ">70%", owner: "C4C", dueDate: "" },
+      { functionName: "Quotation Approval Rate", formula: "Approved Quotes / Raised Quotes", field: "C4C Quote Approved and ZW - Quote Rejected; Repair Total Amount", nextStep: "Define the raised-quote denominator and Repair Total Amount trigger.", stage: "", target: ">70%", owner: "C4C", dueDate: "" },
       { functionName: "Service Appointment Lead Time", formula: "Appointment Date - Booking Request Date", field: "Missing appointment date, having CreatedOn as Booking Request Date", nextStep: "Add a new field for Appointment Date in system.", stage: "", target: "3 to 7 days", owner: "C4C", dueDate: "" },
       { functionName: "Customer Retention Rate", formula: "Returning Sold Vans / Sold Vans in Service Scope", field: "Chassis number in C4C", nextStep: "Define customer return logic using sold van / local service records in system. Chassis? Rego?", stage: "", target: ">90%", owner: "", dueDate: "" },
       { functionName: "Retail Repair Order Growth Rate", formula: "(Current Period Retail ROs - Prior Period Retail ROs) / Prior Period Retail ROs", field: "RO ID in C4C, but missing status change time by date", nextStep: "Add a new field to record the status last change time.", stage: "", target: "3% to 6% YOY", owner: "C4C", dueDate: "" },
@@ -1980,7 +1980,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
         title: "Service Orders",
         subtitle: "Order volume, completion, backlog, turnaround, trend, quote approval, and appointment lead time.",
         kind: "service-orders",
-        functions: ["New Service Orders", "Complete Orders", "Open Service Orders", "Turnaround Time", "Service Orders Trend", "Quotation Approval Rate", "Service Appointment Lead Time"]
+        functions: ["New Service Orders", "Complete Orders", "Open Service Orders", "Turnaround Time", "Rejected Rate", "Quotation Approval Rate", "Service Appointment Lead Time"]
       },
       "workflow": {
         group: "Operations",
@@ -2029,6 +2029,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       "PDI Complete, Awaiting Time Claim": "PDI work appears complete, but the time claim / invoice step is still pending.",
       "Awaiting Quote Approval": "Quote has not been approved yet; shown as an open repair order waiting for customer or internal approval.",
       "Approved, Awaiting Repair": "Quote is approved and the repair can be scheduled or started.",
+      "Quote Rejected": "ZW - Quote Rejected: the customer declined the quote after Open. This is an alternative to Quote Approved; the ticket does not proceed to repair approval.",
       "Repair In Progress": "Repair has started and has not reached the completion or invoice step.",
       "Invoice Cancelled, SO Still Open": "Invoice was cancelled while the service order still remains open; keep visible as an exception.",
       "Awaiting PDI Start": "PDI ticket exists, but the PDI start / completion status has not been reached.",
@@ -2039,7 +2040,8 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       ["Complete Orders", "Repair: Create Invoice. PDI: Claim Time Ticket. Date from lastchangedtime.", "Completed tickets are counted by the final status change date."],
       ["Open Service Orders", "Not completed orders. Age from lastchangedtime, or CreatedOn when lastchangedtime is blank.", "Open backlog is current PDI/Repair tickets that have not reached the completion status."],
       ["Service Orders Trend", "CreatedOn + lastchangedtime", "Created trend and completion trend are ready from C4C plus history API status-change time."],
-      ["Quotation Approval Rate", "Approved Quotes / Raised Quotes", "Needs a cleaner quote rejected / quote approved status split."],
+      ["Rejected Rate", "Quote Rejected / Total Repair Tickets × 100%", "Repair tickets in the selected month and dealer scope. All repair statuses are included in the denominator; ticket search and status filters do not change this rate."],
+      ["Quotation Approval Rate", "Approved Quotes / Raised Quotes", "Quote Approved and ZW - Quote Rejected are separate outcomes after Open. The raised-quote denominator still needs definition."],
       ["Technician Productivity", "Sold Hours / Available Hours", "Sold hours can use C4C claim hours; available hours should come from HR payslip."],
       ["Average Repair Order Amount", "Repair Order Revenue / Repair Order Count", "Revenue comes from SAP invoice enrichment; order count comes from C4C TicketID."]
     ];
@@ -2156,8 +2158,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const createdRows = getTicketDetails();
       const completedRows = completedDetailRows(state.month, state.yard, state.type);
       const openRows = openDetailRows(state.month, state.yard, state.type);
-      const trendRows = getTrendRows();
-      const latestTrend = trendRows.at(-1) || {};
+      const rejection = serviceOrderRejectionRate(state);
       const baseItems = config.functions.map(name => kpiNextSteps.find(item => item.functionName === name)).filter(Boolean);
       const dataByName = {
         "New Service Orders": {
@@ -2178,11 +2179,11 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
           detail: `${money(getOpenQuoteAmount())} open quote value`,
           rows: openRows
         },
-        "Service Orders Trend": {
+        "Rejected Rate": {
           status: "Ready",
-          value: `${num(latestTrend.newTickets || 0)} / ${num(latestTrend.completedTickets || 0)}`,
-          detail: "Created / Completed in latest trend month",
-          rows: createdRows
+          value: rejection.value,
+          detail: rejection.note,
+          rows: rejection.rows
         }
       };
       return baseItems.map(item => ({
@@ -2365,6 +2366,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
     }
 
     function serviceOrderStatusColor(status = "") {
+      if (/reject/i.test(status)) return "#ef4444";
       if (/cancel/i.test(status)) return "#fa7b88";
       if (/completed|invoiced/i.test(status)) return "#55d89b";
       if (/quote approval/i.test(status)) return "#ffb665";
@@ -2373,20 +2375,34 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       return "#77b6ff";
     }
 
+    function serviceOrderRejectionRate(scope = serviceOrdersState) {
+      // Keep the denominator across all repair statuses, even while searching for rejected tickets.
+      const repairRows = serviceOrderBaseRows().filter(row => row.serviceType === "Repair ticket"
+        && rowMatchesScope(row, scope.yard, scope.type)
+        && (!scope.month || rowInPeriod(row, "createdDate", scope.month)));
+      const rejectedRows = repairRows.filter(row => row.status === "Quote Rejected"
+        || /^(?:ZW\s*-\s*)?Quote Rejected$|^ZW$/i.test(String(row.rawStatus || "").trim()));
+      return {
+        value: repairRows.length ? `${(rejectedRows.length / repairRows.length * 100).toFixed(1)}%` : "—",
+        note: repairRows.length ? `${num(rejectedRows.length)} rejected / ${num(repairRows.length)} repair tickets` : "No repair tickets in scope",
+        rows: rejectedRows,
+        total: repairRows.length,
+        rejected: rejectedRows.length
+      };
+    }
+
     function renderServiceOrderMetrics(createdRows) {
       const scope = serviceOrdersState;
       const base = serviceOrderSearchRows(false);
       const isCompleted = row => (row.serviceType === "Repair ticket" && String(row.rawStatus).toLowerCase() === "create invoice") || (row.serviceType === "PDI ticket" && String(row.rawStatus).toLowerCase() === "claim time ticket");
       const completed = base.filter(row => isCompleted(row) && (!scope.month || rowInPeriod(row, "lastchangedtime", scope.month)));
       const open = base.filter(row => isOpenDetailRow(row) && (!scope.month || parseDashboardDate(row.createdDate) <= periodEndDate(scope.month)));
-      const trendMonth = scope.month || data.meta.currentMonth;
-      const trendCreated = base.filter(row => row.period === trendMonth).length;
-      const trendCompleted = base.filter(row => isCompleted(row) && rowInPeriod(row, "lastchangedtime", trendMonth)).length;
+      const rejection = serviceOrderRejectionRate();
       const metrics = [
         ["New Service Orders", num(createdRows.length), scope.month || "All months", "FileText", "#77b6ff"],
         ["Complete Orders", num(completed.length), scope.month || "All months", "CircleCheck", "#55d89b"],
         ["Open Service Orders", num(open.length), "Current status", "Wrench", "#58cecb"],
-        ["Service Orders Trend", `${num(trendCreated)} / ${num(trendCompleted)}`, `${trendMonth} · Created / Completed`, "ChartNoAxesCombined", "#77b6ff"],
+        ["Rejected Rate", rejection.value, rejection.note, "ChartNoAxesCombined", "#ef4444"],
         ["Turnaround Time", "TBC", "", "Clock", "#ffb665"],
         ["Quotation Approval Rate", "TBC", "", "BadgeCheck", "#b49aef"],
         ["Service Appointment Lead Time", "TBC", "", "CalendarDays", "#fa7b88"]
@@ -2437,7 +2453,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
     }
 
     function mappingStatusRows() {
-      const source = page.openStatusMix?.segments || getStatusMix().segments || [];
+      const source = withQuoteRejectedStatus(page.openStatusMix || getStatusMix()).segments;
       return source.map(segment => ({
         display: segment.name,
         raw: (segment.rawStatuses || [segment.name]).join(", "),
@@ -2558,7 +2574,8 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const monthData = page.workflowDaily?.[period]?.[type] || {};
       const dealer = workflowDealer();
       const entries = [monthData[dealer]].filter(Boolean);
-      const pipeline = combineWorkflowPipelines(entries.map(entry => entry.pipeline || []));
+      const pipeline = combineWorkflowPipelines(entries.map(entry => entry.pipeline || []))
+        .filter(stage => stage.status !== "Quote Rejected");
       const metrics = workflowMetrics(pipeline);
       return {
         type,
@@ -2713,7 +2730,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
 
     function workflowStageIcon(type, status, index) {
       const text = String(status || "");
-      if (/cancel/i.test(text)) {
+      if (/cancel|reject/i.test(text)) {
         return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>`;
       }
       if (/approved|completed|invoice|claimed/i.test(text)) {
@@ -2804,7 +2821,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       ]);
 
       const statusMix = getStatusMix();
-      renderDonut("statusDonut", "statusLegend", statusMix.segments.slice(0, 5), "qty", "qty", "status");
+      renderDonut("statusDonut", "statusLegend", statusMix.segments.filter(stage => stage.qty || stage.name === "Quote Rejected"), "qty", "qty", "status");
       document.getElementById("statusTotal").textContent = statusMix.total;
       const typeRows = ticketTypeRows();
       renderDonut("typeDonut", "typeLegend", typeRows, "value", "label");
@@ -2965,10 +2982,24 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       return { total: num(total), segments };
     }
 
+    function emptyQuoteRejectedStage() {
+      return {
+        name: "Quote Rejected", qty: 0, quoteAmount: 0, quoteAmountLabel: "$0",
+        amount: "0 tickets ($0)", share: 0, percent: 0, percentLabel: "0%",
+        rawStatuses: ["ZW - Quote Rejected"], color: "#ef4444",
+        aging: Object.keys(workflowAgingColors).map(label => ({ label, qty: 0 }))
+      };
+    }
+
+    function withQuoteRejectedStatus(mix, type = "All Ticket Types") {
+      if (type === "PDI ticket" || mix.segments.some(stage => stage.name === "Quote Rejected")) return mix;
+      return { ...mix, segments: [...mix.segments, emptyQuoteRejectedStage()] };
+    }
+
     function getStatusMix() {
       const isScoped = state.yard !== "All" || state.type !== "All Ticket Types";
-      if (isScoped) return combineStatusMix(getDealerRows());
-      return page.monthlyOpenStatusMix[state.month] || page.openStatusMix;
+      const mix = isScoped ? combineStatusMix(getDealerRows()) : page.monthlyOpenStatusMix[state.month] || page.openStatusMix;
+      return withQuoteRejectedStatus(mix, state.type);
     }
 
     function getOpenTotal() {

@@ -79,6 +79,7 @@ PDI_WORKFLOW_STAGES = [
 STAGE_COLOR_OVERRIDES = {
     "Awaiting Quote Approval": "#1f6feb",
     "Approved, Awaiting Repair": "#17a6ad",
+    "Quote Rejected": "#ef4444",
     "Repair In Progress": "#f58b1f",
     "Repair Complete, Awaiting Time Claim": "#7c3aed",
     "Time Claimed, Awaiting Invoice": "#22a447",
@@ -211,6 +212,10 @@ def workflow_stage(row: pd.Series) -> str:
             "cancel": "Cancelled",
         }.get(status_key, status or "Blank")
     if ticket_type == "Repair ticket":
+        if clean(row.get("TicketStatus", "")).upper() == "ZW" or status_key in {
+            "zw", "zw - quote rejected", "quote rejected"
+        }:
+            return "Quote Rejected"
         return {
             "open": "Awaiting Quote Approval",
             "quote approved": "Approved, Awaiting Repair",
@@ -227,9 +232,9 @@ def workflow_stage(row: pd.Series) -> str:
 
 def workflow_stages_for_type(ticket_type_filter: str | None) -> list[str]:
     if ticket_type_filter == "Repair ticket":
-        return REPAIR_WORKFLOW_STAGES
+        return REPAIR_WORKFLOW_STAGES.copy()
     if ticket_type_filter == "PDI ticket":
-        return PDI_WORKFLOW_STAGES
+        return PDI_WORKFLOW_STAGES.copy()
     return []
 
 
@@ -598,6 +603,7 @@ def build_status_pipeline(rows: pd.DataFrame, ticket_type_filter: str | None = N
     if not stage_rows.empty:
         stage_rows["WorkflowStage"] = stage_rows.apply(workflow_stage, axis=1)
         stage_rows["RawTicketStatus"] = stage_rows["TicketStatusText"].map(lambda value: clean(value) or "Blank")
+        stage_rows = stage_rows[stage_rows["WorkflowStage"].ne("Quote Rejected")]
     else:
         stage_rows["WorkflowStage"] = pd.Series(dtype="object")
         stage_rows["RawTicketStatus"] = pd.Series(dtype="object")
