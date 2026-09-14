@@ -11,6 +11,7 @@ echo.
 echo  This will fetch latest C4C tickets, enrich invoice data,
 echo  refresh ticket status history, then rebuild dashboard-data.js from:
 echo  c4c_ticket_table_z007_z010_checked_hana_final.xlsx
+echo  After updating, website files will be committed and pushed to GitHub.
 echo.
 
 set "SOURCE_FILE=%CD%\c4c_ticket_table_z007_z010_checked_hana_final.xlsx"
@@ -24,6 +25,10 @@ set "LOG_DIR=%CD%\outputs"
 set "BACKUP_DIR=%LOG_DIR%\dashboard-data-backups"
 set "SOURCE_BACKUP_DIR=%LOG_DIR%\source-workbook-backups"
 set "LOG_FILE=%LOG_DIR%\update_dashboard_data.log"
+set "SETUP_LOG_FILE=%LOG_DIR%\update_dashboard_setup.log"
+set "VENV_PY=%CD%\.venv\Scripts\python.exe"
+set "PUBLISH_SCRIPT_FILE=%CD%\tools\publish_dashboard.py"
+set "PUBLISH_LOG_FILE=%LOG_DIR%\publish_dashboard.log"
 
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
 if not exist "%BACKUP_DIR%" mkdir "%BACKUP_DIR%"
@@ -62,12 +67,15 @@ if not exist "%SCRIPT_FILE%" (
 )
 
 set "PYTHON_EXE="
-set "BUNDLED_PY=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
-if exist "%BUNDLED_PY%" set "PYTHON_EXE=%BUNDLED_PY%"
+set "PYTHON_ARGS="
+if exist "%VENV_PY%" set "PYTHON_EXE=%VENV_PY%"
 
 if not defined PYTHON_EXE (
   where py >nul 2>nul
-  if not errorlevel 1 set "PYTHON_EXE=py -3"
+  if not errorlevel 1 (
+    set "PYTHON_EXE=py"
+    set "PYTHON_ARGS=-3"
+  )
 )
 
 if not defined PYTHON_EXE (
@@ -76,12 +84,47 @@ if not defined PYTHON_EXE (
 )
 
 if not defined PYTHON_EXE (
+  set "BUNDLED_PY=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+)
+if not defined PYTHON_EXE if exist "%BUNDLED_PY%" set "PYTHON_EXE=%BUNDLED_PY%"
+
+if not defined PYTHON_EXE (
   echo [ERROR] Python was not found.
-  echo Install Python, or run this from Codex after dependencies are available.
+  echo Install Python 3.10 or newer, then run this BAT again.
   echo.
   pause
   exit /b 1
 )
+
+echo [%DATE% %TIME%] Checking Python environment > "%SETUP_LOG_FILE%"
+"%PYTHON_EXE%" %PYTHON_ARGS% -c "import sys; sys.exit(0 if sys.version_info >= (3, 10) else 'Python 3.10 or newer is required')" >> "%SETUP_LOG_FILE%" 2>&1
+if errorlevel 1 goto setup_failed
+if not exist "%VENV_PY%" (
+  echo [SETUP] Creating project Python environment...
+  "%PYTHON_EXE%" %PYTHON_ARGS% -m venv "%CD%\.venv" >> "%SETUP_LOG_FILE%" 2>&1
+  if errorlevel 1 goto setup_failed
+)
+set "PYTHON_EXE=%VENV_PY%"
+set "PYTHON_ARGS="
+echo [CHECK] Checking Python dependencies...
+"%PYTHON_EXE%" -c "import pandas, openpyxl, requests, pyodbc" >> "%SETUP_LOG_FILE%" 2>&1
+if errorlevel 1 (
+  echo [SETUP] Installing missing dependencies. This may take a few minutes...
+  "%PYTHON_EXE%" -m pip --version >> "%SETUP_LOG_FILE%" 2>&1
+  if errorlevel 1 (
+    "%PYTHON_EXE%" -m ensurepip --upgrade >> "%SETUP_LOG_FILE%" 2>&1
+    if errorlevel 1 goto setup_failed
+  )
+  "%PYTHON_EXE%" -m pip install -r "%CD%\requirements.txt" >> "%SETUP_LOG_FILE%" 2>&1
+  if errorlevel 1 goto setup_failed
+)
+"%PYTHON_EXE%" -c "import pandas, openpyxl, requests, pyodbc; print('Python dependencies OK'); print('ODBC drivers:', ', '.join(pyodbc.drivers()))" >> "%SETUP_LOG_FILE%" 2>&1
+if errorlevel 1 goto setup_failed
+echo [OK] Python dependencies are ready.
+"%PYTHON_EXE%" "%PUBLISH_SCRIPT_FILE%" --check
+if errorlevel 1 goto publish_failed
+if /i "%~1"=="--check" exit /b 0
+if /i "%~1"=="--publish-only" goto publish
 
 for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set "TS=%%i"
 
@@ -102,7 +145,7 @@ set "SOURCE_TICKET_FILE="
 set "C4C_FETCH_HISTORY=false"
 set "C4C_VERIFY_SSL=false"
 set "C4C_TIMEOUT=60"
-%PYTHON_EXE% "%FETCH_SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
+"%PYTHON_EXE%" -u "%FETCH_SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
 
 if errorlevel 1 (
   echo.
@@ -120,7 +163,7 @@ echo.>> "%LOG_FILE%"
 echo [%DATE% %TIME%] Enriching invoice data from SAP HANA >> "%LOG_FILE%"
 set "WORKBOOK_PATH=%C4C_EXPORT_FILE%"
 set "OUTPUT_PATH=%SOURCE_FILE%"
-%PYTHON_EXE% "%HANA_SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
+"%PYTHON_EXE%" -u "%HANA_SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
 
 if errorlevel 1 (
   echo.
@@ -143,7 +186,7 @@ set "C4C_HISTORY_ENV=PC4C"
 set "C4C_HISTORY_SCOPE=all"
 set "C4C_HISTORY_WORKERS=16"
 set "C4C_TIMEOUT=30"
-%PYTHON_EXE% "%HISTORY_SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
+"%PYTHON_EXE%" -u "%HISTORY_SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
 
 if errorlevel 1 (
   echo.
@@ -159,7 +202,7 @@ if errorlevel 1 (
 echo [RUN] Rebuilding dashboard-data.js...
 echo.>> "%LOG_FILE%"
 echo [%DATE% %TIME%] Rebuilding dashboard-data.js >> "%LOG_FILE%"
-%PYTHON_EXE% "%SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
+"%PYTHON_EXE%" -u "%SCRIPT_FILE%" >> "%LOG_FILE%" 2>&1
 
 if errorlevel 1 (
   echo.
@@ -191,7 +234,32 @@ echo [SOURCE]  %SOURCE_FILE%
 echo [OUTPUT]  %DASHBOARD_DATA_FILE%
 echo [LOG]     %LOG_FILE%
 echo.
-echo If Render is already connected to GitHub, commit and push this change,
-echo then trigger a new deploy.
+
+:publish
+echo [RUN] Publishing dashboard to GitHub...
+"%PYTHON_EXE%" -u "%PUBLISH_SCRIPT_FILE%" > "%PUBLISH_LOG_FILE%" 2>&1
+if errorlevel 1 goto publish_failed
+type "%PUBLISH_LOG_FILE%"
 echo.
 pause
+exit /b 0
+
+:publish_failed
+echo.
+echo [ERROR] Publishing did not complete. Updated local data is kept.
+if exist "%PUBLISH_LOG_FILE%" type "%PUBLISH_LOG_FILE%"
+echo Fix the reported issue, then double-click RUN_PUBLISH_DATA.bat to retry.
+echo No need to fetch C4C data again.
+echo.
+if /i not "%~1"=="--check" pause
+exit /b 1
+
+:setup_failed
+echo.
+echo [ERROR] Python environment setup failed. Log:
+echo %SETUP_LOG_FILE%
+echo.
+type "%SETUP_LOG_FILE%"
+echo.
+if /i not "%~1"=="--check" pause
+exit /b 1

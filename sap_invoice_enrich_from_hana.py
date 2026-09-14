@@ -7,16 +7,17 @@ from typing import Iterable
 import pandas as pd
 
 
+BASE_DIR = Path(__file__).resolve().parent
 WORKBOOK_PATH = Path(
     os.getenv(
         "WORKBOOK_PATH",
-        r"C:\Users\Leo.Li\Documents\ChatGPT\Service centre dashboard\c4c_ticket_table_z007_z010_with_invoice_layout_checked.xlsx",
+        str(BASE_DIR / "c4c_ticket_table_z007_z010_with_invoice_layout_checked.xlsx"),
     )
 )
 OUTPUT_PATH = Path(
     os.getenv(
         "OUTPUT_PATH",
-        r"C:\Users\Leo.Li\Documents\ChatGPT\Service centre dashboard\c4c_ticket_table_z007_z010_checked_hana_final.xlsx",
+        str(BASE_DIR / "c4c_ticket_table_z007_z010_checked_hana_final.xlsx"),
     )
 )
 TICKETS_SHEET = "Tickets"

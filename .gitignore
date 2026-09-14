@@ -1,2 +1,3 @@
 tools/tailadmin-reference/
 dist/
+.venv/
