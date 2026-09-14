@@ -215,18 +215,14 @@ if errorlevel 1 (
   exit /b 1
 )
 
-powershell -NoProfile -Command "$p='%CD%\overview.html'; $utf8=New-Object System.Text.UTF8Encoding($false); $c=[System.IO.File]::ReadAllText($p,[System.Text.Encoding]::UTF8); $c=$c -replace 'dashboard-data\.js\?v=[^\"'']+', 'dashboard-data.js?v=%TS%'; [System.IO.File]::WriteAllText($p,$c,$utf8)"
-echo [OK] Refreshed dashboard-data.js cache version
-
-if exist "%CD%\dist" (
-  copy /y "%CD%\overview.html" "%CD%\dist\index.html" >nul
-  copy /y "%CD%\overview.html" "%CD%\dist\overview.html" >nul
-  copy /y "%CD%\dashboard-data.js" "%CD%\dist\dashboard-data.js" >nul
-  if not exist "%CD%\dist\assets" mkdir "%CD%\dist\assets"
-  copy /y "%CD%\assets\service-order-icons.js" "%CD%\dist\assets\service-order-icons.js" >nul
-  copy /y "%CD%\assets\lucide-LICENSE" "%CD%\dist\assets\lucide-LICENSE" >nul
-  echo [OK] Synced files to dist\
+"%PYTHON_EXE%" -u "%CD%\tools\refresh_dashboard_assets.py" "%TS%" >> "%LOG_FILE%" 2>&1
+if errorlevel 1 (
+  echo [ERROR] Preparing website files failed. Log:
+  type "%LOG_FILE%"
+  pause
+  exit /b 1
 )
+echo [OK] Website cache version and local build are ready.
 
 echo.
 echo [SUCCESS] Dashboard data updated.

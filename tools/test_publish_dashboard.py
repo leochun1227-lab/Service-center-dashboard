@@ -1,6 +1,8 @@
 """Exercise publishing against a disposable local Git remote; no GitHub access."""
 from pathlib import Path
 import subprocess
+import shutil
+import sys
 import tempfile
 import unittest
 
@@ -8,6 +10,23 @@ from publish_dashboard import PUBLISH_FILES, ROOT, check_repository, find_git, g
 
 
 class PublishTests(unittest.TestCase):
+    def test_refresh_from_another_computer_directory(self):
+        with tempfile.TemporaryDirectory(prefix="publish path ' test-", dir=ROOT / "outputs") as directory:
+            root = Path(directory)
+            (root / "tools").mkdir()
+            (root / "dist").mkdir()
+            (root / "assets").mkdir()
+            shutil.copy2(ROOT / "tools/refresh_dashboard_assets.py", root / "tools/refresh_dashboard_assets.py")
+            (root / "overview.html").write_text('<h1>看板</h1><script src="dashboard-data.js?v=old"></script>', encoding="utf-8")
+            for filename in ("dashboard-data.js", "assets/service-order-icons.js", "assets/lucide-LICENSE"):
+                (root / filename).write_text("fixture", encoding="utf-8")
+            subprocess.run([sys.executable, str(root / "tools/refresh_dashboard_assets.py"), "path-test"], cwd=ROOT, check=True, capture_output=True)
+            self.assertIn("dashboard-data.js?v=path-test", (root / "overview.html").read_text(encoding="utf-8"))
+            self.assertIn("看板", (root / "overview.html").read_text(encoding="utf-8"))
+            for filename in ("overview.html", "dashboard-data.js", "assets/service-order-icons.js", "assets/lucide-LICENSE"):
+                self.assertEqual((root / filename).read_bytes(), (root / "dist" / filename).read_bytes())
+            self.assertEqual((root / "overview.html").read_bytes(), (root / "dist/index.html").read_bytes())
+
     def test_publish_retry_and_preserve_unrelated_changes(self):
         executable = find_git()
         with tempfile.TemporaryDirectory(prefix="publish-test-", dir=ROOT / "outputs") as directory:
