@@ -15,6 +15,9 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from openpyxl import load_workbook
+from dashboard_credentials import apply_saved_settings
+
+apply_saved_settings()
 
 
 WORKBOOK_PATH = Path(
@@ -38,8 +41,8 @@ POSTMAN_COLLECTION = Path(
     )
 )
 POSTMAN_ENV_KEY = os.getenv("C4C_HISTORY_ENV", "PC4C").upper()
-USERNAME = os.getenv("C4C_USERNAME", "")
-PASSWORD = os.getenv("C4C_PASSWORD", "")
+USERNAME = os.getenv("C4C_HISTORY_USERNAME", os.getenv("C4C_USERNAME", ""))
+PASSWORD = os.getenv("C4C_HISTORY_PASSWORD", os.getenv("C4C_PASSWORD", ""))
 TIMEOUT = int(os.getenv("C4C_TIMEOUT", "30"))
 VERIFY_SSL = os.getenv("C4C_VERIFY_SSL", "false").lower() in {"1", "true", "yes", "y"}
 HISTORY_PAGE_SIZE = int(os.getenv("C4C_HISTORY_PAGE_SIZE", "500"))

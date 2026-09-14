@@ -5,6 +5,9 @@ from pathlib import Path
 from typing import Iterable
 
 import pandas as pd
+from dashboard_credentials import apply_saved_settings
+
+apply_saved_settings()
 
 
 BASE_DIR = Path(__file__).resolve().parent

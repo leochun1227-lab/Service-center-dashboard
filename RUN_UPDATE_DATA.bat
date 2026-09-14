@@ -121,10 +121,19 @@ if errorlevel 1 (
 "%PYTHON_EXE%" -c "import pandas, openpyxl, requests, pyodbc; print('Python dependencies OK'); print('ODBC drivers:', ', '.join(pyodbc.drivers()))" >> "%SETUP_LOG_FILE%" 2>&1
 if errorlevel 1 goto setup_failed
 echo [OK] Python dependencies are ready.
+if /i "%~1"=="--setup-connections" (
+  "%PYTHON_EXE%" "%CD%\dashboard_credentials.py" --setup
+  if errorlevel 1 goto connections_failed
+  pause
+  exit /b 0
+)
 "%PYTHON_EXE%" "%PUBLISH_SCRIPT_FILE%" --check
 if errorlevel 1 goto publish_failed
 if /i "%~1"=="--check" exit /b 0
 if /i "%~1"=="--publish-only" goto publish
+
+"%PYTHON_EXE%" "%CD%\dashboard_credentials.py"
+if errorlevel 1 goto connections_failed
 
 for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set "TS=%%i"
 
@@ -258,4 +267,12 @@ echo.
 type "%SETUP_LOG_FILE%"
 echo.
 if /i not "%~1"=="--check" pause
+exit /b 1
+
+:connections_failed
+echo.
+echo [ERROR] Connection settings are not ready. No data update was started.
+echo Use SETUP_CONNECTIONS.bat to configure this Windows account once.
+echo.
+pause
 exit /b 1

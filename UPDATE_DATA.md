@@ -11,8 +11,14 @@ Render 服务的 Settings → Auto-Deploy 设为 **On Commit**，连接本仓库
 1. 安装 Python 3.10 或更新版本，以及 Git 或 GitHub Desktop。
 2. 在 GitHub Desktop 登录有仓库推送权限的账号，将仓库克隆到任意目录，切换到 `main`。配置 Git 的提交姓名和邮箱。
 3. 安装与 Python 位数一致的 SAP HANA ODBC 驱动，确保新电脑可访问 C4C 和 SAP HANA 所在网络。
-4. 配置这台电脑使用的连接信息：`C4C_USERNAME`、`C4C_PASSWORD`、`SAP_HANA_DSN` 环境变量。如状态历史使用独立账号，可通过 `C4C_HISTORY_POSTMAN_COLLECTION` 指向本机的 Postman 配置文件。
-5. 双击 `RUN_UPDATE_DATA.bat`。首次运行自动创建项目内的 `.venv`，并按 `requirements.txt` 安装依赖，需要联网。
+4. 双击 `RUN_UPDATE_DATA.bat`。首次运行自动创建项目内的 `.venv`，并按 `requirements.txt` 安装依赖，需要联网。
+5. 首次运行按提示输入 C4C 账号密码、SAP HANA 连接串；状态历史如果使用独立账号，也在这次配置时输入。之后双击更新 BAT 会自动读取，不再逐次询问。
+
+连接信息使用 Windows DPAPI 加密，保存在当前 Windows 用户的 `%LOCALAPPDATA%\ServiceCenterDashboard\connections.dpapi`，不会进入 Git 仓库或更新日志。同一 Windows 账号重新打开终端、重启电脑或把项目克隆到其他目录后仍可读取。环境变量可临时覆盖已保存的值，不会覆盖加密文件。
+
+换电脑或换 Windows 账号需要各配置一次。只有账号密码或连接信息变更时，才手动运行 `SETUP_CONNECTIONS.bat` 修改；留空可保留原值。日常更新不会因为连接失败而反复弹出输入框。
+
+GitHub 使用 Git Credential Manager 已保存的登录，日常发布已关闭交互式登录提示。每台电脑首次完成 Git 登录即可；凭据过期或权限被撤销时需重新登录。Render 自动部署不需要在每次更新时输入 Render 密码。
 
 所有工作簿、网页、日志和备份都以 BAT 所在的项目目录为基准，不依赖固定用户名或盘符。新电脑不需要安装 Codex。`.venv` 不提交到 Git，也不要从旧电脑复制；若移动整个项目目录，请先删除复制过来的 `.venv`，下次运行会重新创建。
 

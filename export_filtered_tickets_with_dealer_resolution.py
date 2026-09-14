@@ -16,7 +16,10 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 from requests.adapters import HTTPAdapter
 from requests.auth import HTTPBasicAuth
+from dashboard_credentials import apply_saved_settings
 from urllib3.util.retry import Retry
+
+apply_saved_settings()
 
 # =================== C4C API configuration ===================
 BASE_URL = os.getenv(
