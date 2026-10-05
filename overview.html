@@ -545,7 +545,10 @@
     .donut-center b { display: block; font-size: 23px; }
     .donut-list { display: grid; gap: 9px; font-size: 13px; }
     .donut-line { display: grid; grid-template-columns: 1fr auto; gap: 10px; color: #dce8f5; }
-    .donut-line strong { color: white; font-weight: 750; }
+    .donut-line strong { color: #1f2937; font-weight: 750; font-variant-numeric: tabular-nums; }
+    .donut-line > span { min-width: 0; }
+    .donut-line:focus-visible { outline: 2px solid #3f78b5; outline-offset: 3px; }
+    .donut-tooltip { position: fixed; z-index: 1000; width: 230px; max-width: calc(100vw - 16px); transform: none; }
 
     table {
       width: 100%;
@@ -638,6 +641,9 @@
       height: 100%;
       background: var(--green);
     }
+
+    .invoice-panel-head { flex-wrap: wrap; gap: 8px; }
+    #exportInvoiceDetails { white-space: nowrap; }
 
     .invoice-list {
       border: 1px solid var(--line);
@@ -1840,7 +1846,7 @@
         </article>
 
         <article class="panel span-2">
-          <div class="panel-head"><h2 class="panel-title">Invoice Summary</h2></div>
+          <div class="panel-head invoice-panel-head"><h2 class="panel-title">Invoice Summary</h2><button class="panel-action" id="exportInvoiceDetails" type="button" title="Download invoice details with the related C4C ticket / SO for the current filters">Download details</button></div>
           <div class="panel-body"><div class="invoice-list" id="invoiceSummary"></div></div>
         </article>
 
@@ -1937,7 +1943,7 @@ SOFTWARE.
 // Lucide icons (ISC license): https://lucide.dev/license
 window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}],["path",{"d":"m7 10 5 5 5-5"}]],"Search":[["path",{"d":"m21 21-4.34-4.34"}],["circle",{"cx":"11","cy":"11","r":"8"}]],"RotateCcw":[["path",{"d":"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"}],["path",{"d":"M3 3v5h5"}]],"ListFilter":[["path",{"d":"M2 5h20"}],["path",{"d":"M6 12h12"}],["path",{"d":"M9 19h6"}]],"ArrowUp":[["path",{"d":"m5 12 7-7 7 7"}],["path",{"d":"M12 19V5"}]],"ArrowDown":[["path",{"d":"M12 5v14"}],["path",{"d":"m19 12-7 7-7-7"}]],"Ellipsis":[["circle",{"cx":"12","cy":"12","r":"1"}],["circle",{"cx":"19","cy":"12","r":"1"}],["circle",{"cx":"5","cy":"12","r":"1"}]],"ChevronLeft":[["path",{"d":"m15 18-6-6 6-6"}]],"ChevronRight":[["path",{"d":"m9 18 6-6-6-6"}]],"FileText":[["path",{"d":"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"}],["path",{"d":"M14 2v5a1 1 0 0 0 1 1h5"}],["path",{"d":"M10 9H8"}],["path",{"d":"M16 13H8"}],["path",{"d":"M16 17H8"}]],"CircleCheck":[["circle",{"cx":"12","cy":"12","r":"10"}],["path",{"d":"m9 12 2 2 4-4"}]],"Wrench":[["path",{"d":"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"}]],"ChartNoAxesCombined":[["path",{"d":"M12 16v5"}],["path",{"d":"M16 14v7"}],["path",{"d":"M20 10v11"}],["path",{"d":"m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"}],["path",{"d":"M4 18v3"}],["path",{"d":"M8 14v7"}]],"Clock":[["circle",{"cx":"12","cy":"12","r":"10"}],["path",{"d":"M12 6v6l4 2"}]],"BadgeCheck":[["path",{"d":"M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"}],["path",{"d":"m9 12 2 2 4-4"}]],"CalendarDays":[["path",{"d":"M8 2v4"}],["path",{"d":"M16 2v4"}],["rect",{"width":"18","height":"18","x":"3","y":"4","rx":"2"}],["path",{"d":"M3 10h18"}],["path",{"d":"M8 14h.01"}],["path",{"d":"M12 14h.01"}],["path",{"d":"M16 14h.01"}],["path",{"d":"M8 18h.01"}],["path",{"d":"M12 18h.01"}],["path",{"d":"M16 18h.01"}]],"X":[["path",{"d":"M18 6 6 18"}],["path",{"d":"m6 6 12 12"}]]};
   </script>
-  <script src="./dashboard-data.js?v=20261005_114446"></script>
+  <script src="./dashboard-data.js?v=20261005_142706"></script>
   <script>
     const data = window.serviceCentreData;
     const page = data.pages.overview;
@@ -2219,6 +2225,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       renderDashboard();
     });
     document.getElementById("exportCsv").addEventListener("click", exportCurrentView);
+    document.getElementById("exportInvoiceDetails").addEventListener("click", exportInvoiceDetails);
     document.getElementById("exportAlerts").addEventListener("click", exportAlerts);
     document.getElementById("exportRisk").addEventListener("click", exportRiskList);
     document.getElementById("exportDrilldown").addEventListener("click", exportDrilldown);
@@ -3237,15 +3244,78 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       }).join(", ");
       const donut = document.getElementById(donutId);
       const legend = document.getElementById(legendId);
-      donut.style.background = `conic-gradient(${stops})`;
+      donut.style.background = start ? `conic-gradient(${stops})` : "#e5e7eb";
       legend.innerHTML = displayRows.map(r => `
-        <div class="donut-line ${drilldownType === "status" ? "clickable-row" : ""}" data-status="${attrText(r.name)}"><span><i class="dot" style="background:${r.color || "#7890a5"}"></i>${r.name}</span><strong>${typeof r[labelKey] === "number" ? num(r[labelKey]) : r[labelKey]}</strong></div>
+        <div class="donut-line ${drilldownType === "status" ? "clickable-row" : ""}" tabindex="0" ${drilldownType === "status" ? 'role="button"' : ""} data-status="${attrText(r.name)}"><span><i class="dot" style="background:${r.color || "#7890a5"}"></i>${htmlText(r.name)}</span><strong>${typeof r[labelKey] === "number" ? num(r[labelKey]) : htmlText(r[labelKey])}</strong></div>
       `).join("");
+      attachDonutTooltip(donut, legend, displayRows, valueKey);
       if (drilldownType === "status") {
         legend.querySelectorAll(".donut-line").forEach(line => {
           line.addEventListener("click", () => showStatusDrilldown(line.dataset.status));
+          line.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              line.click();
+            }
+          });
         });
       }
+    }
+
+    function attachDonutTooltip(donut, legend, rows, valueKey) {
+      let tooltip = document.getElementById("donutTooltip");
+      if (!tooltip) {
+        tooltip = document.createElement("div");
+        tooltip.id = "donutTooltip";
+        tooltip.className = "chart-tooltip donut-tooltip";
+        tooltip.setAttribute("role", "tooltip");
+        document.body.appendChild(tooltip);
+        window.addEventListener("scroll", () => tooltip.classList.remove("show"), true);
+        window.addEventListener("resize", () => tooltip.classList.remove("show"));
+      }
+      const hide = () => {
+        tooltip.classList.remove("show");
+        tooltip.setAttribute("aria-hidden", "true");
+      };
+      hide();
+      const total = rows.reduce((sum, row) => sum + Number(row[valueKey] || 0), 0);
+      const show = (row, x, y) => {
+        const value = Number(row[valueKey] || 0);
+        const amount = value.toLocaleString("en-AU", { maximumFractionDigits: 1 });
+        tooltip.innerHTML = `<strong>${htmlText(row.name)}</strong><span>${donut.id === "labourDonut" ? "Hours" : "Orders"}<b>${amount}</b></span><span>Share<b>${total ? (value / total * 100).toFixed(1) : "0.0"}%</b></span>`;
+        tooltip.classList.add("show");
+        tooltip.setAttribute("aria-hidden", "false");
+        tooltip.style.left = `${Math.max(8, Math.min(x + 14, window.innerWidth - tooltip.offsetWidth - 8))}px`;
+        tooltip.style.top = `${Math.max(8, Math.min(y + 14, window.innerHeight - tooltip.offsetHeight - 8))}px`;
+      };
+      donut.onpointermove = event => {
+        const rect = donut.getBoundingClientRect();
+        const dx = (event.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+        const dy = (event.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+        const radius = Math.hypot(dx, dy);
+        if (!total || radius < 0.44 || radius > 1) return hide();
+        const fraction = ((Math.atan2(dx, -dy) / (Math.PI * 2)) + 1) % 1;
+        let end = 0;
+        const row = rows.find(item => {
+          end += Number(item[valueKey] || 0) / total;
+          return fraction < end;
+        });
+        if (row) show(row, event.clientX, event.clientY);
+        else hide();
+      };
+      donut.onpointerleave = hide;
+      legend.querySelectorAll(".donut-line").forEach((line, index) => {
+        line.setAttribute("aria-describedby", tooltip.id);
+        line.onpointermove = event => show(rows[index], event.clientX, event.clientY);
+        line.onpointerleave = hide;
+        line.onfocus = () => {
+          const rect = line.getBoundingClientRect();
+          show(rows[index], rect.left, rect.bottom);
+        };
+        line.onblur = hide;
+        line.addEventListener("keydown", event => { if (event.key === "Escape") hide(); });
+        line.addEventListener("click", hide);
+      });
     }
 
     function drawLineChart(id, rows, series) {
@@ -3526,6 +3596,120 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
     function exportRiskList() {
       const rows = agingRiskRows();
       downloadWorkbook(buildTicketDetailSheet(rows), `service-center-aging-risk-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`);
+    }
+
+    function isMissingInvoiceDetail(row) {
+      // The generator only sets invoiceAmountLabel when both the source
+      // invoice number and price exist (including a valid zero price).
+      return String(row.rawStatus || row.status || "").trim().toLowerCase() === "create invoice"
+        && (!exportText(row.invoiceNo) || !exportText(row.invoiceAmountLabel));
+    }
+
+    function invoicePeriodMatches(row, period = state.month) {
+      // Invoice periods use BillingDate, falling back to CreatedDate for the
+      // same missing-invoice placeholder logic used by the data generator.
+      const dateKey = parseDashboardDate(row.billingDate) ? "billingDate" : "createdDate";
+      return rowInPeriod(row, dateKey, period);
+    }
+
+    function invoiceDetailRows() {
+      return (page.ticketDetails || []).filter(row => {
+        if (!rowMatchesScope(row, state.yard, state.type) || !invoicePeriodMatches(row)) return false;
+        const status = String(row.rawStatus || row.status || "").trim().toLowerCase();
+        const validInvoice = exportText(row.invoiceNo) && exportText(row.invoiceAmountLabel)
+          && parseDashboardDate(row.billingDate) && !["cancel", "cancel invoice"].includes(status);
+        return validInvoice || isMissingInvoiceDetail(row);
+      });
+    }
+
+    function buildInvoiceDetailSheet(rows) {
+      const amount = row => isMissingInvoiceDetail(row) ? 0 : Number(row.invoiceAmount || 0);
+      const total = scope => Math.round(rows.filter(row => !scope || row.invoiceScope === scope)
+        .reduce((sum, row) => sum + amount(row), 0) * 100) / 100;
+      return [{
+        name: "Invoice_Summary",
+        rows: [
+          ["Field", "Value"],
+          ["Selected Period", state.month],
+          ["Dealer / Yard", state.yard],
+          ["Ticket Type", state.type],
+          ["Currency", "AUD"],
+          ["Invoice Amount", total()],
+          ["Internal Amount", total("Internal")],
+          ["External Amount", total("External")],
+          ["Orders in Invoice Summary", rows.length],
+          ["Missing Invoice Details", rows.filter(isMissingInvoiceDetail).length],
+          ["Avg Invoice / Order", Math.round(total() / Math.max(rows.length, 1) * 100) / 100],
+          ["Date Basis", "Billing date; missing invoice records fall back to created date when billing date is unavailable."],
+          ["Detail Basis", "One row per C4C ticket / SO, matching Invoice Summary. Shared invoice numbers are retained for each linked ticket."],
+          ["Missing Invoice Details Rule", "Create invoice tickets missing an invoice number or price remain in the order count with zero invoice amount."]
+        ]
+      }, {
+        name: "Invoice_Details",
+        rows: [
+          [
+            "InvoiceNo",
+            "C4C Ticket / SO ID",
+            "BillingDate",
+            "InvoiceAmount",
+            "InvoiceScope",
+            "InvoiceStatus",
+            "DealerYard",
+            "DealerName",
+            "Customer",
+            "CustomerBP",
+            "VehicleID",
+            "ChassisNo",
+            "ServiceType",
+            "SOStatus",
+            "CreatedDate",
+            "CompletedDate",
+            "QuoteAmount",
+            "ClaimHours (TotalLabourHours)",
+            "WorkerName",
+            "TechnicianBP",
+            "Role43BP",
+            "TicketName",
+            "Source"
+          ],
+          ...rows.map(row => {
+            const invoiceNo = exportText(row.invoiceNo);
+            return [
+              invoiceNo,
+              exportText(row.serviceOrderId || row.ticketId),
+              exportText(row.billingDate),
+              amount(row),
+              exportText(row.invoiceScope),
+              isMissingInvoiceDetail(row) ? "Missing invoice number or price" : "Invoiced",
+              exportText(row.dealerYard),
+              exportText(row.dealerName),
+              exportText(row.customer),
+              exportText(row.customerBP),
+              exportText(row.vehicle),
+              exportText(row.chassisNumber),
+              serviceTypeText(row),
+              exportText(row.rawStatus || row.status),
+              exportText(row.createdDate),
+              exportText(row.completedDate),
+              numberIfAvailable(row.quoteAmount),
+              numberIfAvailable(row.labourHours),
+              exportText(row.workerName),
+              exportText(row.technicianBP),
+              exportText(row.role43BP),
+              exportText(row.ticketName),
+              exportText(row.source)
+            ];
+          })
+        ]
+      }];
+    }
+
+    function exportInvoiceDetails() {
+      const rows = invoiceDetailRows();
+      downloadWorkbook(
+        buildInvoiceDetailSheet(rows),
+        `service-center-invoice-details-${slug(state.month)}-${slug(state.yard)}-${slug(state.type)}.xls`
+      );
     }
 
     function renderDrilldownTable(rows) {

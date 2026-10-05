@@ -12,7 +12,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any
 from urllib.parse import urlencode
-from urllib.request import Request, urlopen
+from urllib.request import HTTPSHandler, ProxyHandler, Request, build_opener
 
 from openpyxl import load_workbook
 from dashboard_credentials import apply_saved_settings
@@ -149,7 +149,13 @@ def fetch_ticket_history_page(ticket_id: str, skip: int) -> list[dict[str, Any]]
         headers={"Accept": "application/json", "Authorization": auth_header()},
         method="GET",
     )
-    with urlopen(request, timeout=TIMEOUT, context=ssl_context()) as response:
+    # C4C calls must go direct. A stale local HTTP(S) proxy can otherwise turn
+    # a valid API response into a misleading connection failure.
+    handlers = [ProxyHandler({})]
+    context = ssl_context()
+    if context is not None:
+        handlers.append(HTTPSHandler(context=context))
+    with build_opener(*handlers).open(request, timeout=TIMEOUT) as response:
         body = response.read().decode("utf-8")
     payload = json.loads(body)
     return list(payload.get("d", {}).get("results", []))
@@ -335,8 +341,11 @@ def fetch_lastchanged_by_ticket(ticket_ids: list[str]) -> dict[str, str]:
         print("[WARN] First history failures:", flush=True)
         for ticket_id, error in failures[:10]:
             print(f"       {ticket_id}: {error}", flush=True)
-    if len(failures) == len(ticket_ids):
-        raise SystemExit("History update aborted: all C4C history requests failed.")
+    if failures:
+        raise SystemExit(
+            f"History update aborted: {len(failures)} of {len(ticket_ids)} C4C history requests failed. "
+            "The dashboard must be rebuilt only after the full history refresh succeeds."
+        )
     return lastchanged_by_ticket
 
 
