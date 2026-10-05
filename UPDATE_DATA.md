@@ -11,8 +11,8 @@ Render 服务的 Settings → Auto-Deploy 设为 **On Commit**，连接本仓库
 1. 安装 Python 3.10 或更新版本，以及 Git 或 GitHub Desktop。
 2. 在 GitHub Desktop 登录有仓库推送权限的账号，将仓库克隆到任意目录，切换到 `main`。配置 Git 的提交姓名和邮箱。
 3. 安装与 Python 位数一致的 SAP HANA ODBC 驱动，确保新电脑可访问 C4C 和 SAP HANA 所在网络。
-4. 双击 `RUN_UPDATE_DATA.bat`。首次运行自动创建项目内的 `.venv`，并按 `requirements.txt` 安装依赖，需要联网。
-5. 首次运行按提示输入 C4C 账号密码、SAP HANA 连接串；状态历史如果使用独立账号，也在这次配置时输入。之后双击更新 BAT 会自动读取，不再逐次询问。
+4. 双击 `RUN_UPDATE_DATA.bat`。首次运行自动创建项目内的 `.venv`，并按 `requirements.txt` 安装依赖，需要联网。日常更新直接使用项目已有的 C4C、SAP HANA 配置，不会弹出账号输入。
+5. 如果账号密码或连接串发生变化，再运行 `SETUP_CONNECTIONS.bat` 重新保存；状态历史默认复用同一 C4C 账号。
 
 连接信息使用 Windows DPAPI 加密，保存在当前 Windows 用户的 `%LOCALAPPDATA%\ServiceCenterDashboard\connections.dpapi`，不会进入 Git 仓库或更新日志。同一 Windows 账号重新打开终端、重启电脑或把项目克隆到其他目录后仍可读取。环境变量可临时覆盖已保存的值，不会覆盖加密文件。
 

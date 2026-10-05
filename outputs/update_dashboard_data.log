@@ -1,43 +1,356 @@
-[Mon 07/09/2026 10:34:38.02] Refreshing lastchangedtime from C4C status history 
-[RUN] Fetching status history for 3564 tickets (scope=all)...
-[INFO] History progress: 100/3564
-[INFO] History progress: 200/3564
-[INFO] History progress: 300/3564
-[INFO] History progress: 400/3564
-[INFO] History progress: 500/3564
-[INFO] History progress: 600/3564
-[INFO] History progress: 700/3564
-[INFO] History progress: 800/3564
-[INFO] History progress: 900/3564
-[INFO] History progress: 1000/3564
-[INFO] History progress: 1100/3564
-[INFO] History progress: 1200/3564
-[INFO] History progress: 1300/3564
-[INFO] History progress: 1400/3564
-[INFO] History progress: 1500/3564
-[INFO] History progress: 1600/3564
-[INFO] History progress: 1700/3564
-[INFO] History progress: 1800/3564
-[INFO] History progress: 1900/3564
-[INFO] History progress: 2000/3564
-[INFO] History progress: 2100/3564
-[INFO] History progress: 2200/3564
-[INFO] History progress: 2300/3564
-[INFO] History progress: 2400/3564
-[INFO] History progress: 2500/3564
-[INFO] History progress: 2600/3564
-[INFO] History progress: 2700/3564
-[INFO] History progress: 2800/3564
-[INFO] History progress: 2900/3564
-[INFO] History progress: 3000/3564
-[INFO] History progress: 3100/3564
-[INFO] History progress: 3200/3564
-[INFO] History progress: 3300/3564
-[INFO] History progress: 3400/3564
-[INFO] History progress: 3500/3564
-[INFO] History progress: 3564/3564
-[OK] History complete in 603.9s; populated=3004, blank=560, failures=0
-[OK] Workbook updated: C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\c4c_ticket_table_z007_z010_checked_hana_final.xlsx (sheets=2, updatedCells=3004)
+[Mon 05/10/2026 11:34:35.24] Fetching latest C4C ticket data 
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:02,752 - INFO - role=43 first page rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:08,133 - INFO - role=40 first page rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:10,947 - INFO - role=1001 first page rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:29,597 - INFO - role=43 skip=9000 rows=1000
+2026-10-05 11:35:29,631 - INFO - role=43 skip=6000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:29,690 - INFO - role=43 skip=2000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:30,083 - INFO - role=43 skip=12000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:30,846 - INFO - role=43 skip=3000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:31,313 - INFO - role=43 skip=11000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:31,319 - INFO - role=43 skip=1000 rows=1000
+2026-10-05 11:35:31,607 - INFO - role=43 skip=5000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:31,607 - INFO - role=43 skip=7000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:31,635 - INFO - role=43 skip=4000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:31,681 - INFO - role=43 skip=10000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:31,708 - INFO - role=43 skip=8000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:41,145 - INFO - role=40 skip=6000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:41,977 - INFO - role=40 skip=2000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:42,019 - INFO - role=40 skip=12000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:42,218 - INFO - role=40 skip=8000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:42,522 - INFO - role=40 skip=7000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:43,073 - INFO - role=40 skip=5000 rows=1000
+2026-10-05 11:35:43,102 - INFO - role=40 skip=11000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:43,204 - INFO - role=40 skip=9000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:44,384 - INFO - role=40 skip=1000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:44,412 - INFO - role=40 skip=4000 rows=1000
+2026-10-05 11:35:44,444 - INFO - role=40 skip=3000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:45,236 - INFO - role=40 skip=10000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:47,143 - INFO - role=1001 skip=8000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:47,184 - INFO - role=1001 skip=10000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:48,038 - INFO - role=1001 skip=12000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:48,226 - INFO - role=1001 skip=5000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:49,691 - INFO - role=1001 skip=2000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:50,924 - INFO - role=1001 skip=9000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:51,155 - INFO - role=1001 skip=4000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:51,990 - INFO - role=1001 skip=7000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:52,052 - INFO - role=1001 skip=11000 rows=1000
+2026-10-05 11:35:52,607 - INFO - role=1001 skip=1000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:52,860 - INFO - role=1001 skip=3000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:53,202 - INFO - role=1001 skip=6000 rows=1000
+2026-10-05 11:35:54,872 - INFO - role=43 skip=16000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:55,635 - INFO - role=43 skip=17000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:55,804 - INFO - role=43 skip=14000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:35:55,931 - INFO - role=43 skip=13000 rows=1000
+2026-10-05 11:35:56,356 - INFO - role=43 skip=22000 rows=1000
+2026-10-05 11:35:56,935 - INFO - role=43 skip=19000 rows=1000
+2026-10-05 11:35:57,445 - INFO - role=43 skip=15000 rows=1000
+2026-10-05 11:35:57,474 - INFO - role=43 skip=24000 rows=1000
+2026-10-05 11:35:57,933 - INFO - role=43 skip=20000 rows=1000
+2026-10-05 11:35:58,175 - INFO - role=43 skip=23000 rows=1000
+2026-10-05 11:35:59,244 - INFO - role=43 skip=21000 rows=1000
+2026-10-05 11:36:02,464 - INFO - role=43 skip=18000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:11,976 - INFO - role=40 skip=13000 rows=1000
+2026-10-05 11:36:12,196 - INFO - role=40 skip=14000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:12,677 - INFO - role=40 skip=15000 rows=1000
+2026-10-05 11:36:12,894 - INFO - role=40 skip=16000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:12,999 - INFO - role=40 skip=17000 rows=1000
+2026-10-05 11:36:13,277 - INFO - role=40 skip=19000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:14,089 - INFO - role=40 skip=18000 rows=1000
+2026-10-05 11:36:14,230 - INFO - role=40 skip=20000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:14,832 - INFO - role=40 skip=23000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:15,094 - INFO - role=40 skip=22000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:15,554 - INFO - role=40 skip=21000 rows=1000
+2026-10-05 11:36:15,659 - INFO - role=40 skip=24000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:19,007 - INFO - role=43 skip=26000 rows=1000
+2026-10-05 11:36:19,463 - INFO - role=43 skip=25000 rows=1000
+2026-10-05 11:36:19,574 - INFO - role=43 skip=27000 rows=904
+2026-10-05 11:36:19,583 - INFO - role=43 complete, rows=27904, elapsed=103.7s
+2026-10-05 11:36:20,730 - INFO - role=1001 skip=13000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:21,044 - INFO - role=1001 skip=14000 rows=1000
+2026-10-05 11:36:21,313 - INFO - role=1001 skip=15000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:22,644 - INFO - role=1001 skip=17000 rows=1000
+2026-10-05 11:36:23,540 - INFO - role=1001 skip=16000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:24,005 - INFO - role=1001 skip=18000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:25,067 - INFO - role=1001 skip=20000 rows=1000
+2026-10-05 11:36:25,209 - INFO - role=1001 skip=21000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:25,351 - INFO - role=1001 skip=19000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:26,466 - INFO - role=1001 skip=23000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:26,790 - INFO - role=1001 skip=24000 rows=1000
+2026-10-05 11:36:27,227 - INFO - role=1001 skip=22000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:41,609 - INFO - role=40 skip=25000 rows=1000
+2026-10-05 11:36:41,655 - INFO - role=40 skip=26000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:42,204 - INFO - role=40 skip=27000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:42,583 - INFO - role=40 skip=28000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:42,817 - INFO - role=40 skip=30000 rows=1000
+2026-10-05 11:36:43,034 - INFO - role=40 skip=29000 rows=1000
+2026-10-05 11:36:43,863 - INFO - role=40 skip=31000 rows=1000
+2026-10-05 11:36:44,021 - INFO - role=40 skip=32000 rows=1000
+2026-10-05 11:36:44,485 - INFO - role=40 skip=33000 rows=1000
+2026-10-05 11:36:44,868 - INFO - role=40 skip=34000 rows=1000
+2026-10-05 11:36:45,559 - INFO - role=40 skip=36000 rows=1000
+2026-10-05 11:36:45,613 - INFO - role=40 skip=35000 rows=1000
+2026-10-05 11:36:53,048 - INFO - role=1001 skip=25000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:53,566 - INFO - role=1001 skip=26000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:54,072 - INFO - role=1001 skip=27000 rows=1000
+C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\.venv\Lib\site-packages\urllib3\connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host 'longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2026-10-05 11:36:55,561 - INFO - role=1001 skip=28000 rows=1000
+2026-10-05 11:36:56,235 - INFO - role=1001 skip=29000 rows=1000
+2026-10-05 11:36:56,324 - INFO - role=1001 skip=30000 rows=1000
+2026-10-05 11:36:57,665 - INFO - role=1001 skip=33000 rows=1000
+2026-10-05 11:36:57,700 - INFO - role=1001 skip=31000 rows=1000
+2026-10-05 11:36:58,060 - INFO - role=1001 skip=32000 rows=1000
+2026-10-05 11:36:58,926 - INFO - role=1001 skip=34000 rows=1000
+2026-10-05 11:36:59,448 - INFO - role=1001 skip=35000 rows=1000
+2026-10-05 11:36:59,566 - INFO - role=1001 skip=36000 rows=1000
+2026-10-05 11:37:10,629 - INFO - role=40 skip=38000 rows=1000
+2026-10-05 11:37:11,217 - INFO - role=40 skip=37000 rows=1000
+2026-10-05 11:37:11,332 - INFO - role=40 skip=41000 rows=154
+2026-10-05 11:37:11,383 - INFO - role=40 skip=40000 rows=1000
+2026-10-05 11:37:11,439 - INFO - role=40 skip=39000 rows=1000
+2026-10-05 11:37:11,449 - INFO - role=40 complete, rows=41154, elapsed=155.5s
+2026-10-05 11:37:24,280 - INFO - role=1001 skip=37000 rows=1000
+2026-10-05 11:37:25,047 - INFO - role=1001 skip=38000 rows=1000
+2026-10-05 11:37:26,280 - INFO - role=1001 skip=39000 rows=993
+2026-10-05 11:37:26,292 - INFO - role=1001 complete, rows=39993, elapsed=170.4s
+2026-10-05 11:37:33,800 - INFO - Excel created: C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\c4c_ticket_table_z007_z010_with_invoice_layout_checked.xlsx (4252 ticket rows)
+2026-10-05 11:37:33,800 - INFO - Done. Ticket rows=4252 not_assigned=36 elapsed=177.9s
 
-[Mon 07/09/2026 10:44:46.42] Rebuilding dashboard-data.js 
-Dashboard data written: C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\dashboard-data.js
+[Mon 05/10/2026 11:37:34.11] Enriching invoice data from SAP HANA 
+Workbook written: C:\Users\Leo.Li\Documents\GitHub\Service-center-dashboard\c4c_ticket_table_z007_z010_checked_hana_final.xlsx
+Invoice rows matched: 956
+
+[Mon 05/10/2026 11:37:44.78] Refreshing lastchangedtime from C4C status history 
+[RUN] Fetching status history for 4288 tickets (scope=all)...
+[OK] History complete in 263.7s; populated=0, blank=4288, failures=4288
+[WARN] First history failures:
+       21707: HTTP Error 403: Forbidden
+       21779: HTTP Error 403: Forbidden
+       21842: HTTP Error 403: Forbidden
+       21600: HTTP Error 403: Forbidden
+       21710: HTTP Error 403: Forbidden
+       18974: HTTP Error 403: Forbidden
+       21700: HTTP Error 403: Forbidden
+       21660: HTTP Error 403: Forbidden
+       21778: HTTP Error 403: Forbidden
+       21711: HTTP Error 403: Forbidden
+History update aborted: all C4C history requests failed.

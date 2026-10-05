@@ -1,0 +1,6 @@
+{
+  "at_utc": "2026-09-30T23:27:10.523580+00:00",
+  "endpoint": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/PC4C/Ticket/queryOdataBatch?%24top=10&%24skip=0&%24filter=%28CDOC_PROC_TY+eq+%27Z011%27%29+and+%28CDOC_ID+eq+%2743316%27%29",
+  "status": 500,
+  "error_excerpt": "An internal server error occured: The MPL ID for the failed message is : null\n\n"
+}

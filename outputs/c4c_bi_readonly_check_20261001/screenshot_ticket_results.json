@@ -1,0 +1,35 @@
+{
+  "at_utc": "2026-09-30T23:29:23.025396+00:00",
+  "checks": [
+    {
+      "type": "Z007",
+      "target": "43301",
+      "pages": [
+        {
+          "params": {
+            "$top": 1000,
+            "$skip": 0,
+            "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001') and (CDOC_PROC_TY eq 'Z007')"
+          },
+          "status": 500
+        }
+      ],
+      "matches": []
+    },
+    {
+      "type": "Z011",
+      "target": "43316",
+      "pages": [
+        {
+          "params": {
+            "$top": 1000,
+            "$skip": 0,
+            "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001') and (CDOC_PROC_TY eq 'Z011')"
+          },
+          "status": 500
+        }
+      ],
+      "matches": []
+    }
+  ]
+}

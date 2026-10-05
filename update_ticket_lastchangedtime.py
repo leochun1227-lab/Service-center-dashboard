@@ -41,8 +41,10 @@ POSTMAN_COLLECTION = Path(
     )
 )
 POSTMAN_ENV_KEY = os.getenv("C4C_HISTORY_ENV", "PC4C").upper()
-USERNAME = os.getenv("C4C_HISTORY_USERNAME", os.getenv("C4C_USERNAME", ""))
-PASSWORD = os.getenv("C4C_HISTORY_PASSWORD", os.getenv("C4C_PASSWORD", ""))
+HISTORY_USERNAME = os.getenv("C4C_HISTORY_USERNAME", "").strip()
+HISTORY_PASSWORD = os.getenv("C4C_HISTORY_PASSWORD", "")
+USERNAME = os.getenv("C4C_USERNAME", "XIEYONGDONG@newgonow.cn").strip()
+PASSWORD = os.getenv("C4C_PASSWORD", "Max@sap2022")
 TIMEOUT = int(os.getenv("C4C_TIMEOUT", "30"))
 VERIFY_SSL = os.getenv("C4C_VERIFY_SSL", "false").lower() in {"1", "true", "yes", "y"}
 HISTORY_PAGE_SIZE = int(os.getenv("C4C_HISTORY_PAGE_SIZE", "500"))
@@ -94,13 +96,16 @@ def postman_basic_auth_for_path(path_fragment: str) -> tuple[str, str] | None:
 
 
 def resolve_history_auth() -> tuple[str, str]:
-    if USERNAME and PASSWORD:
-        return USERNAME, PASSWORD
-
+    # The history endpoint has its own PC4C integration credential in the
+    # Postman collection. Prefer it over the interactive C4C user account and
+    # over a saved "same account" choice from the one-time setup prompt.
     env_fragment = f"/http/{POSTMAN_ENV_KEY}/Ticket/getChangeHistory"
     found = postman_basic_auth_for_path(env_fragment)
     if found:
         return found
+
+    if HISTORY_USERNAME and HISTORY_PASSWORD:
+        return HISTORY_USERNAME, HISTORY_PASSWORD
 
     found = postman_basic_auth_for_path(HISTORY_PATH)
     if found:

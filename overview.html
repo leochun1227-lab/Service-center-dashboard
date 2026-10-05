@@ -6,20 +6,21 @@
   <title>Service Center Dashboard</title>
   <style>
     :root {
-      --bg: #061625;
-      --panel: rgba(12, 32, 51, 0.86);
-      --panel-strong: rgba(14, 38, 62, 0.94);
-      --line: rgba(145, 180, 214, 0.18);
-      --line-strong: rgba(145, 180, 214, 0.32);
-      --text: #f3f8ff;
-      --muted: #9db2c7;
-      --blue: #2f7df6;
-      --green: #49d17d;
-      --teal: #22c7bd;
-      --yellow: #f5bf2f;
-      --purple: #8f5cf6;
-      --red: #ff5f66;
-      --shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
+      /* One calm base palette. Colour is reserved for status, movement and risk. */
+      --bg: #0b1422;
+      --panel: #131f31;
+      --panel-strong: #18273b;
+      --line: rgba(148, 169, 196, 0.16);
+      --line-strong: rgba(148, 169, 196, 0.28);
+      --text: #edf3fa;
+      --muted: #91a1b5;
+      --blue: #6f8cff;
+      --green: #62c995;
+      --teal: #59b9b5;
+      --yellow: #d9b86a;
+      --purple: #8294c9;
+      --red: #e8787f;
+      --shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
@@ -28,10 +29,7 @@
       margin: 0;
       min-height: 100vh;
       color: var(--text);
-      background:
-        radial-gradient(circle at 18% 0%, rgba(31, 111, 235, 0.20), transparent 28rem),
-        radial-gradient(circle at 82% 14%, rgba(21, 128, 109, 0.16), transparent 30rem),
-        linear-gradient(135deg, #04101d 0%, #071827 48%, #082239 100%);
+      background: var(--bg);
     }
 
     .app {
@@ -46,8 +44,7 @@
       height: 100vh;
       padding: 28px 16px 24px;
       border-right: 1px solid var(--line);
-      background: rgba(4, 17, 29, 0.72);
-      backdrop-filter: blur(18px);
+      background: #0d1828;
       display: flex;
       flex-direction: column;
       gap: 26px;
@@ -104,9 +101,9 @@
     }
 
     .nav-item.active {
-      background: linear-gradient(135deg, #2874ef, #1c5fd2);
-      border-color: rgba(173, 207, 244, 0.28);
-      box-shadow: 0 9px 22px rgba(39, 116, 239, 0.35);
+      background: var(--blue);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 18px rgba(111, 140, 255, 0.22);
       color: white;
       font-weight: 700;
     }
@@ -211,14 +208,14 @@
     }
 
     .filter-button:hover {
-      border-color: rgba(142, 213, 224, 0.55);
+      border-color: rgba(111, 140, 255, 0.55);
       color: #ffffff;
       background: rgba(11, 38, 63, 0.92);
     }
 
     .filter-button.active {
-      border-color: rgba(142, 213, 224, 0.82);
-      background: linear-gradient(135deg, #1f6feb, #15806d);
+      border-color: rgba(111, 140, 255, 0.82);
+      background: rgba(111, 140, 255, 0.20);
       color: #ffffff;
       box-shadow: 0 8px 18px rgba(31, 111, 235, 0.22);
     }
@@ -240,7 +237,7 @@
       border-radius: 7px;
       padding: 0 18px;
       color: white;
-      background: linear-gradient(135deg, #2d7bf3, #2667d8);
+      background: var(--blue);
       font-weight: 800;
       box-shadow: 0 12px 26px rgba(41, 112, 225, 0.32);
     }
@@ -272,8 +269,8 @@
       padding: 0 14px;
       border: 1px solid #4a8de7;
       border-radius: 6px;
-      background: #2169d1;
-      box-shadow: none;
+      background: var(--blue);
+      box-shadow: 0 6px 16px rgba(111, 140, 255, 0.18);
       font-weight: 650;
       cursor: pointer;
     }
@@ -293,9 +290,9 @@
     body:not(.module-mode) .filters select { height: 36px; background: #0b2235; border-color: #35516a; }
     body:not(.module-mode) .filter-buttons { gap: 2px; padding: 3px; background: #081c2c; border: 1px solid #304a60; border-radius: 6px; }
     body:not(.module-mode) .filter-button { min-height: 28px; padding: 0 6px; border: 1px solid transparent; border-radius: 4px; background: transparent; font-size: 11px; font-weight: 600; }
-    body:not(.module-mode) .filter-button.active { border-color: #377b9a; background: #15465b; box-shadow: none; color: #e0fbff; }
-    body:not(.module-mode) .filter-button:hover { background: #12344a; }
-    body:not(.module-mode) .filter-button:focus-visible, body:not(.module-mode) .export:focus-visible { outline: 2px solid #8ed5e0; outline-offset: 2px; }
+    body:not(.module-mode) .filter-button.active { border-color: #5f78c9; background: rgba(111, 140, 255, 0.20); box-shadow: none; color: #edf3fa; }
+    body:not(.module-mode) .filter-button:hover { background: rgba(111, 140, 255, 0.12); }
+    body:not(.module-mode) .filter-button:focus-visible, body:not(.module-mode) .export:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
     .kpis {
       display: grid;
@@ -314,15 +311,10 @@
       border-top: 2px solid var(--kpi-accent);
       border-radius: 6px;
       padding: 12px;
-      background: #0b2235;
+      background: var(--panel);
     }
 
-    .kpi.blue { --kpi-accent: #599af7; }
-    .kpi.teal { --kpi-accent: #49c5c2; background: #0c2932; }
-    .kpi.purple { --kpi-accent: #ad93e8; }
-    .kpi.yellow { --kpi-accent: #d9b85d; background: #242a2c; }
-    .kpi.navy { --kpi-accent: #63b8e2; }
-    .kpi.green { --kpi-accent: #59cd99; background: #102d2d; }
+    .kpi.blue, .kpi.teal, .kpi.purple, .kpi.yellow, .kpi.navy, .kpi.green { --kpi-accent: var(--blue); }
 
     .kpi-heading { display: flex; align-items: center; gap: 8px; min-width: 0; }
     .kpi-title { font-size: 12px; line-height: 1.4; font-weight: 550; color: #dce8f2; min-width: 0; }
@@ -407,7 +399,7 @@
       border: 1px solid rgba(145, 180, 214, 0.28);
       border-radius: 5px;
       padding: 0 10px;
-      background: rgba(47, 125, 246, 0.18);
+      background: rgba(111, 140, 255, 0.14);
       color: #f3f8ff;
       font: inherit;
       font-size: 12px;
@@ -417,7 +409,7 @@
 
     .panel-action:hover {
       border-color: rgba(145, 180, 214, 0.46);
-      background: rgba(47, 125, 246, 0.28);
+      background: rgba(111, 140, 255, 0.22);
     }
 
     .panel-body { padding: 8px 14px 14px; }
@@ -437,7 +429,7 @@
     .donut-line.clickable-row:hover,
     .bar-row.clickable-row:hover,
     .side-stat.clickable-row:hover {
-      background: rgba(142, 213, 224, 0.08);
+      background: rgba(111, 140, 255, 0.08);
     }
 
     .span-2 { grid-column: span 2; }
@@ -527,7 +519,7 @@
       aspect-ratio: 1;
       border-radius: 50%;
       position: relative;
-      background: conic-gradient(var(--blue) 0 25%, var(--green) 25% 75%, var(--yellow) 75% 88%, var(--purple) 88% 95%, #7890a5 95% 100%);
+      background: conic-gradient(var(--blue) 0 25%, #5876c9 25% 75%, #45629f 75% 88%, #364e82 88% 95%, #293c60 95% 100%);
     }
 
     .donut::after {
@@ -535,7 +527,7 @@
       position: absolute;
       inset: 28%;
       border-radius: 50%;
-      background: #071a2d;
+      background: #0d192a;
       box-shadow: inset 0 0 20px rgba(0,0,0,.42);
     }
 
@@ -644,7 +636,7 @@
     .workload-bar i {
       display: block;
       height: 100%;
-      background: linear-gradient(90deg, #36cb71, #5cea9b);
+      background: var(--green);
     }
 
     .invoice-list {
@@ -666,14 +658,12 @@
     .invoice-row strong { font-size: 14px; }
 
     .alert-panel {
-      background:
-        linear-gradient(90deg, rgba(140, 33, 47, 0.34), transparent 72%),
-        var(--panel);
-      border-color: rgba(255, 105, 112, 0.26);
+      background: #191d2b;
+      border-color: rgba(232, 120, 127, 0.42);
     }
 
-    .alert-title { color: #ff7278; }
-    .alert-table td:first-child { color: #ffd4d6; }
+    .alert-title { color: #f0a0a5; }
+    .alert-table td:first-child { color: #f2c5c8; }
     .alert-badge {
       display: inline-grid;
       place-items: center;
@@ -758,6 +748,15 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
     }
+
+    .risk-alert-panels { display: contents; }
+    #moduleGrid > .risk-alert-panels {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: 10px;
+    }
+    #moduleGrid > .risk-alert-panels > article { grid-column: auto; }
 
     .module-card {
       min-height: 258px;
@@ -858,7 +857,7 @@
     .orders-refresh { color: #b0c5d8; font-size: 11px; line-height: 1.6; }
     .orders-refresh strong { display: block; color: #e3edf6; font-weight: 500; }
     .orders-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 34px; padding: 7px 12px; border: 1px solid #315775; border-radius: 6px; background: #102e47; color: #edf6ff; font: inherit; font-size: 12px; cursor: pointer; }
-    .orders-button.primary { background: #176be5; border-color: #3283f2; }
+    .orders-button.primary { background: var(--blue); border-color: #8198ff; }
     .orders-button:hover { filter: brightness(1.16); }
     .orders-button:disabled { opacity: .4; cursor: default; }
     .orders-button:focus-visible, .orders-filters :focus-visible { outline: 2px solid #6fcfd9; outline-offset: 2px; }
@@ -980,7 +979,7 @@
     }
 
     .service-order-function.tbc {
-      border-color: rgba(245, 191, 47, 0.22);
+      border-color: rgba(217, 184, 106, 0.28);
     }
 
     .service-order-function-head {
@@ -1007,7 +1006,7 @@
     }
 
     .service-order-function.tbc .service-order-status {
-      color: #f5bf2f;
+      color: var(--yellow);
     }
 
     .service-order-value {
@@ -1281,7 +1280,7 @@
       gap: 6px;
       padding: 10px 12px;
       border: 1px solid rgba(145, 180, 214, 0.20);
-      border-top: 2px solid var(--stage-color, #1f6feb);
+      border-top: 2px solid var(--stage-color, var(--blue));
       border-radius: 6px;
       background: #0b2235;
       transition: border-color .15s ease, background .15s ease;
@@ -1337,8 +1336,8 @@
       display: grid;
       place-items: center;
       border-radius: 6px;
-      background: color-mix(in srgb, var(--stage-color, #1f6feb) 16%, transparent);
-      color: color-mix(in srgb, var(--stage-color, #1f6feb) 65%, white 35%);
+      background: color-mix(in srgb, var(--stage-color, var(--blue)) 16%, transparent);
+      color: color-mix(in srgb, var(--stage-color, var(--blue)) 65%, white 35%);
     }
 
     .workflow-node-title {
@@ -1412,7 +1411,7 @@
       min-width: var(--bar-min, 0);
       height: 100%;
       border-radius: inherit;
-      background: color-mix(in srgb, var(--stage-color, #1f6feb) 75%, white 25%);
+      background: color-mix(in srgb, var(--stage-color, var(--blue)) 75%, white 25%);
     }
 
     .workflow-aging-value {
@@ -1494,7 +1493,7 @@
       min-width: var(--share-min, 0);
       height: 100%;
       border-radius: inherit;
-      background: color-mix(in srgb, var(--stage-color, #1f6feb) 75%, white 25%);
+      background: color-mix(in srgb, var(--stage-color, var(--blue)) 75%, white 25%);
     }
 
     .workflow-note {
@@ -1591,6 +1590,133 @@
       table { min-width: 620px; }
       .panel-body.table-wrap { overflow-x: auto; }
     }
+
+    /* Report-style light theme: neutral surfaces first, colour only for meaning. */
+    :root {
+      --bg: #eef1f5;
+      --panel: #ffffff;
+      --panel-strong: #ffffff;
+      --line: #d9dee7;
+      --line-strong: #c4ccd8;
+      --text: #1f2937;
+      --muted: #697586;
+      --blue: #3f78b5;
+      --green: #5a9b72;
+      --teal: #4f8d9a;
+      --yellow: #bf8b2e;
+      --purple: #7086a3;
+      --red: #c45c63;
+      --shadow: 0 2px 8px rgba(31, 41, 55, 0.08);
+    }
+
+    body { background: var(--bg); color: var(--text); }
+    .sidebar { background: #ffffff; border-right-color: #d4dae3; backdrop-filter: none; }
+    .brand-title, .nav-item, .sidebar-footer { color: #1f2937; }
+    .brand-subtitle, .nav-label { color: #718096; }
+    .brand-icon svg path { stroke: #263648 !important; }
+    .brand-icon svg circle { fill: #263648 !important; }
+    .nav-item:hover { background: #f3f6fa; border-color: #d3dbe6; color: #1f2937; }
+    .nav-item.active { background: #dce9f7; border-color: #a8c3df; box-shadow: none; color: #234f7d; }
+    h1 { color: #17212f; }
+    .subtitle, .refresh, .muted { color: #697586; }
+    .filters { background: #ffffff; border-color: #d4dbe5; box-shadow: none; border-radius: 4px; }
+    label, .filter-group { color: #526174; }
+    select, .fake-input, .filter-button { background: #ffffff; border-color: #bdc7d4; color: #263648; }
+    .filter-button:hover { border-color: #8eaccb; background: #f3f7fb; color: #234f7d; }
+    .filter-button.active { border-color: #7fa4c7; background: #e7f0fa; color: #234f7d; box-shadow: none; }
+    body:not(.module-mode) .filters { border-color: #d4dbe5; }
+    body:not(.module-mode) .filters select { background: #ffffff; border-color: #bdc7d4; }
+    body:not(.module-mode) .filter-buttons { background: #f7f9fb; border-color: #cbd3de; }
+    body:not(.module-mode) .filter-button.active { border-color: #7fa4c7; background: #e7f0fa; color: #234f7d; }
+    body:not(.module-mode) .filter-button:hover { background: #f0f5fa; }
+    .export, body:not(.module-mode) .export { background: #3f78b5; border-color: #3f78b5; box-shadow: 0 4px 10px rgba(63, 120, 181, 0.18); }
+    .kpi { background: #ffffff; border-color: #d5dce6; border-top-color: #8eaccb; box-shadow: 0 1px 4px rgba(31, 41, 55, 0.06); border-radius: 4px; }
+    .kpi-icon { background: #edf3f9; color: #3f78b5; }
+    .kpi-title { color: #526174; }
+    .kpi-value { color: #17212f; }
+    .kpi-foot { color: #718096; }
+    .up { color: #39835a; }
+    .down { color: #ad5a52; }
+    .panel { background: #ffffff; border-color: #d5dce6; box-shadow: 0 1px 4px rgba(31, 41, 55, 0.06); border-radius: 4px; }
+    .panel-title { color: #1f2937; }
+    .panel-action { background: #f2f6fa; border-color: #c2cedc; color: #315f8f; }
+    .panel-action:hover { background: #e6eff8; border-color: #8eaccb; }
+    .legend, .donut-line, td { color: #374151; }
+    .chart-tooltip { background: #ffffff; border-color: #c5cedb; box-shadow: 0 8px 20px rgba(31, 41, 55, 0.14); color: #1f2937; }
+    .chart-tooltip strong { color: #17212f; }
+    .chart-tooltip span { color: #526174; }
+    .donut::after { background: #ffffff; box-shadow: inset 0 0 16px rgba(31, 41, 55, 0.08); }
+    th { color: #697586; border-bottom-color: #d9dee7; }
+    td { border-bottom-color: #e6eaf0; }
+    .total-row td, .risk-table td:first-child, .drilldown-table td:first-child { color: #17212f; }
+    .bar-track, .workload-bar { background: #edf1f5; box-shadow: inset 0 0 0 1px #e0e5eb; }
+    .side-stats, .invoice-list { border-color: #d9dee7; }
+    .side-stat, .invoice-row { border-bottom-color: #e6eaf0; }
+    .alert-panel { background: #fff7f7; border-color: #e3b6b9; }
+    .alert-title { color: #b14e56; }
+    .alert-table td:first-child { color: #8f3f47; }
+    .alert-badge { background: #c45c63; }
+    .footnote { color: #718096; }
+
+    /* Module pages share the same report treatment. */
+    .module-header { background: #ffffff; border-color: #d5dce6; box-shadow: 0 1px 4px rgba(31, 41, 55, 0.06); border-radius: 4px; }
+    .module-kicker { color: #5279a2; }
+    .module-title, .module-card h3 { color: #17212f; }
+    .module-subtitle, .module-meta span, .module-field-label, .module-mapping-note, .mapping-note { color: #697586; }
+    .module-count { background: #f8fafc; border-color: #d5dce6; color: #697586; }
+    .module-count strong, .module-meta strong { color: #17212f; }
+    .module-card { background: #ffffff; border-color: #d5dce6; box-shadow: 0 1px 4px rgba(31, 41, 55, 0.06); border-radius: 4px; }
+    .module-chip { color: #5279a2; background: #edf3f9; border-color: #c3d4e7; }
+    .module-field { color: #374151; }
+    .module-meta, .module-field.wide { border-color: #e2e7ed; }
+    .orders-refresh { color: #697586; }
+    .orders-refresh strong { color: #263648; }
+    .orders-button { background: #ffffff; border-color: #b9c6d5; color: #315f8f; }
+    .orders-button.primary { background: #3f78b5; border-color: #3f78b5; color: #ffffff; }
+    .orders-button:hover { filter: none; background: #eef4fa; }
+    .orders-button.primary:hover { background: #356a9f; }
+    .orders-metric { background: #ffffff; border-color: #d5dce6; border-radius: 4px; }
+    .orders-metric-head { color: #526174; }
+    .orders-metric-value { color: #17212f; }
+    .orders-metric-note, .orders-result-count, .orders-pagination { color: #697586; }
+    .orders-panel { border-top-color: #d5dce6; }
+    .orders-section-head h2 { color: #1f2937; }
+    .orders-section-head h2 .orders-icon { color: #3f78b5; }
+    .orders-filters label { color: #526174; }
+    .orders-filters input, .orders-filters select, .service-orders-search input { background: #ffffff; border-color: #bdc7d4; color: #263648; }
+    .orders-filters input::placeholder { color: #8793a3; }
+    .orders-results th { background: #f3f6f9; color: #526174; border-bottom-color: #d5dce6; }
+    .orders-results tbody tr:nth-child(odd) { background: #f7f9fb; }
+    .orders-results tbody tr:hover { background: #edf3f9; }
+    .orders-results .service-orders-results td, .service-orders-results td { color: #374151; border-bottom-color: #e2e7ed; }
+    .orders-dialog { background: #ffffff; border-color: #c5cedb; color: #263648; }
+    .orders-detail-grid dt { color: #697586; }
+    .workflow-section { border-top-color: #d5dce6; }
+    .workflow-dealer-button { background: #ffffff; border-color: #bdc7d4; color: #374151; }
+    .workflow-dealer-button:hover { border-color: #8eaccb; background: #f3f7fb; color: #234f7d; }
+    .workflow-dealer-button.active { border-color: #7fa4c7; background: #e7f0fa; color: #234f7d; }
+    .workflow-section-icon { background: #edf3f9; border-color: #c3d4e7; color: #3f78b5; }
+    .workflow-section-title, .workflow-node-title { color: #1f2937; }
+    .workflow-section-subtitle, .workflow-pill, .workflow-metric, .workflow-aging-chart, .workflow-raw { color: #697586; }
+    .workflow-pill strong, .workflow-metric strong, .workflow-aging-value, .workflow-share { color: #17212f; }
+    .workflow-pill, .workflow-node-foot { border-color: #e2e7ed; }
+    .workflow-node { background: #ffffff; border-color: #d5dce6; box-shadow: 0 1px 4px rgba(31, 41, 55, 0.06); }
+    .workflow-node:hover { background: #f8fafc; border-color: #8eaccb; }
+    .workflow-stage-number, .workflow-aging-label { color: #697586; }
+    .workflow-aging-track, .workflow-share-track { background: #edf1f5; }
+    .workflow-export { border-color: #b9c6d5; color: #315f8f; }
+    .workflow-export:hover { border-color: #7fa4c7; background: #edf3f9; }
+    .workflow-arrow { color: #8b98a8; }
+    .workflow-note { color: #697586; }
+    .tbc-box { border-color: #c5cedb; background: #f8fafc; color: #697586; }
+    .tbc-box span { color: #526174; }
+    .module-empty { background: #ffffff; border-color: #c5cedb; color: #697586; }
+    .module-empty strong { color: #17212f; }
+    .mapping-table th { color: #526174; border-bottom-color: #d5dce6; }
+    .mapping-table td { color: #374151; border-bottom-color: #e2e7ed; }
+    .mapping-table strong { color: #17212f; }
+    .mapping-source { color: #4f8d9a; }
+    .mapping-note { color: #697586; }
   </style>
 </head>
 <body>
@@ -1660,7 +1786,7 @@
         <article class="panel span-4">
           <div class="panel-head"><h2 class="panel-title">Service Orders Trend</h2><select><option>By Month</option></select></div>
           <div class="panel-body">
-            <div class="legend"><span><i class="dot" style="background:#2f7df6"></i>Created</span><span><i class="dot" style="background:#49d17d"></i>Completed</span></div>
+            <div class="legend"><span><i class="dot" style="background:var(--blue)"></i>Created</span><span><i class="dot" style="background:var(--green)"></i>Completed</span></div>
             <div class="trend-chart-shell">
               <svg id="trendChart" class="chart" role="img" aria-label="Service orders trend" tabindex="0"></svg>
               <div id="trendTooltip" class="chart-tooltip" aria-hidden="true"></div>
@@ -1692,7 +1818,7 @@
         <article class="panel span-4">
           <div class="panel-head"><h2 class="panel-title">Orders Waiting Time</h2></div>
           <div class="panel-body">
-            <div class="legend"><span><i class="dot" style="background:#f5bf2f"></i>8-30 days</span><span><i class="dot" style="background:#8f5cf6"></i>31-60 days</span><span><i class="dot" style="background:#49d17d"></i>0-7 days</span><span><i class="dot" style="background:#2f7df6"></i>60+ days</span></div>
+            <div class="legend"><span><i class="dot" style="background:var(--yellow)"></i>8-30 days</span><span><i class="dot" style="background:var(--purple)"></i>31-60 days</span><span><i class="dot" style="background:var(--green)"></i>0-7 days</span><span><i class="dot" style="background:var(--blue)"></i>60+ days</span></div>
             <div style="display:grid;grid-template-columns:1fr 130px;gap:14px;margin-top:15px">
               <div class="bars" id="agingBars"></div>
               <div class="side-stats" id="agingStats"></div>
@@ -1718,15 +1844,17 @@
           <div class="panel-body"><div class="invoice-list" id="invoiceSummary"></div></div>
         </article>
 
-        <article class="panel span-7">
-          <div class="panel-head"><h2 class="panel-title">Aging Risk List</h2><button class="panel-action" id="exportRisk" type="button">Export</button></div>
-          <div class="panel-body table-wrap"><table id="riskTable" class="risk-table"></table></div>
-        </article>
+        <div id="riskAlertPanels" class="risk-alert-panels">
+          <article class="panel span-7">
+            <div class="panel-head"><h2 class="panel-title">Aging Risk List</h2><button class="panel-action" id="exportRisk" type="button">Export</button></div>
+            <div class="panel-body table-wrap"><table id="riskTable" class="risk-table"></table></div>
+          </article>
 
-        <article class="panel alert-panel span-5">
-          <div class="panel-head"><h2 class="panel-title alert-title">Exceptions / Alerts</h2><button class="panel-action" id="exportAlerts" type="button">Export</button></div>
-          <div class="panel-body table-wrap"><table id="alertTable" class="alert-table"></table></div>
-        </article>
+          <article class="panel alert-panel span-5">
+            <div class="panel-head"><h2 class="panel-title alert-title">Exceptions / Alerts</h2><button class="panel-action" id="exportAlerts" type="button">Export</button></div>
+            <div class="panel-body table-wrap"><table id="alertTable" class="alert-table"></table></div>
+          </article>
+        </div>
 
         <article class="panel span-12 drilldown-panel" id="drilldownPanel" hidden>
           <div class="panel-head">
@@ -1745,6 +1873,7 @@
       <div class="footnote">All amounts in AUD. Data integrated from C4C Service and SAP S/4HANA Finance exports.</div>
       </section>
 
+      <div id="riskAlertPanelsHome" hidden></div>
       <section class="module-view" id="moduleView" hidden>
         <div class="module-header" id="moduleHeader">
           <div>
@@ -1808,7 +1937,7 @@ SOFTWARE.
 // Lucide icons (ISC license): https://lucide.dev/license
 window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}],["path",{"d":"m7 10 5 5 5-5"}]],"Search":[["path",{"d":"m21 21-4.34-4.34"}],["circle",{"cx":"11","cy":"11","r":"8"}]],"RotateCcw":[["path",{"d":"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"}],["path",{"d":"M3 3v5h5"}]],"ListFilter":[["path",{"d":"M2 5h20"}],["path",{"d":"M6 12h12"}],["path",{"d":"M9 19h6"}]],"ArrowUp":[["path",{"d":"m5 12 7-7 7 7"}],["path",{"d":"M12 19V5"}]],"ArrowDown":[["path",{"d":"M12 5v14"}],["path",{"d":"m19 12-7 7-7-7"}]],"Ellipsis":[["circle",{"cx":"12","cy":"12","r":"1"}],["circle",{"cx":"19","cy":"12","r":"1"}],["circle",{"cx":"5","cy":"12","r":"1"}]],"ChevronLeft":[["path",{"d":"m15 18-6-6 6-6"}]],"ChevronRight":[["path",{"d":"m9 18 6-6-6-6"}]],"FileText":[["path",{"d":"M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"}],["path",{"d":"M14 2v5a1 1 0 0 0 1 1h5"}],["path",{"d":"M10 9H8"}],["path",{"d":"M16 13H8"}],["path",{"d":"M16 17H8"}]],"CircleCheck":[["circle",{"cx":"12","cy":"12","r":"10"}],["path",{"d":"m9 12 2 2 4-4"}]],"Wrench":[["path",{"d":"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"}]],"ChartNoAxesCombined":[["path",{"d":"M12 16v5"}],["path",{"d":"M16 14v7"}],["path",{"d":"M20 10v11"}],["path",{"d":"m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"}],["path",{"d":"M4 18v3"}],["path",{"d":"M8 14v7"}]],"Clock":[["circle",{"cx":"12","cy":"12","r":"10"}],["path",{"d":"M12 6v6l4 2"}]],"BadgeCheck":[["path",{"d":"M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"}],["path",{"d":"m9 12 2 2 4-4"}]],"CalendarDays":[["path",{"d":"M8 2v4"}],["path",{"d":"M16 2v4"}],["rect",{"width":"18","height":"18","x":"3","y":"4","rx":"2"}],["path",{"d":"M3 10h18"}],["path",{"d":"M8 14h.01"}],["path",{"d":"M12 14h.01"}],["path",{"d":"M16 14h.01"}],["path",{"d":"M8 18h.01"}],["path",{"d":"M12 18h.01"}],["path",{"d":"M16 18h.01"}]],"X":[["path",{"d":"M18 6 6 18"}],["path",{"d":"m6 6 12 12"}]]};
   </script>
-  <script src="./dashboard-data.js?v=20260914_123040"></script>
+  <script src="./dashboard-data.js?v=20261005_114446"></script>
   <script>
     const data = window.serviceCentreData;
     const page = data.pages.overview;
@@ -2014,10 +2143,10 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       }
     };
     const workflowAgingColors = {
-      "0-7 days": "#49d17d",
-      "8-30 days": "#f5bf2f",
-      "31-60 days": "#8f5cf6",
-      "60+ days": "#2f7df6"
+      "0-7 days": "#5a9b72",
+      "8-30 days": "#bf8b2e",
+      "31-60 days": "#8fa1b8",
+      "60+ days": "#4f81bd"
     };
     const workflowAgeMidpoints = {
       "0-7 days": 4,
@@ -2110,7 +2239,9 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       document.body.classList.toggle("module-mode", !isOverview);
       document.getElementById("overviewView").hidden = !isOverview;
       document.getElementById("moduleView").hidden = isOverview;
+      if (!isOverview && pageId !== "service-orders") moveRiskAlertPanels("stash");
       if (isOverview) {
+        moveRiskAlertPanels("stash");
         document.getElementById("pageTitle").textContent = overviewTitle;
         document.getElementById("pageSubtitle").innerHTML = overviewSubtitle;
         renderDashboard();
@@ -2151,7 +2282,20 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       document.getElementById("pageSubtitle").textContent = "PDI / Repair";
       document.getElementById("ordersHeaderActions").innerHTML = `<div class="orders-refresh">Last refreshed<strong>${htmlText(data.meta.lastUpdated || "--")}</strong></div><button type="button" class="orders-button primary" id="exportAllServiceOrders">${ordersIcon("Download")} Export All</button>`;
       document.getElementById("moduleGrid").innerHTML = `<div class="orders-metrics" id="serviceOrderMetrics"></div>` + renderServiceOrdersTool();
+      moveRiskAlertPanels("service-orders");
       attachServiceOrdersTool();
+    }
+
+    function moveRiskAlertPanels(destination) {
+      const panels = document.getElementById("riskAlertPanels");
+      const moduleGrid = document.getElementById("moduleGrid");
+      const stash = document.getElementById("riskAlertPanelsHome");
+      if (!panels || !moduleGrid || !stash) return;
+      if (destination === "service-orders") {
+        moduleGrid.appendChild(panels);
+      } else {
+        stash.appendChild(panels);
+      }
     }
 
     function serviceOrderFunctionItems(config) {
@@ -2366,13 +2510,13 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
     }
 
     function serviceOrderStatusColor(status = "") {
-      if (/reject/i.test(status)) return "#ef4444";
-      if (/cancel/i.test(status)) return "#fa7b88";
-      if (/completed|invoiced/i.test(status)) return "#55d89b";
-      if (/quote approval/i.test(status)) return "#ffb665";
-      if (/progress/i.test(status)) return "#f0cd66";
-      if (/time claim/i.test(status)) return "#58cecb";
-      return "#77b6ff";
+      if (/reject/i.test(status)) return "#c45c63";
+      if (/cancel/i.test(status)) return "#b56a72";
+      if (/completed|invoiced/i.test(status)) return "#5a9b72";
+      if (/quote approval/i.test(status)) return "#bf8b2e";
+      if (/progress/i.test(status)) return "#8fa1b8";
+      if (/time claim/i.test(status)) return "#4f8d9a";
+      return "#4f81bd";
     }
 
     function serviceOrderRejectionRate(scope = serviceOrdersState) {
@@ -2399,13 +2543,13 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const open = base.filter(row => isOpenDetailRow(row) && (!scope.month || parseDashboardDate(row.createdDate) <= periodEndDate(scope.month)));
       const rejection = serviceOrderRejectionRate();
       const metrics = [
-        ["New Service Orders", num(createdRows.length), scope.month || "All months", "FileText", "#77b6ff"],
-        ["Complete Orders", num(completed.length), scope.month || "All months", "CircleCheck", "#55d89b"],
-        ["Open Service Orders", num(open.length), "Current status", "Wrench", "#58cecb"],
-        ["Rejected Rate", rejection.value, rejection.note, "ChartNoAxesCombined", "#ef4444"],
-        ["Turnaround Time", "TBC", "", "Clock", "#ffb665"],
-        ["Quotation Approval Rate", "TBC", "", "BadgeCheck", "#b49aef"],
-        ["Service Appointment Lead Time", "TBC", "", "CalendarDays", "#fa7b88"]
+        ["New Service Orders", num(createdRows.length), scope.month || "All months", "FileText", "#4f81bd"],
+        ["Complete Orders", num(completed.length), scope.month || "All months", "CircleCheck", "#5a9b72"],
+        ["Open Service Orders", num(open.length), "Current status", "Wrench", "#4f8d9a"],
+        ["Rejected Rate", rejection.value, rejection.note, "ChartNoAxesCombined", "#c45c63"],
+        ["Turnaround Time", "TBC", "", "Clock", "#bf8b2e"],
+        ["Quotation Approval Rate", "TBC", "", "BadgeCheck", "#8fa1b8"],
+        ["Service Appointment Lead Time", "TBC", "", "CalendarDays", "#b56a72"]
       ];
       document.getElementById("serviceOrderMetrics").innerHTML = metrics.map(([label, value, note, icon, color]) => `<article class="orders-metric" style="--metric-color:${color}"><div class="orders-metric-head">${ordersIcon(icon)}<span>${label}</span></div><div class="orders-metric-value">${htmlText(value)}</div><div class="orders-metric-note">${htmlText(note)}</div></article>`).join("");
     }
@@ -2816,8 +2960,8 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
         </article>`).join("");
 
       drawLineChart("trendChart", getTrendRows(), [
-        { key: "newTickets", name: "Created", color: "#2f7df6", fill: "rgba(47,125,246,.14)" },
-        { key: "completedTickets", name: "Completed", color: "#49d17d", fill: "rgba(73,209,125,.12)" }
+        { key: "newTickets", name: "Created", color: "#4f81bd", fill: "rgba(79,129,189,.12)" },
+        { key: "completedTickets", name: "Completed", color: "#5a9b72", fill: "rgba(90,155,114,.10)" }
       ]);
 
       const statusMix = getStatusMix();
@@ -2831,9 +2975,9 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       renderRiskTable();
       renderTechTable();
       renderDonut("labourDonut", "labourLegend", [
-        { name: "Repair", value: labour.repair, label: labour.repair.toFixed(1) + " (" + pct(labour.repair, labour.total) + ")", color: "#2f7df6" },
-        { name: "PDI", value: labour.pdi, label: labour.pdi.toFixed(1) + " (" + pct(labour.pdi, labour.total) + ")", color: "#49d17d" },
-        { name: "Other", value: Math.max(labour.total - labour.repair - labour.pdi, 0), label: Math.max(labour.total - labour.repair - labour.pdi, 0).toFixed(1) + " (" + pct(Math.max(labour.total - labour.repair - labour.pdi, 0), labour.total) + ")", color: "#8f5cf6" }
+        { name: "Repair", value: labour.repair, label: labour.repair.toFixed(1) + " (" + pct(labour.repair, labour.total) + ")", color: "#4f81bd" },
+        { name: "PDI", value: labour.pdi, label: labour.pdi.toFixed(1) + " (" + pct(labour.pdi, labour.total) + ")", color: "#4f8d9a" },
+        { name: "Other", value: Math.max(labour.total - labour.repair - labour.pdi, 0), label: Math.max(labour.total - labour.repair - labour.pdi, 0).toFixed(1) + " (" + pct(Math.max(labour.total - labour.repair - labour.pdi, 0), labour.total) + ")", color: "#9aa8b8" }
       ], "value", "label");
       document.getElementById("labourTotal").textContent = labour.total.toLocaleString("en-AU", { maximumFractionDigits: 1 });
       renderInvoice();
@@ -2986,7 +3130,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       return {
         name: "Quote Rejected", qty: 0, quoteAmount: 0, quoteAmountLabel: "$0",
         amount: "0 tickets ($0)", share: 0, percent: 0, percentLabel: "0%",
-        rawStatuses: ["ZW - Quote Rejected"], color: "#ef4444",
+        rawStatuses: ["ZW - Quote Rejected"], color: "#c45c63",
         aging: Object.keys(workflowAgingColors).map(label => ({ label, qty: 0 }))
       };
     }
@@ -3023,8 +3167,8 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
         total: money(totalAmount),
         totalAmount,
         segments: [
-          { name: "External", percent: Math.round(Number(pct(externalAmount, totalAmount).replace("%", ""))), amount: money(externalAmount), qty: externalQty, color: "#1f6feb" },
-          { name: "Internal", percent: Math.round(Number(pct(internalAmount, totalAmount).replace("%", ""))), amount: money(internalAmount), qty: internalQty, color: "#f58b1f" }
+          { name: "External", percent: Math.round(Number(pct(externalAmount, totalAmount).replace("%", ""))), amount: money(externalAmount), qty: externalQty, color: "#4f81bd" },
+          { name: "Internal", percent: Math.round(Number(pct(internalAmount, totalAmount).replace("%", ""))), amount: money(internalAmount), qty: internalQty, color: "#4f8d9a" }
         ]
       };
     }
@@ -3071,14 +3215,21 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       return ["Repair ticket", "PDI ticket"].map((type, i) => {
         const rows = state.type !== "All Ticket Types" && state.type !== type ? [] : (month[type] || []).filter(row => state.yard === "All" || row.yard === state.yard);
         const value = rows.reduce((a, r) => a + (r.newTickets || 0), 0);
-        return { name: type.replace(" ticket", ""), value, label: num(value) + " (" + pct(value, getCreatedTotal()) + ")", color: i ? "#49d17d" : "#2f7df6" };
-      }).concat([{ name: "Other", value: 0, label: "0 (0%)", color: "#8f5cf6" }]);
+        return { name: type.replace(" ticket", ""), value, label: num(value) + " (" + pct(value, getCreatedTotal()) + ")", color: i ? "#5a9b72" : "#4f81bd" };
+      }).concat([{ name: "Other", value: 0, label: "0 (0%)", color: "#9aa8b8" }]);
     }
 
     function renderDonut(donutId, legendId, rows, valueKey, labelKey, drilldownType = "") {
-      const total = rows.reduce((a, r) => a + Number(r[valueKey] || 0), 0) || 1;
+      const statusPalette = ["#4f81bd", "#7190b1", "#8fa1b8", "#b0bcc9", "#bf8b2e", "#657f9e", "#536d8d", "#425b79"];
+      const displayRows = rows.map((row, index) => ({
+        ...row,
+        color: drilldownType === "status"
+          ? (row.name === "Quote Rejected" ? "#c45c63" : statusPalette[index % statusPalette.length])
+          : row.color
+      }));
+      const total = displayRows.reduce((a, r) => a + Number(r[valueKey] || 0), 0) || 1;
       let start = 0;
-      const stops = rows.map(r => {
+      const stops = displayRows.map(r => {
         const end = start + Number(r[valueKey] || 0) / total * 100;
         const part = `${r.color || "#7890a5"} ${start}% ${end}%`;
         start = end;
@@ -3087,7 +3238,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const donut = document.getElementById(donutId);
       const legend = document.getElementById(legendId);
       donut.style.background = `conic-gradient(${stops})`;
-      legend.innerHTML = rows.map(r => `
+      legend.innerHTML = displayRows.map(r => `
         <div class="donut-line ${drilldownType === "status" ? "clickable-row" : ""}" data-status="${attrText(r.name)}"><span><i class="dot" style="background:${r.color || "#7890a5"}"></i>${r.name}</span><strong>${typeof r[labelKey] === "number" ? num(r[labelKey]) : r[labelKey]}</strong></div>
       `).join("");
       if (drilldownType === "status") {
@@ -3106,19 +3257,19 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const y = v => h - pad.b - (v / max) * (h - pad.t - pad.b);
       const grid = Array.from({ length: 5 }, (_, i) => {
         const yy = pad.t + i * ((h - pad.t - pad.b) / 4);
-        return `<line x1="${pad.l}" y1="${yy}" x2="${w - pad.r}" y2="${yy}" stroke="rgba(145,180,214,.13)"/><text x="6" y="${yy + 4}" fill="#b5c6d8" font-size="11">${Math.round(max - i * max / 4)}</text>`;
+        return `<line x1="${pad.l}" y1="${yy}" x2="${w - pad.r}" y2="${yy}" stroke="rgba(148,163,184,.32)"/><text x="6" y="${yy + 4}" fill="#697586" font-size="11">${Math.round(max - i * max / 4)}</text>`;
       }).join("") + rows.map((r, i) => i % 2 === 0 ? `<line x1="${x(i)}" y1="${pad.t}" x2="${x(i)}" y2="${h - pad.b}" stroke="rgba(145,180,214,.08)"/>` : "").join("");
       const paths = series.map(s => {
         const d = rows.map((r, i) => `${i ? "L" : "M"}${x(i)},${y(r[s.key] || 0)}`).join(" ");
         const area = d + ` L${x(rows.length - 1)},${h - pad.b} L${x(0)},${h - pad.b} Z`;
         return `<path d="${area}" fill="${s.fill}"/><path d="${d}" fill="none" stroke="${s.color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;
       }).join("");
-      const labels = rows.map((r, i) => i % 2 === 0 ? `<text x="${x(i)}" y="${h - 7}" fill="#bfd0e1" font-size="11" text-anchor="middle">${r.month}</text>` : "").join("");
+      const labels = rows.map((r, i) => i % 2 === 0 ? `<text x="${x(i)}" y="${h - 7}" fill="#697586" font-size="11" text-anchor="middle">${r.month}</text>` : "").join("");
       svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
       const hover = `
         <g id="${id}Hover" opacity="0" pointer-events="none">
-          <line id="${id}HoverLine" x1="0" y1="${pad.t}" x2="0" y2="${h - pad.b}" stroke="rgba(231,242,255,.55)" stroke-width="1" stroke-dasharray="4 4"/>
-          ${series.map((s, index) => `<circle id="${id}HoverDot${index}" r="5" fill="${s.color}" stroke="#061a2c" stroke-width="2"/>`).join("")}
+          <line id="${id}HoverLine" x1="0" y1="${pad.t}" x2="0" y2="${h - pad.b}" stroke="rgba(63,120,181,.55)" stroke-width="1" stroke-dasharray="4 4"/>
+          ${series.map((s, index) => `<circle id="${id}HoverDot${index}" r="5" fill="${s.color}" stroke="#ffffff" stroke-width="2"/>`).join("")}
         </g>
         <rect x="${pad.l}" y="${pad.t}" width="${w - pad.l - pad.r}" height="${h - pad.t - pad.b}" fill="transparent"/>`;
       svg.innerHTML = grid + paths + labels + hover;
@@ -3227,7 +3378,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
     }
 
     function renderAging() {
-      const colors = { "8-30 days": "#f5bf2f", "31-60 days": "#8f5cf6", "0-7 days": "#49d17d", "60+ days": "#2f7df6" };
+      const colors = { "8-30 days": "#bf8b2e", "31-60 days": "#8fa1b8", "0-7 days": "#5a9b72", "60+ days": "#4f81bd" };
       const rows = getStatusMix().segments.slice(0, 5);
       const max = Math.max(...rows.map(r => r.qty), 1);
       document.getElementById("agingBars").innerHTML = rows.map(r => {

@@ -132,8 +132,8 @@ if errorlevel 1 goto publish_failed
 if /i "%~1"=="--check" exit /b 0
 if /i "%~1"=="--publish-only" goto publish
 
-"%PYTHON_EXE%" "%CD%\dashboard_credentials.py"
-if errorlevel 1 goto connections_failed
+rem Normal updates load saved credentials inside each data script. If no saved
+rem settings exist, the scripts use the project defaults and do not prompt.
 
 for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set "TS=%%i"
 
@@ -199,8 +199,9 @@ set "C4C_TIMEOUT=30"
 
 if errorlevel 1 (
   echo.
-  echo [ERROR] History update failed. Log:
-  echo %LOG_FILE%
+  echo [ERROR] C4C status history refresh failed. Dashboard data was not rebuilt.
+  echo The C4C history step is required so the dashboard cannot publish stale lifecycle data.
+  echo Log: %LOG_FILE%
   echo.
   type "%LOG_FILE%"
   echo.

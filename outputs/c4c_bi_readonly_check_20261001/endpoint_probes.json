@@ -1,0 +1,71 @@
+[
+  {
+    "at_utc": "2026-09-30T23:18:24.618813+00:00",
+    "url": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/PC4C/Ticket/queryOdataBatch?%24top=5&%24skip=0&%24filter=%28CCSRQ_DPY_ROLE_CD+eq+%271001%27%29",
+    "status": 200,
+    "content_type": "application/json;charset=utf-8",
+    "bytes": 7960,
+    "request_id": null,
+    "root_keys": [
+      "count",
+      "data",
+      "pageSize",
+      "pageNumber"
+    ],
+    "count": "40141",
+    "returned": 5,
+    "field_names": [
+      "AmountIncludingTax",
+      "ApprovalDate",
+      "ApprovalNumber",
+      "ChangeOnDateTime",
+      "ChassisNumber",
+      "ClaimApprovedOnDateTime",
+      "CreatedOn",
+      "DealerID",
+      "DealerName",
+      "ERPFreeOrder",
+      "ERPInvoiceNumber",
+      "ERPPurchaseOrder",
+      "HubSpotID",
+      "InvolvedParties",
+      "RepairTicketID",
+      "RepairerBusinessNameID",
+      "RepairerEmail",
+      "RepairerNamePointOfContact",
+      "RepairerPhoneNumber",
+      "ResolvedOnDateTime",
+      "Responded",
+      "SerialID",
+      "ServiceRequesterEmail",
+      "TicketID",
+      "TicketName",
+      "TicketSeverity",
+      "TicketStatus",
+      "TicketStatusText",
+      "TicketType",
+      "TicketTypeText",
+      "TotalLabourHours",
+      "WarrantyHandlingDealerID",
+      "Z1Z8TimeConsumed"
+    ],
+    "classification_values": [
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "at_utc": "2026-09-30T23:18:24.874486+00:00",
+    "url": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/c4c/tickets?top=5&skip=0&type=Z007",
+    "status": 404,
+    "content_type": "text/html;charset=utf-8",
+    "bytes": 431,
+    "request_id": null,
+    "body_markers": [
+      "Not Found"
+    ]
+  }
+]

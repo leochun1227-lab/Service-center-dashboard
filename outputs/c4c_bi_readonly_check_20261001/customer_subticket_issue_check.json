@@ -1,0 +1,183 @@
+{
+  "at_utc": "2026-09-30T23:29:48.489766+00:00",
+  "checks": [
+    {
+      "type": "Z007",
+      "status": 200,
+      "params": {
+        "top": 50,
+        "skip": 0,
+        "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001') and (CDOC_PROC_TY eq 'Z007')"
+      },
+      "pageSize": 5,
+      "returned": 5,
+      "count": "1996",
+      "samples": [
+        {
+          "TicketID": "21786",
+          "TicketType": "Z007",
+          "TicketTypeText": "Repair ticket",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "3110",
+              "InvolvedPartyID": "3110.ORG",
+              "InvolvedPartyName": "REGENT RV PTY LTD",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "22139",
+          "TicketType": "Z007",
+          "TicketTypeText": "Repair ticket",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "3110",
+              "InvolvedPartyID": "3110.ORG",
+              "InvolvedPartyName": "REGENT RV PTY LTD",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "22261",
+          "TicketType": "Z007",
+          "TicketTypeText": "Repair ticket",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "3110",
+              "InvolvedPartyID": "3110.ORG",
+              "InvolvedPartyName": "REGENT RV PTY LTD",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "22140",
+          "TicketType": "Z007",
+          "TicketTypeText": "Repair ticket",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "3110",
+              "InvolvedPartyID": "3110.ORG",
+              "InvolvedPartyName": "REGENT RV PTY LTD",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "22136",
+          "TicketType": "Z007",
+          "TicketTypeText": "Repair ticket",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "3110",
+              "InvolvedPartyID": "3110.ORG",
+              "InvolvedPartyName": "REGENT RV PTY LTD",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        }
+      ]
+    },
+    {
+      "type": "Z011",
+      "status": 200,
+      "params": {
+        "top": 50,
+        "skip": 0,
+        "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001') and (CDOC_PROC_TY eq 'Z011')"
+      },
+      "pageSize": 5,
+      "returned": 5,
+      "count": "1361",
+      "samples": [
+        {
+          "TicketID": "41520",
+          "TicketType": "Z011",
+          "TicketTypeText": "Recall Claims",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "3110",
+              "InvolvedPartyID": "3110.ORG",
+              "InvolvedPartyName": "REGENT RV PTY LTD",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "40478",
+          "TicketType": "Z011",
+          "TicketTypeText": "Recall Claims",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "1000002",
+              "InvolvedPartyID": "1000002",
+              "InvolvedPartyName": "lu Molly2",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "42146",
+          "TicketType": "Z011",
+          "TicketTypeText": "Recall Claims",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "1000206",
+              "InvolvedPartyID": "1000206",
+              "InvolvedPartyName": "Matt Greene",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "41006",
+          "TicketType": "Z011",
+          "TicketTypeText": "Recall Claims",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "1000206",
+              "InvolvedPartyID": "1000206",
+              "InvolvedPartyName": "Matt Greene",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        },
+        {
+          "TicketID": "42985",
+          "TicketType": "Z011",
+          "TicketTypeText": "Recall Claims",
+          "customers": [
+            {
+              "InvolvedPartyBusinessPartnerID": "1000874",
+              "InvolvedPartyID": "1000874",
+              "InvolvedPartyName": "Kym Norton",
+              "InvolvedPartyRoleID": "1001"
+            }
+          ],
+          "SubticketType_present": false,
+          "IssueItems_present": false
+        }
+      ]
+    }
+  ]
+}

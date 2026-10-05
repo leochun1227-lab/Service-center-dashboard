@@ -1,0 +1,29 @@
+{
+  "at_utc": "2026-09-30T23:19:14.993762+00:00",
+  "checks": [
+    {
+      "ticket_type_requested": "Z007",
+      "endpoint": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/PC4C/Ticket/queryOdataBatch",
+      "params": {
+        "$top": 5,
+        "$skip": 0,
+        "$typecode": "Z007",
+        "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001')"
+      },
+      "status": 500,
+      "elapsed_seconds": 1.57
+    },
+    {
+      "ticket_type_requested": "Z011",
+      "endpoint": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/PC4C/Ticket/queryOdataBatch",
+      "params": {
+        "$top": 5,
+        "$skip": 0,
+        "$typecode": "Z011",
+        "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001')"
+      },
+      "status": 500,
+      "elapsed_seconds": 0.86
+    }
+  ]
+}

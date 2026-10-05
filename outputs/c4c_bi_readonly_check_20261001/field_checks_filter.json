@@ -1,0 +1,975 @@
+{
+  "at_utc": "2026-09-30T23:19:28.534930+00:00",
+  "checks": [
+    {
+      "ticket_type_requested": "Z007",
+      "endpoint": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/PC4C/Ticket/queryOdataBatch",
+      "params": {
+        "$top": 5,
+        "$skip": 0,
+        "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001') and (CDOC_PROC_TY eq 'Z007')"
+      },
+      "status": 200,
+      "elapsed_seconds": 4.08,
+      "count": "1996",
+      "returned": 5,
+      "actual_types": [
+        "Z007"
+      ],
+      "ticket_fields": {
+        "TicketID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketName": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketStatus": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketStatusText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketType": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketTypeText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "RepairTicketID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ApprovalDate": {
+          "missing": 0,
+          "null": 5,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ApprovalNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "TicketSeverity": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "HubSpotID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "Responded": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "ERPInvoiceNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "ERPPurchaseOrder": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ERPPurchaseOrderOldID": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ERPFreeOrder": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ERPServiceOrder": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ERPTicketID": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequesterEmail": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ServicePerformerPartyID": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "AmountIncludingTax": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "InvolvedParties": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "RepairerBusinessNameID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "RepairerEmail": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "RepairerPhoneNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "RepairerNamePointOfContact": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "Z1Z8TimeConsumed": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ApprovedConsumed": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "CreatedOn": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "ChassisNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "SerialID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "DealerID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 1,
+          "nonempty": 4
+        },
+        "DealerName": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "WarrantyHandlingDealerID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "ChangeOnDateTime": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "ResolvedOnDateTime": {
+          "missing": 0,
+          "null": 0,
+          "empty": 4,
+          "nonempty": 1
+        },
+        "ClaimApprovedOnDateTime": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "TotalLabourHours": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TotalActualHours": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubticketType": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "HandoverStatus": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ActualStartTime": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ActualEndTime": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestSellerParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestServiceSupportTeamParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestProcessorParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestBuyerParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssueItems": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        }
+      },
+      "issue_count": 0,
+      "issue_fields": {
+        "ObjectID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ParentObjectID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "TicketID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssueID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssueUUID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssuesPosition": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssuesPositionText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssuesDescription": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "HoursOfLabour": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "UnitPrice": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "RepairItem": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "RepairItemText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "RepairItemDescription": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubcategoryReason": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubcategoryReasonText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "Subcategory": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubcategoryText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ApprovalStatus": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ClaimReimbursement": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ClaimRejectedReasonBC": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ClaimRejectedReason": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "PartsItems": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "WorkLogs": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        }
+      },
+      "parts_count": 0,
+      "worklogs_count": 0,
+      "all_present_ticket_fields": [
+        "AmountIncludingTax",
+        "ApprovalDate",
+        "ApprovalNumber",
+        "ChangeOnDateTime",
+        "ChassisNumber",
+        "ClaimApprovedOnDateTime",
+        "CreatedOn",
+        "DealerID",
+        "DealerName",
+        "ERPFreeOrder",
+        "ERPInvoiceNumber",
+        "ERPPurchaseOrder",
+        "HubSpotID",
+        "InvolvedParties",
+        "RepairTicketID",
+        "RepairerBusinessNameID",
+        "RepairerEmail",
+        "RepairerNamePointOfContact",
+        "RepairerPhoneNumber",
+        "ResolvedOnDateTime",
+        "Responded",
+        "SerialID",
+        "ServiceRequesterEmail",
+        "TicketID",
+        "TicketName",
+        "TicketSeverity",
+        "TicketStatus",
+        "TicketStatusText",
+        "TicketType",
+        "TicketTypeText",
+        "TotalLabourHours",
+        "WarrantyHandlingDealerID",
+        "Z1Z8TimeConsumed"
+      ],
+      "classification_examples": []
+    },
+    {
+      "ticket_type_requested": "Z011",
+      "endpoint": "https://longcui-automobile-cpi-tyrbc1k7.it-cpi010-rt.cpi.cn40.apps.platform.sapcloud.cn/http/PC4C/Ticket/queryOdataBatch",
+      "params": {
+        "$top": 5,
+        "$skip": 0,
+        "$filter": "(CCSRQ_DPY_ROLE_CD eq '1001') and (CDOC_PROC_TY eq 'Z011')"
+      },
+      "status": 200,
+      "elapsed_seconds": 2.2,
+      "count": "1359",
+      "returned": 5,
+      "actual_types": [
+        "Z011"
+      ],
+      "ticket_fields": {
+        "TicketID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketName": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketStatus": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketStatusText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketType": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TicketTypeText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "RepairTicketID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ApprovalDate": {
+          "missing": 0,
+          "null": 5,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ApprovalNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "TicketSeverity": {
+          "missing": 0,
+          "null": 0,
+          "empty": 3,
+          "nonempty": 2
+        },
+        "HubSpotID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "Responded": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "ERPInvoiceNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ERPPurchaseOrder": {
+          "missing": 0,
+          "null": 0,
+          "empty": 4,
+          "nonempty": 1
+        },
+        "ERPPurchaseOrderOldID": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ERPFreeOrder": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "ERPServiceOrder": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ERPTicketID": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequesterEmail": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "ServicePerformerPartyID": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "AmountIncludingTax": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "InvolvedParties": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "RepairerBusinessNameID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "RepairerEmail": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "RepairerPhoneNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "RepairerNamePointOfContact": {
+          "missing": 0,
+          "null": 0,
+          "empty": 5,
+          "nonempty": 0
+        },
+        "Z1Z8TimeConsumed": {
+          "missing": 0,
+          "null": 0,
+          "empty": 4,
+          "nonempty": 1
+        },
+        "ApprovedConsumed": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "CreatedOn": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "ChassisNumber": {
+          "missing": 0,
+          "null": 0,
+          "empty": 1,
+          "nonempty": 4
+        },
+        "SerialID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "DealerID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "DealerName": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "WarrantyHandlingDealerID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 2,
+          "nonempty": 3
+        },
+        "ChangeOnDateTime": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "ResolvedOnDateTime": {
+          "missing": 0,
+          "null": 0,
+          "empty": 4,
+          "nonempty": 1
+        },
+        "ClaimApprovedOnDateTime": {
+          "missing": 0,
+          "null": 0,
+          "empty": 4,
+          "nonempty": 1
+        },
+        "TotalLabourHours": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 5
+        },
+        "TotalActualHours": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubticketType": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "HandoverStatus": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ActualStartTime": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ActualEndTime": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestSellerParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestServiceSupportTeamParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestProcessorParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ServiceRequestBuyerParty": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssueItems": {
+          "missing": 5,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        }
+      },
+      "issue_count": 0,
+      "issue_fields": {
+        "ObjectID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ParentObjectID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "TicketID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssueID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssueUUID": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssuesPosition": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssuesPositionText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "IssuesDescription": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "HoursOfLabour": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "UnitPrice": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "RepairItem": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "RepairItemText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "RepairItemDescription": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubcategoryReason": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubcategoryReasonText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "Subcategory": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "SubcategoryText": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ApprovalStatus": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ClaimReimbursement": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ClaimRejectedReasonBC": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "ClaimRejectedReason": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "PartsItems": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        },
+        "WorkLogs": {
+          "missing": 0,
+          "null": 0,
+          "empty": 0,
+          "nonempty": 0
+        }
+      },
+      "parts_count": 0,
+      "worklogs_count": 0,
+      "all_present_ticket_fields": [
+        "AmountIncludingTax",
+        "ApprovalDate",
+        "ApprovalNumber",
+        "ChangeOnDateTime",
+        "ChassisNumber",
+        "ClaimApprovedOnDateTime",
+        "CreatedOn",
+        "DealerID",
+        "DealerName",
+        "ERPFreeOrder",
+        "ERPInvoiceNumber",
+        "ERPPurchaseOrder",
+        "HubSpotID",
+        "InvolvedParties",
+        "RepairTicketID",
+        "RepairerBusinessNameID",
+        "RepairerEmail",
+        "RepairerNamePointOfContact",
+        "RepairerPhoneNumber",
+        "ResolvedOnDateTime",
+        "Responded",
+        "SerialID",
+        "ServiceRequesterEmail",
+        "TicketID",
+        "TicketName",
+        "TicketSeverity",
+        "TicketStatus",
+        "TicketStatusText",
+        "TicketType",
+        "TicketTypeText",
+        "TotalLabourHours",
+        "WarrantyHandlingDealerID",
+        "Z1Z8TimeConsumed"
+      ],
+      "classification_examples": []
+    }
+  ]
+}
