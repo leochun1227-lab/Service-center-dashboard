@@ -642,6 +642,11 @@ def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
                 "quoteAmountLabel": money(quote_amount) if quote_amount else "",
                 "invoiceNo": invoice_number,
                 "invoiceAmount": round(invoice_amount, 2),
+                "invoiceRawAmount": (
+                    round(numeric_value(row.get("ERPInvoiceNumberPriceRaw")), 2)
+                    if clean(row.get("ERPInvoiceNumberPriceRaw", "")) else None
+                ),
+                "billingType": clean(row.get("BillingType", "")),
                 "invoiceAmountLabel": money(invoice_amount) if invoice_number and invoice_price else "",
                 "billingDate": date_label(row.get("BillingDate")) or "TBC",
                 "invoiceScope": clean(row.get("InvoiceScope", "")) or "TBC",
@@ -1118,9 +1123,10 @@ def build_dashboard_payload() -> dict[str, Any]:
                 "openStatusMix": build_open_status_mix(current_open),
                 "monthlyOpenStatusMix": monthly_open_status_mix,
                 "monthlyLabour": monthly_labour,
-                "ticketDetails": build_ticket_details(
-                    pd.concat([created_tickets, sap_only_rows], ignore_index=True, sort=False)
-                ),
+                "ticketDetails": build_ticket_details(created_tickets),
+                # Both invoice exports consume the exact population used by
+                # the aggregates, including SAP-only rows and placeholders.
+                "invoiceDetails": build_ticket_details(invoice_tickets),
                 "workflowDaily": workflow_daily,
                 "yardSummary": [
                     {
