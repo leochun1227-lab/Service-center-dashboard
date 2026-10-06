@@ -3167,15 +3167,20 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const rows = getDealerRows();
       const externalAmount = rows.reduce((sum, row) => sum + (row.externalInvoicedAmount || 0), 0);
       const internalAmount = rows.reduce((sum, row) => sum + (row.internalInvoicedAmount || 0), 0);
+      const otherAmount = rows.reduce((sum, row) => sum + (row.otherInvoicedAmount || 0), 0);
       const externalQty = rows.reduce((sum, row) => sum + (row.externalInvoicedTickets || 0), 0);
       const internalQty = rows.reduce((sum, row) => sum + (row.internalInvoicedTickets || 0), 0);
-      const totalAmount = externalAmount + internalAmount;
+      const otherQty = rows.reduce((sum, row) => sum + (row.otherInvoicedTickets || 0), 0);
+      const totalAmount = externalAmount + internalAmount + otherAmount;
+      const externalPercent = Math.round(Number(pct(externalAmount, totalAmount).replace("%", "")));
+      const internalPercent = Math.round(Number(pct(internalAmount, totalAmount).replace("%", "")));
       return {
         total: money(totalAmount),
         totalAmount,
         segments: [
-          { name: "External", percent: Math.round(Number(pct(externalAmount, totalAmount).replace("%", ""))), amount: money(externalAmount), qty: externalQty, color: "#4f81bd" },
-          { name: "Internal", percent: Math.round(Number(pct(internalAmount, totalAmount).replace("%", ""))), amount: money(internalAmount), qty: internalQty, color: "#4f8d9a" }
+          { name: "External", percent: externalPercent, amount: money(externalAmount), qty: externalQty, color: "#4f81bd" },
+          { name: "Internal", percent: internalPercent, amount: money(internalAmount), qty: internalQty, color: "#4f8d9a" },
+          { name: "Other", percent: totalAmount ? 100 - externalPercent - internalPercent : 0, amount: money(otherAmount), qty: otherQty, color: "#64748b" }
         ]
       };
     }
@@ -3505,11 +3510,13 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
       const invoice = getInvoiceMix();
       const internal = invoice.segments.find(s => s.name === "Internal") || { qty: 0, percent: 0, amount: "$0" };
       const external = invoice.segments.find(s => s.name === "External") || { qty: 0, percent: 0, amount: "$0" };
-      const avg = invoice.totalAmount / Math.max(internal.qty + external.qty, 1);
+      const other = invoice.segments.find(s => s.name === "Other") || { qty: 0, percent: 0, amount: "$0" };
+      const avg = invoice.totalAmount / Math.max(internal.qty + external.qty + other.qty, 1);
       const rows = [
         ["Invoice Amount", invoice.total],
         ["Internal Amount", internal.amount + " (" + internal.percent + "%)"],
         ["External Amount", external.amount + " (" + external.percent + "%)"],
+        ["Other Amount", other.amount + " (" + other.percent + "%)"],
         ["Open Quote Amount", money(getOpenQuoteAmount())],
         ["Avg Invoice / Order", money(avg)]
       ];
@@ -3637,6 +3644,7 @@ window.serviceOrderIcons = {"Download":[["path",{"d":"M12 15V3"}],["path",{"d":"
           ["Invoice Amount", total()],
           ["Internal Amount", total("Internal")],
           ["External Amount", total("External")],
+          ["Other Amount", total("Other")],
           ["Orders in Invoice Summary", rows.length],
           ["Missing Invoice Details", rows.filter(isMissingInvoiceDetail).length],
           ["Avg Invoice / Order", Math.round(total() / Math.max(rows.length, 1) * 100) / 100],

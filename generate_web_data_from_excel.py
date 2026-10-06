@@ -16,7 +16,7 @@ SOURCE_WORKBOOK = Path(
         str(BASE_DIR / "c4c_ticket_table_z007_z010_checked_hana_final.xlsx"),
     )
 )
-OUTPUT_JS = BASE_DIR / "dashboard-data.js"
+OUTPUT_JS = Path(os.getenv("OUTPUT_JS", str(BASE_DIR / "dashboard-data.js")))
 ABNORMAL_WORKBOOK = BASE_DIR / "abnormal_tickets.xlsx"
 
 DEALER_LABELS = {
@@ -158,6 +158,11 @@ def is_abnormal_party(row: pd.Series) -> bool:
 
 
 def invoice_scope(row: pd.Series) -> str:
+    # NotAssigned records are intentionally kept in the Other bucket so they
+    # remain visible in the invoice reconciliation instead of being silently
+    # absorbed into Internal/External based on the customer party.
+    if clean(row.get("DealerName", "")).lower() == "not assigned":
+        return "Other"
     if is_internal_party(row):
         return "Internal"
     return "External"
@@ -298,6 +303,7 @@ def build_dealer_rows(
         open_quote_amount = float(dealer_open["NewTicketQuoteAmount"].sum())
         internal_invoices = dealer_invoices[dealer_invoices["InvoiceScope"].eq("Internal")]
         external_invoices = dealer_invoices[dealer_invoices["InvoiceScope"].eq("External")]
+        other_invoices = dealer_invoices[dealer_invoices["InvoiceScope"].eq("Other")]
         dealer_rows.append(
             {
                 "yard": dealer,
@@ -319,6 +325,9 @@ def build_dealer_rows(
                 "externalInvoicedTickets": int(len(external_invoices)),
                 "externalInvoicedAmount": round(float(external_invoices["InvoiceAmount"].sum()), 2),
                 "externalInvoicedAmountLabel": money(float(external_invoices["InvoiceAmount"].sum())),
+                "otherInvoicedTickets": int(len(other_invoices)),
+                "otherInvoicedAmount": round(float(other_invoices["InvoiceAmount"].sum()), 2),
+                "otherInvoicedAmountLabel": money(float(other_invoices["InvoiceAmount"].sum())),
                 "openStatusMix": build_open_status_mix(dealer_open, ticket_type_filter),
             }
         )
@@ -329,27 +338,39 @@ def build_invoice_mix(invoice_rows: pd.DataFrame) -> dict[str, Any]:
     total_amount = float(invoice_rows["InvoiceAmount"].sum())
     internal = invoice_rows[invoice_rows["InvoiceScope"].eq("Internal")]
     external = invoice_rows[invoice_rows["InvoiceScope"].eq("External")]
+    other = invoice_rows[invoice_rows["InvoiceScope"].eq("Other")]
     internal_amount = float(internal["InvoiceAmount"].sum())
     external_amount = float(external["InvoiceAmount"].sum())
-    external_percent = round((external_amount / total_amount) * 100) if total_amount else 0
-    internal_percent = 100 - external_percent if total_amount else 0
+    other_amount = float(other["InvoiceAmount"].sum())
+    raw_percentages = [
+        round((external_amount / total_amount) * 100) if total_amount else 0,
+        round((internal_amount / total_amount) * 100) if total_amount else 0,
+    ]
+    other_percent = (100 - sum(raw_percentages)) if total_amount else 0
     return {
         "total": money(total_amount),
         "totalAmount": round(total_amount, 2),
         "segments": [
             {
                 "name": "External",
-                "percent": external_percent,
+                "percent": raw_percentages[0],
                 "amount": money(external_amount),
                 "qty": int(len(external)),
                 "color": "#1f6feb",
             },
             {
                 "name": "Internal",
-                "percent": internal_percent,
+                "percent": raw_percentages[1],
                 "amount": money(internal_amount),
                 "qty": int(len(internal)),
                 "color": "#f58b1f",
+            },
+            {
+                "name": "Other",
+                "percent": other_percent,
+                "amount": money(other_amount),
+                "qty": int(len(other)),
+                "color": "#64748b",
             },
         ],
     }
@@ -518,6 +539,72 @@ def numeric_value(value: Any) -> float:
     return float(number)
 
 
+def normalize_invoice_number(value: Any) -> str:
+    text = clean(value)
+    return text.zfill(10) if text.isdigit() else text
+
+
+def build_sap_only_rows(workbook: pd.ExcelFile, c4c_rows: pd.DataFrame) -> pd.DataFrame:
+    """Create invoice-only rows for SAP service documents absent from C4C."""
+    if "SAPInvoiceLookup" not in workbook.sheet_names:
+        return pd.DataFrame()
+    lookup = pd.read_excel(workbook, sheet_name="SAPInvoiceLookup", dtype=str).fillna("")
+    if lookup.empty or "ERPInvoiceNumber" not in lookup.columns:
+        return pd.DataFrame()
+    c4c_ids = {
+        normalize_invoice_number(value)
+        for value in c4c_rows.get("ERPInvoiceNumber", pd.Series(dtype="object"))
+        if clean(value)
+    }
+    lookup["ERPInvoiceNumber"] = lookup["ERPInvoiceNumber"].map(normalize_invoice_number)
+    sap_only = lookup[
+        lookup["ERPInvoiceNumber"].ne("")
+        & ~lookup["ERPInvoiceNumber"].isin(c4c_ids)
+    ].drop_duplicates(subset=["ERPInvoiceNumber"], keep="first").copy()
+    if sap_only.empty:
+        return sap_only
+
+    rows = pd.DataFrame(index=sap_only.index)
+    rows["TicketID"] = sap_only["ERPInvoiceNumber"].map(lambda value: f"SAP-{value}")
+    rows["TicketType"] = "SAP"
+    rows["TicketTypeText"] = "SAP invoice"
+    rows["DealerName"] = "Other"
+    rows["ERPInvoiceNumber"] = sap_only["ERPInvoiceNumber"]
+    rows["ERPInvoiceNumberPrice"] = sap_only.get("ERPInvoiceNumberPrice", "")
+    rows["ERPInvoiceNumberPriceRaw"] = sap_only.get("ERPInvoiceNumberPriceRaw", "")
+    rows["Billing date"] = sap_only.get("Billing date", "")
+    rows["BillingType"] = sap_only.get("BillingType", "")
+    rows["CreatedOn"] = rows["Billing date"]
+    rows["lastchangedtime"] = rows["Billing date"]
+    rows["TicketStatus"] = "SAP"
+    rows["TicketStatusText"] = "SAP-only invoice"
+    rows["AmountIncludingTax"] = "0"
+    rows["TotalLabourHours"] = "0"
+    rows["Customer"] = "SAP"
+    rows["Source"] = "SAP"
+    rows["DealerBucket"] = "Other"
+    rows["NewTicketQuoteAmount"] = 0.0
+    rows["InvoiceAmount"] = parse_amount(rows["ERPInvoiceNumberPrice"])
+    rows["LabourHours"] = 0.0
+    rows["TicketTypeBucket"] = "Other"
+    rows["WorkerName"] = "SAP"
+    rows["AbnormalParty"] = False
+    rows["InvoiceScope"] = "Other"
+    rows["AbnormalReason"] = ""
+    rows["MissingInvoicePlaceholder"] = False
+    rows["CompletedDate"] = parse_dashboard_datetime(rows["Billing date"])
+    rows["CreatedDate"] = parse_dashboard_datetime(rows["CreatedOn"])
+    rows["BillingDate"] = parse_dashboard_datetime(rows["Billing date"])
+    rows["LastChangedDate"] = parse_dashboard_datetime(rows["lastchangedtime"])
+    rows["WorkflowAgeStartDate"] = rows["LastChangedDate"]
+    rows["CreatedMonth"] = rows["CreatedDate"].dt.to_period("M").astype(str).where(rows["CreatedDate"].notna(), "")
+    rows["CreatedYear"] = rows["CreatedDate"].dt.year.astype("Int64").astype(str).where(rows["CreatedDate"].notna(), "")
+    rows["BillingMonth"] = rows["BillingDate"].dt.to_period("M").astype(str).where(rows["BillingDate"].notna(), "")
+    rows["InvoiceMonth"] = rows["BillingMonth"]
+    rows["InvoiceYear"] = rows["InvoiceMonth"].str.slice(0, 4)
+    return rows.reset_index(drop=True)
+
+
 def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
     details = []
     source = rows.copy().sort_values(["CreatedDate", "TicketID"], ascending=[False, True])
@@ -533,7 +620,7 @@ def build_ticket_details(rows: pd.DataFrame) -> list[dict[str, Any]]:
             {
                 "ticketId": clean(row.get("TicketID", "")) or "TBC",
                 "serviceOrderId": clean(row.get("TicketID", "")) or "TBC",
-                "source": "C4C",
+                "source": clean(row.get("Source", "")) or "C4C",
                 "period": period_label(created_month),
                 "periodKey": created_month,
                 "year": clean(row.get("CreatedYear", "")),
@@ -841,6 +928,13 @@ def build_dashboard_payload() -> dict[str, Any]:
     invoice_tickets["InvoiceYear"] = invoice_tickets["InvoiceMonth"].str.slice(0, 4)
     invoice_tickets.loc[invoice_tickets["MissingInvoicePlaceholder"], "InvoiceAmount"] = 0.0
 
+    # Keep the C4C workflow population unchanged, but add SAP service invoices
+    # that have no C4C ticket so the invoice total and detail export reconcile
+    # to the SAP billing-document universe.  These rows are explicitly Other.
+    sap_only_rows = build_sap_only_rows(workbook, tickets)
+    if not sap_only_rows.empty:
+        invoice_tickets = pd.concat([invoice_tickets, sap_only_rows], ignore_index=True, sort=False)
+
     all_month_periods = sorted(
         set(created_tickets["CreatedMonth"].dropna().unique())
         | set(invoice_tickets["InvoiceMonth"].dropna().unique()),
@@ -968,7 +1062,7 @@ def build_dashboard_payload() -> dict[str, Any]:
             "months": months,
             "periodLabels": period_labels,
             "yards": ["All Dealers", *DEALER_ORDER],
-            "invoiceScopes": ["All Invoices", "Internal", "External"],
+            "invoiceScopes": ["All Invoices", "Internal", "External", "Other"],
             "ticketTypes": TICKET_TYPE_FILTERS,
             "currentMonth": selected_label,
             "abnormalExportFile": "../abnormal_tickets.xlsx",
@@ -1024,7 +1118,9 @@ def build_dashboard_payload() -> dict[str, Any]:
                 "openStatusMix": build_open_status_mix(current_open),
                 "monthlyOpenStatusMix": monthly_open_status_mix,
                 "monthlyLabour": monthly_labour,
-                "ticketDetails": build_ticket_details(created_tickets),
+                "ticketDetails": build_ticket_details(
+                    pd.concat([created_tickets, sap_only_rows], ignore_index=True, sort=False)
+                ),
                 "workflowDaily": workflow_daily,
                 "yardSummary": [
                     {
