@@ -53,6 +53,14 @@ HISTORY_WORKERS = int(os.getenv("C4C_HISTORY_WORKERS", "16"))
 FETCH_HISTORY = os.getenv("C4C_FETCH_HISTORY", "true").lower() in {"1", "true", "yes", "y"}
 HISTORY_SCOPE = os.getenv("C4C_HISTORY_SCOPE", "dashboard").strip().lower()
 FORCE_REFRESH = os.getenv("C4C_FORCE_HISTORY_REFRESH", "false").lower() in {"1", "true", "yes", "y"}
+# Temporary, user-approved exceptions for C4C history API failures. Keep these
+# tickets in the dashboard and leave their existing history values unchanged.
+# Set the environment variable to an empty string to query every ticket again.
+HISTORY_SKIP_TICKET_IDS = frozenset(
+    ticket_id.strip()
+    for ticket_id in os.getenv("C4C_HISTORY_SKIP_TICKET_IDS", "21710,21711,21864").split(",")
+    if ticket_id.strip()
+)
 STATUS_CHANGE_FIELD = "Status/ServiceRequestLifeCycleStatusCode"
 C4C_DATE_RE = re.compile(r"/Date\((-?\d+)\)/")
 ROOT_NODE_RE = re.compile(r"^Root\([^)]+\)$")
@@ -310,6 +318,17 @@ def fetch_lastchanged_by_ticket(ticket_ids: list[str]) -> dict[str, str]:
     if not FETCH_HISTORY or not ticket_ids:
         return {}
 
+    skipped = sorted(set(ticket_ids) & HISTORY_SKIP_TICKET_IDS)
+    if skipped:
+        print(
+            f"[WARN] Temporarily skipping C4C history for tickets: {', '.join(skipped)}. "
+            "Tickets remain included; existing lastchangedtime values are left unchanged.",
+            flush=True,
+        )
+        ticket_ids = [ticket_id for ticket_id in ticket_ids if ticket_id not in HISTORY_SKIP_TICKET_IDS]
+    if not ticket_ids:
+        return {}
+
     started = time.time()
     print(f"[RUN] Fetching status history for {len(ticket_ids)} tickets (scope={HISTORY_SCOPE})...", flush=True)
     lastchanged_by_ticket: dict[str, str] = {}
@@ -332,8 +351,9 @@ def fetch_lastchanged_by_ticket(ticket_ids: list[str]) -> dict[str, str]:
 
     populated = sum(1 for value in lastchanged_by_ticket.values() if value)
     print(
-        f"[OK] History complete in {time.time() - started:.1f}s; "
-        f"populated={populated}, blank={len(ticket_ids) - populated}, failures={len(failures)}"
+        f"[{'ERROR' if failures else 'OK'}] History complete in {time.time() - started:.1f}s; "
+        f"populated={populated}, blank={len(lastchanged_by_ticket) - populated}, "
+        f"failures={len(failures)}, skipped={len(skipped)}"
         ,
         flush=True,
     )

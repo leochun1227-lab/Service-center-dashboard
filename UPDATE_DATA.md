@@ -6,6 +6,8 @@ Render 服务的 Settings → Auto-Deploy 设为 **On Commit**，连接本仓库
 
 数据更新成功、发布失败时，双击 `RUN_PUBLISH_DATA.bat` 重试发布，无需再次拉取数据。日志位于项目的 `outputs` 目录。发布成功代表已推送 GitHub，网站上线仍需等待 Render 构建完成。
 
+当前暂时跳过工单 `21710`、`21711`、`21864` 的 C4C 状态历史查询（接口返回 HTTP 500）。这三张工单仍保留在看板中，已有的 `lastchangedtime` 不修改，没有历史时间的保持空白；日志会明确列出跳过的工单。其他工单查询失败仍会阻止生成和发布。接口恢复后可移除 `update_ticket_lastchangedtime.py` 中的默认跳过列表；程序也支持通过 `C4C_HISTORY_SKIP_TICKET_IDS` 环境变量覆盖列表。
+
 ## 换到另一台 Windows 电脑
 
 1. 安装 Python 3.10 或更新版本，以及 Git 或 GitHub Desktop。
