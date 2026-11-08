@@ -37,11 +37,12 @@ API_TOP = int(os.getenv("C4C_API_TOP", "1000"))
 API_SKIP_START = int(os.getenv("C4C_API_SKIP_START", "0"))
 TIMEOUT = int(os.getenv("C4C_TIMEOUT", "60"))
 VERIFY_SSL = os.getenv("C4C_VERIFY_SSL", "true").lower() in {"1", "true", "yes", "y"}
-MAX_WORKERS = int(os.getenv("C4C_MAX_WORKERS", "12"))
-ROLE_WORKERS = min(max(1, len(ROLE_CODES)), 3)
+# Query roles sequentially to keep total CPI request concurrency low.
+MAX_WORKERS = max(1, int(os.getenv("C4C_MAX_WORKERS", "4")))
+ROLE_WORKERS = min(max(1, len(ROLE_CODES)), max(1, int(os.getenv("C4C_ROLE_WORKERS", "1"))))
 HISTORY_PAGE_SIZE = int(os.getenv("C4C_HISTORY_PAGE_SIZE", "500"))
 HISTORY_MAX_PAGES = int(os.getenv("C4C_HISTORY_MAX_PAGES", "20"))
-HISTORY_WORKERS = int(os.getenv("C4C_HISTORY_WORKERS", "8"))
+HISTORY_WORKERS = max(1, int(os.getenv("C4C_HISTORY_WORKERS", "4")))
 FETCH_HISTORY = os.getenv("C4C_FETCH_HISTORY", "true").lower() in {"1", "true", "yes", "y"}
 
 OUTPUT_FILE = os.getenv(
