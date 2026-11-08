@@ -1,10 +1,10 @@
 window.serviceCentreData = {
   "meta": {
-    "lastUpdated": "05 Nov 2026, 10:26 AM",
+    "lastUpdated": "09 Nov 2026, 10:24 AM",
     "sourceWorkbook": "C:\\Users\\Leo.Li\\Documents\\GitHub\\Service-center-dashboard\\c4c_ticket_table_z007_z010_checked_hana_final.xlsx",
-    "sourceRows": 4796,
-    "sourceCreatedMax": "04/11/2026",
-    "sourceChangedMax": "04/11/2026",
+    "sourceRows": 4843,
+    "sourceCreatedMax": "08/11/2026",
+    "sourceChangedMax": "08/11/2026",
     "months": [
       "Nov 2026",
       "2026",
@@ -40,7 +40,7 @@ window.serviceCentreData = {
       "Aug 2023"
     ],
     "periodLabels": {
-      "Nov 2026": "01/11/2026 - 04/11/2026",
+      "Nov 2026": "01/11/2026 - 08/11/2026",
       "2026": "2026",
       "2025": "2025",
       "2024": "2024",
@@ -95,7 +95,7 @@ window.serviceCentreData = {
     ],
     "currentMonth": "Nov 2026",
     "abnormalExportFile": "../abnormal_tickets.xlsx",
-    "abnormalTickets": 1218
+    "abnormalTickets": 1232
   },
   "pages": {
     "overview": {
@@ -104,7 +104,7 @@ window.serviceCentreData = {
       "kpis": [
         {
           "title": "New Tickets Created",
-          "value": "33",
+          "value": "80",
           "detail": "Nov 2026 total across five target dealers plus Other",
           "icon": "NT",
           "tone": "blue",
@@ -113,7 +113,7 @@ window.serviceCentreData = {
         },
         {
           "title": "New Ticket Quote Amount",
-          "value": "$8.0K",
+          "value": "$21.9K",
           "detail": "AmountIncludingTax from exported C4C ticket result",
           "icon": "AM",
           "tone": "teal",
@@ -135,7 +135,7 @@ window.serviceCentreData = {
           "detail": "All dealers outside the five target dealer buckets",
           "icon": "OT",
           "tone": "orange",
-          "badge": "$1.6K",
+          "badge": "$1.3K",
           "badgeTone": "warn"
         }
       ],
@@ -143,7 +143,7 @@ window.serviceCentreData = {
         {
           "yard": "Perth",
           "color": "#1f6feb",
-          "newTickets": 5,
+          "newTickets": 8,
           "newQuoteAmount": 1241.25,
           "newQuoteAmountLabel": "$1.2K",
           "newAmount": 1241.25,
@@ -151,7 +151,7 @@ window.serviceCentreData = {
           "invoicedTickets": 0,
           "invoicedAmount": 0.0,
           "invoicedAmountLabel": "$0",
-          "openTickets": 1533,
+          "openTickets": 1536,
           "openQuoteAmount": 330003.18,
           "openQuoteAmountLabel": "$330.0K",
           "internalInvoicedTickets": 0,
@@ -164,43 +164,43 @@ window.serviceCentreData = {
           "otherInvoicedAmount": 0.0,
           "otherInvoicedAmountLabel": "$0",
           "openStatusMix": {
-            "total": "1,533",
+            "total": "1,536",
             "segments": [
               {
                 "name": "PDI Complete, Awaiting Time Claim",
-                "share": 59.6217,
+                "share": 59.7005,
                 "percent": 60,
                 "percentLabel": "60%",
-                "qty": 914,
+                "qty": 917,
                 "quoteAmount": 0.0,
                 "quoteAmountLabel": "$0",
-                "amount": "914 tickets ($0)",
+                "amount": "917 tickets ($0)",
                 "rawStatuses": [
                   "Repair completed"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 1
+                    "qty": 3
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 22
+                    "qty": 19
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 43
+                    "qty": 37
                   },
                   {
                     "label": "60+ days",
-                    "qty": 848
+                    "qty": 858
                   }
                 ],
                 "color": "#17a6ad"
               },
               {
                 "name": "Awaiting Quote Approval",
-                "share": 26.0274,
+                "share": 25.9766,
                 "percent": 26,
                 "percentLabel": "26%",
                 "qty": 399,
@@ -217,22 +217,22 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 149
+                    "qty": 135
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 118
+                    "qty": 130
                   },
                   {
                     "label": "60+ days",
-                    "qty": 127
+                    "qty": 129
                   }
                 ],
                 "color": "#1f6feb"
               },
               {
                 "name": "Approved, Awaiting Repair",
-                "share": 8.8715,
+                "share": 8.8542,
                 "percent": 9,
                 "percentLabel": "9%",
                 "qty": 136,
@@ -249,22 +249,22 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 12
+                    "qty": 9
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 16
+                    "qty": 12
                   },
                   {
                     "label": "60+ days",
-                    "qty": 107
+                    "qty": 114
                   }
                 ],
                 "color": "#17a6ad"
               },
               {
                 "name": "Repair In Progress",
-                "share": 4.3053,
+                "share": 4.2969,
                 "percent": 4,
                 "percentLabel": "4%",
                 "qty": 66,
@@ -296,7 +296,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Invoice Cancelled, SO Still Open",
-                "share": 0.5219,
+                "share": 0.5208,
                 "percent": 1,
                 "percentLabel": "<1%",
                 "qty": 8,
@@ -328,7 +328,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Time Claimed, Awaiting Invoice",
-                "share": 0.3262,
+                "share": 0.3255,
                 "percent": 0,
                 "percentLabel": "<1%",
                 "qty": 5,
@@ -341,11 +341,11 @@ window.serviceCentreData = {
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 1
+                    "qty": 0
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 2
+                    "qty": 3
                   },
                   {
                     "label": "31-60 days",
@@ -360,7 +360,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Awaiting PDI Start",
-                "share": 0.2609,
+                "share": 0.2604,
                 "percent": 0,
                 "percentLabel": "<1%",
                 "qty": 4,
@@ -392,7 +392,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair in Progress",
-                "share": 0.0652,
+                "share": 0.0651,
                 "percent": 0,
                 "percentLabel": "<1%",
                 "qty": 1,
@@ -428,32 +428,32 @@ window.serviceCentreData = {
         {
           "yard": "Traralgon",
           "color": "#17a6ad",
-          "newTickets": 1,
-          "newQuoteAmount": 297.0,
-          "newQuoteAmountLabel": "$297",
-          "newAmount": 297.0,
-          "newAmountLabel": "$297",
-          "invoicedTickets": 0,
-          "invoicedAmount": 0.0,
-          "invoicedAmountLabel": "$0",
-          "openTickets": 89,
-          "openQuoteAmount": 49535.49,
-          "openQuoteAmountLabel": "$49.5K",
-          "internalInvoicedTickets": 0,
-          "internalInvoicedAmount": 0.0,
-          "internalInvoicedAmountLabel": "$0",
-          "externalInvoicedTickets": 0,
-          "externalInvoicedAmount": 0.0,
-          "externalInvoicedAmountLabel": "$0",
+          "newTickets": 6,
+          "newQuoteAmount": 2434.01,
+          "newQuoteAmountLabel": "$2.4K",
+          "newAmount": 2434.01,
+          "newAmountLabel": "$2.4K",
+          "invoicedTickets": 5,
+          "invoicedAmount": 1701.83,
+          "invoicedAmountLabel": "$1.7K",
+          "openTickets": 90,
+          "openQuoteAmount": 50097.49,
+          "openQuoteAmountLabel": "$50.1K",
+          "internalInvoicedTickets": 2,
+          "internalInvoicedAmount": 781.82,
+          "internalInvoicedAmountLabel": "$782",
+          "externalInvoicedTickets": 3,
+          "externalInvoicedAmount": 920.01,
+          "externalInvoicedAmountLabel": "$920",
           "otherInvoicedTickets": 0,
           "otherInvoicedAmount": 0.0,
           "otherInvoicedAmountLabel": "$0",
           "openStatusMix": {
-            "total": "89",
+            "total": "90",
             "segments": [
               {
                 "name": "Awaiting PDI Start",
-                "share": 26.9663,
+                "share": 26.6667,
                 "percent": 27,
                 "percentLabel": "27%",
                 "qty": 24,
@@ -485,28 +485,28 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair In Progress",
-                "share": 19.1011,
+                "share": 18.8889,
                 "percent": 19,
                 "percentLabel": "19%",
                 "qty": 17,
-                "quoteAmount": 17618.93,
-                "quoteAmountLabel": "$17.6K",
-                "amount": "17 tickets ($17.6K)",
+                "quoteAmount": 17247.68,
+                "quoteAmountLabel": "$17.2K",
+                "amount": "17 tickets ($17.2K)",
                 "rawStatuses": [
                   "Repair in Progress"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 0
+                    "qty": 1
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 3
+                    "qty": 1
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 11
+                    "qty": 12
                   },
                   {
                     "label": "60+ days",
@@ -517,15 +517,47 @@ window.serviceCentreData = {
               },
               {
                 "name": "Time Claimed, Awaiting Invoice",
-                "share": 17.9775,
-                "percent": 18,
-                "percentLabel": "18%",
-                "qty": 16,
-                "quoteAmount": 9214.81,
-                "quoteAmountLabel": "$9.2K",
-                "amount": "16 tickets ($9.2K)",
+                "share": 18.8889,
+                "percent": 19,
+                "percentLabel": "19%",
+                "qty": 17,
+                "quoteAmount": 9883.06,
+                "quoteAmountLabel": "$9.9K",
+                "amount": "17 tickets ($9.9K)",
                 "rawStatuses": [
                   "Claim Time Ticket"
+                ],
+                "aging": [
+                  {
+                    "label": "0-7 days",
+                    "qty": 1
+                  },
+                  {
+                    "label": "8-30 days",
+                    "qty": 5
+                  },
+                  {
+                    "label": "31-60 days",
+                    "qty": 5
+                  },
+                  {
+                    "label": "60+ days",
+                    "qty": 6
+                  }
+                ],
+                "color": "#22a447"
+              },
+              {
+                "name": "Approved, Awaiting Repair",
+                "share": 14.4444,
+                "percent": 14,
+                "percentLabel": "14%",
+                "qty": 13,
+                "quoteAmount": 11161.48,
+                "quoteAmountLabel": "$11.2K",
+                "amount": "13 tickets ($11.2K)",
+                "rawStatuses": [
+                  "Quote Approved"
                 ],
                 "aging": [
                   {
@@ -538,39 +570,7 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 6
-                  },
-                  {
-                    "label": "60+ days",
-                    "qty": 5
-                  }
-                ],
-                "color": "#22a447"
-              },
-              {
-                "name": "Approved, Awaiting Repair",
-                "share": 15.7303,
-                "percent": 16,
-                "percentLabel": "16%",
-                "qty": 14,
-                "quoteAmount": 11326.48,
-                "quoteAmountLabel": "$11.3K",
-                "amount": "14 tickets ($11.3K)",
-                "rawStatuses": [
-                  "Quote Approved"
-                ],
-                "aging": [
-                  {
-                    "label": "0-7 days",
-                    "qty": 1
-                  },
-                  {
-                    "label": "8-30 days",
-                    "qty": 6
-                  },
-                  {
-                    "label": "31-60 days",
-                    "qty": 7
+                    "qty": 8
                   },
                   {
                     "label": "60+ days",
@@ -581,20 +581,20 @@ window.serviceCentreData = {
               },
               {
                 "name": "Awaiting Quote Approval",
-                "share": 11.236,
-                "percent": 11,
-                "percentLabel": "11%",
-                "qty": 10,
-                "quoteAmount": 5926.25,
-                "quoteAmountLabel": "$5.9K",
-                "amount": "10 tickets ($5.9K)",
+                "share": 12.2222,
+                "percent": 12,
+                "percentLabel": "12%",
+                "qty": 11,
+                "quoteAmount": 6356.25,
+                "quoteAmountLabel": "$6.4K",
+                "amount": "11 tickets ($6.4K)",
                 "rawStatuses": [
                   "Open"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 0
+                    "qty": 1
                   },
                   {
                     "label": "8-30 days",
@@ -613,7 +613,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair Complete, Awaiting Time Claim",
-                "share": 6.7416,
+                "share": 6.6667,
                 "percent": 7,
                 "percentLabel": "7%",
                 "qty": 6,
@@ -645,7 +645,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "PDI Complete, Awaiting Time Claim",
-                "share": 2.2472,
+                "share": 2.2222,
                 "percent": 2,
                 "percentLabel": "2%",
                 "qty": 2,
@@ -681,96 +681,96 @@ window.serviceCentreData = {
         {
           "yard": "Launceston",
           "color": "#f58b1f",
-          "newTickets": 3,
-          "newQuoteAmount": 2410.01,
-          "newQuoteAmountLabel": "$2.4K",
-          "newAmount": 2410.01,
-          "newAmountLabel": "$2.4K",
-          "invoicedTickets": 1,
-          "invoicedAmount": 1363.62,
-          "invoicedAmountLabel": "$1.4K",
-          "openTickets": 179,
-          "openQuoteAmount": 103307.68,
-          "openQuoteAmountLabel": "$103.3K",
+          "newTickets": 17,
+          "newQuoteAmount": 10925.46,
+          "newQuoteAmountLabel": "$10.9K",
+          "newAmount": 10925.46,
+          "newAmountLabel": "$10.9K",
+          "invoicedTickets": 3,
+          "invoicedAmount": 4811.2,
+          "invoicedAmountLabel": "$4.8K",
+          "openTickets": 191,
+          "openQuoteAmount": 108030.8,
+          "openQuoteAmountLabel": "$108.0K",
           "internalInvoicedTickets": 0,
           "internalInvoicedAmount": 0.0,
           "internalInvoicedAmountLabel": "$0",
-          "externalInvoicedTickets": 1,
-          "externalInvoicedAmount": 1363.62,
-          "externalInvoicedAmountLabel": "$1.4K",
+          "externalInvoicedTickets": 3,
+          "externalInvoicedAmount": 4811.2,
+          "externalInvoicedAmountLabel": "$4.8K",
           "otherInvoicedTickets": 0,
           "otherInvoicedAmount": 0.0,
           "otherInvoicedAmountLabel": "$0",
           "openStatusMix": {
-            "total": "179",
+            "total": "191",
             "segments": [
               {
                 "name": "Awaiting Quote Approval",
-                "share": 52.514,
-                "percent": 53,
-                "percentLabel": "53%",
-                "qty": 94,
-                "quoteAmount": 70966.01,
-                "quoteAmountLabel": "$71.0K",
-                "amount": "94 tickets ($71.0K)",
+                "share": 54.9738,
+                "percent": 55,
+                "percentLabel": "55%",
+                "qty": 105,
+                "quoteAmount": 75466.38,
+                "quoteAmountLabel": "$75.5K",
+                "amount": "105 tickets ($75.5K)",
                 "rawStatuses": [
                   "Open"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 5
+                    "qty": 14
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 37
+                    "qty": 34
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 22
+                    "qty": 25
                   },
                   {
                     "label": "60+ days",
-                    "qty": 30
+                    "qty": 32
                   }
                 ],
                 "color": "#1f6feb"
               },
               {
                 "name": "Approved, Awaiting Repair",
-                "share": 40.7821,
-                "percent": 41,
-                "percentLabel": "41%",
-                "qty": 73,
-                "quoteAmount": 29636.51,
-                "quoteAmountLabel": "$29.6K",
-                "amount": "73 tickets ($29.6K)",
+                "share": 38.7435,
+                "percent": 39,
+                "percentLabel": "39%",
+                "qty": 74,
+                "quoteAmount": 29859.26,
+                "quoteAmountLabel": "$29.9K",
+                "amount": "74 tickets ($29.9K)",
                 "rawStatuses": [
                   "Quote Approved"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 0
+                    "qty": 1
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 4
+                    "qty": 3
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 10
+                    "qty": 9
                   },
                   {
                     "label": "60+ days",
-                    "qty": 59
+                    "qty": 61
                   }
                 ],
                 "color": "#17a6ad"
               },
               {
                 "name": "Awaiting PDI Start",
-                "share": 2.7933,
+                "share": 2.6178,
                 "percent": 3,
                 "percentLabel": "3%",
                 "qty": 5,
@@ -802,7 +802,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair In Progress",
-                "share": 2.2346,
+                "share": 2.0942,
                 "percent": 2,
                 "percentLabel": "2%",
                 "qty": 4,
@@ -834,7 +834,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Invoice Cancelled, SO Still Open",
-                "share": 1.1173,
+                "share": 1.0471,
                 "percent": 1,
                 "percentLabel": "1%",
                 "qty": 2,
@@ -866,7 +866,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair Complete, Awaiting Time Claim",
-                "share": 0.5587,
+                "share": 0.5236,
                 "percent": 0,
                 "percentLabel": "<1%",
                 "qty": 1,
@@ -902,20 +902,20 @@ window.serviceCentreData = {
         {
           "yard": "Geelong",
           "color": "#7c3aed",
-          "newTickets": 22,
-          "newQuoteAmount": 2477.32,
-          "newQuoteAmountLabel": "$2.5K",
-          "newAmount": 2477.32,
-          "newAmountLabel": "$2.5K",
-          "invoicedTickets": 3,
-          "invoicedAmount": 1256.36,
-          "invoicedAmountLabel": "$1.3K",
-          "openTickets": 532,
-          "openQuoteAmount": 93841.92,
-          "openQuoteAmountLabel": "$93.8K",
-          "internalInvoicedTickets": 2,
-          "internalInvoicedAmount": 645.46,
-          "internalInvoicedAmountLabel": "$645",
+          "newTickets": 39,
+          "newQuoteAmount": 5978.39,
+          "newQuoteAmountLabel": "$6.0K",
+          "newAmount": 5978.39,
+          "newAmountLabel": "$6.0K",
+          "invoicedTickets": 5,
+          "invoicedAmount": 2038.18,
+          "invoicedAmountLabel": "$2.0K",
+          "openTickets": 543,
+          "openQuoteAmount": 97076.93,
+          "openQuoteAmountLabel": "$97.1K",
+          "internalInvoicedTickets": 4,
+          "internalInvoicedAmount": 1427.28,
+          "internalInvoicedAmountLabel": "$1.4K",
           "externalInvoicedTickets": 1,
           "externalInvoicedAmount": 610.9,
           "externalInvoicedAmountLabel": "$611",
@@ -923,49 +923,49 @@ window.serviceCentreData = {
           "otherInvoicedAmount": 0.0,
           "otherInvoicedAmountLabel": "$0",
           "openStatusMix": {
-            "total": "532",
+            "total": "543",
             "segments": [
               {
                 "name": "Awaiting Quote Approval",
-                "share": 59.7744,
+                "share": 59.8527,
                 "percent": 60,
                 "percentLabel": "60%",
-                "qty": 318,
-                "quoteAmount": 51060.05,
-                "quoteAmountLabel": "$51.1K",
-                "amount": "318 tickets ($51.1K)",
+                "qty": 325,
+                "quoteAmount": 52875.01,
+                "quoteAmountLabel": "$52.9K",
+                "amount": "325 tickets ($52.9K)",
                 "rawStatuses": [
                   "Open"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 15
+                    "qty": 20
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 50
+                    "qty": 48
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 15
+                    "qty": 18
                   },
                   {
                     "label": "60+ days",
-                    "qty": 238
+                    "qty": 239
                   }
                 ],
                 "color": "#1f6feb"
               },
               {
                 "name": "Awaiting PDI Start",
-                "share": 18.4211,
+                "share": 18.4162,
                 "percent": 18,
                 "percentLabel": "18%",
-                "qty": 98,
+                "qty": 100,
                 "quoteAmount": 0.0,
                 "quoteAmountLabel": "$0",
-                "amount": "98 tickets ($0)",
+                "amount": "100 tickets ($0)",
                 "rawStatuses": [
                   "Open"
                 ],
@@ -976,39 +976,39 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 5
+                    "qty": 6
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 16
+                    "qty": 13
                   },
                   {
                     "label": "60+ days",
-                    "qty": 71
+                    "qty": 75
                   }
                 ],
                 "color": "#1f6feb"
               },
               {
                 "name": "Approved, Awaiting Repair",
-                "share": 8.2707,
+                "share": 8.2873,
                 "percent": 8,
                 "percentLabel": "8%",
-                "qty": 44,
-                "quoteAmount": 28251.92,
-                "quoteAmountLabel": "$28.3K",
-                "amount": "44 tickets ($28.3K)",
+                "qty": 45,
+                "quoteAmount": 28901.91,
+                "quoteAmountLabel": "$28.9K",
+                "amount": "45 tickets ($28.9K)",
                 "rawStatuses": [
                   "Quote Approved"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 3
+                    "qty": 2
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 9
+                    "qty": 11
                   },
                   {
                     "label": "31-60 days",
@@ -1023,20 +1023,20 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair In Progress",
-                "share": 4.6992,
+                "share": 4.7882,
                 "percent": 5,
                 "percentLabel": "5%",
-                "qty": 25,
-                "quoteAmount": 8513.81,
-                "quoteAmountLabel": "$8.5K",
-                "amount": "25 tickets ($8.5K)",
+                "qty": 26,
+                "quoteAmount": 9283.87,
+                "quoteAmountLabel": "$9.3K",
+                "amount": "26 tickets ($9.3K)",
                 "rawStatuses": [
                   "Repair in Progress"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 1
+                    "qty": 2
                   },
                   {
                     "label": "8-30 days",
@@ -1055,9 +1055,9 @@ window.serviceCentreData = {
               },
               {
                 "name": "PDI Complete, Awaiting Time Claim",
-                "share": 4.5113,
-                "percent": 5,
-                "percentLabel": "5%",
+                "share": 4.4199,
+                "percent": 4,
+                "percentLabel": "4%",
                 "qty": 24,
                 "quoteAmount": 0.0,
                 "quoteAmountLabel": "$0",
@@ -1087,7 +1087,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Time Claimed, Awaiting Invoice",
-                "share": 2.4436,
+                "share": 2.3941,
                 "percent": 2,
                 "percentLabel": "2%",
                 "qty": 13,
@@ -1119,7 +1119,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Repair Complete, Awaiting Time Claim",
-                "share": 0.9398,
+                "share": 0.9208,
                 "percent": 1,
                 "percentLabel": "<1%",
                 "qty": 5,
@@ -1132,11 +1132,11 @@ window.serviceCentreData = {
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 1
+                    "qty": 0
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 1
+                    "qty": 2
                   },
                   {
                     "label": "31-60 days",
@@ -1151,7 +1151,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Invoice Cancelled, SO Still Open",
-                "share": 0.7519,
+                "share": 0.7366,
                 "percent": 1,
                 "percentLabel": "<1%",
                 "qty": 4,
@@ -1172,19 +1172,19 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 3
+                    "qty": 0
                   },
                   {
                     "label": "60+ days",
-                    "qty": 1
+                    "qty": 4
                   }
                 ],
                 "color": "#9a3412"
               },
               {
                 "name": "Repair in Progress",
-                "share": 0.188,
-                "percent": 0,
+                "share": 0.1842,
+                "percent": 1,
                 "percentLabel": "<1%",
                 "qty": 1,
                 "quoteAmount": 0.0,
@@ -1219,7 +1219,7 @@ window.serviceCentreData = {
         {
           "yard": "Frankston",
           "color": "#22a447",
-          "newTickets": 0,
+          "newTickets": 8,
           "newQuoteAmount": 0.0,
           "newQuoteAmountLabel": "$0",
           "newAmount": 0.0,
@@ -1227,7 +1227,7 @@ window.serviceCentreData = {
           "invoicedTickets": 0,
           "invoicedAmount": 0.0,
           "invoicedAmountLabel": "$0",
-          "openTickets": 262,
+          "openTickets": 270,
           "openQuoteAmount": 124648.59,
           "openQuoteAmountLabel": "$124.6K",
           "internalInvoicedTickets": 0,
@@ -1240,13 +1240,13 @@ window.serviceCentreData = {
           "otherInvoicedAmount": 0.0,
           "otherInvoicedAmountLabel": "$0",
           "openStatusMix": {
-            "total": "262",
+            "total": "270",
             "segments": [
               {
                 "name": "Approved, Awaiting Repair",
-                "share": 46.5649,
-                "percent": 47,
-                "percentLabel": "47%",
+                "share": 45.1852,
+                "percent": 45,
+                "percentLabel": "45%",
                 "qty": 122,
                 "quoteAmount": 87693.85,
                 "quoteAmountLabel": "$87.7K",
@@ -1261,39 +1261,39 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 6
+                    "qty": 0
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 36
+                    "qty": 32
                   },
                   {
                     "label": "60+ days",
-                    "qty": 80
+                    "qty": 90
                   }
                 ],
                 "color": "#17a6ad"
               },
               {
                 "name": "Awaiting PDI Start",
-                "share": 30.5344,
-                "percent": 31,
-                "percentLabel": "31%",
-                "qty": 80,
+                "share": 32.5926,
+                "percent": 33,
+                "percentLabel": "33%",
+                "qty": 88,
                 "quoteAmount": 0.0,
                 "quoteAmountLabel": "$0",
-                "amount": "80 tickets ($0)",
+                "amount": "88 tickets ($0)",
                 "rawStatuses": [
                   "Open"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 2
+                    "qty": 8
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 29
+                    "qty": 31
                   },
                   {
                     "label": "31-60 days",
@@ -1308,7 +1308,7 @@ window.serviceCentreData = {
               },
               {
                 "name": "Awaiting Quote Approval",
-                "share": 14.1221,
+                "share": 13.7037,
                 "percent": 14,
                 "percentLabel": "14%",
                 "qty": 37,
@@ -1321,7 +1321,7 @@ window.serviceCentreData = {
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 1
+                    "qty": 0
                   },
                   {
                     "label": "8-30 days",
@@ -1333,14 +1333,14 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "60+ days",
-                    "qty": 28
+                    "qty": 29
                   }
                 ],
                 "color": "#1f6feb"
               },
               {
                 "name": "Repair In Progress",
-                "share": 5.7252,
+                "share": 5.5556,
                 "percent": 6,
                 "percentLabel": "6%",
                 "qty": 15,
@@ -1357,11 +1357,11 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 2
+                    "qty": 0
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 11
+                    "qty": 13
                   },
                   {
                     "label": "60+ days",
@@ -1372,9 +1372,9 @@ window.serviceCentreData = {
               },
               {
                 "name": "Invoice Cancelled, SO Still Open",
-                "share": 1.5267,
-                "percent": 2,
-                "percentLabel": "2%",
+                "share": 1.4815,
+                "percent": 1,
+                "percentLabel": "1%",
                 "qty": 4,
                 "quoteAmount": 2358.0,
                 "quoteAmountLabel": "$2.4K",
@@ -1404,9 +1404,9 @@ window.serviceCentreData = {
               },
               {
                 "name": "PDI Complete, Awaiting Time Claim",
-                "share": 1.5267,
-                "percent": 0,
-                "percentLabel": "2%",
+                "share": 1.4815,
+                "percent": 1,
+                "percentLabel": "1%",
                 "qty": 4,
                 "quoteAmount": 0.0,
                 "quoteAmountLabel": "$0",
@@ -1441,16 +1441,16 @@ window.serviceCentreData = {
           "yard": "Other",
           "color": "#64748b",
           "newTickets": 2,
-          "newQuoteAmount": 1599.52,
-          "newQuoteAmountLabel": "$1.6K",
-          "newAmount": 1599.52,
-          "newAmountLabel": "$1.6K",
+          "newQuoteAmount": 1319.51,
+          "newQuoteAmountLabel": "$1.3K",
+          "newAmount": 1319.51,
+          "newAmountLabel": "$1.3K",
           "invoicedTickets": 1,
           "invoicedAmount": -136.36,
           "invoicedAmountLabel": "$-136",
           "openTickets": 64,
-          "openQuoteAmount": 49508.47,
-          "openQuoteAmountLabel": "$49.5K",
+          "openQuoteAmount": 49228.46,
+          "openQuoteAmountLabel": "$49.2K",
           "internalInvoicedTickets": 0,
           "internalInvoicedAmount": 0.0,
           "internalInvoicedAmountLabel": "$0",
@@ -1465,20 +1465,20 @@ window.serviceCentreData = {
             "segments": [
               {
                 "name": "Awaiting Quote Approval",
-                "share": 48.4375,
-                "percent": 48,
-                "percentLabel": "48%",
-                "qty": 31,
-                "quoteAmount": 14313.51,
-                "quoteAmountLabel": "$14.3K",
-                "amount": "31 tickets ($14.3K)",
+                "share": 46.875,
+                "percent": 47,
+                "percentLabel": "47%",
+                "qty": 30,
+                "quoteAmount": 14033.5,
+                "quoteAmountLabel": "$14.0K",
+                "amount": "30 tickets ($14.0K)",
                 "rawStatuses": [
                   "Open"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 3
+                    "qty": 1
                   },
                   {
                     "label": "8-30 days",
@@ -1486,7 +1486,7 @@ window.serviceCentreData = {
                   },
                   {
                     "label": "31-60 days",
-                    "qty": 1
+                    "qty": 2
                   },
                   {
                     "label": "60+ days",
@@ -1510,11 +1510,11 @@ window.serviceCentreData = {
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 1
+                    "qty": 0
                   },
                   {
                     "label": "8-30 days",
-                    "qty": 0
+                    "qty": 1
                   },
                   {
                     "label": "31-60 days",
@@ -1561,20 +1561,20 @@ window.serviceCentreData = {
               },
               {
                 "name": "Awaiting PDI Start",
-                "share": 9.375,
-                "percent": 9,
-                "percentLabel": "9%",
-                "qty": 6,
+                "share": 10.9375,
+                "percent": 11,
+                "percentLabel": "11%",
+                "qty": 7,
                 "quoteAmount": 0.0,
                 "quoteAmountLabel": "$0",
-                "amount": "6 tickets ($0)",
+                "amount": "7 tickets ($0)",
                 "rawStatuses": [
                   "Open"
                 ],
                 "aging": [
                   {
                     "label": "0-7 days",
-                    "qty": 0
+                    "qty": 1
                   },
                   {
                     "label": "8-30 days",
@@ -1690,7 +1690,7 @@ window.serviceCentreData = {
               {
                 "name": "Repair in Progress",
                 "share": 1.5625,
-                "percent": 2,
+                "percent": 1,
                 "percentLabel": "2%",
                 "qty": 1,
                 "quoteAmount": 0.0,
@@ -1728,7 +1728,7 @@ window.serviceCentreData = {
           {
             "yard": "Perth",
             "color": "#1f6feb",
-            "newTickets": 1519,
+            "newTickets": 1522,
             "newQuoteAmount": 454299.55,
             "newQuoteAmountLabel": "$454.3K",
             "newAmount": 454299.55,
@@ -1736,7 +1736,7 @@ window.serviceCentreData = {
             "invoicedTickets": 591,
             "invoicedAmount": 243045.08,
             "invoicedAmountLabel": "$243.0K",
-            "openTickets": 1533,
+            "openTickets": 1536,
             "openQuoteAmount": 330003.18,
             "openQuoteAmountLabel": "$330.0K",
             "internalInvoicedTickets": 591,
@@ -1749,43 +1749,43 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "1,533",
+              "total": "1,536",
               "segments": [
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 59.6217,
+                  "share": 59.7005,
                   "percent": 60,
                   "percentLabel": "60%",
-                  "qty": 914,
+                  "qty": 917,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "914 tickets ($0)",
+                  "amount": "917 tickets ($0)",
                   "rawStatuses": [
                     "Repair completed"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 3
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 22
+                      "qty": 19
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 43
+                      "qty": 37
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 26.0274,
+                  "share": 25.9766,
                   "percent": 26,
                   "percentLabel": "26%",
                   "qty": 399,
@@ -1802,22 +1802,22 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 149
+                      "qty": 135
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 118
+                      "qty": 130
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 8.8715,
+                  "share": 8.8542,
                   "percent": 9,
                   "percentLabel": "9%",
                   "qty": 136,
@@ -1834,22 +1834,22 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 12
+                      "qty": 9
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 4.3053,
+                  "share": 4.2969,
                   "percent": 4,
                   "percentLabel": "4%",
                   "qty": 66,
@@ -1881,7 +1881,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 0.5219,
+                  "share": 0.5208,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 8,
@@ -1913,7 +1913,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 0.3262,
+                  "share": 0.3255,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 5,
@@ -1926,11 +1926,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -1945,7 +1945,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 0.2609,
+                  "share": 0.2604,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 4,
@@ -1977,7 +1977,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair in Progress",
-                  "share": 0.0652,
+                  "share": 0.0651,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 1,
@@ -2013,32 +2013,32 @@ window.serviceCentreData = {
           {
             "yard": "Traralgon",
             "color": "#17a6ad",
-            "newTickets": 197,
-            "newQuoteAmount": 66194.86,
-            "newQuoteAmountLabel": "$66.2K",
-            "newAmount": 66194.86,
-            "newAmountLabel": "$66.2K",
-            "invoicedTickets": 32,
-            "invoicedAmount": 15794.87,
-            "invoicedAmountLabel": "$15.8K",
-            "openTickets": 89,
-            "openQuoteAmount": 49535.49,
-            "openQuoteAmountLabel": "$49.5K",
-            "internalInvoicedTickets": 15,
-            "internalInvoicedAmount": 8097.27,
-            "internalInvoicedAmountLabel": "$8.1K",
-            "externalInvoicedTickets": 17,
-            "externalInvoicedAmount": 7697.6,
-            "externalInvoicedAmountLabel": "$7.7K",
+            "newTickets": 202,
+            "newQuoteAmount": 68331.87,
+            "newQuoteAmountLabel": "$68.3K",
+            "newAmount": 68331.87,
+            "newAmountLabel": "$68.3K",
+            "invoicedTickets": 37,
+            "invoicedAmount": 17496.7,
+            "invoicedAmountLabel": "$17.5K",
+            "openTickets": 90,
+            "openQuoteAmount": 50097.49,
+            "openQuoteAmountLabel": "$50.1K",
+            "internalInvoicedTickets": 17,
+            "internalInvoicedAmount": 8879.09,
+            "internalInvoicedAmountLabel": "$8.9K",
+            "externalInvoicedTickets": 20,
+            "externalInvoicedAmount": 8617.61,
+            "externalInvoicedAmountLabel": "$8.6K",
             "otherInvoicedTickets": 0,
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "89",
+              "total": "90",
               "segments": [
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 26.9663,
+                  "share": 26.6667,
                   "percent": 27,
                   "percentLabel": "27%",
                   "qty": 24,
@@ -2070,28 +2070,28 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 19.1011,
+                  "share": 18.8889,
                   "percent": 19,
                   "percentLabel": "19%",
                   "qty": 17,
-                  "quoteAmount": 17618.93,
-                  "quoteAmountLabel": "$17.6K",
-                  "amount": "17 tickets ($17.6K)",
+                  "quoteAmount": 17247.68,
+                  "quoteAmountLabel": "$17.2K",
+                  "amount": "17 tickets ($17.2K)",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
@@ -2102,15 +2102,47 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 17.9775,
-                  "percent": 18,
-                  "percentLabel": "18%",
-                  "qty": 16,
-                  "quoteAmount": 9214.81,
-                  "quoteAmountLabel": "$9.2K",
-                  "amount": "16 tickets ($9.2K)",
+                  "share": 18.8889,
+                  "percent": 19,
+                  "percentLabel": "19%",
+                  "qty": 17,
+                  "quoteAmount": 9883.06,
+                  "quoteAmountLabel": "$9.9K",
+                  "amount": "17 tickets ($9.9K)",
                   "rawStatuses": [
                     "Claim Time Ticket"
+                  ],
+                  "aging": [
+                    {
+                      "label": "0-7 days",
+                      "qty": 1
+                    },
+                    {
+                      "label": "8-30 days",
+                      "qty": 5
+                    },
+                    {
+                      "label": "31-60 days",
+                      "qty": 5
+                    },
+                    {
+                      "label": "60+ days",
+                      "qty": 6
+                    }
+                  ],
+                  "color": "#22a447"
+                },
+                {
+                  "name": "Approved, Awaiting Repair",
+                  "share": 14.4444,
+                  "percent": 14,
+                  "percentLabel": "14%",
+                  "qty": 13,
+                  "quoteAmount": 11161.48,
+                  "quoteAmountLabel": "$11.2K",
+                  "amount": "13 tickets ($11.2K)",
+                  "rawStatuses": [
+                    "Quote Approved"
                   ],
                   "aging": [
                     {
@@ -2123,39 +2155,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 6
-                    },
-                    {
-                      "label": "60+ days",
-                      "qty": 5
-                    }
-                  ],
-                  "color": "#22a447"
-                },
-                {
-                  "name": "Approved, Awaiting Repair",
-                  "share": 15.7303,
-                  "percent": 16,
-                  "percentLabel": "16%",
-                  "qty": 14,
-                  "quoteAmount": 11326.48,
-                  "quoteAmountLabel": "$11.3K",
-                  "amount": "14 tickets ($11.3K)",
-                  "rawStatuses": [
-                    "Quote Approved"
-                  ],
-                  "aging": [
-                    {
-                      "label": "0-7 days",
-                      "qty": 1
-                    },
-                    {
-                      "label": "8-30 days",
-                      "qty": 6
-                    },
-                    {
-                      "label": "31-60 days",
-                      "qty": 7
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
@@ -2166,20 +2166,20 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 11.236,
-                  "percent": 11,
-                  "percentLabel": "11%",
-                  "qty": 10,
-                  "quoteAmount": 5926.25,
-                  "quoteAmountLabel": "$5.9K",
-                  "amount": "10 tickets ($5.9K)",
+                  "share": 12.2222,
+                  "percent": 12,
+                  "percentLabel": "12%",
+                  "qty": 11,
+                  "quoteAmount": 6356.25,
+                  "quoteAmountLabel": "$6.4K",
+                  "amount": "11 tickets ($6.4K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -2198,7 +2198,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 6.7416,
+                  "share": 6.6667,
                   "percent": 7,
                   "percentLabel": "7%",
                   "qty": 6,
@@ -2230,7 +2230,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 2.2472,
+                  "share": 2.2222,
                   "percent": 2,
                   "percentLabel": "2%",
                   "qty": 2,
@@ -2266,96 +2266,96 @@ window.serviceCentreData = {
           {
             "yard": "Launceston",
             "color": "#f58b1f",
-            "newTickets": 294,
-            "newQuoteAmount": 180941.04,
-            "newQuoteAmountLabel": "$180.9K",
-            "newAmount": 180941.04,
-            "newAmountLabel": "$180.9K",
-            "invoicedTickets": 111,
-            "invoicedAmount": 57272.98,
-            "invoicedAmountLabel": "$57.3K",
-            "openTickets": 179,
-            "openQuoteAmount": 103307.68,
-            "openQuoteAmountLabel": "$103.3K",
+            "newTickets": 308,
+            "newQuoteAmount": 189456.49,
+            "newQuoteAmountLabel": "$189.5K",
+            "newAmount": 189456.49,
+            "newAmountLabel": "$189.5K",
+            "invoicedTickets": 113,
+            "invoicedAmount": 60720.56,
+            "invoicedAmountLabel": "$60.7K",
+            "openTickets": 191,
+            "openQuoteAmount": 108030.8,
+            "openQuoteAmountLabel": "$108.0K",
             "internalInvoicedTickets": 27,
             "internalInvoicedAmount": 9240.24,
             "internalInvoicedAmountLabel": "$9.2K",
-            "externalInvoicedTickets": 84,
-            "externalInvoicedAmount": 48032.74,
-            "externalInvoicedAmountLabel": "$48.0K",
+            "externalInvoicedTickets": 86,
+            "externalInvoicedAmount": 51480.32,
+            "externalInvoicedAmountLabel": "$51.5K",
             "otherInvoicedTickets": 0,
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "179",
+              "total": "191",
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 52.514,
-                  "percent": 53,
-                  "percentLabel": "53%",
-                  "qty": 94,
-                  "quoteAmount": 70966.01,
-                  "quoteAmountLabel": "$71.0K",
-                  "amount": "94 tickets ($71.0K)",
+                  "share": 54.9738,
+                  "percent": 55,
+                  "percentLabel": "55%",
+                  "qty": 105,
+                  "quoteAmount": 75466.38,
+                  "quoteAmountLabel": "$75.5K",
+                  "amount": "105 tickets ($75.5K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 5
+                      "qty": 14
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 37
+                      "qty": 34
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 22
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 32
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 40.7821,
-                  "percent": 41,
-                  "percentLabel": "41%",
-                  "qty": 73,
-                  "quoteAmount": 29636.51,
-                  "quoteAmountLabel": "$29.6K",
-                  "amount": "73 tickets ($29.6K)",
+                  "share": 38.7435,
+                  "percent": 39,
+                  "percentLabel": "39%",
+                  "qty": 74,
+                  "quoteAmount": 29859.26,
+                  "quoteAmountLabel": "$29.9K",
+                  "amount": "74 tickets ($29.9K)",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 4
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 9
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 61
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 2.7933,
+                  "share": 2.6178,
                   "percent": 3,
                   "percentLabel": "3%",
                   "qty": 5,
@@ -2387,7 +2387,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 2.2346,
+                  "share": 2.0942,
                   "percent": 2,
                   "percentLabel": "2%",
                   "qty": 4,
@@ -2419,7 +2419,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 1.1173,
+                  "share": 1.0471,
                   "percent": 1,
                   "percentLabel": "1%",
                   "qty": 2,
@@ -2451,7 +2451,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 0.5587,
+                  "share": 0.5236,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 1,
@@ -2487,20 +2487,20 @@ window.serviceCentreData = {
           {
             "yard": "Geelong",
             "color": "#7c3aed",
-            "newTickets": 920,
-            "newQuoteAmount": 161279.87,
-            "newQuoteAmountLabel": "$161.3K",
-            "newAmount": 161279.87,
-            "newAmountLabel": "$161.3K",
-            "invoicedTickets": 113,
-            "invoicedAmount": 51380.34,
-            "invoicedAmountLabel": "$51.4K",
-            "openTickets": 532,
-            "openQuoteAmount": 93841.92,
-            "openQuoteAmountLabel": "$93.8K",
-            "internalInvoicedTickets": 41,
-            "internalInvoicedAmount": 17935.74,
-            "internalInvoicedAmountLabel": "$17.9K",
+            "newTickets": 937,
+            "newQuoteAmount": 165374.88,
+            "newQuoteAmountLabel": "$165.4K",
+            "newAmount": 165374.88,
+            "newAmountLabel": "$165.4K",
+            "invoicedTickets": 115,
+            "invoicedAmount": 52162.16,
+            "invoicedAmountLabel": "$52.2K",
+            "openTickets": 543,
+            "openQuoteAmount": 97076.93,
+            "openQuoteAmountLabel": "$97.1K",
+            "internalInvoicedTickets": 43,
+            "internalInvoicedAmount": 18717.56,
+            "internalInvoicedAmountLabel": "$18.7K",
             "externalInvoicedTickets": 72,
             "externalInvoicedAmount": 33444.6,
             "externalInvoicedAmountLabel": "$33.4K",
@@ -2508,49 +2508,49 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "532",
+              "total": "543",
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 59.7744,
+                  "share": 59.8527,
                   "percent": 60,
                   "percentLabel": "60%",
-                  "qty": 318,
-                  "quoteAmount": 51060.05,
-                  "quoteAmountLabel": "$51.1K",
-                  "amount": "318 tickets ($51.1K)",
+                  "qty": 325,
+                  "quoteAmount": 52875.01,
+                  "quoteAmountLabel": "$52.9K",
+                  "amount": "325 tickets ($52.9K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 15
+                      "qty": 20
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 50
+                      "qty": 48
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 18.4211,
+                  "share": 18.4162,
                   "percent": 18,
                   "percentLabel": "18%",
-                  "qty": 98,
+                  "qty": 100,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "98 tickets ($0)",
+                  "amount": "100 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
@@ -2561,39 +2561,39 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 8.2707,
+                  "share": 8.2873,
                   "percent": 8,
                   "percentLabel": "8%",
-                  "qty": 44,
-                  "quoteAmount": 28251.92,
-                  "quoteAmountLabel": "$28.3K",
-                  "amount": "44 tickets ($28.3K)",
+                  "qty": 45,
+                  "quoteAmount": 28901.91,
+                  "quoteAmountLabel": "$28.9K",
+                  "amount": "45 tickets ($28.9K)",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 9
+                      "qty": 11
                     },
                     {
                       "label": "31-60 days",
@@ -2608,20 +2608,20 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 4.6992,
+                  "share": 4.7882,
                   "percent": 5,
                   "percentLabel": "5%",
-                  "qty": 25,
-                  "quoteAmount": 8513.81,
-                  "quoteAmountLabel": "$8.5K",
-                  "amount": "25 tickets ($8.5K)",
+                  "qty": 26,
+                  "quoteAmount": 9283.87,
+                  "quoteAmountLabel": "$9.3K",
+                  "amount": "26 tickets ($9.3K)",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
@@ -2640,9 +2640,9 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 4.5113,
-                  "percent": 5,
-                  "percentLabel": "5%",
+                  "share": 4.4199,
+                  "percent": 4,
+                  "percentLabel": "4%",
                   "qty": 24,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
@@ -2672,7 +2672,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 2.4436,
+                  "share": 2.3941,
                   "percent": 2,
                   "percentLabel": "2%",
                   "qty": 13,
@@ -2704,7 +2704,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 0.9398,
+                  "share": 0.9208,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 5,
@@ -2717,11 +2717,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -2736,7 +2736,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 0.7519,
+                  "share": 0.7366,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 4,
@@ -2757,19 +2757,19 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "color": "#9a3412"
                 },
                 {
                   "name": "Repair in Progress",
-                  "share": 0.188,
-                  "percent": 0,
+                  "share": 0.1842,
+                  "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 1,
                   "quoteAmount": 0.0,
@@ -2804,7 +2804,7 @@ window.serviceCentreData = {
           {
             "yard": "Frankston",
             "color": "#22a447",
-            "newTickets": 443,
+            "newTickets": 451,
             "newQuoteAmount": 194722.99,
             "newQuoteAmountLabel": "$194.7K",
             "newAmount": 194722.99,
@@ -2812,7 +2812,7 @@ window.serviceCentreData = {
             "invoicedTickets": 152,
             "invoicedAmount": 55484.41,
             "invoicedAmountLabel": "$55.5K",
-            "openTickets": 262,
+            "openTickets": 270,
             "openQuoteAmount": 124648.59,
             "openQuoteAmountLabel": "$124.6K",
             "internalInvoicedTickets": 59,
@@ -2825,13 +2825,13 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "262",
+              "total": "270",
               "segments": [
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 46.5649,
-                  "percent": 47,
-                  "percentLabel": "47%",
+                  "share": 45.1852,
+                  "percent": 45,
+                  "percentLabel": "45%",
                   "qty": 122,
                   "quoteAmount": 87693.85,
                   "quoteAmountLabel": "$87.7K",
@@ -2846,39 +2846,39 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 36
+                      "qty": 32
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 30.5344,
-                  "percent": 31,
-                  "percentLabel": "31%",
-                  "qty": 80,
+                  "share": 32.5926,
+                  "percent": 33,
+                  "percentLabel": "33%",
+                  "qty": 88,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "80 tickets ($0)",
+                  "amount": "88 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 8
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 29
+                      "qty": 31
                     },
                     {
                       "label": "31-60 days",
@@ -2893,7 +2893,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 14.1221,
+                  "share": 13.7037,
                   "percent": 14,
                   "percentLabel": "14%",
                   "qty": 37,
@@ -2906,7 +2906,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -2918,14 +2918,14 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 5.7252,
+                  "share": 5.5556,
                   "percent": 6,
                   "percentLabel": "6%",
                   "qty": 15,
@@ -2942,11 +2942,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
@@ -2957,9 +2957,9 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 1.5267,
-                  "percent": 2,
-                  "percentLabel": "2%",
+                  "share": 1.4815,
+                  "percent": 1,
+                  "percentLabel": "1%",
                   "qty": 4,
                   "quoteAmount": 2358.0,
                   "quoteAmountLabel": "$2.4K",
@@ -2989,9 +2989,9 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 1.5267,
-                  "percent": 0,
-                  "percentLabel": "2%",
+                  "share": 1.4815,
+                  "percent": 1,
+                  "percentLabel": "1%",
                   "qty": 4,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
@@ -3026,16 +3026,16 @@ window.serviceCentreData = {
             "yard": "Other",
             "color": "#64748b",
             "newTickets": 74,
-            "newQuoteAmount": 49053.98,
-            "newQuoteAmountLabel": "$49.1K",
-            "newAmount": 49053.98,
-            "newAmountLabel": "$49.1K",
+            "newQuoteAmount": 48773.97,
+            "newQuoteAmountLabel": "$48.8K",
+            "newAmount": 48773.97,
+            "newAmountLabel": "$48.8K",
             "invoicedTickets": 463,
             "invoicedAmount": 71832.92,
             "invoicedAmountLabel": "$71.8K",
             "openTickets": 64,
-            "openQuoteAmount": 49508.47,
-            "openQuoteAmountLabel": "$49.5K",
+            "openQuoteAmount": 49228.46,
+            "openQuoteAmountLabel": "$49.2K",
             "internalInvoicedTickets": 0,
             "internalInvoicedAmount": 0.0,
             "internalInvoicedAmountLabel": "$0",
@@ -3050,20 +3050,20 @@ window.serviceCentreData = {
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 48.4375,
-                  "percent": 48,
-                  "percentLabel": "48%",
-                  "qty": 31,
-                  "quoteAmount": 14313.51,
-                  "quoteAmountLabel": "$14.3K",
-                  "amount": "31 tickets ($14.3K)",
+                  "share": 46.875,
+                  "percent": 47,
+                  "percentLabel": "47%",
+                  "qty": 30,
+                  "quoteAmount": 14033.5,
+                  "quoteAmountLabel": "$14.0K",
+                  "amount": "30 tickets ($14.0K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -3071,7 +3071,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "60+ days",
@@ -3095,11 +3095,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -3146,20 +3146,20 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 9.375,
-                  "percent": 9,
-                  "percentLabel": "9%",
-                  "qty": 6,
+                  "share": 10.9375,
+                  "percent": 11,
+                  "percentLabel": "11%",
+                  "qty": 7,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "6 tickets ($0)",
+                  "amount": "7 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -3275,7 +3275,7 @@ window.serviceCentreData = {
                 {
                   "name": "Repair in Progress",
                   "share": 1.5625,
-                  "percent": 2,
+                  "percent": 1,
                   "percentLabel": "2%",
                   "qty": 1,
                   "quoteAmount": 0.0,
@@ -4534,7 +4534,7 @@ window.serviceCentreData = {
           {
             "yard": "Perth",
             "color": "#1f6feb",
-            "newTickets": 5,
+            "newTickets": 8,
             "newQuoteAmount": 1241.25,
             "newQuoteAmountLabel": "$1.2K",
             "newAmount": 1241.25,
@@ -4542,7 +4542,7 @@ window.serviceCentreData = {
             "invoicedTickets": 0,
             "invoicedAmount": 0.0,
             "invoicedAmountLabel": "$0",
-            "openTickets": 1533,
+            "openTickets": 1536,
             "openQuoteAmount": 330003.18,
             "openQuoteAmountLabel": "$330.0K",
             "internalInvoicedTickets": 0,
@@ -4555,43 +4555,43 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "1,533",
+              "total": "1,536",
               "segments": [
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 59.6217,
+                  "share": 59.7005,
                   "percent": 60,
                   "percentLabel": "60%",
-                  "qty": 914,
+                  "qty": 917,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "914 tickets ($0)",
+                  "amount": "917 tickets ($0)",
                   "rawStatuses": [
                     "Repair completed"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 3
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 22
+                      "qty": 19
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 43
+                      "qty": 37
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 26.0274,
+                  "share": 25.9766,
                   "percent": 26,
                   "percentLabel": "26%",
                   "qty": 399,
@@ -4608,22 +4608,22 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 149
+                      "qty": 135
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 118
+                      "qty": 130
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 8.8715,
+                  "share": 8.8542,
                   "percent": 9,
                   "percentLabel": "9%",
                   "qty": 136,
@@ -4640,22 +4640,22 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 12
+                      "qty": 9
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 4.3053,
+                  "share": 4.2969,
                   "percent": 4,
                   "percentLabel": "4%",
                   "qty": 66,
@@ -4687,7 +4687,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 0.5219,
+                  "share": 0.5208,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 8,
@@ -4719,7 +4719,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 0.3262,
+                  "share": 0.3255,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 5,
@@ -4732,11 +4732,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -4751,7 +4751,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 0.2609,
+                  "share": 0.2604,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 4,
@@ -4783,7 +4783,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair in Progress",
-                  "share": 0.0652,
+                  "share": 0.0651,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 1,
@@ -4819,32 +4819,32 @@ window.serviceCentreData = {
           {
             "yard": "Traralgon",
             "color": "#17a6ad",
-            "newTickets": 1,
-            "newQuoteAmount": 297.0,
-            "newQuoteAmountLabel": "$297",
-            "newAmount": 297.0,
-            "newAmountLabel": "$297",
-            "invoicedTickets": 0,
-            "invoicedAmount": 0.0,
-            "invoicedAmountLabel": "$0",
-            "openTickets": 89,
-            "openQuoteAmount": 49535.49,
-            "openQuoteAmountLabel": "$49.5K",
-            "internalInvoicedTickets": 0,
-            "internalInvoicedAmount": 0.0,
-            "internalInvoicedAmountLabel": "$0",
-            "externalInvoicedTickets": 0,
-            "externalInvoicedAmount": 0.0,
-            "externalInvoicedAmountLabel": "$0",
+            "newTickets": 6,
+            "newQuoteAmount": 2434.01,
+            "newQuoteAmountLabel": "$2.4K",
+            "newAmount": 2434.01,
+            "newAmountLabel": "$2.4K",
+            "invoicedTickets": 5,
+            "invoicedAmount": 1701.83,
+            "invoicedAmountLabel": "$1.7K",
+            "openTickets": 90,
+            "openQuoteAmount": 50097.49,
+            "openQuoteAmountLabel": "$50.1K",
+            "internalInvoicedTickets": 2,
+            "internalInvoicedAmount": 781.82,
+            "internalInvoicedAmountLabel": "$782",
+            "externalInvoicedTickets": 3,
+            "externalInvoicedAmount": 920.01,
+            "externalInvoicedAmountLabel": "$920",
             "otherInvoicedTickets": 0,
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "89",
+              "total": "90",
               "segments": [
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 26.9663,
+                  "share": 26.6667,
                   "percent": 27,
                   "percentLabel": "27%",
                   "qty": 24,
@@ -4876,28 +4876,28 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 19.1011,
+                  "share": 18.8889,
                   "percent": 19,
                   "percentLabel": "19%",
                   "qty": 17,
-                  "quoteAmount": 17618.93,
-                  "quoteAmountLabel": "$17.6K",
-                  "amount": "17 tickets ($17.6K)",
+                  "quoteAmount": 17247.68,
+                  "quoteAmountLabel": "$17.2K",
+                  "amount": "17 tickets ($17.2K)",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
@@ -4908,15 +4908,47 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 17.9775,
-                  "percent": 18,
-                  "percentLabel": "18%",
-                  "qty": 16,
-                  "quoteAmount": 9214.81,
-                  "quoteAmountLabel": "$9.2K",
-                  "amount": "16 tickets ($9.2K)",
+                  "share": 18.8889,
+                  "percent": 19,
+                  "percentLabel": "19%",
+                  "qty": 17,
+                  "quoteAmount": 9883.06,
+                  "quoteAmountLabel": "$9.9K",
+                  "amount": "17 tickets ($9.9K)",
                   "rawStatuses": [
                     "Claim Time Ticket"
+                  ],
+                  "aging": [
+                    {
+                      "label": "0-7 days",
+                      "qty": 1
+                    },
+                    {
+                      "label": "8-30 days",
+                      "qty": 5
+                    },
+                    {
+                      "label": "31-60 days",
+                      "qty": 5
+                    },
+                    {
+                      "label": "60+ days",
+                      "qty": 6
+                    }
+                  ],
+                  "color": "#22a447"
+                },
+                {
+                  "name": "Approved, Awaiting Repair",
+                  "share": 14.4444,
+                  "percent": 14,
+                  "percentLabel": "14%",
+                  "qty": 13,
+                  "quoteAmount": 11161.48,
+                  "quoteAmountLabel": "$11.2K",
+                  "amount": "13 tickets ($11.2K)",
+                  "rawStatuses": [
+                    "Quote Approved"
                   ],
                   "aging": [
                     {
@@ -4929,39 +4961,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 6
-                    },
-                    {
-                      "label": "60+ days",
-                      "qty": 5
-                    }
-                  ],
-                  "color": "#22a447"
-                },
-                {
-                  "name": "Approved, Awaiting Repair",
-                  "share": 15.7303,
-                  "percent": 16,
-                  "percentLabel": "16%",
-                  "qty": 14,
-                  "quoteAmount": 11326.48,
-                  "quoteAmountLabel": "$11.3K",
-                  "amount": "14 tickets ($11.3K)",
-                  "rawStatuses": [
-                    "Quote Approved"
-                  ],
-                  "aging": [
-                    {
-                      "label": "0-7 days",
-                      "qty": 1
-                    },
-                    {
-                      "label": "8-30 days",
-                      "qty": 6
-                    },
-                    {
-                      "label": "31-60 days",
-                      "qty": 7
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
@@ -4972,20 +4972,20 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 11.236,
-                  "percent": 11,
-                  "percentLabel": "11%",
-                  "qty": 10,
-                  "quoteAmount": 5926.25,
-                  "quoteAmountLabel": "$5.9K",
-                  "amount": "10 tickets ($5.9K)",
+                  "share": 12.2222,
+                  "percent": 12,
+                  "percentLabel": "12%",
+                  "qty": 11,
+                  "quoteAmount": 6356.25,
+                  "quoteAmountLabel": "$6.4K",
+                  "amount": "11 tickets ($6.4K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -5004,7 +5004,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 6.7416,
+                  "share": 6.6667,
                   "percent": 7,
                   "percentLabel": "7%",
                   "qty": 6,
@@ -5036,7 +5036,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 2.2472,
+                  "share": 2.2222,
                   "percent": 2,
                   "percentLabel": "2%",
                   "qty": 2,
@@ -5072,96 +5072,96 @@ window.serviceCentreData = {
           {
             "yard": "Launceston",
             "color": "#f58b1f",
-            "newTickets": 3,
-            "newQuoteAmount": 2410.01,
-            "newQuoteAmountLabel": "$2.4K",
-            "newAmount": 2410.01,
-            "newAmountLabel": "$2.4K",
-            "invoicedTickets": 1,
-            "invoicedAmount": 1363.62,
-            "invoicedAmountLabel": "$1.4K",
-            "openTickets": 179,
-            "openQuoteAmount": 103307.68,
-            "openQuoteAmountLabel": "$103.3K",
+            "newTickets": 17,
+            "newQuoteAmount": 10925.46,
+            "newQuoteAmountLabel": "$10.9K",
+            "newAmount": 10925.46,
+            "newAmountLabel": "$10.9K",
+            "invoicedTickets": 3,
+            "invoicedAmount": 4811.2,
+            "invoicedAmountLabel": "$4.8K",
+            "openTickets": 191,
+            "openQuoteAmount": 108030.8,
+            "openQuoteAmountLabel": "$108.0K",
             "internalInvoicedTickets": 0,
             "internalInvoicedAmount": 0.0,
             "internalInvoicedAmountLabel": "$0",
-            "externalInvoicedTickets": 1,
-            "externalInvoicedAmount": 1363.62,
-            "externalInvoicedAmountLabel": "$1.4K",
+            "externalInvoicedTickets": 3,
+            "externalInvoicedAmount": 4811.2,
+            "externalInvoicedAmountLabel": "$4.8K",
             "otherInvoicedTickets": 0,
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "179",
+              "total": "191",
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 52.514,
-                  "percent": 53,
-                  "percentLabel": "53%",
-                  "qty": 94,
-                  "quoteAmount": 70966.01,
-                  "quoteAmountLabel": "$71.0K",
-                  "amount": "94 tickets ($71.0K)",
+                  "share": 54.9738,
+                  "percent": 55,
+                  "percentLabel": "55%",
+                  "qty": 105,
+                  "quoteAmount": 75466.38,
+                  "quoteAmountLabel": "$75.5K",
+                  "amount": "105 tickets ($75.5K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 5
+                      "qty": 14
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 37
+                      "qty": 34
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 22
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 32
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 40.7821,
-                  "percent": 41,
-                  "percentLabel": "41%",
-                  "qty": 73,
-                  "quoteAmount": 29636.51,
-                  "quoteAmountLabel": "$29.6K",
-                  "amount": "73 tickets ($29.6K)",
+                  "share": 38.7435,
+                  "percent": 39,
+                  "percentLabel": "39%",
+                  "qty": 74,
+                  "quoteAmount": 29859.26,
+                  "quoteAmountLabel": "$29.9K",
+                  "amount": "74 tickets ($29.9K)",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 4
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 9
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 61
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 2.7933,
+                  "share": 2.6178,
                   "percent": 3,
                   "percentLabel": "3%",
                   "qty": 5,
@@ -5193,7 +5193,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 2.2346,
+                  "share": 2.0942,
                   "percent": 2,
                   "percentLabel": "2%",
                   "qty": 4,
@@ -5225,7 +5225,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 1.1173,
+                  "share": 1.0471,
                   "percent": 1,
                   "percentLabel": "1%",
                   "qty": 2,
@@ -5257,7 +5257,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 0.5587,
+                  "share": 0.5236,
                   "percent": 0,
                   "percentLabel": "<1%",
                   "qty": 1,
@@ -5293,20 +5293,20 @@ window.serviceCentreData = {
           {
             "yard": "Geelong",
             "color": "#7c3aed",
-            "newTickets": 22,
-            "newQuoteAmount": 2477.32,
-            "newQuoteAmountLabel": "$2.5K",
-            "newAmount": 2477.32,
-            "newAmountLabel": "$2.5K",
-            "invoicedTickets": 3,
-            "invoicedAmount": 1256.36,
-            "invoicedAmountLabel": "$1.3K",
-            "openTickets": 532,
-            "openQuoteAmount": 93841.92,
-            "openQuoteAmountLabel": "$93.8K",
-            "internalInvoicedTickets": 2,
-            "internalInvoicedAmount": 645.46,
-            "internalInvoicedAmountLabel": "$645",
+            "newTickets": 39,
+            "newQuoteAmount": 5978.39,
+            "newQuoteAmountLabel": "$6.0K",
+            "newAmount": 5978.39,
+            "newAmountLabel": "$6.0K",
+            "invoicedTickets": 5,
+            "invoicedAmount": 2038.18,
+            "invoicedAmountLabel": "$2.0K",
+            "openTickets": 543,
+            "openQuoteAmount": 97076.93,
+            "openQuoteAmountLabel": "$97.1K",
+            "internalInvoicedTickets": 4,
+            "internalInvoicedAmount": 1427.28,
+            "internalInvoicedAmountLabel": "$1.4K",
             "externalInvoicedTickets": 1,
             "externalInvoicedAmount": 610.9,
             "externalInvoicedAmountLabel": "$611",
@@ -5314,49 +5314,49 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "532",
+              "total": "543",
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 59.7744,
+                  "share": 59.8527,
                   "percent": 60,
                   "percentLabel": "60%",
-                  "qty": 318,
-                  "quoteAmount": 51060.05,
-                  "quoteAmountLabel": "$51.1K",
-                  "amount": "318 tickets ($51.1K)",
+                  "qty": 325,
+                  "quoteAmount": 52875.01,
+                  "quoteAmountLabel": "$52.9K",
+                  "amount": "325 tickets ($52.9K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 15
+                      "qty": 20
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 50
+                      "qty": 48
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 18.4211,
+                  "share": 18.4162,
                   "percent": 18,
                   "percentLabel": "18%",
-                  "qty": 98,
+                  "qty": 100,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "98 tickets ($0)",
+                  "amount": "100 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
@@ -5367,39 +5367,39 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 8.2707,
+                  "share": 8.2873,
                   "percent": 8,
                   "percentLabel": "8%",
-                  "qty": 44,
-                  "quoteAmount": 28251.92,
-                  "quoteAmountLabel": "$28.3K",
-                  "amount": "44 tickets ($28.3K)",
+                  "qty": 45,
+                  "quoteAmount": 28901.91,
+                  "quoteAmountLabel": "$28.9K",
+                  "amount": "45 tickets ($28.9K)",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 9
+                      "qty": 11
                     },
                     {
                       "label": "31-60 days",
@@ -5414,20 +5414,20 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 4.6992,
+                  "share": 4.7882,
                   "percent": 5,
                   "percentLabel": "5%",
-                  "qty": 25,
-                  "quoteAmount": 8513.81,
-                  "quoteAmountLabel": "$8.5K",
-                  "amount": "25 tickets ($8.5K)",
+                  "qty": 26,
+                  "quoteAmount": 9283.87,
+                  "quoteAmountLabel": "$9.3K",
+                  "amount": "26 tickets ($9.3K)",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
@@ -5446,9 +5446,9 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 4.5113,
-                  "percent": 5,
-                  "percentLabel": "5%",
+                  "share": 4.4199,
+                  "percent": 4,
+                  "percentLabel": "4%",
                   "qty": 24,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
@@ -5478,7 +5478,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 2.4436,
+                  "share": 2.3941,
                   "percent": 2,
                   "percentLabel": "2%",
                   "qty": 13,
@@ -5510,7 +5510,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 0.9398,
+                  "share": 0.9208,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 5,
@@ -5523,11 +5523,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -5542,7 +5542,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 0.7519,
+                  "share": 0.7366,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 4,
@@ -5563,19 +5563,19 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "color": "#9a3412"
                 },
                 {
                   "name": "Repair in Progress",
-                  "share": 0.188,
-                  "percent": 0,
+                  "share": 0.1842,
+                  "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 1,
                   "quoteAmount": 0.0,
@@ -5610,7 +5610,7 @@ window.serviceCentreData = {
           {
             "yard": "Frankston",
             "color": "#22a447",
-            "newTickets": 0,
+            "newTickets": 8,
             "newQuoteAmount": 0.0,
             "newQuoteAmountLabel": "$0",
             "newAmount": 0.0,
@@ -5618,7 +5618,7 @@ window.serviceCentreData = {
             "invoicedTickets": 0,
             "invoicedAmount": 0.0,
             "invoicedAmountLabel": "$0",
-            "openTickets": 262,
+            "openTickets": 270,
             "openQuoteAmount": 124648.59,
             "openQuoteAmountLabel": "$124.6K",
             "internalInvoicedTickets": 0,
@@ -5631,13 +5631,13 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "262",
+              "total": "270",
               "segments": [
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 46.5649,
-                  "percent": 47,
-                  "percentLabel": "47%",
+                  "share": 45.1852,
+                  "percent": 45,
+                  "percentLabel": "45%",
                   "qty": 122,
                   "quoteAmount": 87693.85,
                   "quoteAmountLabel": "$87.7K",
@@ -5652,39 +5652,39 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 36
+                      "qty": 32
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 30.5344,
-                  "percent": 31,
-                  "percentLabel": "31%",
-                  "qty": 80,
+                  "share": 32.5926,
+                  "percent": 33,
+                  "percentLabel": "33%",
+                  "qty": 88,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "80 tickets ($0)",
+                  "amount": "88 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 8
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 29
+                      "qty": 31
                     },
                     {
                       "label": "31-60 days",
@@ -5699,7 +5699,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 14.1221,
+                  "share": 13.7037,
                   "percent": 14,
                   "percentLabel": "14%",
                   "qty": 37,
@@ -5712,7 +5712,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -5724,14 +5724,14 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 5.7252,
+                  "share": 5.5556,
                   "percent": 6,
                   "percentLabel": "6%",
                   "qty": 15,
@@ -5748,11 +5748,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
@@ -5763,9 +5763,9 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 1.5267,
-                  "percent": 2,
-                  "percentLabel": "2%",
+                  "share": 1.4815,
+                  "percent": 1,
+                  "percentLabel": "1%",
                   "qty": 4,
                   "quoteAmount": 2358.0,
                   "quoteAmountLabel": "$2.4K",
@@ -5795,9 +5795,9 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 1.5267,
-                  "percent": 0,
-                  "percentLabel": "2%",
+                  "share": 1.4815,
+                  "percent": 1,
+                  "percentLabel": "1%",
                   "qty": 4,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
@@ -5832,16 +5832,16 @@ window.serviceCentreData = {
             "yard": "Other",
             "color": "#64748b",
             "newTickets": 2,
-            "newQuoteAmount": 1599.52,
-            "newQuoteAmountLabel": "$1.6K",
-            "newAmount": 1599.52,
-            "newAmountLabel": "$1.6K",
+            "newQuoteAmount": 1319.51,
+            "newQuoteAmountLabel": "$1.3K",
+            "newAmount": 1319.51,
+            "newAmountLabel": "$1.3K",
             "invoicedTickets": 1,
             "invoicedAmount": -136.36,
             "invoicedAmountLabel": "$-136",
             "openTickets": 64,
-            "openQuoteAmount": 49508.47,
-            "openQuoteAmountLabel": "$49.5K",
+            "openQuoteAmount": 49228.46,
+            "openQuoteAmountLabel": "$49.2K",
             "internalInvoicedTickets": 0,
             "internalInvoicedAmount": 0.0,
             "internalInvoicedAmountLabel": "$0",
@@ -5856,20 +5856,20 @@ window.serviceCentreData = {
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 48.4375,
-                  "percent": 48,
-                  "percentLabel": "48%",
-                  "qty": 31,
-                  "quoteAmount": 14313.51,
-                  "quoteAmountLabel": "$14.3K",
-                  "amount": "31 tickets ($14.3K)",
+                  "share": 46.875,
+                  "percent": 47,
+                  "percentLabel": "47%",
+                  "qty": 30,
+                  "quoteAmount": 14033.5,
+                  "quoteAmountLabel": "$14.0K",
+                  "amount": "30 tickets ($14.0K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -5877,7 +5877,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "60+ days",
@@ -5901,11 +5901,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -5952,20 +5952,20 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 9.375,
-                  "percent": 9,
-                  "percentLabel": "9%",
-                  "qty": 6,
+                  "share": 10.9375,
+                  "percent": 11,
+                  "percentLabel": "11%",
+                  "qty": 7,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "6 tickets ($0)",
+                  "amount": "7 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -6081,7 +6081,7 @@ window.serviceCentreData = {
                 {
                   "name": "Repair in Progress",
                   "share": 1.5625,
-                  "percent": 2,
+                  "percent": 1,
                   "percentLabel": "2%",
                   "qty": 1,
                   "quoteAmount": 0.0,
@@ -6156,19 +6156,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 22
+                      "qty": 19
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 43
+                      "qty": 37
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "color": "#17a6ad"
@@ -6192,15 +6192,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 149
+                      "qty": 135
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 118
+                      "qty": 130
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "color": "#1f6feb"
@@ -6224,15 +6224,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 12
+                      "qty": 9
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "color": "#17a6ad"
@@ -6316,11 +6316,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -6411,9 +6411,9 @@ window.serviceCentreData = {
             "invoicedTickets": 0,
             "invoicedAmount": 0.0,
             "invoicedAmountLabel": "$0",
-            "openTickets": 88,
-            "openQuoteAmount": 49238.49,
-            "openQuoteAmountLabel": "$49.2K",
+            "openTickets": 87,
+            "openQuoteAmount": 49073.49,
+            "openQuoteAmountLabel": "$49.1K",
             "internalInvoicedTickets": 0,
             "internalInvoicedAmount": 0.0,
             "internalInvoicedAmountLabel": "$0",
@@ -6424,13 +6424,13 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "88",
+              "total": "87",
               "segments": [
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 27.2727,
-                  "percent": 27,
-                  "percentLabel": "27%",
+                  "share": 27.5862,
+                  "percent": 28,
+                  "percentLabel": "28%",
                   "qty": 24,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
@@ -6459,14 +6459,46 @@ window.serviceCentreData = {
                   "color": "#1f6feb"
                 },
                 {
-                  "name": "Repair In Progress",
-                  "share": 19.3182,
-                  "percent": 19,
-                  "percentLabel": "19%",
+                  "name": "Time Claimed, Awaiting Invoice",
+                  "share": 19.5402,
+                  "percent": 20,
+                  "percentLabel": "20%",
                   "qty": 17,
-                  "quoteAmount": 17618.93,
-                  "quoteAmountLabel": "$17.6K",
-                  "amount": "17 tickets ($17.6K)",
+                  "quoteAmount": 9883.06,
+                  "quoteAmountLabel": "$9.9K",
+                  "amount": "17 tickets ($9.9K)",
+                  "rawStatuses": [
+                    "Claim Time Ticket"
+                  ],
+                  "aging": [
+                    {
+                      "label": "0-7 days",
+                      "qty": 1
+                    },
+                    {
+                      "label": "8-30 days",
+                      "qty": 5
+                    },
+                    {
+                      "label": "31-60 days",
+                      "qty": 5
+                    },
+                    {
+                      "label": "60+ days",
+                      "qty": 6
+                    }
+                  ],
+                  "color": "#22a447"
+                },
+                {
+                  "name": "Repair In Progress",
+                  "share": 18.3908,
+                  "percent": 18,
+                  "percentLabel": "18%",
+                  "qty": 16,
+                  "quoteAmount": 16950.68,
+                  "quoteAmountLabel": "$17.0K",
+                  "amount": "16 tickets ($17.0K)",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
@@ -6477,11 +6509,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
@@ -6491,46 +6523,14 @@ window.serviceCentreData = {
                   "color": "#f58b1f"
                 },
                 {
-                  "name": "Time Claimed, Awaiting Invoice",
-                  "share": 18.1818,
-                  "percent": 18,
-                  "percentLabel": "18%",
-                  "qty": 16,
-                  "quoteAmount": 9214.81,
-                  "quoteAmountLabel": "$9.2K",
-                  "amount": "16 tickets ($9.2K)",
-                  "rawStatuses": [
-                    "Claim Time Ticket"
-                  ],
-                  "aging": [
-                    {
-                      "label": "0-7 days",
-                      "qty": 0
-                    },
-                    {
-                      "label": "8-30 days",
-                      "qty": 5
-                    },
-                    {
-                      "label": "31-60 days",
-                      "qty": 6
-                    },
-                    {
-                      "label": "60+ days",
-                      "qty": 5
-                    }
-                  ],
-                  "color": "#22a447"
-                },
-                {
                   "name": "Approved, Awaiting Repair",
-                  "share": 14.7727,
-                  "percent": 15,
-                  "percentLabel": "15%",
-                  "qty": 13,
-                  "quoteAmount": 11029.48,
-                  "quoteAmountLabel": "$11.0K",
-                  "amount": "13 tickets ($11.0K)",
+                  "share": 13.7931,
+                  "percent": 14,
+                  "percentLabel": "14%",
+                  "qty": 12,
+                  "quoteAmount": 10864.48,
+                  "quoteAmountLabel": "$10.9K",
+                  "amount": "12 tickets ($10.9K)",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
@@ -6541,11 +6541,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 4
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 7
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
@@ -6556,7 +6556,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 11.3636,
+                  "share": 11.4943,
                   "percent": 11,
                   "percentLabel": "11%",
                   "qty": 10,
@@ -6588,7 +6588,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 6.8182,
+                  "share": 6.8966,
                   "percent": 7,
                   "percentLabel": "7%",
                   "qty": 6,
@@ -6620,8 +6620,8 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 2.2727,
-                  "percent": 3,
+                  "share": 2.2989,
+                  "percent": 2,
                   "percentLabel": "2%",
                   "qty": 2,
                   "quoteAmount": 0.0,
@@ -6681,47 +6681,15 @@ window.serviceCentreData = {
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 51.9774,
-                  "percent": 52,
-                  "percentLabel": "52%",
-                  "qty": 92,
-                  "quoteAmount": 70256.0,
-                  "quoteAmountLabel": "$70.3K",
-                  "amount": "92 tickets ($70.3K)",
+                  "share": 51.4124,
+                  "percent": 51,
+                  "percentLabel": "51%",
+                  "qty": 91,
+                  "quoteAmount": 70033.25,
+                  "quoteAmountLabel": "$70.0K",
+                  "amount": "91 tickets ($70.0K)",
                   "rawStatuses": [
                     "Open"
-                  ],
-                  "aging": [
-                    {
-                      "label": "0-7 days",
-                      "qty": 3
-                    },
-                    {
-                      "label": "8-30 days",
-                      "qty": 37
-                    },
-                    {
-                      "label": "31-60 days",
-                      "qty": 22
-                    },
-                    {
-                      "label": "60+ days",
-                      "qty": 30
-                    }
-                  ],
-                  "color": "#1f6feb"
-                },
-                {
-                  "name": "Approved, Awaiting Repair",
-                  "share": 41.2429,
-                  "percent": 41,
-                  "percentLabel": "41%",
-                  "qty": 73,
-                  "quoteAmount": 29636.51,
-                  "quoteAmountLabel": "$29.6K",
-                  "amount": "73 tickets ($29.6K)",
-                  "rawStatuses": [
-                    "Quote Approved"
                   ],
                   "aging": [
                     {
@@ -6730,15 +6698,47 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 4
+                      "qty": 34
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 32
+                    }
+                  ],
+                  "color": "#1f6feb"
+                },
+                {
+                  "name": "Approved, Awaiting Repair",
+                  "share": 41.8079,
+                  "percent": 42,
+                  "percentLabel": "42%",
+                  "qty": 74,
+                  "quoteAmount": 29859.26,
+                  "quoteAmountLabel": "$29.9K",
+                  "amount": "74 tickets ($29.9K)",
+                  "rawStatuses": [
+                    "Quote Approved"
+                  ],
+                  "aging": [
+                    {
+                      "label": "0-7 days",
+                      "qty": 1
+                    },
+                    {
+                      "label": "8-30 days",
+                      "qty": 3
+                    },
+                    {
+                      "label": "31-60 days",
+                      "qty": 9
+                    },
+                    {
+                      "label": "60+ days",
+                      "qty": 61
                     }
                   ],
                   "color": "#17a6ad"
@@ -6878,16 +6878,16 @@ window.serviceCentreData = {
             "yard": "Geelong",
             "color": "#7c3aed",
             "newTickets": 124,
-            "newQuoteAmount": 9628.93,
-            "newQuoteAmountLabel": "$9.6K",
-            "newAmount": 9628.93,
-            "newAmountLabel": "$9.6K",
+            "newQuoteAmount": 10222.87,
+            "newQuoteAmountLabel": "$10.2K",
+            "newAmount": 10222.87,
+            "newAmountLabel": "$10.2K",
             "invoicedTickets": 2,
             "invoicedAmount": 540.0,
             "invoicedAmountLabel": "$540",
-            "openTickets": 515,
-            "openQuoteAmount": 92896.59,
-            "openQuoteAmountLabel": "$92.9K",
+            "openTickets": 514,
+            "openQuoteAmount": 93490.53,
+            "openQuoteAmountLabel": "$93.5K",
             "internalInvoicedTickets": 2,
             "internalInvoicedAmount": 540.0,
             "internalInvoicedAmountLabel": "$540",
@@ -6898,75 +6898,75 @@ window.serviceCentreData = {
             "otherInvoicedAmount": 0.0,
             "otherInvoicedAmountLabel": "$0",
             "openStatusMix": {
-              "total": "515",
+              "total": "514",
               "segments": [
                 {
                   "name": "Awaiting Quote Approval",
-                  "share": 59.2233,
+                  "share": 59.3385,
                   "percent": 59,
                   "percentLabel": "59%",
                   "qty": 305,
-                  "quoteAmount": 50263.22,
-                  "quoteAmountLabel": "$50.3K",
-                  "amount": "305 tickets ($50.3K)",
+                  "quoteAmount": 50857.16,
+                  "quoteAmountLabel": "$50.9K",
+                  "amount": "305 tickets ($50.9K)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 50
+                      "qty": 47
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Awaiting PDI Start",
-                  "share": 18.4466,
+                  "share": 18.2879,
                   "percent": 18,
                   "percentLabel": "18%",
-                  "qty": 95,
+                  "qty": 94,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
-                  "amount": "95 tickets ($0)",
+                  "amount": "94 tickets ($0)",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "name": "Approved, Awaiting Repair",
-                  "share": 8.5437,
+                  "share": 8.5603,
                   "percent": 9,
                   "percentLabel": "9%",
                   "qty": 44,
@@ -6979,11 +6979,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 9
+                      "qty": 11
                     },
                     {
                       "label": "31-60 days",
@@ -6998,7 +6998,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "PDI Complete, Awaiting Time Claim",
-                  "share": 4.6602,
+                  "share": 4.6693,
                   "percent": 5,
                   "percentLabel": "5%",
                   "qty": 24,
@@ -7030,7 +7030,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair In Progress",
-                  "share": 4.6602,
+                  "share": 4.6693,
                   "percent": 5,
                   "percentLabel": "5%",
                   "qty": 24,
@@ -7062,7 +7062,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Time Claimed, Awaiting Invoice",
-                  "share": 2.5243,
+                  "share": 2.5292,
                   "percent": 3,
                   "percentLabel": "3%",
                   "qty": 13,
@@ -7094,7 +7094,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Repair Complete, Awaiting Time Claim",
-                  "share": 0.9709,
+                  "share": 0.9728,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 5,
@@ -7107,11 +7107,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -7126,7 +7126,7 @@ window.serviceCentreData = {
                 },
                 {
                   "name": "Invoice Cancelled, SO Still Open",
-                  "share": 0.7767,
+                  "share": 0.7782,
                   "percent": 1,
                   "percentLabel": "<1%",
                   "qty": 4,
@@ -7147,18 +7147,18 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "color": "#9a3412"
                 },
                 {
                   "name": "Repair in Progress",
-                  "share": 0.1942,
+                  "share": 0.1946,
                   "percent": -1,
                   "percentLabel": "<1%",
                   "qty": 1,
@@ -7236,15 +7236,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 36
+                      "qty": 32
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "color": "#17a6ad"
@@ -7264,11 +7264,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 29
+                      "qty": 31
                     },
                     {
                       "label": "31-60 days",
@@ -7296,7 +7296,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -7308,7 +7308,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "color": "#1f6feb"
@@ -7332,11 +7332,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
@@ -7453,7 +7453,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -7461,7 +7461,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "60+ days",
@@ -7485,11 +7485,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -7748,11 +7748,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 39
+                      "qty": 29
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "color": "#17a6ad"
@@ -7780,11 +7780,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 94
+                      "qty": 92
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "color": "#1f6feb"
@@ -7808,15 +7808,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 7
+                      "qty": 5
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 11
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "color": "#17a6ad"
@@ -7900,11 +7900,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -8033,11 +8033,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 5
+                      "qty": 4
                     },
                     {
                       "label": "60+ days",
-                      "qty": 5
+                      "qty": 6
                     }
                   ],
                   "color": "#22a447"
@@ -8254,11 +8254,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 61
                     }
                   ],
                   "color": "#17a6ad"
@@ -8286,11 +8286,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 20
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 32
                     }
                   ],
                   "color": "#1f6feb"
@@ -8475,11 +8475,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 14
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "color": "#1f6feb"
@@ -8507,11 +8507,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "color": "#1f6feb"
@@ -8667,11 +8667,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "color": "#9a3412"
@@ -8788,15 +8788,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 35
+                      "qty": 26
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "color": "#17a6ad"
@@ -8856,11 +8856,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 7
+                      "qty": 6
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "color": "#1f6feb"
@@ -9452,11 +9452,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -9774,11 +9774,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 55
+                      "qty": 56
                     }
                   ],
                   "color": "#17a6ad"
@@ -10940,11 +10940,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -25154,7 +25154,7 @@ window.serviceCentreData = {
             {
               "yard": "Perth",
               "color": "#1f6feb",
-              "newTickets": 1519,
+              "newTickets": 1522,
               "newQuoteAmount": 454299.55,
               "newQuoteAmountLabel": "$454.3K",
               "newAmount": 454299.55,
@@ -25162,7 +25162,7 @@ window.serviceCentreData = {
               "invoicedTickets": 591,
               "invoicedAmount": 243045.08,
               "invoicedAmountLabel": "$243.0K",
-              "openTickets": 1533,
+              "openTickets": 1536,
               "openQuoteAmount": 330003.18,
               "openQuoteAmountLabel": "$330.0K",
               "internalInvoicedTickets": 591,
@@ -25175,43 +25175,43 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "1,533",
+                "total": "1,536",
                 "segments": [
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 59.6217,
+                    "share": 59.7005,
                     "percent": 60,
                     "percentLabel": "60%",
-                    "qty": 914,
+                    "qty": 917,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "914 tickets ($0)",
+                    "amount": "917 tickets ($0)",
                     "rawStatuses": [
                       "Repair completed"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 3
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 22
+                        "qty": 19
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 43
+                        "qty": 37
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 26.0274,
+                    "share": 25.9766,
                     "percent": 26,
                     "percentLabel": "26%",
                     "qty": 399,
@@ -25228,22 +25228,22 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 149
+                        "qty": 135
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 118
+                        "qty": 130
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 8.8715,
+                    "share": 8.8542,
                     "percent": 9,
                     "percentLabel": "9%",
                     "qty": 136,
@@ -25260,22 +25260,22 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 12
+                        "qty": 9
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 4.3053,
+                    "share": 4.2969,
                     "percent": 4,
                     "percentLabel": "4%",
                     "qty": 66,
@@ -25307,7 +25307,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.5219,
+                    "share": 0.5208,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 8,
@@ -25339,7 +25339,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 0.3262,
+                    "share": 0.3255,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 5,
@@ -25352,11 +25352,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -25371,7 +25371,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 0.2609,
+                    "share": 0.2604,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -25403,7 +25403,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.0652,
+                    "share": 0.0651,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -25439,32 +25439,32 @@ window.serviceCentreData = {
             {
               "yard": "Traralgon",
               "color": "#17a6ad",
-              "newTickets": 197,
-              "newQuoteAmount": 66194.86,
-              "newQuoteAmountLabel": "$66.2K",
-              "newAmount": 66194.86,
-              "newAmountLabel": "$66.2K",
-              "invoicedTickets": 32,
-              "invoicedAmount": 15794.87,
-              "invoicedAmountLabel": "$15.8K",
-              "openTickets": 89,
-              "openQuoteAmount": 49535.49,
-              "openQuoteAmountLabel": "$49.5K",
-              "internalInvoicedTickets": 15,
-              "internalInvoicedAmount": 8097.27,
-              "internalInvoicedAmountLabel": "$8.1K",
-              "externalInvoicedTickets": 17,
-              "externalInvoicedAmount": 7697.6,
-              "externalInvoicedAmountLabel": "$7.7K",
+              "newTickets": 202,
+              "newQuoteAmount": 68331.87,
+              "newQuoteAmountLabel": "$68.3K",
+              "newAmount": 68331.87,
+              "newAmountLabel": "$68.3K",
+              "invoicedTickets": 37,
+              "invoicedAmount": 17496.7,
+              "invoicedAmountLabel": "$17.5K",
+              "openTickets": 90,
+              "openQuoteAmount": 50097.49,
+              "openQuoteAmountLabel": "$50.1K",
+              "internalInvoicedTickets": 17,
+              "internalInvoicedAmount": 8879.09,
+              "internalInvoicedAmountLabel": "$8.9K",
+              "externalInvoicedTickets": 20,
+              "externalInvoicedAmount": 8617.61,
+              "externalInvoicedAmountLabel": "$8.6K",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "89",
+                "total": "90",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 26.9663,
+                    "share": 26.6667,
                     "percent": 27,
                     "percentLabel": "27%",
                     "qty": 24,
@@ -25496,28 +25496,28 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 19.1011,
+                    "share": 18.8889,
                     "percent": 19,
                     "percentLabel": "19%",
                     "qty": 17,
-                    "quoteAmount": 17618.93,
-                    "quoteAmountLabel": "$17.6K",
-                    "amount": "17 tickets ($17.6K)",
+                    "quoteAmount": 17247.68,
+                    "quoteAmountLabel": "$17.2K",
+                    "amount": "17 tickets ($17.2K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
@@ -25528,15 +25528,47 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 17.9775,
-                    "percent": 18,
-                    "percentLabel": "18%",
-                    "qty": 16,
-                    "quoteAmount": 9214.81,
-                    "quoteAmountLabel": "$9.2K",
-                    "amount": "16 tickets ($9.2K)",
+                    "share": 18.8889,
+                    "percent": 19,
+                    "percentLabel": "19%",
+                    "qty": 17,
+                    "quoteAmount": 9883.06,
+                    "quoteAmountLabel": "$9.9K",
+                    "amount": "17 tickets ($9.9K)",
                     "rawStatuses": [
                       "Claim Time Ticket"
+                    ],
+                    "aging": [
+                      {
+                        "label": "0-7 days",
+                        "qty": 1
+                      },
+                      {
+                        "label": "8-30 days",
+                        "qty": 5
+                      },
+                      {
+                        "label": "31-60 days",
+                        "qty": 5
+                      },
+                      {
+                        "label": "60+ days",
+                        "qty": 6
+                      }
+                    ],
+                    "color": "#22a447"
+                  },
+                  {
+                    "name": "Approved, Awaiting Repair",
+                    "share": 14.4444,
+                    "percent": 14,
+                    "percentLabel": "14%",
+                    "qty": 13,
+                    "quoteAmount": 11161.48,
+                    "quoteAmountLabel": "$11.2K",
+                    "amount": "13 tickets ($11.2K)",
+                    "rawStatuses": [
+                      "Quote Approved"
                     ],
                     "aging": [
                       {
@@ -25549,39 +25581,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 6
-                      },
-                      {
-                        "label": "60+ days",
-                        "qty": 5
-                      }
-                    ],
-                    "color": "#22a447"
-                  },
-                  {
-                    "name": "Approved, Awaiting Repair",
-                    "share": 15.7303,
-                    "percent": 16,
-                    "percentLabel": "16%",
-                    "qty": 14,
-                    "quoteAmount": 11326.48,
-                    "quoteAmountLabel": "$11.3K",
-                    "amount": "14 tickets ($11.3K)",
-                    "rawStatuses": [
-                      "Quote Approved"
-                    ],
-                    "aging": [
-                      {
-                        "label": "0-7 days",
-                        "qty": 1
-                      },
-                      {
-                        "label": "8-30 days",
-                        "qty": 6
-                      },
-                      {
-                        "label": "31-60 days",
-                        "qty": 7
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
@@ -25592,20 +25592,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 11.236,
-                    "percent": 11,
-                    "percentLabel": "11%",
-                    "qty": 10,
-                    "quoteAmount": 5926.25,
-                    "quoteAmountLabel": "$5.9K",
-                    "amount": "10 tickets ($5.9K)",
+                    "share": 12.2222,
+                    "percent": 12,
+                    "percentLabel": "12%",
+                    "qty": 11,
+                    "quoteAmount": 6356.25,
+                    "quoteAmountLabel": "$6.4K",
+                    "amount": "11 tickets ($6.4K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -25624,7 +25624,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 6.7416,
+                    "share": 6.6667,
                     "percent": 7,
                     "percentLabel": "7%",
                     "qty": 6,
@@ -25656,7 +25656,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 2.2472,
+                    "share": 2.2222,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 2,
@@ -25692,96 +25692,96 @@ window.serviceCentreData = {
             {
               "yard": "Launceston",
               "color": "#f58b1f",
-              "newTickets": 294,
-              "newQuoteAmount": 180941.04,
-              "newQuoteAmountLabel": "$180.9K",
-              "newAmount": 180941.04,
-              "newAmountLabel": "$180.9K",
-              "invoicedTickets": 111,
-              "invoicedAmount": 57272.98,
-              "invoicedAmountLabel": "$57.3K",
-              "openTickets": 179,
-              "openQuoteAmount": 103307.68,
-              "openQuoteAmountLabel": "$103.3K",
+              "newTickets": 308,
+              "newQuoteAmount": 189456.49,
+              "newQuoteAmountLabel": "$189.5K",
+              "newAmount": 189456.49,
+              "newAmountLabel": "$189.5K",
+              "invoicedTickets": 113,
+              "invoicedAmount": 60720.56,
+              "invoicedAmountLabel": "$60.7K",
+              "openTickets": 191,
+              "openQuoteAmount": 108030.8,
+              "openQuoteAmountLabel": "$108.0K",
               "internalInvoicedTickets": 27,
               "internalInvoicedAmount": 9240.24,
               "internalInvoicedAmountLabel": "$9.2K",
-              "externalInvoicedTickets": 84,
-              "externalInvoicedAmount": 48032.74,
-              "externalInvoicedAmountLabel": "$48.0K",
+              "externalInvoicedTickets": 86,
+              "externalInvoicedAmount": 51480.32,
+              "externalInvoicedAmountLabel": "$51.5K",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "179",
+                "total": "191",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 52.514,
-                    "percent": 53,
-                    "percentLabel": "53%",
-                    "qty": 94,
-                    "quoteAmount": 70966.01,
-                    "quoteAmountLabel": "$71.0K",
-                    "amount": "94 tickets ($71.0K)",
+                    "share": 54.9738,
+                    "percent": 55,
+                    "percentLabel": "55%",
+                    "qty": 105,
+                    "quoteAmount": 75466.38,
+                    "quoteAmountLabel": "$75.5K",
+                    "amount": "105 tickets ($75.5K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 5
+                        "qty": 14
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 37
+                        "qty": 34
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 22
+                        "qty": 25
                       },
                       {
                         "label": "60+ days",
-                        "qty": 30
+                        "qty": 32
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 40.7821,
-                    "percent": 41,
-                    "percentLabel": "41%",
-                    "qty": 73,
-                    "quoteAmount": 29636.51,
-                    "quoteAmountLabel": "$29.6K",
-                    "amount": "73 tickets ($29.6K)",
+                    "share": 38.7435,
+                    "percent": 39,
+                    "percentLabel": "39%",
+                    "qty": 74,
+                    "quoteAmount": 29859.26,
+                    "quoteAmountLabel": "$29.9K",
+                    "amount": "74 tickets ($29.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 4
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 9
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 2.7933,
+                    "share": 2.6178,
                     "percent": 3,
                     "percentLabel": "3%",
                     "qty": 5,
@@ -25813,7 +25813,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 2.2346,
+                    "share": 2.0942,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 4,
@@ -25845,7 +25845,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 1.1173,
+                    "share": 1.0471,
                     "percent": 1,
                     "percentLabel": "1%",
                     "qty": 2,
@@ -25877,7 +25877,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.5587,
+                    "share": 0.5236,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -25913,20 +25913,20 @@ window.serviceCentreData = {
             {
               "yard": "Geelong",
               "color": "#7c3aed",
-              "newTickets": 920,
-              "newQuoteAmount": 161279.87,
-              "newQuoteAmountLabel": "$161.3K",
-              "newAmount": 161279.87,
-              "newAmountLabel": "$161.3K",
-              "invoicedTickets": 113,
-              "invoicedAmount": 51380.34,
-              "invoicedAmountLabel": "$51.4K",
-              "openTickets": 532,
-              "openQuoteAmount": 93841.92,
-              "openQuoteAmountLabel": "$93.8K",
-              "internalInvoicedTickets": 41,
-              "internalInvoicedAmount": 17935.74,
-              "internalInvoicedAmountLabel": "$17.9K",
+              "newTickets": 937,
+              "newQuoteAmount": 165374.88,
+              "newQuoteAmountLabel": "$165.4K",
+              "newAmount": 165374.88,
+              "newAmountLabel": "$165.4K",
+              "invoicedTickets": 115,
+              "invoicedAmount": 52162.16,
+              "invoicedAmountLabel": "$52.2K",
+              "openTickets": 543,
+              "openQuoteAmount": 97076.93,
+              "openQuoteAmountLabel": "$97.1K",
+              "internalInvoicedTickets": 43,
+              "internalInvoicedAmount": 18717.56,
+              "internalInvoicedAmountLabel": "$18.7K",
               "externalInvoicedTickets": 72,
               "externalInvoicedAmount": 33444.6,
               "externalInvoicedAmountLabel": "$33.4K",
@@ -25934,49 +25934,49 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "532",
+                "total": "543",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 59.7744,
+                    "share": 59.8527,
                     "percent": 60,
                     "percentLabel": "60%",
-                    "qty": 318,
-                    "quoteAmount": 51060.05,
-                    "quoteAmountLabel": "$51.1K",
-                    "amount": "318 tickets ($51.1K)",
+                    "qty": 325,
+                    "quoteAmount": 52875.01,
+                    "quoteAmountLabel": "$52.9K",
+                    "amount": "325 tickets ($52.9K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 15
+                        "qty": 20
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 50
+                        "qty": 48
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 18.4211,
+                    "share": 18.4162,
                     "percent": 18,
                     "percentLabel": "18%",
-                    "qty": 98,
+                    "qty": 100,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "98 tickets ($0)",
+                    "amount": "100 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
@@ -25987,39 +25987,39 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 5
+                        "qty": 6
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 8.2707,
+                    "share": 8.2873,
                     "percent": 8,
                     "percentLabel": "8%",
-                    "qty": 44,
-                    "quoteAmount": 28251.92,
-                    "quoteAmountLabel": "$28.3K",
-                    "amount": "44 tickets ($28.3K)",
+                    "qty": 45,
+                    "quoteAmount": 28901.91,
+                    "quoteAmountLabel": "$28.9K",
+                    "amount": "45 tickets ($28.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 9
+                        "qty": 11
                       },
                       {
                         "label": "31-60 days",
@@ -26034,20 +26034,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 4.6992,
+                    "share": 4.7882,
                     "percent": 5,
                     "percentLabel": "5%",
-                    "qty": 25,
-                    "quoteAmount": 8513.81,
-                    "quoteAmountLabel": "$8.5K",
-                    "amount": "25 tickets ($8.5K)",
+                    "qty": 26,
+                    "quoteAmount": 9283.87,
+                    "quoteAmountLabel": "$9.3K",
+                    "amount": "26 tickets ($9.3K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
@@ -26066,9 +26066,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 4.5113,
-                    "percent": 5,
-                    "percentLabel": "5%",
+                    "share": 4.4199,
+                    "percent": 4,
+                    "percentLabel": "4%",
                     "qty": 24,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -26098,7 +26098,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 2.4436,
+                    "share": 2.3941,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 13,
@@ -26130,7 +26130,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.9398,
+                    "share": 0.9208,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 5,
@@ -26143,11 +26143,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -26162,7 +26162,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.7519,
+                    "share": 0.7366,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -26183,19 +26183,19 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.188,
-                    "percent": 0,
+                    "share": 0.1842,
+                    "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
                     "quoteAmount": 0.0,
@@ -26230,7 +26230,7 @@ window.serviceCentreData = {
             {
               "yard": "Frankston",
               "color": "#22a447",
-              "newTickets": 443,
+              "newTickets": 451,
               "newQuoteAmount": 194722.99,
               "newQuoteAmountLabel": "$194.7K",
               "newAmount": 194722.99,
@@ -26238,7 +26238,7 @@ window.serviceCentreData = {
               "invoicedTickets": 152,
               "invoicedAmount": 55484.41,
               "invoicedAmountLabel": "$55.5K",
-              "openTickets": 262,
+              "openTickets": 270,
               "openQuoteAmount": 124648.59,
               "openQuoteAmountLabel": "$124.6K",
               "internalInvoicedTickets": 59,
@@ -26251,13 +26251,13 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "262",
+                "total": "270",
                 "segments": [
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 46.5649,
-                    "percent": 47,
-                    "percentLabel": "47%",
+                    "share": 45.1852,
+                    "percent": 45,
+                    "percentLabel": "45%",
                     "qty": 122,
                     "quoteAmount": 87693.85,
                     "quoteAmountLabel": "$87.7K",
@@ -26272,39 +26272,39 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 36
+                        "qty": 32
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 30.5344,
-                    "percent": 31,
-                    "percentLabel": "31%",
-                    "qty": 80,
+                    "share": 32.5926,
+                    "percent": 33,
+                    "percentLabel": "33%",
+                    "qty": 88,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "80 tickets ($0)",
+                    "amount": "88 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 8
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 29
+                        "qty": 31
                       },
                       {
                         "label": "31-60 days",
@@ -26319,7 +26319,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 14.1221,
+                    "share": 13.7037,
                     "percent": 14,
                     "percentLabel": "14%",
                     "qty": 37,
@@ -26332,7 +26332,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -26344,14 +26344,14 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 5.7252,
+                    "share": 5.5556,
                     "percent": 6,
                     "percentLabel": "6%",
                     "qty": 15,
@@ -26368,11 +26368,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
@@ -26383,9 +26383,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 1.5267,
-                    "percent": 2,
-                    "percentLabel": "2%",
+                    "share": 1.4815,
+                    "percent": 1,
+                    "percentLabel": "1%",
                     "qty": 4,
                     "quoteAmount": 2358.0,
                     "quoteAmountLabel": "$2.4K",
@@ -26415,9 +26415,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 1.5267,
-                    "percent": 0,
-                    "percentLabel": "2%",
+                    "share": 1.4815,
+                    "percent": 1,
+                    "percentLabel": "1%",
                     "qty": 4,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -26452,16 +26452,16 @@ window.serviceCentreData = {
               "yard": "Other",
               "color": "#64748b",
               "newTickets": 74,
-              "newQuoteAmount": 49053.98,
-              "newQuoteAmountLabel": "$49.1K",
-              "newAmount": 49053.98,
-              "newAmountLabel": "$49.1K",
+              "newQuoteAmount": 48773.97,
+              "newQuoteAmountLabel": "$48.8K",
+              "newAmount": 48773.97,
+              "newAmountLabel": "$48.8K",
               "invoicedTickets": 463,
               "invoicedAmount": 71832.92,
               "invoicedAmountLabel": "$71.8K",
               "openTickets": 64,
-              "openQuoteAmount": 49508.47,
-              "openQuoteAmountLabel": "$49.5K",
+              "openQuoteAmount": 49228.46,
+              "openQuoteAmountLabel": "$49.2K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
@@ -26476,20 +26476,20 @@ window.serviceCentreData = {
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 48.4375,
-                    "percent": 48,
-                    "percentLabel": "48%",
-                    "qty": 31,
-                    "quoteAmount": 14313.51,
-                    "quoteAmountLabel": "$14.3K",
-                    "amount": "31 tickets ($14.3K)",
+                    "share": 46.875,
+                    "percent": 47,
+                    "percentLabel": "47%",
+                    "qty": 30,
+                    "quoteAmount": 14033.5,
+                    "quoteAmountLabel": "$14.0K",
+                    "amount": "30 tickets ($14.0K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -26497,7 +26497,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "60+ days",
@@ -26521,11 +26521,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
@@ -26572,20 +26572,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 9.375,
-                    "percent": 9,
-                    "percentLabel": "9%",
-                    "qty": 6,
+                    "share": 10.9375,
+                    "percent": 11,
+                    "percentLabel": "11%",
+                    "qty": 7,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "6 tickets ($0)",
+                    "amount": "7 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -26701,7 +26701,7 @@ window.serviceCentreData = {
                   {
                     "name": "Repair in Progress",
                     "share": 1.5625,
-                    "percent": 2,
+                    "percent": 1,
                     "percentLabel": "2%",
                     "qty": 1,
                     "quoteAmount": 0.0,
@@ -26780,15 +26780,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 149
+                        "qty": 135
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 118
+                        "qty": 130
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
@@ -26812,15 +26812,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 12
+                        "qty": 9
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
@@ -26902,11 +26902,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -27017,45 +27017,45 @@ window.serviceCentreData = {
             {
               "yard": "Traralgon",
               "color": "#17a6ad",
-              "newTickets": 82,
-              "newQuoteAmount": 66194.86,
-              "newQuoteAmountLabel": "$66.2K",
-              "newAmount": 66194.86,
-              "newAmountLabel": "$66.2K",
-              "invoicedTickets": 32,
-              "invoicedAmount": 15794.87,
-              "invoicedAmountLabel": "$15.8K",
-              "openTickets": 63,
-              "openQuoteAmount": 49535.49,
-              "openQuoteAmountLabel": "$49.5K",
-              "internalInvoicedTickets": 15,
-              "internalInvoicedAmount": 8097.27,
-              "internalInvoicedAmountLabel": "$8.1K",
-              "externalInvoicedTickets": 17,
-              "externalInvoicedAmount": 7697.6,
-              "externalInvoicedAmountLabel": "$7.7K",
+              "newTickets": 87,
+              "newQuoteAmount": 68331.87,
+              "newQuoteAmountLabel": "$68.3K",
+              "newAmount": 68331.87,
+              "newAmountLabel": "$68.3K",
+              "invoicedTickets": 37,
+              "invoicedAmount": 17496.7,
+              "invoicedAmountLabel": "$17.5K",
+              "openTickets": 64,
+              "openQuoteAmount": 50097.49,
+              "openQuoteAmountLabel": "$50.1K",
+              "internalInvoicedTickets": 17,
+              "internalInvoicedAmount": 8879.09,
+              "internalInvoicedAmountLabel": "$8.9K",
+              "externalInvoicedTickets": 20,
+              "externalInvoicedAmount": 8617.61,
+              "externalInvoicedAmountLabel": "$8.6K",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "63",
+                "total": "64",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 15.873,
-                    "percent": 16,
-                    "percentLabel": "16%",
-                    "qty": 10,
-                    "quoteAmount": 5926.25,
-                    "quoteAmountLabel": "$5.9K",
-                    "amount": "10 tickets ($5.9K)",
+                    "share": 17.1875,
+                    "percent": 17,
+                    "percentLabel": "17%",
+                    "qty": 11,
+                    "quoteAmount": 6356.25,
+                    "quoteAmountLabel": "$6.4K",
+                    "amount": "11 tickets ($6.4K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -27074,28 +27074,28 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 22.2222,
-                    "percent": 22,
-                    "percentLabel": "22%",
-                    "qty": 14,
-                    "quoteAmount": 11326.48,
-                    "quoteAmountLabel": "$11.3K",
-                    "amount": "14 tickets ($11.3K)",
+                    "share": 20.3125,
+                    "percent": 20,
+                    "percentLabel": "20%",
+                    "qty": 13,
+                    "quoteAmount": 11161.48,
+                    "quoteAmountLabel": "$11.2K",
+                    "amount": "13 tickets ($11.2K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 5
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 7
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
@@ -27106,28 +27106,28 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 26.9841,
+                    "share": 26.5625,
                     "percent": 27,
                     "percentLabel": "27%",
                     "qty": 17,
-                    "quoteAmount": 17618.93,
-                    "quoteAmountLabel": "$17.6K",
-                    "amount": "17 tickets ($17.6K)",
+                    "quoteAmount": 17247.68,
+                    "quoteAmountLabel": "$17.2K",
+                    "amount": "17 tickets ($17.2K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
@@ -27138,9 +27138,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 9.5238,
-                    "percent": 10,
-                    "percentLabel": "10%",
+                    "share": 9.375,
+                    "percent": 9,
+                    "percentLabel": "9%",
                     "qty": 6,
                     "quoteAmount": 5449.02,
                     "quoteAmountLabel": "$5.4K",
@@ -27170,20 +27170,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 25.3968,
-                    "percent": 25,
-                    "percentLabel": "25%",
-                    "qty": 16,
-                    "quoteAmount": 9214.81,
-                    "quoteAmountLabel": "$9.2K",
-                    "amount": "16 tickets ($9.2K)",
+                    "share": 26.5625,
+                    "percent": 27,
+                    "percentLabel": "27%",
+                    "qty": 17,
+                    "quoteAmount": 9883.06,
+                    "quoteAmountLabel": "$9.9K",
+                    "amount": "17 tickets ($9.9K)",
                     "rawStatuses": [
                       "Claim Time Ticket"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -27191,11 +27191,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 6
+                        "qty": 5
                       },
                       {
                         "label": "60+ days",
-                        "qty": 5
+                        "qty": 6
                       }
                     ],
                     "color": "#22a447"
@@ -27296,96 +27296,96 @@ window.serviceCentreData = {
             {
               "yard": "Launceston",
               "color": "#f58b1f",
-              "newTickets": 290,
-              "newQuoteAmount": 180941.04,
-              "newQuoteAmountLabel": "$180.9K",
-              "newAmount": 180941.04,
-              "newAmountLabel": "$180.9K",
-              "invoicedTickets": 111,
-              "invoicedAmount": 57272.98,
-              "invoicedAmountLabel": "$57.3K",
-              "openTickets": 174,
-              "openQuoteAmount": 103307.68,
-              "openQuoteAmountLabel": "$103.3K",
+              "newTickets": 304,
+              "newQuoteAmount": 189456.49,
+              "newQuoteAmountLabel": "$189.5K",
+              "newAmount": 189456.49,
+              "newAmountLabel": "$189.5K",
+              "invoicedTickets": 113,
+              "invoicedAmount": 60720.56,
+              "invoicedAmountLabel": "$60.7K",
+              "openTickets": 186,
+              "openQuoteAmount": 108030.8,
+              "openQuoteAmountLabel": "$108.0K",
               "internalInvoicedTickets": 27,
               "internalInvoicedAmount": 9240.24,
               "internalInvoicedAmountLabel": "$9.2K",
-              "externalInvoicedTickets": 84,
-              "externalInvoicedAmount": 48032.74,
-              "externalInvoicedAmountLabel": "$48.0K",
+              "externalInvoicedTickets": 86,
+              "externalInvoicedAmount": 51480.32,
+              "externalInvoicedAmountLabel": "$51.5K",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "174",
+                "total": "186",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 54.023,
-                    "percent": 54,
-                    "percentLabel": "54%",
-                    "qty": 94,
-                    "quoteAmount": 70966.01,
-                    "quoteAmountLabel": "$71.0K",
-                    "amount": "94 tickets ($71.0K)",
+                    "share": 56.4516,
+                    "percent": 56,
+                    "percentLabel": "56%",
+                    "qty": 105,
+                    "quoteAmount": 75466.38,
+                    "quoteAmountLabel": "$75.5K",
+                    "amount": "105 tickets ($75.5K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 5
+                        "qty": 14
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 37
+                        "qty": 34
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 22
+                        "qty": 25
                       },
                       {
                         "label": "60+ days",
-                        "qty": 30
+                        "qty": 32
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 41.954,
-                    "percent": 42,
-                    "percentLabel": "42%",
-                    "qty": 73,
-                    "quoteAmount": 29636.51,
-                    "quoteAmountLabel": "$29.6K",
-                    "amount": "73 tickets ($29.6K)",
+                    "share": 39.7849,
+                    "percent": 40,
+                    "percentLabel": "40%",
+                    "qty": 74,
+                    "quoteAmount": 29859.26,
+                    "quoteAmountLabel": "$29.9K",
+                    "amount": "74 tickets ($29.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 4
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 9
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 2.2989,
+                    "share": 2.1505,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 4,
@@ -27417,7 +27417,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.5747,
+                    "share": 0.5376,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -27509,7 +27509,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 1.1494,
+                    "share": 1.0753,
                     "percent": 1,
                     "percentLabel": "1%",
                     "qty": 2,
@@ -27575,20 +27575,20 @@ window.serviceCentreData = {
             {
               "yard": "Geelong",
               "color": "#7c3aed",
-              "newTickets": 532,
-              "newQuoteAmount": 161279.87,
-              "newQuoteAmountLabel": "$161.3K",
-              "newAmount": 161279.87,
-              "newAmountLabel": "$161.3K",
-              "invoicedTickets": 113,
-              "invoicedAmount": 51380.34,
-              "invoicedAmountLabel": "$51.4K",
-              "openTickets": 409,
-              "openQuoteAmount": 93841.92,
-              "openQuoteAmountLabel": "$93.8K",
-              "internalInvoicedTickets": 41,
-              "internalInvoicedAmount": 17935.74,
-              "internalInvoicedAmountLabel": "$17.9K",
+              "newTickets": 543,
+              "newQuoteAmount": 165374.88,
+              "newQuoteAmountLabel": "$165.4K",
+              "newAmount": 165374.88,
+              "newAmountLabel": "$165.4K",
+              "invoicedTickets": 115,
+              "invoicedAmount": 52162.16,
+              "invoicedAmountLabel": "$52.2K",
+              "openTickets": 418,
+              "openQuoteAmount": 97076.93,
+              "openQuoteAmountLabel": "$97.1K",
+              "internalInvoicedTickets": 43,
+              "internalInvoicedAmount": 18717.56,
+              "internalInvoicedAmountLabel": "$18.7K",
               "externalInvoicedTickets": 72,
               "externalInvoicedAmount": 33444.6,
               "externalInvoicedAmountLabel": "$33.4K",
@@ -27596,60 +27596,60 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "409",
+                "total": "418",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 77.7506,
+                    "share": 77.7512,
                     "percent": 78,
                     "percentLabel": "78%",
-                    "qty": 318,
-                    "quoteAmount": 51060.05,
-                    "quoteAmountLabel": "$51.1K",
-                    "amount": "318 tickets ($51.1K)",
+                    "qty": 325,
+                    "quoteAmount": 52875.01,
+                    "quoteAmountLabel": "$52.9K",
+                    "amount": "325 tickets ($52.9K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 15
+                        "qty": 20
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 50
+                        "qty": 48
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 10.7579,
+                    "share": 10.7656,
                     "percent": 11,
                     "percentLabel": "11%",
-                    "qty": 44,
-                    "quoteAmount": 28251.92,
-                    "quoteAmountLabel": "$28.3K",
-                    "amount": "44 tickets ($28.3K)",
+                    "qty": 45,
+                    "quoteAmount": 28901.91,
+                    "quoteAmountLabel": "$28.9K",
+                    "amount": "45 tickets ($28.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 9
+                        "qty": 11
                       },
                       {
                         "label": "31-60 days",
@@ -27664,20 +27664,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 6.1125,
+                    "share": 6.2201,
                     "percent": 6,
                     "percentLabel": "6%",
-                    "qty": 25,
-                    "quoteAmount": 8513.81,
-                    "quoteAmountLabel": "$8.5K",
-                    "amount": "25 tickets ($8.5K)",
+                    "qty": 26,
+                    "quoteAmount": 9283.87,
+                    "quoteAmountLabel": "$9.3K",
+                    "amount": "26 tickets ($9.3K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
@@ -27696,7 +27696,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 1.2225,
+                    "share": 1.1962,
                     "percent": 1,
                     "percentLabel": "1%",
                     "qty": 5,
@@ -27709,11 +27709,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -27728,7 +27728,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 3.1785,
+                    "share": 3.11,
                     "percent": 3,
                     "percentLabel": "3%",
                     "qty": 13,
@@ -27790,7 +27790,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.978,
+                    "share": 0.9569,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -27811,11 +27811,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
@@ -27894,7 +27894,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -27906,7 +27906,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
@@ -27930,15 +27930,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 36
+                        "qty": 32
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
@@ -27962,11 +27962,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
@@ -28133,17 +28133,17 @@ window.serviceCentreData = {
             {
               "yard": "Other",
               "color": "#64748b",
-              "newTickets": 65,
-              "newQuoteAmount": 49053.98,
-              "newQuoteAmountLabel": "$49.1K",
-              "newAmount": 49053.98,
-              "newAmountLabel": "$49.1K",
+              "newTickets": 64,
+              "newQuoteAmount": 48773.97,
+              "newQuoteAmountLabel": "$48.8K",
+              "newAmount": 48773.97,
+              "newAmountLabel": "$48.8K",
               "invoicedTickets": 8,
               "invoicedAmount": 2245.11,
               "invoicedAmountLabel": "$2.2K",
-              "openTickets": 56,
-              "openQuoteAmount": 49508.47,
-              "openQuoteAmountLabel": "$49.5K",
+              "openTickets": 55,
+              "openQuoteAmount": 49228.46,
+              "openQuoteAmountLabel": "$49.2K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
@@ -28154,24 +28154,24 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 2245.11,
               "otherInvoicedAmountLabel": "$2.2K",
               "openStatusMix": {
-                "total": "56",
+                "total": "55",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 55.3571,
+                    "share": 54.5455,
                     "percent": 55,
                     "percentLabel": "55%",
-                    "qty": 31,
-                    "quoteAmount": 14313.51,
-                    "quoteAmountLabel": "$14.3K",
-                    "amount": "31 tickets ($14.3K)",
+                    "qty": 30,
+                    "quoteAmount": 14033.5,
+                    "quoteAmountLabel": "$14.0K",
+                    "amount": "30 tickets ($14.0K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -28179,7 +28179,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "60+ days",
@@ -28190,7 +28190,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 16.0714,
+                    "share": 16.3636,
                     "percent": 16,
                     "percentLabel": "16%",
                     "qty": 9,
@@ -28222,7 +28222,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 19.6429,
+                    "share": 20.0,
                     "percent": 20,
                     "percentLabel": "20%",
                     "qty": 11,
@@ -28235,11 +28235,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
@@ -28254,7 +28254,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 1.7857,
+                    "share": 1.8182,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 1,
@@ -28286,7 +28286,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 7.1429,
+                    "share": 7.2727,
                     "percent": 7,
                     "percentLabel": "7%",
                     "qty": 4,
@@ -28414,7 +28414,7 @@ window.serviceCentreData = {
             {
               "yard": "Perth",
               "color": "#1f6feb",
-              "newTickets": 712,
+              "newTickets": 715,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -28422,7 +28422,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 919,
+              "openTickets": 922,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -28435,11 +28435,11 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "919",
+                "total": "922",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 0.4353,
+                    "share": 0.4338,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -28471,32 +28471,32 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 99.4559,
+                    "share": 99.4577,
                     "percent": 99,
                     "percentLabel": "99%",
-                    "qty": 914,
+                    "qty": 917,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "914 tickets ($0)",
+                    "amount": "917 tickets ($0)",
                     "rawStatuses": [
                       "Repair completed"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 3
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 22
+                        "qty": 19
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 43
+                        "qty": 37
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
@@ -28563,7 +28563,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.1088,
+                    "share": 0.1085,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -28903,7 +28903,7 @@ window.serviceCentreData = {
             {
               "yard": "Geelong",
               "color": "#7c3aed",
-              "newTickets": 388,
+              "newTickets": 394,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -28911,7 +28911,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 123,
+              "openTickets": 125,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -28924,17 +28924,17 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "123",
+                "total": "125",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 79.6748,
+                    "share": 80.0,
                     "percent": 80,
                     "percentLabel": "80%",
-                    "qty": 98,
+                    "qty": 100,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "98 tickets ($0)",
+                    "amount": "100 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
@@ -28945,24 +28945,24 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 5
+                        "qty": 6
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 19.5122,
-                    "percent": 20,
-                    "percentLabel": "20%",
+                    "share": 19.2,
+                    "percent": 19,
+                    "percentLabel": "19%",
                     "qty": 24,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -29052,8 +29052,8 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.813,
-                    "percent": 0,
+                    "share": 0.8,
+                    "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
                     "quoteAmount": 0.0,
@@ -29088,7 +29088,7 @@ window.serviceCentreData = {
             {
               "yard": "Frankston",
               "color": "#22a447",
-              "newTickets": 103,
+              "newTickets": 111,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -29096,7 +29096,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 84,
+              "openTickets": 92,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -29109,28 +29109,28 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "84",
+                "total": "92",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 95.2381,
-                    "percent": 95,
-                    "percentLabel": "95%",
-                    "qty": 80,
+                    "share": 95.6522,
+                    "percent": 96,
+                    "percentLabel": "96%",
+                    "qty": 88,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "80 tickets ($0)",
+                    "amount": "88 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 8
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 29
+                        "qty": 31
                       },
                       {
                         "label": "31-60 days",
@@ -29145,9 +29145,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 4.7619,
-                    "percent": 5,
-                    "percentLabel": "5%",
+                    "share": 4.3478,
+                    "percent": 4,
+                    "percentLabel": "4%",
                     "qty": 4,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -29241,7 +29241,7 @@ window.serviceCentreData = {
             {
               "yard": "Other",
               "color": "#64748b",
-              "newTickets": 9,
+              "newTickets": 10,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -29249,7 +29249,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 8,
+              "openTickets": 9,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -29262,24 +29262,24 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "8",
+                "total": "9",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 75.0,
-                    "percent": 75,
-                    "percentLabel": "75%",
-                    "qty": 6,
+                    "share": 77.7778,
+                    "percent": 78,
+                    "percentLabel": "78%",
+                    "qty": 7,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "6 tickets ($0)",
+                    "amount": "7 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -29298,9 +29298,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 12.5,
-                    "percent": 12,
-                    "percentLabel": "12%",
+                    "share": 11.1111,
+                    "percent": 11,
+                    "percentLabel": "11%",
                     "qty": 1,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -29390,9 +29390,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 12.5,
-                    "percent": 13,
-                    "percentLabel": "12%",
+                    "share": 11.1111,
+                    "percent": 11,
+                    "percentLabel": "11%",
                     "qty": 1,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -38238,7 +38238,7 @@ window.serviceCentreData = {
             {
               "yard": "Perth",
               "color": "#1f6feb",
-              "newTickets": 5,
+              "newTickets": 8,
               "newQuoteAmount": 1241.25,
               "newQuoteAmountLabel": "$1.2K",
               "newAmount": 1241.25,
@@ -38246,7 +38246,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 1533,
+              "openTickets": 1536,
               "openQuoteAmount": 330003.18,
               "openQuoteAmountLabel": "$330.0K",
               "internalInvoicedTickets": 0,
@@ -38259,43 +38259,43 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "1,533",
+                "total": "1,536",
                 "segments": [
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 59.6217,
+                    "share": 59.7005,
                     "percent": 60,
                     "percentLabel": "60%",
-                    "qty": 914,
+                    "qty": 917,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "914 tickets ($0)",
+                    "amount": "917 tickets ($0)",
                     "rawStatuses": [
                       "Repair completed"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 3
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 22
+                        "qty": 19
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 43
+                        "qty": 37
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 26.0274,
+                    "share": 25.9766,
                     "percent": 26,
                     "percentLabel": "26%",
                     "qty": 399,
@@ -38312,22 +38312,22 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 149
+                        "qty": 135
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 118
+                        "qty": 130
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 8.8715,
+                    "share": 8.8542,
                     "percent": 9,
                     "percentLabel": "9%",
                     "qty": 136,
@@ -38344,22 +38344,22 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 12
+                        "qty": 9
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 4.3053,
+                    "share": 4.2969,
                     "percent": 4,
                     "percentLabel": "4%",
                     "qty": 66,
@@ -38391,7 +38391,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.5219,
+                    "share": 0.5208,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 8,
@@ -38423,7 +38423,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 0.3262,
+                    "share": 0.3255,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 5,
@@ -38436,11 +38436,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -38455,7 +38455,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 0.2609,
+                    "share": 0.2604,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -38487,7 +38487,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.0652,
+                    "share": 0.0651,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -38523,32 +38523,32 @@ window.serviceCentreData = {
             {
               "yard": "Traralgon",
               "color": "#17a6ad",
-              "newTickets": 1,
-              "newQuoteAmount": 297.0,
-              "newQuoteAmountLabel": "$297",
-              "newAmount": 297.0,
-              "newAmountLabel": "$297",
-              "invoicedTickets": 0,
-              "invoicedAmount": 0.0,
-              "invoicedAmountLabel": "$0",
-              "openTickets": 89,
-              "openQuoteAmount": 49535.49,
-              "openQuoteAmountLabel": "$49.5K",
-              "internalInvoicedTickets": 0,
-              "internalInvoicedAmount": 0.0,
-              "internalInvoicedAmountLabel": "$0",
-              "externalInvoicedTickets": 0,
-              "externalInvoicedAmount": 0.0,
-              "externalInvoicedAmountLabel": "$0",
+              "newTickets": 6,
+              "newQuoteAmount": 2434.01,
+              "newQuoteAmountLabel": "$2.4K",
+              "newAmount": 2434.01,
+              "newAmountLabel": "$2.4K",
+              "invoicedTickets": 5,
+              "invoicedAmount": 1701.83,
+              "invoicedAmountLabel": "$1.7K",
+              "openTickets": 90,
+              "openQuoteAmount": 50097.49,
+              "openQuoteAmountLabel": "$50.1K",
+              "internalInvoicedTickets": 2,
+              "internalInvoicedAmount": 781.82,
+              "internalInvoicedAmountLabel": "$782",
+              "externalInvoicedTickets": 3,
+              "externalInvoicedAmount": 920.01,
+              "externalInvoicedAmountLabel": "$920",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "89",
+                "total": "90",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 26.9663,
+                    "share": 26.6667,
                     "percent": 27,
                     "percentLabel": "27%",
                     "qty": 24,
@@ -38580,28 +38580,28 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 19.1011,
+                    "share": 18.8889,
                     "percent": 19,
                     "percentLabel": "19%",
                     "qty": 17,
-                    "quoteAmount": 17618.93,
-                    "quoteAmountLabel": "$17.6K",
-                    "amount": "17 tickets ($17.6K)",
+                    "quoteAmount": 17247.68,
+                    "quoteAmountLabel": "$17.2K",
+                    "amount": "17 tickets ($17.2K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
@@ -38612,15 +38612,47 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 17.9775,
-                    "percent": 18,
-                    "percentLabel": "18%",
-                    "qty": 16,
-                    "quoteAmount": 9214.81,
-                    "quoteAmountLabel": "$9.2K",
-                    "amount": "16 tickets ($9.2K)",
+                    "share": 18.8889,
+                    "percent": 19,
+                    "percentLabel": "19%",
+                    "qty": 17,
+                    "quoteAmount": 9883.06,
+                    "quoteAmountLabel": "$9.9K",
+                    "amount": "17 tickets ($9.9K)",
                     "rawStatuses": [
                       "Claim Time Ticket"
+                    ],
+                    "aging": [
+                      {
+                        "label": "0-7 days",
+                        "qty": 1
+                      },
+                      {
+                        "label": "8-30 days",
+                        "qty": 5
+                      },
+                      {
+                        "label": "31-60 days",
+                        "qty": 5
+                      },
+                      {
+                        "label": "60+ days",
+                        "qty": 6
+                      }
+                    ],
+                    "color": "#22a447"
+                  },
+                  {
+                    "name": "Approved, Awaiting Repair",
+                    "share": 14.4444,
+                    "percent": 14,
+                    "percentLabel": "14%",
+                    "qty": 13,
+                    "quoteAmount": 11161.48,
+                    "quoteAmountLabel": "$11.2K",
+                    "amount": "13 tickets ($11.2K)",
+                    "rawStatuses": [
+                      "Quote Approved"
                     ],
                     "aging": [
                       {
@@ -38633,39 +38665,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 6
-                      },
-                      {
-                        "label": "60+ days",
-                        "qty": 5
-                      }
-                    ],
-                    "color": "#22a447"
-                  },
-                  {
-                    "name": "Approved, Awaiting Repair",
-                    "share": 15.7303,
-                    "percent": 16,
-                    "percentLabel": "16%",
-                    "qty": 14,
-                    "quoteAmount": 11326.48,
-                    "quoteAmountLabel": "$11.3K",
-                    "amount": "14 tickets ($11.3K)",
-                    "rawStatuses": [
-                      "Quote Approved"
-                    ],
-                    "aging": [
-                      {
-                        "label": "0-7 days",
-                        "qty": 1
-                      },
-                      {
-                        "label": "8-30 days",
-                        "qty": 6
-                      },
-                      {
-                        "label": "31-60 days",
-                        "qty": 7
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
@@ -38676,20 +38676,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 11.236,
-                    "percent": 11,
-                    "percentLabel": "11%",
-                    "qty": 10,
-                    "quoteAmount": 5926.25,
-                    "quoteAmountLabel": "$5.9K",
-                    "amount": "10 tickets ($5.9K)",
+                    "share": 12.2222,
+                    "percent": 12,
+                    "percentLabel": "12%",
+                    "qty": 11,
+                    "quoteAmount": 6356.25,
+                    "quoteAmountLabel": "$6.4K",
+                    "amount": "11 tickets ($6.4K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -38708,7 +38708,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 6.7416,
+                    "share": 6.6667,
                     "percent": 7,
                     "percentLabel": "7%",
                     "qty": 6,
@@ -38740,7 +38740,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 2.2472,
+                    "share": 2.2222,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 2,
@@ -38776,96 +38776,96 @@ window.serviceCentreData = {
             {
               "yard": "Launceston",
               "color": "#f58b1f",
-              "newTickets": 3,
-              "newQuoteAmount": 2410.01,
-              "newQuoteAmountLabel": "$2.4K",
-              "newAmount": 2410.01,
-              "newAmountLabel": "$2.4K",
-              "invoicedTickets": 1,
-              "invoicedAmount": 1363.62,
-              "invoicedAmountLabel": "$1.4K",
-              "openTickets": 179,
-              "openQuoteAmount": 103307.68,
-              "openQuoteAmountLabel": "$103.3K",
+              "newTickets": 17,
+              "newQuoteAmount": 10925.46,
+              "newQuoteAmountLabel": "$10.9K",
+              "newAmount": 10925.46,
+              "newAmountLabel": "$10.9K",
+              "invoicedTickets": 3,
+              "invoicedAmount": 4811.2,
+              "invoicedAmountLabel": "$4.8K",
+              "openTickets": 191,
+              "openQuoteAmount": 108030.8,
+              "openQuoteAmountLabel": "$108.0K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
-              "externalInvoicedTickets": 1,
-              "externalInvoicedAmount": 1363.62,
-              "externalInvoicedAmountLabel": "$1.4K",
+              "externalInvoicedTickets": 3,
+              "externalInvoicedAmount": 4811.2,
+              "externalInvoicedAmountLabel": "$4.8K",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "179",
+                "total": "191",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 52.514,
-                    "percent": 53,
-                    "percentLabel": "53%",
-                    "qty": 94,
-                    "quoteAmount": 70966.01,
-                    "quoteAmountLabel": "$71.0K",
-                    "amount": "94 tickets ($71.0K)",
+                    "share": 54.9738,
+                    "percent": 55,
+                    "percentLabel": "55%",
+                    "qty": 105,
+                    "quoteAmount": 75466.38,
+                    "quoteAmountLabel": "$75.5K",
+                    "amount": "105 tickets ($75.5K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 5
+                        "qty": 14
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 37
+                        "qty": 34
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 22
+                        "qty": 25
                       },
                       {
                         "label": "60+ days",
-                        "qty": 30
+                        "qty": 32
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 40.7821,
-                    "percent": 41,
-                    "percentLabel": "41%",
-                    "qty": 73,
-                    "quoteAmount": 29636.51,
-                    "quoteAmountLabel": "$29.6K",
-                    "amount": "73 tickets ($29.6K)",
+                    "share": 38.7435,
+                    "percent": 39,
+                    "percentLabel": "39%",
+                    "qty": 74,
+                    "quoteAmount": 29859.26,
+                    "quoteAmountLabel": "$29.9K",
+                    "amount": "74 tickets ($29.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 4
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 9
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 2.7933,
+                    "share": 2.6178,
                     "percent": 3,
                     "percentLabel": "3%",
                     "qty": 5,
@@ -38897,7 +38897,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 2.2346,
+                    "share": 2.0942,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 4,
@@ -38929,7 +38929,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 1.1173,
+                    "share": 1.0471,
                     "percent": 1,
                     "percentLabel": "1%",
                     "qty": 2,
@@ -38961,7 +38961,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.5587,
+                    "share": 0.5236,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -38997,20 +38997,20 @@ window.serviceCentreData = {
             {
               "yard": "Geelong",
               "color": "#7c3aed",
-              "newTickets": 22,
-              "newQuoteAmount": 2477.32,
-              "newQuoteAmountLabel": "$2.5K",
-              "newAmount": 2477.32,
-              "newAmountLabel": "$2.5K",
-              "invoicedTickets": 3,
-              "invoicedAmount": 1256.36,
-              "invoicedAmountLabel": "$1.3K",
-              "openTickets": 532,
-              "openQuoteAmount": 93841.92,
-              "openQuoteAmountLabel": "$93.8K",
-              "internalInvoicedTickets": 2,
-              "internalInvoicedAmount": 645.46,
-              "internalInvoicedAmountLabel": "$645",
+              "newTickets": 39,
+              "newQuoteAmount": 5978.39,
+              "newQuoteAmountLabel": "$6.0K",
+              "newAmount": 5978.39,
+              "newAmountLabel": "$6.0K",
+              "invoicedTickets": 5,
+              "invoicedAmount": 2038.18,
+              "invoicedAmountLabel": "$2.0K",
+              "openTickets": 543,
+              "openQuoteAmount": 97076.93,
+              "openQuoteAmountLabel": "$97.1K",
+              "internalInvoicedTickets": 4,
+              "internalInvoicedAmount": 1427.28,
+              "internalInvoicedAmountLabel": "$1.4K",
               "externalInvoicedTickets": 1,
               "externalInvoicedAmount": 610.9,
               "externalInvoicedAmountLabel": "$611",
@@ -39018,49 +39018,49 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "532",
+                "total": "543",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 59.7744,
+                    "share": 59.8527,
                     "percent": 60,
                     "percentLabel": "60%",
-                    "qty": 318,
-                    "quoteAmount": 51060.05,
-                    "quoteAmountLabel": "$51.1K",
-                    "amount": "318 tickets ($51.1K)",
+                    "qty": 325,
+                    "quoteAmount": 52875.01,
+                    "quoteAmountLabel": "$52.9K",
+                    "amount": "325 tickets ($52.9K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 15
+                        "qty": 20
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 50
+                        "qty": 48
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 18.4211,
+                    "share": 18.4162,
                     "percent": 18,
                     "percentLabel": "18%",
-                    "qty": 98,
+                    "qty": 100,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "98 tickets ($0)",
+                    "amount": "100 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
@@ -39071,39 +39071,39 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 5
+                        "qty": 6
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 8.2707,
+                    "share": 8.2873,
                     "percent": 8,
                     "percentLabel": "8%",
-                    "qty": 44,
-                    "quoteAmount": 28251.92,
-                    "quoteAmountLabel": "$28.3K",
-                    "amount": "44 tickets ($28.3K)",
+                    "qty": 45,
+                    "quoteAmount": 28901.91,
+                    "quoteAmountLabel": "$28.9K",
+                    "amount": "45 tickets ($28.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 9
+                        "qty": 11
                       },
                       {
                         "label": "31-60 days",
@@ -39118,20 +39118,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 4.6992,
+                    "share": 4.7882,
                     "percent": 5,
                     "percentLabel": "5%",
-                    "qty": 25,
-                    "quoteAmount": 8513.81,
-                    "quoteAmountLabel": "$8.5K",
-                    "amount": "25 tickets ($8.5K)",
+                    "qty": 26,
+                    "quoteAmount": 9283.87,
+                    "quoteAmountLabel": "$9.3K",
+                    "amount": "26 tickets ($9.3K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
@@ -39150,9 +39150,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 4.5113,
-                    "percent": 5,
-                    "percentLabel": "5%",
+                    "share": 4.4199,
+                    "percent": 4,
+                    "percentLabel": "4%",
                     "qty": 24,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -39182,7 +39182,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 2.4436,
+                    "share": 2.3941,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 13,
@@ -39214,7 +39214,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.9398,
+                    "share": 0.9208,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 5,
@@ -39227,11 +39227,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -39246,7 +39246,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.7519,
+                    "share": 0.7366,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -39267,19 +39267,19 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.188,
-                    "percent": 0,
+                    "share": 0.1842,
+                    "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
                     "quoteAmount": 0.0,
@@ -39314,7 +39314,7 @@ window.serviceCentreData = {
             {
               "yard": "Frankston",
               "color": "#22a447",
-              "newTickets": 0,
+              "newTickets": 8,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -39322,7 +39322,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 262,
+              "openTickets": 270,
               "openQuoteAmount": 124648.59,
               "openQuoteAmountLabel": "$124.6K",
               "internalInvoicedTickets": 0,
@@ -39335,13 +39335,13 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "262",
+                "total": "270",
                 "segments": [
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 46.5649,
-                    "percent": 47,
-                    "percentLabel": "47%",
+                    "share": 45.1852,
+                    "percent": 45,
+                    "percentLabel": "45%",
                     "qty": 122,
                     "quoteAmount": 87693.85,
                     "quoteAmountLabel": "$87.7K",
@@ -39356,39 +39356,39 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 36
+                        "qty": 32
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 30.5344,
-                    "percent": 31,
-                    "percentLabel": "31%",
-                    "qty": 80,
+                    "share": 32.5926,
+                    "percent": 33,
+                    "percentLabel": "33%",
+                    "qty": 88,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "80 tickets ($0)",
+                    "amount": "88 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 8
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 29
+                        "qty": 31
                       },
                       {
                         "label": "31-60 days",
@@ -39403,7 +39403,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 14.1221,
+                    "share": 13.7037,
                     "percent": 14,
                     "percentLabel": "14%",
                     "qty": 37,
@@ -39416,7 +39416,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -39428,14 +39428,14 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 5.7252,
+                    "share": 5.5556,
                     "percent": 6,
                     "percentLabel": "6%",
                     "qty": 15,
@@ -39452,11 +39452,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
@@ -39467,9 +39467,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 1.5267,
-                    "percent": 2,
-                    "percentLabel": "2%",
+                    "share": 1.4815,
+                    "percent": 1,
+                    "percentLabel": "1%",
                     "qty": 4,
                     "quoteAmount": 2358.0,
                     "quoteAmountLabel": "$2.4K",
@@ -39499,9 +39499,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 1.5267,
-                    "percent": 0,
-                    "percentLabel": "2%",
+                    "share": 1.4815,
+                    "percent": 1,
+                    "percentLabel": "1%",
                     "qty": 4,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -39536,16 +39536,16 @@ window.serviceCentreData = {
               "yard": "Other",
               "color": "#64748b",
               "newTickets": 2,
-              "newQuoteAmount": 1599.52,
-              "newQuoteAmountLabel": "$1.6K",
-              "newAmount": 1599.52,
-              "newAmountLabel": "$1.6K",
+              "newQuoteAmount": 1319.51,
+              "newQuoteAmountLabel": "$1.3K",
+              "newAmount": 1319.51,
+              "newAmountLabel": "$1.3K",
               "invoicedTickets": 1,
               "invoicedAmount": -136.36,
               "invoicedAmountLabel": "$-136",
               "openTickets": 64,
-              "openQuoteAmount": 49508.47,
-              "openQuoteAmountLabel": "$49.5K",
+              "openQuoteAmount": 49228.46,
+              "openQuoteAmountLabel": "$49.2K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
@@ -39560,20 +39560,20 @@ window.serviceCentreData = {
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 48.4375,
-                    "percent": 48,
-                    "percentLabel": "48%",
-                    "qty": 31,
-                    "quoteAmount": 14313.51,
-                    "quoteAmountLabel": "$14.3K",
-                    "amount": "31 tickets ($14.3K)",
+                    "share": 46.875,
+                    "percent": 47,
+                    "percentLabel": "47%",
+                    "qty": 30,
+                    "quoteAmount": 14033.5,
+                    "quoteAmountLabel": "$14.0K",
+                    "amount": "30 tickets ($14.0K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -39581,7 +39581,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "60+ days",
@@ -39605,11 +39605,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
@@ -39656,20 +39656,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 9.375,
-                    "percent": 9,
-                    "percentLabel": "9%",
-                    "qty": 6,
+                    "share": 10.9375,
+                    "percent": 11,
+                    "percentLabel": "11%",
+                    "qty": 7,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "6 tickets ($0)",
+                    "amount": "7 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -39785,7 +39785,7 @@ window.serviceCentreData = {
                   {
                     "name": "Repair in Progress",
                     "share": 1.5625,
-                    "percent": 2,
+                    "percent": 1,
                     "percentLabel": "2%",
                     "qty": 1,
                     "quoteAmount": 0.0,
@@ -39864,15 +39864,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 149
+                        "qty": 135
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 118
+                        "qty": 130
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
@@ -39896,15 +39896,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 12
+                        "qty": 9
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
@@ -39986,11 +39986,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -40101,45 +40101,45 @@ window.serviceCentreData = {
             {
               "yard": "Traralgon",
               "color": "#17a6ad",
-              "newTickets": 1,
-              "newQuoteAmount": 297.0,
-              "newQuoteAmountLabel": "$297",
-              "newAmount": 297.0,
-              "newAmountLabel": "$297",
-              "invoicedTickets": 0,
-              "invoicedAmount": 0.0,
-              "invoicedAmountLabel": "$0",
-              "openTickets": 63,
-              "openQuoteAmount": 49535.49,
-              "openQuoteAmountLabel": "$49.5K",
-              "internalInvoicedTickets": 0,
-              "internalInvoicedAmount": 0.0,
-              "internalInvoicedAmountLabel": "$0",
-              "externalInvoicedTickets": 0,
-              "externalInvoicedAmount": 0.0,
-              "externalInvoicedAmountLabel": "$0",
+              "newTickets": 6,
+              "newQuoteAmount": 2434.01,
+              "newQuoteAmountLabel": "$2.4K",
+              "newAmount": 2434.01,
+              "newAmountLabel": "$2.4K",
+              "invoicedTickets": 5,
+              "invoicedAmount": 1701.83,
+              "invoicedAmountLabel": "$1.7K",
+              "openTickets": 64,
+              "openQuoteAmount": 50097.49,
+              "openQuoteAmountLabel": "$50.1K",
+              "internalInvoicedTickets": 2,
+              "internalInvoicedAmount": 781.82,
+              "internalInvoicedAmountLabel": "$782",
+              "externalInvoicedTickets": 3,
+              "externalInvoicedAmount": 920.01,
+              "externalInvoicedAmountLabel": "$920",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "63",
+                "total": "64",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 15.873,
-                    "percent": 16,
-                    "percentLabel": "16%",
-                    "qty": 10,
-                    "quoteAmount": 5926.25,
-                    "quoteAmountLabel": "$5.9K",
-                    "amount": "10 tickets ($5.9K)",
+                    "share": 17.1875,
+                    "percent": 17,
+                    "percentLabel": "17%",
+                    "qty": 11,
+                    "quoteAmount": 6356.25,
+                    "quoteAmountLabel": "$6.4K",
+                    "amount": "11 tickets ($6.4K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -40158,28 +40158,28 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 22.2222,
-                    "percent": 22,
-                    "percentLabel": "22%",
-                    "qty": 14,
-                    "quoteAmount": 11326.48,
-                    "quoteAmountLabel": "$11.3K",
-                    "amount": "14 tickets ($11.3K)",
+                    "share": 20.3125,
+                    "percent": 20,
+                    "percentLabel": "20%",
+                    "qty": 13,
+                    "quoteAmount": 11161.48,
+                    "quoteAmountLabel": "$11.2K",
+                    "amount": "13 tickets ($11.2K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 5
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 7
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
@@ -40190,28 +40190,28 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 26.9841,
+                    "share": 26.5625,
                     "percent": 27,
                     "percentLabel": "27%",
                     "qty": 17,
-                    "quoteAmount": 17618.93,
-                    "quoteAmountLabel": "$17.6K",
-                    "amount": "17 tickets ($17.6K)",
+                    "quoteAmount": 17247.68,
+                    "quoteAmountLabel": "$17.2K",
+                    "amount": "17 tickets ($17.2K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
@@ -40222,9 +40222,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 9.5238,
-                    "percent": 10,
-                    "percentLabel": "10%",
+                    "share": 9.375,
+                    "percent": 9,
+                    "percentLabel": "9%",
                     "qty": 6,
                     "quoteAmount": 5449.02,
                     "quoteAmountLabel": "$5.4K",
@@ -40254,20 +40254,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 25.3968,
-                    "percent": 25,
-                    "percentLabel": "25%",
-                    "qty": 16,
-                    "quoteAmount": 9214.81,
-                    "quoteAmountLabel": "$9.2K",
-                    "amount": "16 tickets ($9.2K)",
+                    "share": 26.5625,
+                    "percent": 27,
+                    "percentLabel": "27%",
+                    "qty": 17,
+                    "quoteAmount": 9883.06,
+                    "quoteAmountLabel": "$9.9K",
+                    "amount": "17 tickets ($9.9K)",
                     "rawStatuses": [
                       "Claim Time Ticket"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -40275,11 +40275,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 6
+                        "qty": 5
                       },
                       {
                         "label": "60+ days",
-                        "qty": 5
+                        "qty": 6
                       }
                     ],
                     "color": "#22a447"
@@ -40380,96 +40380,96 @@ window.serviceCentreData = {
             {
               "yard": "Launceston",
               "color": "#f58b1f",
-              "newTickets": 3,
-              "newQuoteAmount": 2410.01,
-              "newQuoteAmountLabel": "$2.4K",
-              "newAmount": 2410.01,
-              "newAmountLabel": "$2.4K",
-              "invoicedTickets": 1,
-              "invoicedAmount": 1363.62,
-              "invoicedAmountLabel": "$1.4K",
-              "openTickets": 174,
-              "openQuoteAmount": 103307.68,
-              "openQuoteAmountLabel": "$103.3K",
+              "newTickets": 17,
+              "newQuoteAmount": 10925.46,
+              "newQuoteAmountLabel": "$10.9K",
+              "newAmount": 10925.46,
+              "newAmountLabel": "$10.9K",
+              "invoicedTickets": 3,
+              "invoicedAmount": 4811.2,
+              "invoicedAmountLabel": "$4.8K",
+              "openTickets": 186,
+              "openQuoteAmount": 108030.8,
+              "openQuoteAmountLabel": "$108.0K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
-              "externalInvoicedTickets": 1,
-              "externalInvoicedAmount": 1363.62,
-              "externalInvoicedAmountLabel": "$1.4K",
+              "externalInvoicedTickets": 3,
+              "externalInvoicedAmount": 4811.2,
+              "externalInvoicedAmountLabel": "$4.8K",
               "otherInvoicedTickets": 0,
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "174",
+                "total": "186",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 54.023,
-                    "percent": 54,
-                    "percentLabel": "54%",
-                    "qty": 94,
-                    "quoteAmount": 70966.01,
-                    "quoteAmountLabel": "$71.0K",
-                    "amount": "94 tickets ($71.0K)",
+                    "share": 56.4516,
+                    "percent": 56,
+                    "percentLabel": "56%",
+                    "qty": 105,
+                    "quoteAmount": 75466.38,
+                    "quoteAmountLabel": "$75.5K",
+                    "amount": "105 tickets ($75.5K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 5
+                        "qty": 14
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 37
+                        "qty": 34
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 22
+                        "qty": 25
                       },
                       {
                         "label": "60+ days",
-                        "qty": 30
+                        "qty": 32
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 41.954,
-                    "percent": 42,
-                    "percentLabel": "42%",
-                    "qty": 73,
-                    "quoteAmount": 29636.51,
-                    "quoteAmountLabel": "$29.6K",
-                    "amount": "73 tickets ($29.6K)",
+                    "share": 39.7849,
+                    "percent": 40,
+                    "percentLabel": "40%",
+                    "qty": 74,
+                    "quoteAmount": 29859.26,
+                    "quoteAmountLabel": "$29.9K",
+                    "amount": "74 tickets ($29.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 4
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 9
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 2.2989,
+                    "share": 2.1505,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 4,
@@ -40501,7 +40501,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.5747,
+                    "share": 0.5376,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -40593,7 +40593,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 1.1494,
+                    "share": 1.0753,
                     "percent": 1,
                     "percentLabel": "1%",
                     "qty": 2,
@@ -40659,20 +40659,20 @@ window.serviceCentreData = {
             {
               "yard": "Geelong",
               "color": "#7c3aed",
-              "newTickets": 17,
-              "newQuoteAmount": 2477.32,
-              "newQuoteAmountLabel": "$2.5K",
-              "newAmount": 2477.32,
-              "newAmountLabel": "$2.5K",
-              "invoicedTickets": 3,
-              "invoicedAmount": 1256.36,
-              "invoicedAmountLabel": "$1.3K",
-              "openTickets": 409,
-              "openQuoteAmount": 93841.92,
-              "openQuoteAmountLabel": "$93.8K",
-              "internalInvoicedTickets": 2,
-              "internalInvoicedAmount": 645.46,
-              "internalInvoicedAmountLabel": "$645",
+              "newTickets": 28,
+              "newQuoteAmount": 5978.39,
+              "newQuoteAmountLabel": "$6.0K",
+              "newAmount": 5978.39,
+              "newAmountLabel": "$6.0K",
+              "invoicedTickets": 5,
+              "invoicedAmount": 2038.18,
+              "invoicedAmountLabel": "$2.0K",
+              "openTickets": 418,
+              "openQuoteAmount": 97076.93,
+              "openQuoteAmountLabel": "$97.1K",
+              "internalInvoicedTickets": 4,
+              "internalInvoicedAmount": 1427.28,
+              "internalInvoicedAmountLabel": "$1.4K",
               "externalInvoicedTickets": 1,
               "externalInvoicedAmount": 610.9,
               "externalInvoicedAmountLabel": "$611",
@@ -40680,60 +40680,60 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "409",
+                "total": "418",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 77.7506,
+                    "share": 77.7512,
                     "percent": 78,
                     "percentLabel": "78%",
-                    "qty": 318,
-                    "quoteAmount": 51060.05,
-                    "quoteAmountLabel": "$51.1K",
-                    "amount": "318 tickets ($51.1K)",
+                    "qty": 325,
+                    "quoteAmount": 52875.01,
+                    "quoteAmountLabel": "$52.9K",
+                    "amount": "325 tickets ($52.9K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 15
+                        "qty": 20
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 50
+                        "qty": 48
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 10.7579,
+                    "share": 10.7656,
                     "percent": 11,
                     "percentLabel": "11%",
-                    "qty": 44,
-                    "quoteAmount": 28251.92,
-                    "quoteAmountLabel": "$28.3K",
-                    "amount": "44 tickets ($28.3K)",
+                    "qty": 45,
+                    "quoteAmount": 28901.91,
+                    "quoteAmountLabel": "$28.9K",
+                    "amount": "45 tickets ($28.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 9
+                        "qty": 11
                       },
                       {
                         "label": "31-60 days",
@@ -40748,20 +40748,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 6.1125,
+                    "share": 6.2201,
                     "percent": 6,
                     "percentLabel": "6%",
-                    "qty": 25,
-                    "quoteAmount": 8513.81,
-                    "quoteAmountLabel": "$8.5K",
-                    "amount": "25 tickets ($8.5K)",
+                    "qty": 26,
+                    "quoteAmount": 9283.87,
+                    "quoteAmountLabel": "$9.3K",
+                    "amount": "26 tickets ($9.3K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "8-30 days",
@@ -40780,7 +40780,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 1.2225,
+                    "share": 1.1962,
                     "percent": 1,
                     "percentLabel": "1%",
                     "qty": 5,
@@ -40793,11 +40793,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -40812,7 +40812,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 3.1785,
+                    "share": 3.11,
                     "percent": 3,
                     "percentLabel": "3%",
                     "qty": 13,
@@ -40874,7 +40874,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.978,
+                    "share": 0.9569,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -40895,11 +40895,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
@@ -40978,7 +40978,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -40990,7 +40990,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
@@ -41014,15 +41014,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 36
+                        "qty": 32
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
@@ -41046,11 +41046,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
@@ -41217,17 +41217,17 @@ window.serviceCentreData = {
             {
               "yard": "Other",
               "color": "#64748b",
-              "newTickets": 2,
-              "newQuoteAmount": 1599.52,
-              "newQuoteAmountLabel": "$1.6K",
-              "newAmount": 1599.52,
-              "newAmountLabel": "$1.6K",
+              "newTickets": 1,
+              "newQuoteAmount": 1319.51,
+              "newQuoteAmountLabel": "$1.3K",
+              "newAmount": 1319.51,
+              "newAmountLabel": "$1.3K",
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 56,
-              "openQuoteAmount": 49508.47,
-              "openQuoteAmountLabel": "$49.5K",
+              "openTickets": 55,
+              "openQuoteAmount": 49228.46,
+              "openQuoteAmountLabel": "$49.2K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
@@ -41238,24 +41238,24 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "56",
+                "total": "55",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 55.3571,
+                    "share": 54.5455,
                     "percent": 55,
                     "percentLabel": "55%",
-                    "qty": 31,
-                    "quoteAmount": 14313.51,
-                    "quoteAmountLabel": "$14.3K",
-                    "amount": "31 tickets ($14.3K)",
+                    "qty": 30,
+                    "quoteAmount": 14033.5,
+                    "quoteAmountLabel": "$14.0K",
+                    "amount": "30 tickets ($14.0K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -41263,7 +41263,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "60+ days",
@@ -41274,7 +41274,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 16.0714,
+                    "share": 16.3636,
                     "percent": 16,
                     "percentLabel": "16%",
                     "qty": 9,
@@ -41306,7 +41306,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 19.6429,
+                    "share": 20.0,
                     "percent": 20,
                     "percentLabel": "20%",
                     "qty": 11,
@@ -41319,11 +41319,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
@@ -41338,7 +41338,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 1.7857,
+                    "share": 1.8182,
                     "percent": 2,
                     "percentLabel": "2%",
                     "qty": 1,
@@ -41370,7 +41370,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 7.1429,
+                    "share": 7.2727,
                     "percent": 7,
                     "percentLabel": "7%",
                     "qty": 4,
@@ -41498,7 +41498,7 @@ window.serviceCentreData = {
             {
               "yard": "Perth",
               "color": "#1f6feb",
-              "newTickets": 0,
+              "newTickets": 3,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -41506,7 +41506,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 919,
+              "openTickets": 922,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -41519,11 +41519,11 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "919",
+                "total": "922",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 0.4353,
+                    "share": 0.4338,
                     "percent": 0,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -41555,32 +41555,32 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 99.4559,
+                    "share": 99.4577,
                     "percent": 99,
                     "percentLabel": "99%",
-                    "qty": 914,
+                    "qty": 917,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "914 tickets ($0)",
+                    "amount": "917 tickets ($0)",
                     "rawStatuses": [
                       "Repair completed"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 3
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 22
+                        "qty": 19
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 43
+                        "qty": 37
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
@@ -41647,7 +41647,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.1088,
+                    "share": 0.1085,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -41987,7 +41987,7 @@ window.serviceCentreData = {
             {
               "yard": "Geelong",
               "color": "#7c3aed",
-              "newTickets": 5,
+              "newTickets": 11,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -41995,7 +41995,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 123,
+              "openTickets": 125,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -42008,17 +42008,17 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "123",
+                "total": "125",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 79.6748,
+                    "share": 80.0,
                     "percent": 80,
                     "percentLabel": "80%",
-                    "qty": 98,
+                    "qty": 100,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "98 tickets ($0)",
+                    "amount": "100 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
@@ -42029,24 +42029,24 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 5
+                        "qty": 6
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 19.5122,
-                    "percent": 20,
-                    "percentLabel": "20%",
+                    "share": 19.2,
+                    "percent": 19,
+                    "percentLabel": "19%",
                     "qty": 24,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -42136,8 +42136,8 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.813,
-                    "percent": 0,
+                    "share": 0.8,
+                    "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
                     "quoteAmount": 0.0,
@@ -42172,7 +42172,7 @@ window.serviceCentreData = {
             {
               "yard": "Frankston",
               "color": "#22a447",
-              "newTickets": 0,
+              "newTickets": 8,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -42180,7 +42180,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 84,
+              "openTickets": 92,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -42193,28 +42193,28 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "84",
+                "total": "92",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 95.2381,
-                    "percent": 95,
-                    "percentLabel": "95%",
-                    "qty": 80,
+                    "share": 95.6522,
+                    "percent": 96,
+                    "percentLabel": "96%",
+                    "qty": 88,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "80 tickets ($0)",
+                    "amount": "88 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 8
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 29
+                        "qty": 31
                       },
                       {
                         "label": "31-60 days",
@@ -42229,9 +42229,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 4.7619,
-                    "percent": 5,
-                    "percentLabel": "5%",
+                    "share": 4.3478,
+                    "percent": 4,
+                    "percentLabel": "4%",
                     "qty": 4,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -42325,7 +42325,7 @@ window.serviceCentreData = {
             {
               "yard": "Other",
               "color": "#64748b",
-              "newTickets": 0,
+              "newTickets": 1,
               "newQuoteAmount": 0.0,
               "newQuoteAmountLabel": "$0",
               "newAmount": 0.0,
@@ -42333,7 +42333,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 8,
+              "openTickets": 9,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -42346,24 +42346,24 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "8",
+                "total": "9",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 75.0,
-                    "percent": 75,
-                    "percentLabel": "75%",
-                    "qty": 6,
+                    "share": 77.7778,
+                    "percent": 78,
+                    "percentLabel": "78%",
+                    "qty": 7,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "6 tickets ($0)",
+                    "amount": "7 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -42382,9 +42382,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 12.5,
-                    "percent": 12,
-                    "percentLabel": "12%",
+                    "share": 11.1111,
+                    "percent": 11,
+                    "percentLabel": "11%",
                     "qty": 1,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -42474,9 +42474,9 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 12.5,
-                    "percent": 13,
-                    "percentLabel": "12%",
+                    "share": 11.1111,
+                    "percent": 11,
+                    "percentLabel": "11%",
                     "qty": 1,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -42552,19 +42552,19 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 22
+                        "qty": 19
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 43
+                        "qty": 37
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
@@ -42588,15 +42588,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 149
+                        "qty": 135
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 118
+                        "qty": 130
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
@@ -42620,15 +42620,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 12
+                        "qty": 9
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
@@ -42712,11 +42712,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -42807,9 +42807,9 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 88,
-              "openQuoteAmount": 49238.49,
-              "openQuoteAmountLabel": "$49.2K",
+              "openTickets": 87,
+              "openQuoteAmount": 49073.49,
+              "openQuoteAmountLabel": "$49.1K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
@@ -42820,13 +42820,13 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "88",
+                "total": "87",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 27.2727,
-                    "percent": 27,
-                    "percentLabel": "27%",
+                    "share": 27.5862,
+                    "percent": 28,
+                    "percentLabel": "28%",
                     "qty": 24,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
@@ -42855,14 +42855,46 @@ window.serviceCentreData = {
                     "color": "#1f6feb"
                   },
                   {
-                    "name": "Repair In Progress",
-                    "share": 19.3182,
-                    "percent": 19,
-                    "percentLabel": "19%",
+                    "name": "Time Claimed, Awaiting Invoice",
+                    "share": 19.5402,
+                    "percent": 20,
+                    "percentLabel": "20%",
                     "qty": 17,
-                    "quoteAmount": 17618.93,
-                    "quoteAmountLabel": "$17.6K",
-                    "amount": "17 tickets ($17.6K)",
+                    "quoteAmount": 9883.06,
+                    "quoteAmountLabel": "$9.9K",
+                    "amount": "17 tickets ($9.9K)",
+                    "rawStatuses": [
+                      "Claim Time Ticket"
+                    ],
+                    "aging": [
+                      {
+                        "label": "0-7 days",
+                        "qty": 1
+                      },
+                      {
+                        "label": "8-30 days",
+                        "qty": 5
+                      },
+                      {
+                        "label": "31-60 days",
+                        "qty": 5
+                      },
+                      {
+                        "label": "60+ days",
+                        "qty": 6
+                      }
+                    ],
+                    "color": "#22a447"
+                  },
+                  {
+                    "name": "Repair In Progress",
+                    "share": 18.3908,
+                    "percent": 18,
+                    "percentLabel": "18%",
+                    "qty": 16,
+                    "quoteAmount": 16950.68,
+                    "quoteAmountLabel": "$17.0K",
+                    "amount": "16 tickets ($17.0K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
@@ -42873,11 +42905,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
@@ -42887,46 +42919,14 @@ window.serviceCentreData = {
                     "color": "#f58b1f"
                   },
                   {
-                    "name": "Time Claimed, Awaiting Invoice",
-                    "share": 18.1818,
-                    "percent": 18,
-                    "percentLabel": "18%",
-                    "qty": 16,
-                    "quoteAmount": 9214.81,
-                    "quoteAmountLabel": "$9.2K",
-                    "amount": "16 tickets ($9.2K)",
-                    "rawStatuses": [
-                      "Claim Time Ticket"
-                    ],
-                    "aging": [
-                      {
-                        "label": "0-7 days",
-                        "qty": 0
-                      },
-                      {
-                        "label": "8-30 days",
-                        "qty": 5
-                      },
-                      {
-                        "label": "31-60 days",
-                        "qty": 6
-                      },
-                      {
-                        "label": "60+ days",
-                        "qty": 5
-                      }
-                    ],
-                    "color": "#22a447"
-                  },
-                  {
                     "name": "Approved, Awaiting Repair",
-                    "share": 14.7727,
-                    "percent": 15,
-                    "percentLabel": "15%",
-                    "qty": 13,
-                    "quoteAmount": 11029.48,
-                    "quoteAmountLabel": "$11.0K",
-                    "amount": "13 tickets ($11.0K)",
+                    "share": 13.7931,
+                    "percent": 14,
+                    "percentLabel": "14%",
+                    "qty": 12,
+                    "quoteAmount": 10864.48,
+                    "quoteAmountLabel": "$10.9K",
+                    "amount": "12 tickets ($10.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
@@ -42937,11 +42937,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 4
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 7
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
@@ -42952,7 +42952,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 11.3636,
+                    "share": 11.4943,
                     "percent": 11,
                     "percentLabel": "11%",
                     "qty": 10,
@@ -42984,7 +42984,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 6.8182,
+                    "share": 6.8966,
                     "percent": 7,
                     "percentLabel": "7%",
                     "qty": 6,
@@ -43016,8 +43016,8 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 2.2727,
-                    "percent": 3,
+                    "share": 2.2989,
+                    "percent": 2,
                     "percentLabel": "2%",
                     "qty": 2,
                     "quoteAmount": 0.0,
@@ -43077,47 +43077,15 @@ window.serviceCentreData = {
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 51.9774,
-                    "percent": 52,
-                    "percentLabel": "52%",
-                    "qty": 92,
-                    "quoteAmount": 70256.0,
-                    "quoteAmountLabel": "$70.3K",
-                    "amount": "92 tickets ($70.3K)",
+                    "share": 51.4124,
+                    "percent": 51,
+                    "percentLabel": "51%",
+                    "qty": 91,
+                    "quoteAmount": 70033.25,
+                    "quoteAmountLabel": "$70.0K",
+                    "amount": "91 tickets ($70.0K)",
                     "rawStatuses": [
                       "Open"
-                    ],
-                    "aging": [
-                      {
-                        "label": "0-7 days",
-                        "qty": 3
-                      },
-                      {
-                        "label": "8-30 days",
-                        "qty": 37
-                      },
-                      {
-                        "label": "31-60 days",
-                        "qty": 22
-                      },
-                      {
-                        "label": "60+ days",
-                        "qty": 30
-                      }
-                    ],
-                    "color": "#1f6feb"
-                  },
-                  {
-                    "name": "Approved, Awaiting Repair",
-                    "share": 41.2429,
-                    "percent": 41,
-                    "percentLabel": "41%",
-                    "qty": 73,
-                    "quoteAmount": 29636.51,
-                    "quoteAmountLabel": "$29.6K",
-                    "amount": "73 tickets ($29.6K)",
-                    "rawStatuses": [
-                      "Quote Approved"
                     ],
                     "aging": [
                       {
@@ -43126,15 +43094,47 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 4
+                        "qty": 34
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 25
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 32
+                      }
+                    ],
+                    "color": "#1f6feb"
+                  },
+                  {
+                    "name": "Approved, Awaiting Repair",
+                    "share": 41.8079,
+                    "percent": 42,
+                    "percentLabel": "42%",
+                    "qty": 74,
+                    "quoteAmount": 29859.26,
+                    "quoteAmountLabel": "$29.9K",
+                    "amount": "74 tickets ($29.9K)",
+                    "rawStatuses": [
+                      "Quote Approved"
+                    ],
+                    "aging": [
+                      {
+                        "label": "0-7 days",
+                        "qty": 1
+                      },
+                      {
+                        "label": "8-30 days",
+                        "qty": 3
+                      },
+                      {
+                        "label": "31-60 days",
+                        "qty": 9
+                      },
+                      {
+                        "label": "60+ days",
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
@@ -43274,16 +43274,16 @@ window.serviceCentreData = {
               "yard": "Geelong",
               "color": "#7c3aed",
               "newTickets": 124,
-              "newQuoteAmount": 9628.93,
-              "newQuoteAmountLabel": "$9.6K",
-              "newAmount": 9628.93,
-              "newAmountLabel": "$9.6K",
+              "newQuoteAmount": 10222.87,
+              "newQuoteAmountLabel": "$10.2K",
+              "newAmount": 10222.87,
+              "newAmountLabel": "$10.2K",
               "invoicedTickets": 2,
               "invoicedAmount": 540.0,
               "invoicedAmountLabel": "$540",
-              "openTickets": 515,
-              "openQuoteAmount": 92896.59,
-              "openQuoteAmountLabel": "$92.9K",
+              "openTickets": 514,
+              "openQuoteAmount": 93490.53,
+              "openQuoteAmountLabel": "$93.5K",
               "internalInvoicedTickets": 2,
               "internalInvoicedAmount": 540.0,
               "internalInvoicedAmountLabel": "$540",
@@ -43294,75 +43294,75 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "515",
+                "total": "514",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 59.2233,
+                    "share": 59.3385,
                     "percent": 59,
                     "percentLabel": "59%",
                     "qty": 305,
-                    "quoteAmount": 50263.22,
-                    "quoteAmountLabel": "$50.3K",
-                    "amount": "305 tickets ($50.3K)",
+                    "quoteAmount": 50857.16,
+                    "quoteAmountLabel": "$50.9K",
+                    "amount": "305 tickets ($50.9K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 50
+                        "qty": 47
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 18.4466,
+                    "share": 18.2879,
                     "percent": 18,
                     "percentLabel": "18%",
-                    "qty": 95,
+                    "qty": 94,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "95 tickets ($0)",
+                    "amount": "94 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 5
+                        "qty": 6
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 8.5437,
+                    "share": 8.5603,
                     "percent": 9,
                     "percentLabel": "9%",
                     "qty": 44,
@@ -43375,11 +43375,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 9
+                        "qty": 11
                       },
                       {
                         "label": "31-60 days",
@@ -43394,7 +43394,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 4.6602,
+                    "share": 4.6693,
                     "percent": 5,
                     "percentLabel": "5%",
                     "qty": 24,
@@ -43426,7 +43426,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 4.6602,
+                    "share": 4.6693,
                     "percent": 5,
                     "percentLabel": "5%",
                     "qty": 24,
@@ -43458,7 +43458,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 2.5243,
+                    "share": 2.5292,
                     "percent": 3,
                     "percentLabel": "3%",
                     "qty": 13,
@@ -43490,7 +43490,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 0.9709,
+                    "share": 0.9728,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 5,
@@ -43503,11 +43503,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -43522,7 +43522,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Invoice Cancelled, SO Still Open",
-                    "share": 0.7767,
+                    "share": 0.7782,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 4,
@@ -43543,18 +43543,18 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.1942,
+                    "share": 0.1946,
                     "percent": -1,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -43632,15 +43632,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 36
+                        "qty": 32
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
@@ -43660,11 +43660,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 29
+                        "qty": 31
                       },
                       {
                         "label": "31-60 days",
@@ -43692,7 +43692,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -43704,7 +43704,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
@@ -43728,11 +43728,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
@@ -43849,7 +43849,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -43857,7 +43857,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "60+ days",
@@ -43881,11 +43881,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
@@ -44140,15 +44140,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 149
+                        "qty": 135
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 118
+                        "qty": 130
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
@@ -44172,15 +44172,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 12
+                        "qty": 9
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
@@ -44262,11 +44262,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -44385,9 +44385,9 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 62,
-              "openQuoteAmount": 49238.49,
-              "openQuoteAmountLabel": "$49.2K",
+              "openTickets": 61,
+              "openQuoteAmount": 49073.49,
+              "openQuoteAmountLabel": "$49.1K",
               "internalInvoicedTickets": 0,
               "internalInvoicedAmount": 0.0,
               "internalInvoicedAmountLabel": "$0",
@@ -44398,11 +44398,11 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "62",
+                "total": "61",
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 16.129,
+                    "share": 16.3934,
                     "percent": 16,
                     "percentLabel": "16%",
                     "qty": 10,
@@ -44434,13 +44434,13 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Approved, Awaiting Repair",
-                    "share": 20.9677,
-                    "percent": 21,
-                    "percentLabel": "21%",
-                    "qty": 13,
-                    "quoteAmount": 11029.48,
-                    "quoteAmountLabel": "$11.0K",
-                    "amount": "13 tickets ($11.0K)",
+                    "share": 19.6721,
+                    "percent": 20,
+                    "percentLabel": "20%",
+                    "qty": 12,
+                    "quoteAmount": 10864.48,
+                    "quoteAmountLabel": "$10.9K",
+                    "amount": "12 tickets ($10.9K)",
                     "rawStatuses": [
                       "Quote Approved"
                     ],
@@ -44451,11 +44451,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 4
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 7
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
@@ -44466,13 +44466,13 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair In Progress",
-                    "share": 27.4194,
-                    "percent": 27,
-                    "percentLabel": "27%",
-                    "qty": 17,
-                    "quoteAmount": 17618.93,
-                    "quoteAmountLabel": "$17.6K",
-                    "amount": "17 tickets ($17.6K)",
+                    "share": 26.2295,
+                    "percent": 26,
+                    "percentLabel": "26%",
+                    "qty": 16,
+                    "quoteAmount": 16950.68,
+                    "quoteAmountLabel": "$17.0K",
+                    "amount": "16 tickets ($17.0K)",
                     "rawStatuses": [
                       "Repair in Progress"
                     ],
@@ -44483,11 +44483,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
@@ -44498,7 +44498,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair Complete, Awaiting Time Claim",
-                    "share": 9.6774,
+                    "share": 9.8361,
                     "percent": 10,
                     "percentLabel": "10%",
                     "qty": 6,
@@ -44530,20 +44530,20 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Time Claimed, Awaiting Invoice",
-                    "share": 25.8065,
-                    "percent": 26,
-                    "percentLabel": "26%",
-                    "qty": 16,
-                    "quoteAmount": 9214.81,
-                    "quoteAmountLabel": "$9.2K",
-                    "amount": "16 tickets ($9.2K)",
+                    "share": 27.8689,
+                    "percent": 28,
+                    "percentLabel": "28%",
+                    "qty": 17,
+                    "quoteAmount": 9883.06,
+                    "quoteAmountLabel": "$9.9K",
+                    "amount": "17 tickets ($9.9K)",
                     "rawStatuses": [
                       "Claim Time Ticket"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
@@ -44551,11 +44551,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 6
+                        "qty": 5
                       },
                       {
                         "label": "60+ days",
-                        "qty": 5
+                        "qty": 6
                       }
                     ],
                     "color": "#22a447"
@@ -44681,47 +44681,15 @@ window.serviceCentreData = {
                 "segments": [
                   {
                     "name": "Awaiting Quote Approval",
-                    "share": 53.4884,
+                    "share": 52.907,
                     "percent": 53,
                     "percentLabel": "53%",
-                    "qty": 92,
-                    "quoteAmount": 70256.0,
-                    "quoteAmountLabel": "$70.3K",
-                    "amount": "92 tickets ($70.3K)",
+                    "qty": 91,
+                    "quoteAmount": 70033.25,
+                    "quoteAmountLabel": "$70.0K",
+                    "amount": "91 tickets ($70.0K)",
                     "rawStatuses": [
                       "Open"
-                    ],
-                    "aging": [
-                      {
-                        "label": "0-7 days",
-                        "qty": 3
-                      },
-                      {
-                        "label": "8-30 days",
-                        "qty": 37
-                      },
-                      {
-                        "label": "31-60 days",
-                        "qty": 22
-                      },
-                      {
-                        "label": "60+ days",
-                        "qty": 30
-                      }
-                    ],
-                    "color": "#1f6feb"
-                  },
-                  {
-                    "name": "Approved, Awaiting Repair",
-                    "share": 42.4419,
-                    "percent": 42,
-                    "percentLabel": "42%",
-                    "qty": 73,
-                    "quoteAmount": 29636.51,
-                    "quoteAmountLabel": "$29.6K",
-                    "amount": "73 tickets ($29.6K)",
-                    "rawStatuses": [
-                      "Quote Approved"
                     ],
                     "aging": [
                       {
@@ -44730,15 +44698,47 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 4
+                        "qty": 34
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 25
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 32
+                      }
+                    ],
+                    "color": "#1f6feb"
+                  },
+                  {
+                    "name": "Approved, Awaiting Repair",
+                    "share": 43.0233,
+                    "percent": 43,
+                    "percentLabel": "43%",
+                    "qty": 74,
+                    "quoteAmount": 29859.26,
+                    "quoteAmountLabel": "$29.9K",
+                    "amount": "74 tickets ($29.9K)",
+                    "rawStatuses": [
+                      "Quote Approved"
+                    ],
+                    "aging": [
+                      {
+                        "label": "0-7 days",
+                        "qty": 1
+                      },
+                      {
+                        "label": "8-30 days",
+                        "qty": 3
+                      },
+                      {
+                        "label": "31-60 days",
+                        "qty": 9
+                      },
+                      {
+                        "label": "60+ days",
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
@@ -44902,7 +44902,7 @@ window.serviceCentreData = {
                   {
                     "name": "Cancelled",
                     "share": 0.0,
-                    "percent": 1,
+                    "percent": 0,
                     "percentLabel": "0%",
                     "qty": 0,
                     "quoteAmount": 0.0,
@@ -44936,16 +44936,16 @@ window.serviceCentreData = {
               "yard": "Geelong",
               "color": "#7c3aed",
               "newTickets": 71,
-              "newQuoteAmount": 9628.93,
-              "newQuoteAmountLabel": "$9.6K",
-              "newAmount": 9628.93,
-              "newAmountLabel": "$9.6K",
+              "newQuoteAmount": 10222.87,
+              "newQuoteAmountLabel": "$10.2K",
+              "newAmount": 10222.87,
+              "newAmountLabel": "$10.2K",
               "invoicedTickets": 2,
               "invoicedAmount": 540.0,
               "invoicedAmountLabel": "$540",
               "openTickets": 395,
-              "openQuoteAmount": 92896.59,
-              "openQuoteAmountLabel": "$92.9K",
+              "openQuoteAmount": 93490.53,
+              "openQuoteAmountLabel": "$93.5K",
               "internalInvoicedTickets": 2,
               "internalInvoicedAmount": 540.0,
               "internalInvoicedAmountLabel": "$540",
@@ -44964,28 +44964,28 @@ window.serviceCentreData = {
                     "percent": 77,
                     "percentLabel": "77%",
                     "qty": 305,
-                    "quoteAmount": 50263.22,
-                    "quoteAmountLabel": "$50.3K",
-                    "amount": "305 tickets ($50.3K)",
+                    "quoteAmount": 50857.16,
+                    "quoteAmountLabel": "$50.9K",
+                    "amount": "305 tickets ($50.9K)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 50
+                        "qty": 47
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
@@ -45005,11 +45005,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 1
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 9
+                        "qty": 11
                       },
                       {
                         "label": "31-60 days",
@@ -45069,11 +45069,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -45171,11 +45171,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
@@ -45254,7 +45254,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -45266,7 +45266,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
@@ -45290,15 +45290,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 6
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 36
+                        "qty": 32
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
@@ -45322,11 +45322,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 11
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
@@ -45531,7 +45531,7 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
@@ -45539,7 +45539,7 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "60+ days",
@@ -45595,11 +45595,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 0
+                        "qty": 1
                       },
                       {
                         "label": "31-60 days",
@@ -45844,19 +45844,19 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 22
+                        "qty": 19
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 43
+                        "qty": 37
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
@@ -46271,7 +46271,7 @@ window.serviceCentreData = {
               "invoicedTickets": 0,
               "invoicedAmount": 0.0,
               "invoicedAmountLabel": "$0",
-              "openTickets": 120,
+              "openTickets": 119,
               "openQuoteAmount": 0.0,
               "openQuoteAmountLabel": "$0",
               "internalInvoicedTickets": 0,
@@ -46284,43 +46284,43 @@ window.serviceCentreData = {
               "otherInvoicedAmount": 0.0,
               "otherInvoicedAmountLabel": "$0",
               "openStatusMix": {
-                "total": "120",
+                "total": "119",
                 "segments": [
                   {
                     "name": "Awaiting PDI Start",
-                    "share": 79.1667,
+                    "share": 78.9916,
                     "percent": 79,
                     "percentLabel": "79%",
-                    "qty": 95,
+                    "qty": 94,
                     "quoteAmount": 0.0,
                     "quoteAmountLabel": "$0",
-                    "amount": "95 tickets ($0)",
+                    "amount": "94 tickets ($0)",
                     "rawStatuses": [
                       "Open"
                     ],
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 5
+                        "qty": 6
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 13
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
                   },
                   {
                     "name": "PDI Complete, Awaiting Time Claim",
-                    "share": 20.0,
+                    "share": 20.1681,
                     "percent": 20,
                     "percentLabel": "20%",
                     "qty": 24,
@@ -46412,7 +46412,7 @@ window.serviceCentreData = {
                   },
                   {
                     "name": "Repair in Progress",
-                    "share": 0.8333,
+                    "share": 0.8403,
                     "percent": 1,
                     "percentLabel": "<1%",
                     "qty": 1,
@@ -46486,11 +46486,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 2
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 29
+                        "qty": 31
                       },
                       {
                         "label": "31-60 days",
@@ -46836,11 +46836,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 39
+                        "qty": 29
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
@@ -46868,11 +46868,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 94
+                        "qty": 92
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
@@ -46896,15 +46896,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 7
+                        "qty": 5
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 11
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
@@ -46988,11 +46988,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -47121,11 +47121,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 5
+                        "qty": 4
                       },
                       {
                         "label": "60+ days",
-                        "qty": 5
+                        "qty": 6
                       }
                     ],
                     "color": "#22a447"
@@ -47342,11 +47342,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
@@ -47374,11 +47374,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 20
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 30
+                        "qty": 32
                       }
                     ],
                     "color": "#1f6feb"
@@ -47563,11 +47563,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 14
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
@@ -47595,11 +47595,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
@@ -47755,11 +47755,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
@@ -47876,15 +47876,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 35
+                        "qty": 26
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
@@ -47944,11 +47944,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 7
+                        "qty": 6
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
@@ -48388,11 +48388,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 94
+                        "qty": 92
                       },
                       {
                         "label": "60+ days",
-                        "qty": 127
+                        "qty": 129
                       }
                     ],
                     "color": "#1f6feb"
@@ -48416,15 +48416,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 7
+                        "qty": 5
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 11
                       },
                       {
                         "label": "60+ days",
-                        "qty": 107
+                        "qty": 114
                       }
                     ],
                     "color": "#17a6ad"
@@ -48506,11 +48506,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -48795,11 +48795,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 5
+                        "qty": 4
                       },
                       {
                         "label": "60+ days",
-                        "qty": 5
+                        "qty": 6
                       }
                     ],
                     "color": "#22a447"
@@ -48946,11 +48946,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 20
+                        "qty": 18
                       },
                       {
                         "label": "60+ days",
-                        "qty": 30
+                        "qty": 32
                       }
                     ],
                     "color": "#1f6feb"
@@ -48978,11 +48978,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 10
+                        "qty": 8
                       },
                       {
                         "label": "60+ days",
-                        "qty": 59
+                        "qty": 61
                       }
                     ],
                     "color": "#17a6ad"
@@ -49225,11 +49225,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 15
+                        "qty": 14
                       },
                       {
                         "label": "60+ days",
-                        "qty": 238
+                        "qty": 239
                       }
                     ],
                     "color": "#1f6feb"
@@ -49415,11 +49415,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 3
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 1
+                        "qty": 4
                       }
                     ],
                     "color": "#9a3412"
@@ -49506,11 +49506,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 7
+                        "qty": 6
                       },
                       {
                         "label": "60+ days",
-                        "qty": 28
+                        "qty": 29
                       }
                     ],
                     "color": "#1f6feb"
@@ -49534,15 +49534,15 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 35
+                        "qty": 26
                       },
                       {
                         "label": "60+ days",
-                        "qty": 80
+                        "qty": 90
                       }
                     ],
                     "color": "#17a6ad"
@@ -50096,11 +50096,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 39
+                        "qty": 29
                       },
                       {
                         "label": "60+ days",
-                        "qty": 848
+                        "qty": 858
                       }
                     ],
                     "color": "#17a6ad"
@@ -50521,11 +50521,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 16
+                        "qty": 12
                       },
                       {
                         "label": "60+ days",
-                        "qty": 71
+                        "qty": 75
                       }
                     ],
                     "color": "#1f6feb"
@@ -51200,11 +51200,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -51522,11 +51522,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 55
+                        "qty": 56
                       }
                     ],
                     "color": "#17a6ad"
@@ -52654,11 +52654,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 2
+                        "qty": 3
                       },
                       {
                         "label": "31-60 days",
@@ -53124,11 +53124,11 @@ window.serviceCentreData = {
                       },
                       {
                         "label": "31-60 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "60+ days",
-                        "qty": 55
+                        "qty": 56
                       }
                     ],
                     "color": "#17a6ad"
@@ -55314,11 +55314,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -56672,11 +56672,11 @@ window.serviceCentreData = {
                     "aging": [
                       {
                         "label": "0-7 days",
-                        "qty": 1
+                        "qty": 0
                       },
                       {
                         "label": "8-30 days",
-                        "qty": 1
+                        "qty": 2
                       },
                       {
                         "label": "31-60 days",
@@ -130588,26 +130588,26 @@ window.serviceCentreData = {
         }
       },
       "invoiceMix": {
-        "total": "$2.5K",
-        "totalAmount": 2483.62,
+        "total": "$8.4K",
+        "totalAmount": 8414.85,
         "segments": [
           {
             "name": "External",
-            "percent": 80,
-            "amount": "$2.0K",
-            "qty": 2,
+            "percent": 75,
+            "amount": "$6.3K",
+            "qty": 7,
             "color": "#1f6feb"
           },
           {
             "name": "Internal",
             "percent": 26,
-            "amount": "$645",
-            "qty": 2,
+            "amount": "$2.2K",
+            "qty": 6,
             "color": "#f58b1f"
           },
           {
             "name": "Other",
-            "percent": -6,
+            "percent": -1,
             "amount": "$-136",
             "qty": 1,
             "color": "#64748b"
@@ -130616,26 +130616,26 @@ window.serviceCentreData = {
       },
       "monthlyInvoiceMix": {
         "2026": {
-          "total": "$494.8K",
-          "totalAmount": 494810.6,
+          "total": "$500.7K",
+          "totalAmount": 500741.83,
           "segments": [
             {
               "name": "External",
-              "percent": 27,
-              "amount": "$134.2K",
-              "qty": 266,
+              "percent": 28,
+              "amount": "$138.5K",
+              "qty": 271,
               "color": "#1f6feb"
             },
             {
               "name": "Internal",
               "percent": 58,
-              "amount": "$288.8K",
-              "qty": 733,
+              "amount": "$290.4K",
+              "qty": 737,
               "color": "#f58b1f"
             },
             {
               "name": "Other",
-              "percent": 15,
+              "percent": 14,
               "amount": "$71.8K",
               "qty": 463,
               "color": "#64748b"
@@ -130724,26 +130724,26 @@ window.serviceCentreData = {
           ]
         },
         "Nov 2026": {
-          "total": "$2.5K",
-          "totalAmount": 2483.62,
+          "total": "$8.4K",
+          "totalAmount": 8414.85,
           "segments": [
             {
               "name": "External",
-              "percent": 80,
-              "amount": "$2.0K",
-              "qty": 2,
+              "percent": 75,
+              "amount": "$6.3K",
+              "qty": 7,
               "color": "#1f6feb"
             },
             {
               "name": "Internal",
               "percent": 26,
-              "amount": "$645",
-              "qty": 2,
+              "amount": "$2.2K",
+              "qty": 6,
               "color": "#f58b1f"
             },
             {
               "name": "Other",
-              "percent": -6,
+              "percent": -1,
               "amount": "$-136",
               "qty": 1,
               "color": "#64748b"
@@ -131481,160 +131481,160 @@ window.serviceCentreData = {
         }
       },
       "openStatusMix": {
-        "total": "2,659",
+        "total": "2,694",
         "segments": [
           {
             "name": "PDI Complete, Awaiting Time Claim",
-            "share": 35.5397,
-            "percent": 36,
-            "percentLabel": "36%",
-            "qty": 945,
+            "share": 35.1893,
+            "percent": 35,
+            "percentLabel": "35%",
+            "qty": 948,
             "quoteAmount": 0.0,
             "quoteAmountLabel": "$0",
-            "amount": "945 tickets ($0)",
+            "amount": "948 tickets ($0)",
             "rawStatuses": [
               "Repair completed"
             ],
             "aging": [
               {
                 "label": "0-7 days",
-                "qty": 1
+                "qty": 3
               },
               {
                 "label": "8-30 days",
-                "qty": 23
+                "qty": 20
               },
               {
                 "label": "31-60 days",
-                "qty": 44
+                "qty": 38
               },
               {
                 "label": "60+ days",
-                "qty": 877
+                "qty": 887
               }
             ],
             "color": "#17a6ad"
           },
           {
             "name": "Awaiting Quote Approval",
-            "share": 33.4336,
-            "percent": 33,
-            "percentLabel": "33%",
-            "qty": 889,
-            "quoteAmount": 347053.97,
-            "quoteAmountLabel": "$347.1K",
-            "amount": "889 tickets ($347.1K)",
+            "share": 33.6674,
+            "percent": 34,
+            "percentLabel": "34%",
+            "qty": 907,
+            "quoteAmount": 353519.29,
+            "quoteAmountLabel": "$353.5K",
+            "amount": "907 tickets ($353.5K)",
             "rawStatuses": [
               "Open"
             ],
             "aging": [
               {
                 "label": "0-7 days",
-                "qty": 29
+                "qty": 41
               },
               {
                 "label": "8-30 days",
-                "qty": 252
+                "qty": 233
               },
               {
                 "label": "31-60 days",
-                "qty": 168
+                "qty": 187
               },
               {
                 "label": "60+ days",
-                "qty": 440
+                "qty": 446
               }
             ],
             "color": "#1f6feb"
           },
           {
             "name": "Approved, Awaiting Repair",
-            "share": 14.968,
+            "share": 14.8107,
             "percent": 15,
             "percentLabel": "15%",
-            "qty": 398,
-            "quoteAmount": 248421.93,
-            "quoteAmountLabel": "$248.4K",
-            "amount": "398 tickets ($248.4K)",
+            "qty": 399,
+            "quoteAmount": 249129.67,
+            "quoteAmountLabel": "$249.1K",
+            "amount": "399 tickets ($249.1K)",
             "rawStatuses": [
               "Quote Approved"
             ],
             "aging": [
               {
                 "label": "0-7 days",
-                "qty": 6
+                "qty": 5
               },
               {
                 "label": "8-30 days",
-                "qty": 40
+                "qty": 31
               },
               {
                 "label": "31-60 days",
-                "qty": 72
+                "qty": 64
               },
               {
                 "label": "60+ days",
-                "qty": 280
+                "qty": 299
               }
             ],
             "color": "#17a6ad"
           },
           {
             "name": "Awaiting PDI Start",
-            "share": 8.161,
+            "share": 8.4633,
             "percent": 8,
             "percentLabel": "8%",
-            "qty": 217,
+            "qty": 228,
             "quoteAmount": 0.0,
             "quoteAmountLabel": "$0",
-            "amount": "217 tickets ($0)",
+            "amount": "228 tickets ($0)",
             "rawStatuses": [
               "Open"
             ],
             "aging": [
               {
                 "label": "0-7 days",
-                "qty": 8
+                "qty": 15
               },
               {
                 "label": "8-30 days",
-                "qty": 36
+                "qty": 39
               },
               {
                 "label": "31-60 days",
-                "qty": 31
+                "qty": 28
               },
               {
                 "label": "60+ days",
-                "qty": 142
+                "qty": 146
               }
             ],
             "color": "#1f6feb"
           },
           {
             "name": "Repair In Progress",
-            "share": 5.1899,
+            "share": 5.1596,
             "percent": 5,
             "percentLabel": "5%",
-            "qty": 138,
-            "quoteAmount": 99447.35,
-            "quoteAmountLabel": "$99.4K",
-            "amount": "138 tickets ($99.4K)",
+            "qty": 139,
+            "quoteAmount": 99846.16,
+            "quoteAmountLabel": "$99.8K",
+            "amount": "139 tickets ($99.8K)",
             "rawStatuses": [
               "Repair in Progress"
             ],
             "aging": [
               {
                 "label": "0-7 days",
-                "qty": 2
+                "qty": 3
               },
               {
                 "label": "8-30 days",
-                "qty": 8
+                "qty": 5
               },
               {
                 "label": "31-60 days",
-                "qty": 23
+                "qty": 26
               },
               {
                 "label": "60+ days",
@@ -131645,13 +131645,13 @@ window.serviceCentreData = {
           },
           {
             "name": "Time Claimed, Awaiting Invoice",
-            "share": 1.4291,
+            "share": 1.4477,
             "percent": 1,
             "percentLabel": "1%",
-            "qty": 38,
-            "quoteAmount": 40824.07,
-            "quoteAmountLabel": "$40.8K",
-            "amount": "38 tickets ($40.8K)",
+            "qty": 39,
+            "quoteAmount": 41492.32,
+            "quoteAmountLabel": "$41.5K",
+            "amount": "39 tickets ($41.5K)",
             "rawStatuses": [
               "Claim Time Ticket"
             ],
@@ -131662,22 +131662,22 @@ window.serviceCentreData = {
               },
               {
                 "label": "8-30 days",
-                "qty": 8
-              },
-              {
-                "label": "31-60 days",
                 "qty": 9
               },
               {
+                "label": "31-60 days",
+                "qty": 8
+              },
+              {
                 "label": "60+ days",
-                "qty": 20
+                "qty": 21
               }
             ],
             "color": "#22a447"
           },
           {
             "name": "Invoice Cancelled, SO Still Open",
-            "share": 0.6769,
+            "share": 0.6682,
             "percent": 1,
             "percentLabel": "<1%",
             "qty": 18,
@@ -131698,18 +131698,18 @@ window.serviceCentreData = {
               },
               {
                 "label": "31-60 days",
-                "qty": 4
+                "qty": 1
               },
               {
                 "label": "60+ days",
-                "qty": 14
+                "qty": 17
               }
             ],
             "color": "#9a3412"
           },
           {
             "name": "Repair Complete, Awaiting Time Claim",
-            "share": 0.4889,
+            "share": 0.4826,
             "percent": 0,
             "percentLabel": "<1%",
             "qty": 13,
@@ -131722,11 +131722,11 @@ window.serviceCentreData = {
             "aging": [
               {
                 "label": "0-7 days",
-                "qty": 1
+                "qty": 0
               },
               {
                 "label": "8-30 days",
-                "qty": 1
+                "qty": 2
               },
               {
                 "label": "31-60 days",
@@ -131741,7 +131741,7 @@ window.serviceCentreData = {
           },
           {
             "name": "Repair in Progress",
-            "share": 0.1128,
+            "share": 0.1114,
             "percent": 1,
             "percentLabel": "<1%",
             "qty": 3,
@@ -131775,160 +131775,160 @@ window.serviceCentreData = {
       },
       "monthlyOpenStatusMix": {
         "2026": {
-          "total": "2,659",
+          "total": "2,694",
           "segments": [
             {
               "name": "PDI Complete, Awaiting Time Claim",
-              "share": 35.5397,
-              "percent": 36,
-              "percentLabel": "36%",
-              "qty": 945,
+              "share": 35.1893,
+              "percent": 35,
+              "percentLabel": "35%",
+              "qty": 948,
               "quoteAmount": 0.0,
               "quoteAmountLabel": "$0",
-              "amount": "945 tickets ($0)",
+              "amount": "948 tickets ($0)",
               "rawStatuses": [
                 "Repair completed"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 3
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 23
+                  "qty": 20
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 44
+                  "qty": 38
                 },
                 {
                   "label": "60+ days",
-                  "qty": 877
+                  "qty": 887
                 }
               ],
               "color": "#17a6ad"
             },
             {
               "name": "Awaiting Quote Approval",
-              "share": 33.4336,
-              "percent": 33,
-              "percentLabel": "33%",
-              "qty": 889,
-              "quoteAmount": 347053.97,
-              "quoteAmountLabel": "$347.1K",
-              "amount": "889 tickets ($347.1K)",
+              "share": 33.6674,
+              "percent": 34,
+              "percentLabel": "34%",
+              "qty": 907,
+              "quoteAmount": 353519.29,
+              "quoteAmountLabel": "$353.5K",
+              "amount": "907 tickets ($353.5K)",
               "rawStatuses": [
                 "Open"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 29
+                  "qty": 41
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 252
+                  "qty": 233
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 168
+                  "qty": 187
                 },
                 {
                   "label": "60+ days",
-                  "qty": 440
+                  "qty": 446
                 }
               ],
               "color": "#1f6feb"
             },
             {
               "name": "Approved, Awaiting Repair",
-              "share": 14.968,
+              "share": 14.8107,
               "percent": 15,
               "percentLabel": "15%",
-              "qty": 398,
-              "quoteAmount": 248421.93,
-              "quoteAmountLabel": "$248.4K",
-              "amount": "398 tickets ($248.4K)",
+              "qty": 399,
+              "quoteAmount": 249129.67,
+              "quoteAmountLabel": "$249.1K",
+              "amount": "399 tickets ($249.1K)",
               "rawStatuses": [
                 "Quote Approved"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 6
+                  "qty": 5
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 40
+                  "qty": 31
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 72
+                  "qty": 64
                 },
                 {
                   "label": "60+ days",
-                  "qty": 280
+                  "qty": 299
                 }
               ],
               "color": "#17a6ad"
             },
             {
               "name": "Awaiting PDI Start",
-              "share": 8.161,
+              "share": 8.4633,
               "percent": 8,
               "percentLabel": "8%",
-              "qty": 217,
+              "qty": 228,
               "quoteAmount": 0.0,
               "quoteAmountLabel": "$0",
-              "amount": "217 tickets ($0)",
+              "amount": "228 tickets ($0)",
               "rawStatuses": [
                 "Open"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 8
+                  "qty": 15
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 36
+                  "qty": 39
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 31
+                  "qty": 28
                 },
                 {
                   "label": "60+ days",
-                  "qty": 142
+                  "qty": 146
                 }
               ],
               "color": "#1f6feb"
             },
             {
               "name": "Repair In Progress",
-              "share": 5.1899,
+              "share": 5.1596,
               "percent": 5,
               "percentLabel": "5%",
-              "qty": 138,
-              "quoteAmount": 99447.35,
-              "quoteAmountLabel": "$99.4K",
-              "amount": "138 tickets ($99.4K)",
+              "qty": 139,
+              "quoteAmount": 99846.16,
+              "quoteAmountLabel": "$99.8K",
+              "amount": "139 tickets ($99.8K)",
               "rawStatuses": [
                 "Repair in Progress"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 2
+                  "qty": 3
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 8
+                  "qty": 5
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 23
+                  "qty": 26
                 },
                 {
                   "label": "60+ days",
@@ -131939,13 +131939,13 @@ window.serviceCentreData = {
             },
             {
               "name": "Time Claimed, Awaiting Invoice",
-              "share": 1.4291,
+              "share": 1.4477,
               "percent": 1,
               "percentLabel": "1%",
-              "qty": 38,
-              "quoteAmount": 40824.07,
-              "quoteAmountLabel": "$40.8K",
-              "amount": "38 tickets ($40.8K)",
+              "qty": 39,
+              "quoteAmount": 41492.32,
+              "quoteAmountLabel": "$41.5K",
+              "amount": "39 tickets ($41.5K)",
               "rawStatuses": [
                 "Claim Time Ticket"
               ],
@@ -131956,22 +131956,22 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 8
-                },
-                {
-                  "label": "31-60 days",
                   "qty": 9
                 },
                 {
+                  "label": "31-60 days",
+                  "qty": 8
+                },
+                {
                   "label": "60+ days",
-                  "qty": 20
+                  "qty": 21
                 }
               ],
               "color": "#22a447"
             },
             {
               "name": "Invoice Cancelled, SO Still Open",
-              "share": 0.6769,
+              "share": 0.6682,
               "percent": 1,
               "percentLabel": "<1%",
               "qty": 18,
@@ -131992,18 +131992,18 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 4
+                  "qty": 1
                 },
                 {
                   "label": "60+ days",
-                  "qty": 14
+                  "qty": 17
                 }
               ],
               "color": "#9a3412"
             },
             {
               "name": "Repair Complete, Awaiting Time Claim",
-              "share": 0.4889,
+              "share": 0.4826,
               "percent": 0,
               "percentLabel": "<1%",
               "qty": 13,
@@ -132016,11 +132016,11 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 1
+                  "qty": 2
                 },
                 {
                   "label": "31-60 days",
@@ -132035,7 +132035,7 @@ window.serviceCentreData = {
             },
             {
               "name": "Repair in Progress",
-              "share": 0.1128,
+              "share": 0.1114,
               "percent": 1,
               "percentLabel": "<1%",
               "qty": 3,
@@ -132371,160 +132371,160 @@ window.serviceCentreData = {
           ]
         },
         "Nov 2026": {
-          "total": "2,659",
+          "total": "2,694",
           "segments": [
             {
               "name": "PDI Complete, Awaiting Time Claim",
-              "share": 35.5397,
-              "percent": 36,
-              "percentLabel": "36%",
-              "qty": 945,
+              "share": 35.1893,
+              "percent": 35,
+              "percentLabel": "35%",
+              "qty": 948,
               "quoteAmount": 0.0,
               "quoteAmountLabel": "$0",
-              "amount": "945 tickets ($0)",
+              "amount": "948 tickets ($0)",
               "rawStatuses": [
                 "Repair completed"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 3
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 23
+                  "qty": 20
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 44
+                  "qty": 38
                 },
                 {
                   "label": "60+ days",
-                  "qty": 877
+                  "qty": 887
                 }
               ],
               "color": "#17a6ad"
             },
             {
               "name": "Awaiting Quote Approval",
-              "share": 33.4336,
-              "percent": 33,
-              "percentLabel": "33%",
-              "qty": 889,
-              "quoteAmount": 347053.97,
-              "quoteAmountLabel": "$347.1K",
-              "amount": "889 tickets ($347.1K)",
+              "share": 33.6674,
+              "percent": 34,
+              "percentLabel": "34%",
+              "qty": 907,
+              "quoteAmount": 353519.29,
+              "quoteAmountLabel": "$353.5K",
+              "amount": "907 tickets ($353.5K)",
               "rawStatuses": [
                 "Open"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 29
+                  "qty": 41
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 252
+                  "qty": 233
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 168
+                  "qty": 187
                 },
                 {
                   "label": "60+ days",
-                  "qty": 440
+                  "qty": 446
                 }
               ],
               "color": "#1f6feb"
             },
             {
               "name": "Approved, Awaiting Repair",
-              "share": 14.968,
+              "share": 14.8107,
               "percent": 15,
               "percentLabel": "15%",
-              "qty": 398,
-              "quoteAmount": 248421.93,
-              "quoteAmountLabel": "$248.4K",
-              "amount": "398 tickets ($248.4K)",
+              "qty": 399,
+              "quoteAmount": 249129.67,
+              "quoteAmountLabel": "$249.1K",
+              "amount": "399 tickets ($249.1K)",
               "rawStatuses": [
                 "Quote Approved"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 6
+                  "qty": 5
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 40
+                  "qty": 31
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 72
+                  "qty": 64
                 },
                 {
                   "label": "60+ days",
-                  "qty": 280
+                  "qty": 299
                 }
               ],
               "color": "#17a6ad"
             },
             {
               "name": "Awaiting PDI Start",
-              "share": 8.161,
+              "share": 8.4633,
               "percent": 8,
               "percentLabel": "8%",
-              "qty": 217,
+              "qty": 228,
               "quoteAmount": 0.0,
               "quoteAmountLabel": "$0",
-              "amount": "217 tickets ($0)",
+              "amount": "228 tickets ($0)",
               "rawStatuses": [
                 "Open"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 8
+                  "qty": 15
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 36
+                  "qty": 39
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 31
+                  "qty": 28
                 },
                 {
                   "label": "60+ days",
-                  "qty": 142
+                  "qty": 146
                 }
               ],
               "color": "#1f6feb"
             },
             {
               "name": "Repair In Progress",
-              "share": 5.1899,
+              "share": 5.1596,
               "percent": 5,
               "percentLabel": "5%",
-              "qty": 138,
-              "quoteAmount": 99447.35,
-              "quoteAmountLabel": "$99.4K",
-              "amount": "138 tickets ($99.4K)",
+              "qty": 139,
+              "quoteAmount": 99846.16,
+              "quoteAmountLabel": "$99.8K",
+              "amount": "139 tickets ($99.8K)",
               "rawStatuses": [
                 "Repair in Progress"
               ],
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 2
+                  "qty": 3
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 8
+                  "qty": 5
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 23
+                  "qty": 26
                 },
                 {
                   "label": "60+ days",
@@ -132535,13 +132535,13 @@ window.serviceCentreData = {
             },
             {
               "name": "Time Claimed, Awaiting Invoice",
-              "share": 1.4291,
+              "share": 1.4477,
               "percent": 1,
               "percentLabel": "1%",
-              "qty": 38,
-              "quoteAmount": 40824.07,
-              "quoteAmountLabel": "$40.8K",
-              "amount": "38 tickets ($40.8K)",
+              "qty": 39,
+              "quoteAmount": 41492.32,
+              "quoteAmountLabel": "$41.5K",
+              "amount": "39 tickets ($41.5K)",
               "rawStatuses": [
                 "Claim Time Ticket"
               ],
@@ -132552,22 +132552,22 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 8
-                },
-                {
-                  "label": "31-60 days",
                   "qty": 9
                 },
                 {
+                  "label": "31-60 days",
+                  "qty": 8
+                },
+                {
                   "label": "60+ days",
-                  "qty": 20
+                  "qty": 21
                 }
               ],
               "color": "#22a447"
             },
             {
               "name": "Invoice Cancelled, SO Still Open",
-              "share": 0.6769,
+              "share": 0.6682,
               "percent": 1,
               "percentLabel": "<1%",
               "qty": 18,
@@ -132588,18 +132588,18 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 4
+                  "qty": 1
                 },
                 {
                   "label": "60+ days",
-                  "qty": 14
+                  "qty": 17
                 }
               ],
               "color": "#9a3412"
             },
             {
               "name": "Repair Complete, Awaiting Time Claim",
-              "share": 0.4889,
+              "share": 0.4826,
               "percent": 0,
               "percentLabel": "<1%",
               "qty": 13,
@@ -132612,11 +132612,11 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 1
+                  "qty": 2
                 },
                 {
                   "label": "31-60 days",
@@ -132631,7 +132631,7 @@ window.serviceCentreData = {
             },
             {
               "name": "Repair in Progress",
-              "share": 0.1128,
+              "share": 0.1114,
               "percent": 1,
               "percentLabel": "<1%",
               "qty": 3,
@@ -132664,11 +132664,11 @@ window.serviceCentreData = {
           ]
         },
         "Oct 2026": {
-          "total": "2,632",
+          "total": "2,630",
           "segments": [
             {
               "name": "PDI Complete, Awaiting Time Claim",
-              "share": 35.9043,
+              "share": 35.9316,
               "percent": 36,
               "percentLabel": "36%",
               "qty": 945,
@@ -132681,130 +132681,34 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 23
+                  "qty": 20
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 44
+                  "qty": 38
                 },
                 {
                   "label": "60+ days",
-                  "qty": 877
+                  "qty": 887
                 }
               ],
               "color": "#17a6ad"
             },
             {
               "name": "Awaiting Quote Approval",
-              "share": 32.9407,
+              "share": 32.9278,
               "percent": 33,
               "percentLabel": "33%",
-              "qty": 867,
-              "quoteAmount": 342706.36,
-              "quoteAmountLabel": "$342.7K",
-              "amount": "867 tickets ($342.7K)",
+              "qty": 866,
+              "quoteAmount": 343077.55,
+              "quoteAmountLabel": "$343.1K",
+              "amount": "866 tickets ($343.1K)",
               "rawStatuses": [
                 "Open"
-              ],
-              "aging": [
-                {
-                  "label": "0-7 days",
-                  "qty": 7
-                },
-                {
-                  "label": "8-30 days",
-                  "qty": 252
-                },
-                {
-                  "label": "31-60 days",
-                  "qty": 168
-                },
-                {
-                  "label": "60+ days",
-                  "qty": 440
-                }
-              ],
-              "color": "#1f6feb"
-            },
-            {
-              "name": "Approved, Awaiting Repair",
-              "share": 15.0836,
-              "percent": 15,
-              "percentLabel": "15%",
-              "qty": 397,
-              "quoteAmount": 248124.93,
-              "quoteAmountLabel": "$248.1K",
-              "amount": "397 tickets ($248.1K)",
-              "rawStatuses": [
-                "Quote Approved"
-              ],
-              "aging": [
-                {
-                  "label": "0-7 days",
-                  "qty": 5
-                },
-                {
-                  "label": "8-30 days",
-                  "qty": 40
-                },
-                {
-                  "label": "31-60 days",
-                  "qty": 72
-                },
-                {
-                  "label": "60+ days",
-                  "qty": 280
-                }
-              ],
-              "color": "#17a6ad"
-            },
-            {
-              "name": "Awaiting PDI Start",
-              "share": 8.1307,
-              "percent": 8,
-              "percentLabel": "8%",
-              "qty": 214,
-              "quoteAmount": 0.0,
-              "quoteAmountLabel": "$0",
-              "amount": "214 tickets ($0)",
-              "rawStatuses": [
-                "Open"
-              ],
-              "aging": [
-                {
-                  "label": "0-7 days",
-                  "qty": 5
-                },
-                {
-                  "label": "8-30 days",
-                  "qty": 36
-                },
-                {
-                  "label": "31-60 days",
-                  "qty": 31
-                },
-                {
-                  "label": "60+ days",
-                  "qty": 142
-                }
-              ],
-              "color": "#1f6feb"
-            },
-            {
-              "name": "Repair In Progress",
-              "share": 5.2052,
-              "percent": 5,
-              "percentLabel": "5%",
-              "qty": 137,
-              "quoteAmount": 99298.85,
-              "quoteAmountLabel": "$99.3K",
-              "amount": "137 tickets ($99.3K)",
-              "rawStatuses": [
-                "Repair in Progress"
               ],
               "aging": [
                 {
@@ -132813,11 +132717,107 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 8
+                  "qty": 232
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 23
+                  "qty": 187
+                },
+                {
+                  "label": "60+ days",
+                  "qty": 446
+                }
+              ],
+              "color": "#1f6feb"
+            },
+            {
+              "name": "Approved, Awaiting Repair",
+              "share": 15.0951,
+              "percent": 15,
+              "percentLabel": "15%",
+              "qty": 397,
+              "quoteAmount": 248182.68,
+              "quoteAmountLabel": "$248.2K",
+              "amount": "397 tickets ($248.2K)",
+              "rawStatuses": [
+                "Quote Approved"
+              ],
+              "aging": [
+                {
+                  "label": "0-7 days",
+                  "qty": 4
+                },
+                {
+                  "label": "8-30 days",
+                  "qty": 30
+                },
+                {
+                  "label": "31-60 days",
+                  "qty": 64
+                },
+                {
+                  "label": "60+ days",
+                  "qty": 299
+                }
+              ],
+              "color": "#17a6ad"
+            },
+            {
+              "name": "Awaiting PDI Start",
+              "share": 8.0989,
+              "percent": 8,
+              "percentLabel": "8%",
+              "qty": 213,
+              "quoteAmount": 0.0,
+              "quoteAmountLabel": "$0",
+              "amount": "213 tickets ($0)",
+              "rawStatuses": [
+                "Open"
+              ],
+              "aging": [
+                {
+                  "label": "0-7 days",
+                  "qty": 0
+                },
+                {
+                  "label": "8-30 days",
+                  "qty": 39
+                },
+                {
+                  "label": "31-60 days",
+                  "qty": 28
+                },
+                {
+                  "label": "60+ days",
+                  "qty": 146
+                }
+              ],
+              "color": "#1f6feb"
+            },
+            {
+              "name": "Repair In Progress",
+              "share": 5.1711,
+              "percent": 5,
+              "percentLabel": "5%",
+              "qty": 136,
+              "quoteAmount": 98630.6,
+              "quoteAmountLabel": "$98.6K",
+              "amount": "136 tickets ($98.6K)",
+              "rawStatuses": [
+                "Repair in Progress"
+              ],
+              "aging": [
+                {
+                  "label": "0-7 days",
+                  "qty": 0
+                },
+                {
+                  "label": "8-30 days",
+                  "qty": 5
+                },
+                {
+                  "label": "31-60 days",
+                  "qty": 26
                 },
                 {
                   "label": "60+ days",
@@ -132828,13 +132828,13 @@ window.serviceCentreData = {
             },
             {
               "name": "Time Claimed, Awaiting Invoice",
-              "share": 1.4438,
+              "share": 1.4829,
               "percent": 1,
               "percentLabel": "1%",
-              "qty": 38,
-              "quoteAmount": 40824.07,
-              "quoteAmountLabel": "$40.8K",
-              "amount": "38 tickets ($40.8K)",
+              "qty": 39,
+              "quoteAmount": 41492.32,
+              "quoteAmountLabel": "$41.5K",
+              "amount": "39 tickets ($41.5K)",
               "rawStatuses": [
                 "Claim Time Ticket"
               ],
@@ -132845,22 +132845,22 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 8
-                },
-                {
-                  "label": "31-60 days",
                   "qty": 9
                 },
                 {
+                  "label": "31-60 days",
+                  "qty": 8
+                },
+                {
                   "label": "60+ days",
-                  "qty": 20
+                  "qty": 21
                 }
               ],
               "color": "#22a447"
             },
             {
               "name": "Invoice Cancelled, SO Still Open",
-              "share": 0.6839,
+              "share": 0.6844,
               "percent": 1,
               "percentLabel": "<1%",
               "qty": 18,
@@ -132881,18 +132881,18 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 4
+                  "qty": 1
                 },
                 {
                   "label": "60+ days",
-                  "qty": 14
+                  "qty": 17
                 }
               ],
               "color": "#9a3412"
             },
             {
               "name": "Repair Complete, Awaiting Time Claim",
-              "share": 0.4939,
+              "share": 0.4943,
               "percent": 0,
               "percentLabel": "<1%",
               "qty": 13,
@@ -132905,11 +132905,11 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 1
+                  "qty": 2
                 },
                 {
                   "label": "31-60 days",
@@ -132924,7 +132924,7 @@ window.serviceCentreData = {
             },
             {
               "name": "Repair in Progress",
-              "share": 0.114,
+              "share": 0.1141,
               "percent": 1,
               "percentLabel": "<1%",
               "qty": 3,
@@ -132982,11 +132982,11 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 40
+                  "qty": 30
                 },
                 {
                   "label": "60+ days",
-                  "qty": 877
+                  "qty": 887
                 }
               ],
               "color": "#17a6ad"
@@ -133014,11 +133014,11 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 141
+                  "qty": 135
                 },
                 {
                   "label": "60+ days",
-                  "qty": 440
+                  "qty": 446
                 }
               ],
               "color": "#1f6feb"
@@ -133042,15 +133042,15 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 12
+                  "qty": 9
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 71
+                  "qty": 55
                 },
                 {
                   "label": "60+ days",
-                  "qty": 280
+                  "qty": 299
                 }
               ],
               "color": "#17a6ad"
@@ -133078,11 +133078,11 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 31
+                  "qty": 27
                 },
                 {
                   "label": "60+ days",
-                  "qty": 142
+                  "qty": 146
                 }
               ],
               "color": "#1f6feb"
@@ -133134,19 +133134,19 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 4
+                  "qty": 5
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 8
+                  "qty": 7
                 },
                 {
                   "label": "60+ days",
-                  "qty": 20
+                  "qty": 21
                 }
               ],
               "color": "#22a447"
@@ -133174,11 +133174,11 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 3
+                  "qty": 0
                 },
                 {
                   "label": "60+ days",
-                  "qty": 14
+                  "qty": 17
                 }
               ],
               "color": "#9a3412"
@@ -133339,11 +133339,11 @@ window.serviceCentreData = {
                 },
                 {
                   "label": "31-60 days",
-                  "qty": 4
+                  "qty": 3
                 },
                 {
                   "label": "60+ days",
-                  "qty": 271
+                  "qty": 272
                 }
               ],
               "color": "#17a6ad"
@@ -133427,11 +133427,11 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 3
+                  "qty": 4
                 },
                 {
                   "label": "31-60 days",
@@ -133720,11 +133720,11 @@ window.serviceCentreData = {
               "aging": [
                 {
                   "label": "0-7 days",
-                  "qty": 1
+                  "qty": 0
                 },
                 {
                   "label": "8-30 days",
-                  "qty": 1
+                  "qty": 2
                 },
                 {
                   "label": "31-60 days",
@@ -137250,13 +137250,13 @@ window.serviceCentreData = {
       "monthlyLabour": {
         "2026": {
           "Perth": {
-            "totalHours": 5656.58,
-            "totalHoursLabel": "5,656.6h",
+            "totalHours": 5668.58,
+            "totalHoursLabel": "5,668.6h",
             "repairHours": 2831.58,
             "repairHoursLabel": "2,831.6h",
-            "pdiHours": 2825.0,
-            "pdiHoursLabel": "2,825.0h",
-            "ticketCount": 1519,
+            "pdiHours": 2837.0,
+            "pdiHoursLabel": "2,837.0h",
+            "ticketCount": 1522,
             "workerCount": 7,
             "topWorkers": [
               {
@@ -137297,15 +137297,15 @@ window.serviceCentreData = {
               },
               {
                 "worker": "Peter Harrison",
-                "tickets": 18,
-                "hours": 65.5,
-                "hoursLabel": "65.5h",
-                "avgHours": 3.64,
-                "avgHoursLabel": "3.6h",
+                "tickets": 21,
+                "hours": 77.5,
+                "hoursLabel": "77.5h",
+                "avgHours": 3.69,
+                "avgHoursLabel": "3.7h",
                 "repairHours": 13.5,
                 "repairHoursLabel": "13.5h",
-                "pdiHours": 52.0,
-                "pdiHoursLabel": "52.0h"
+                "pdiHours": 64.0,
+                "pdiHoursLabel": "64.0h"
               },
               {
                 "worker": "(Invalid) Karl Invalid-Karl Nethercott",
@@ -137346,24 +137346,24 @@ window.serviceCentreData = {
             ]
           },
           "Traralgon": {
-            "totalHours": 427.34,
-            "totalHoursLabel": "427.3h",
-            "repairHours": 273.34,
-            "repairHoursLabel": "273.3h",
+            "totalHours": 432.84,
+            "totalHoursLabel": "432.8h",
+            "repairHours": 278.84,
+            "repairHoursLabel": "278.8h",
             "pdiHours": 154.0,
             "pdiHoursLabel": "154.0h",
-            "ticketCount": 197,
+            "ticketCount": 202,
             "workerCount": 3,
             "topWorkers": [
               {
                 "worker": "Karena Phelan",
-                "tickets": 66,
-                "hours": 216.34,
-                "hoursLabel": "216.3h",
-                "avgHours": 3.28,
-                "avgHoursLabel": "3.3h",
-                "repairHours": 199.34,
-                "repairHoursLabel": "199.3h",
+                "tickets": 71,
+                "hours": 221.84,
+                "hoursLabel": "221.8h",
+                "avgHours": 3.12,
+                "avgHoursLabel": "3.1h",
+                "repairHours": 204.84,
+                "repairHoursLabel": "204.8h",
                 "pdiHours": 17.0,
                 "pdiHoursLabel": "17.0h"
               },
@@ -137394,24 +137394,24 @@ window.serviceCentreData = {
             ]
           },
           "Launceston": {
-            "totalHours": 740.15,
-            "totalHoursLabel": "740.1h",
-            "repairHours": 740.15,
-            "repairHoursLabel": "740.1h",
+            "totalHours": 788.4,
+            "totalHoursLabel": "788.4h",
+            "repairHours": 788.4,
+            "repairHoursLabel": "788.4h",
             "pdiHours": 0.0,
             "pdiHoursLabel": "0.0h",
-            "ticketCount": 294,
+            "ticketCount": 308,
             "workerCount": 3,
             "topWorkers": [
               {
                 "worker": "Logan Pinner",
-                "tickets": 289,
-                "hours": 739.65,
-                "hoursLabel": "739.6h",
-                "avgHours": 2.56,
+                "tickets": 303,
+                "hours": 787.9,
+                "hoursLabel": "787.9h",
+                "avgHours": 2.6,
                 "avgHoursLabel": "2.6h",
-                "repairHours": 739.65,
-                "repairHoursLabel": "739.6h",
+                "repairHours": 787.9,
+                "repairHoursLabel": "787.9h",
                 "pdiHours": 0.0,
                 "pdiHoursLabel": "0.0h"
               },
@@ -137442,26 +137442,26 @@ window.serviceCentreData = {
             ]
           },
           "Geelong": {
-            "totalHours": 1798.45,
-            "totalHoursLabel": "1,798.5h",
-            "repairHours": 675.2,
-            "repairHoursLabel": "675.2h",
-            "pdiHours": 1123.25,
-            "pdiHoursLabel": "1,123.2h",
-            "ticketCount": 920,
+            "totalHours": 1816.75,
+            "totalHoursLabel": "1,816.8h",
+            "repairHours": 686.5,
+            "repairHoursLabel": "686.5h",
+            "pdiHours": 1130.25,
+            "pdiHoursLabel": "1,130.2h",
+            "ticketCount": 937,
             "workerCount": 9,
             "topWorkers": [
               {
                 "worker": "Cindy Keay",
-                "tickets": 703,
-                "hours": 1109.35,
-                "hoursLabel": "1,109.3h",
-                "avgHours": 1.58,
+                "tickets": 714,
+                "hours": 1117.15,
+                "hoursLabel": "1,117.2h",
+                "avgHours": 1.56,
                 "avgHoursLabel": "1.6h",
-                "repairHours": 514.85,
-                "repairHoursLabel": "514.8h",
-                "pdiHours": 594.5,
-                "pdiHoursLabel": "594.5h"
+                "repairHours": 518.15,
+                "repairHoursLabel": "518.1h",
+                "pdiHours": 599.0,
+                "pdiHoursLabel": "599.0h"
               },
               {
                 "worker": "Victor Handley-Parsons",
@@ -137501,15 +137501,15 @@ window.serviceCentreData = {
               },
               {
                 "worker": "Tyson Porter",
-                "tickets": 21,
-                "hours": 61.0,
-                "hoursLabel": "61.0h",
-                "avgHours": 2.9,
+                "tickets": 22,
+                "hours": 63.5,
+                "hoursLabel": "63.5h",
+                "avgHours": 2.89,
                 "avgHoursLabel": "2.9h",
                 "repairHours": 13.5,
                 "repairHoursLabel": "13.5h",
-                "pdiHours": 47.5,
-                "pdiHoursLabel": "47.5h"
+                "pdiHours": 50.0,
+                "pdiHoursLabel": "50.0h"
               },
               {
                 "worker": "Chris Bolitho",
@@ -137525,27 +137525,27 @@ window.serviceCentreData = {
               },
               {
                 "worker": "Stuart Cook",
-                "tickets": 36,
-                "hours": 42.7,
-                "hoursLabel": "42.7h",
-                "avgHours": 1.19,
+                "tickets": 40,
+                "hours": 46.2,
+                "hoursLabel": "46.2h",
+                "avgHours": 1.16,
                 "avgHoursLabel": "1.2h",
-                "repairHours": 30.7,
-                "repairHoursLabel": "30.7h",
+                "repairHours": 34.2,
+                "repairHoursLabel": "34.2h",
                 "pdiHours": 12.0,
                 "pdiHoursLabel": "12.0h"
               },
               {
-                "worker": "Christopher Bolitho",
+                "worker": "Wayne Gibbons",
                 "tickets": 9,
-                "hours": 24.65,
-                "hoursLabel": "24.6h",
-                "avgHours": 2.74,
-                "avgHoursLabel": "2.7h",
-                "repairHours": 8.15,
-                "repairHoursLabel": "8.2h",
-                "pdiHours": 16.5,
-                "pdiHoursLabel": "16.5h"
+                "hours": 28.5,
+                "hoursLabel": "28.5h",
+                "avgHours": 3.17,
+                "avgHoursLabel": "3.2h",
+                "repairHours": 4.5,
+                "repairHoursLabel": "4.5h",
+                "pdiHours": 24.0,
+                "pdiHoursLabel": "24.0h"
               }
             ]
           },
@@ -137556,15 +137556,15 @@ window.serviceCentreData = {
             "repairHoursLabel": "955.6h",
             "pdiHours": 114.0,
             "pdiHoursLabel": "114.0h",
-            "ticketCount": 443,
+            "ticketCount": 451,
             "workerCount": 3,
             "topWorkers": [
               {
                 "worker": "Matt Sims",
-                "tickets": 440,
+                "tickets": 448,
                 "hours": 1069.61,
                 "hoursLabel": "1,069.6h",
-                "avgHours": 2.43,
+                "avgHours": 2.39,
                 "avgHoursLabel": "2.4h",
                 "repairHours": 955.61,
                 "repairHoursLabel": "955.6h",
@@ -138291,15 +138291,27 @@ window.serviceCentreData = {
         },
         "Nov 2026": {
           "Perth": {
-            "totalHours": 7.0,
-            "totalHoursLabel": "7.0h",
+            "totalHours": 19.0,
+            "totalHoursLabel": "19.0h",
             "repairHours": 7.0,
             "repairHoursLabel": "7.0h",
-            "pdiHours": 0.0,
-            "pdiHoursLabel": "0.0h",
-            "ticketCount": 5,
+            "pdiHours": 12.0,
+            "pdiHoursLabel": "12.0h",
+            "ticketCount": 8,
             "workerCount": 3,
             "topWorkers": [
+              {
+                "worker": "Peter Harrison",
+                "tickets": 4,
+                "hours": 13.0,
+                "hoursLabel": "13.0h",
+                "avgHours": 3.25,
+                "avgHoursLabel": "3.2h",
+                "repairHours": 1.0,
+                "repairHoursLabel": "1.0h",
+                "pdiHours": 12.0,
+                "pdiHoursLabel": "12.0h"
+              },
               {
                 "worker": "Karl Nethercott",
                 "tickets": 2,
@@ -138323,114 +138335,114 @@ window.serviceCentreData = {
                 "repairHoursLabel": "2.0h",
                 "pdiHours": 0.0,
                 "pdiHoursLabel": "0.0h"
-              },
-              {
-                "worker": "Peter Harrison",
-                "tickets": 1,
-                "hours": 1.0,
-                "hoursLabel": "1.0h",
-                "avgHours": 1.0,
-                "avgHoursLabel": "1.0h",
-                "repairHours": 1.0,
-                "repairHoursLabel": "1.0h",
-                "pdiHours": 0.0,
-                "pdiHoursLabel": "0.0h"
               }
             ]
           },
           "Traralgon": {
-            "totalHours": 2.0,
-            "totalHoursLabel": "2.0h",
-            "repairHours": 2.0,
-            "repairHoursLabel": "2.0h",
+            "totalHours": 7.5,
+            "totalHoursLabel": "7.5h",
+            "repairHours": 7.5,
+            "repairHoursLabel": "7.5h",
             "pdiHours": 0.0,
             "pdiHoursLabel": "0.0h",
-            "ticketCount": 1,
+            "ticketCount": 6,
             "workerCount": 1,
             "topWorkers": [
               {
                 "worker": "Karena Phelan",
-                "tickets": 1,
-                "hours": 2.0,
-                "hoursLabel": "2.0h",
-                "avgHours": 2.0,
-                "avgHoursLabel": "2.0h",
-                "repairHours": 2.0,
-                "repairHoursLabel": "2.0h",
+                "tickets": 6,
+                "hours": 7.5,
+                "hoursLabel": "7.5h",
+                "avgHours": 1.25,
+                "avgHoursLabel": "1.2h",
+                "repairHours": 7.5,
+                "repairHoursLabel": "7.5h",
                 "pdiHours": 0.0,
                 "pdiHoursLabel": "0.0h"
               }
             ]
           },
           "Launceston": {
-            "totalHours": 6.0,
-            "totalHoursLabel": "6.0h",
-            "repairHours": 6.0,
-            "repairHoursLabel": "6.0h",
+            "totalHours": 54.25,
+            "totalHoursLabel": "54.2h",
+            "repairHours": 54.25,
+            "repairHoursLabel": "54.2h",
             "pdiHours": 0.0,
             "pdiHoursLabel": "0.0h",
-            "ticketCount": 3,
+            "ticketCount": 17,
             "workerCount": 1,
             "topWorkers": [
               {
                 "worker": "Logan Pinner",
-                "tickets": 3,
-                "hours": 6.0,
-                "hoursLabel": "6.0h",
-                "avgHours": 2.0,
-                "avgHoursLabel": "2.0h",
-                "repairHours": 6.0,
-                "repairHoursLabel": "6.0h",
+                "tickets": 17,
+                "hours": 54.25,
+                "hoursLabel": "54.2h",
+                "avgHours": 3.19,
+                "avgHoursLabel": "3.2h",
+                "repairHours": 54.25,
+                "repairHoursLabel": "54.2h",
                 "pdiHours": 0.0,
                 "pdiHoursLabel": "0.0h"
               }
             ]
           },
           "Geelong": {
-            "totalHours": 9.95,
-            "totalHoursLabel": "9.9h",
-            "repairHours": 5.95,
-            "repairHoursLabel": "6.0h",
-            "pdiHours": 4.0,
-            "pdiHoursLabel": "4.0h",
-            "ticketCount": 22,
-            "workerCount": 3,
+            "totalHours": 26.75,
+            "totalHoursLabel": "26.8h",
+            "repairHours": 17.25,
+            "repairHoursLabel": "17.2h",
+            "pdiHours": 9.5,
+            "pdiHoursLabel": "9.5h",
+            "ticketCount": 39,
+            "workerCount": 4,
             "topWorkers": [
               {
                 "worker": "Stuart Cook",
-                "tickets": 6,
-                "hours": 5.5,
-                "hoursLabel": "5.5h",
-                "avgHours": 0.92,
-                "avgHoursLabel": "0.9h",
-                "repairHours": 5.5,
-                "repairHoursLabel": "5.5h",
+                "tickets": 11,
+                "hours": 9.0,
+                "hoursLabel": "9.0h",
+                "avgHours": 0.82,
+                "avgHoursLabel": "0.8h",
+                "repairHours": 9.0,
+                "repairHoursLabel": "9.0h",
                 "pdiHours": 0.0,
                 "pdiHoursLabel": "0.0h"
               },
               {
+                "worker": "Cindy Keay",
+                "tickets": 25,
+                "hours": 8.25,
+                "hoursLabel": "8.2h",
+                "avgHours": 0.33,
+                "avgHoursLabel": "0.3h",
+                "repairHours": 3.75,
+                "repairHoursLabel": "3.8h",
+                "pdiHours": 4.5,
+                "pdiHoursLabel": "4.5h"
+              },
+              {
                 "worker": "Tyson Porter",
-                "tickets": 1,
-                "hours": 2.5,
-                "hoursLabel": "2.5h",
+                "tickets": 2,
+                "hours": 5.0,
+                "hoursLabel": "5.0h",
                 "avgHours": 2.5,
                 "avgHoursLabel": "2.5h",
                 "repairHours": 0.0,
                 "repairHoursLabel": "0.0h",
-                "pdiHours": 2.5,
-                "pdiHoursLabel": "2.5h"
+                "pdiHours": 5.0,
+                "pdiHoursLabel": "5.0h"
               },
               {
-                "worker": "Cindy Keay",
-                "tickets": 15,
-                "hours": 1.95,
-                "hoursLabel": "1.9h",
-                "avgHours": 0.13,
-                "avgHoursLabel": "0.1h",
-                "repairHours": 0.45,
-                "repairHoursLabel": "0.5h",
-                "pdiHours": 1.5,
-                "pdiHoursLabel": "1.5h"
+                "worker": "Wayne Gibbons",
+                "tickets": 1,
+                "hours": 4.5,
+                "hoursLabel": "4.5h",
+                "avgHours": 4.5,
+                "avgHoursLabel": "4.5h",
+                "repairHours": 4.5,
+                "repairHoursLabel": "4.5h",
+                "pdiHours": 0.0,
+                "pdiHoursLabel": "0.0h"
               }
             ]
           },
@@ -138441,9 +138453,22 @@ window.serviceCentreData = {
             "repairHoursLabel": "0.0h",
             "pdiHours": 0.0,
             "pdiHoursLabel": "0.0h",
-            "ticketCount": 0,
-            "workerCount": 0,
-            "topWorkers": []
+            "ticketCount": 8,
+            "workerCount": 1,
+            "topWorkers": [
+              {
+                "worker": "Matt Sims",
+                "tickets": 8,
+                "hours": 0.0,
+                "hoursLabel": "0.0h",
+                "avgHours": 0.0,
+                "avgHoursLabel": "0.0h",
+                "repairHours": 0.0,
+                "repairHoursLabel": "0.0h",
+                "pdiHours": 0.0,
+                "pdiHoursLabel": "0.0h"
+              }
+            ]
           },
           "Other": {
             "totalHours": 7.0,
@@ -138568,33 +138593,33 @@ window.serviceCentreData = {
             ]
           },
           "Geelong": {
-            "totalHours": 127.27,
-            "totalHoursLabel": "127.3h",
+            "totalHours": 128.77,
+            "totalHoursLabel": "128.8h",
             "repairHours": 47.27,
             "repairHoursLabel": "47.3h",
-            "pdiHours": 80.0,
-            "pdiHoursLabel": "80.0h",
+            "pdiHours": 81.5,
+            "pdiHoursLabel": "81.5h",
             "ticketCount": 124,
             "workerCount": 7,
             "topWorkers": [
               {
                 "worker": "Cindy Keay",
-                "tickets": 84,
-                "hours": 65.32,
-                "hoursLabel": "65.3h",
-                "avgHours": 0.78,
+                "tickets": 85,
+                "hours": 66.82,
+                "hoursLabel": "66.8h",
+                "avgHours": 0.79,
                 "avgHoursLabel": "0.8h",
                 "repairHours": 22.32,
                 "repairHoursLabel": "22.3h",
-                "pdiHours": 43.0,
-                "pdiHoursLabel": "43.0h"
+                "pdiHours": 44.5,
+                "pdiHoursLabel": "44.5h"
               },
               {
                 "worker": "Stuart Cook",
-                "tickets": 23,
+                "tickets": 22,
                 "hours": 24.7,
                 "hoursLabel": "24.7h",
-                "avgHours": 1.07,
+                "avgHours": 1.12,
                 "avgHoursLabel": "1.1h",
                 "repairHours": 20.2,
                 "repairHoursLabel": "20.2h",
@@ -143123,6 +143148,1683 @@ window.serviceCentreData = {
       },
       "ticketDetails": [
         {
+          "ticketId": "45834",
+          "serviceOrderId": "45834",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "08/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRC253160",
+          "chassisNumber": "SRC253160",
+          "ticketName": "SRC253160",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45778",
+          "serviceOrderId": "45778",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 03:37:29",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "Robert & Helen Burns",
+          "customerBP": "1071208",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "PDI Completed",
+          "rawStatus": "Claim Time Ticket",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 1.5,
+          "labourHoursLabel": "1.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRH263352",
+          "chassisNumber": "SRH263352",
+          "ticketName": "SRH263352",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45779",
+          "serviceOrderId": "45779",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 03:39:35",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "SNOWY RIVER GEELONG",
+          "customerBP": "3128",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "PDI Completed",
+          "rawStatus": "Claim Time Ticket",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 1.5,
+          "labourHoursLabel": "1.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRH264006",
+          "chassisNumber": "SRH264006",
+          "ticketName": "SRH264006",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45782",
+          "serviceOrderId": "45782",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 270.01,
+          "quoteAmountLabel": "$270",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 2.0,
+          "labourHoursLabel": "2.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC255600",
+          "chassisNumber": "SRC255600",
+          "ticketName": "SRC255600",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45784",
+          "serviceOrderId": "45784",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 270.01,
+          "quoteAmountLabel": "$270",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 2.0,
+          "labourHoursLabel": "2.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC255526",
+          "chassisNumber": "SRC255526",
+          "ticketName": "SRC255526",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45786",
+          "serviceOrderId": "45786",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 1113.78,
+          "quoteAmountLabel": "$1.1K",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 8.25,
+          "labourHoursLabel": "8.2h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRP253382",
+          "chassisNumber": "SRP253382",
+          "ticketName": "SRP253382",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45788",
+          "serviceOrderId": "45788",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 02:48:04",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050751",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "SRP253361",
+          "chassisNumber": "SRP253361",
+          "ticketName": "SRP253361",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45789",
+          "serviceOrderId": "45789",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "TBC",
+          "customerBP": "",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "LRT240531",
+          "chassisNumber": "LRT240531",
+          "ticketName": "LRT240531",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45814",
+          "serviceOrderId": "45814",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 04:23:05",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "SNOWY RIVER GEELONG",
+          "customerBP": "3128",
+          "technicianBP": "8000002134",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "PDI Completed",
+          "rawStatus": "Claim Time Ticket",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 2.5,
+          "labourHoursLabel": "2.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Tyson Porter",
+          "vehicle": "SRH264004",
+          "chassisNumber": "SRH264004",
+          "ticketName": "SRH264004",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45818",
+          "serviceOrderId": "45818",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "Geoffery $ Lesley Schutt",
+          "customerBP": "1079465",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRH264364",
+          "chassisNumber": "SRH264364",
+          "ticketName": "SRH264364",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45819",
+          "serviceOrderId": "45819",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "REGENT RV - FRANKSTON",
+          "customerBP": "3141",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRM263737",
+          "chassisNumber": "SRM263737",
+          "ticketName": "SRM263737",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45824",
+          "serviceOrderId": "45824",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "SNOWY RIVER GEELONG",
+          "customerBP": "3128",
+          "technicianBP": "8000003101",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Stuart Cook",
+          "vehicle": "SRH264557",
+          "chassisNumber": "SRH264557",
+          "ticketName": "SRH264557",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45827",
+          "serviceOrderId": "45827",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "REGENT RV - FRANKSTON",
+          "customerBP": "3141",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRM263713",
+          "chassisNumber": "SRM263713",
+          "ticketName": "SRM263713",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45828",
+          "serviceOrderId": "45828",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 05:07:15",
+          "dealerYard": "Perth",
+          "dealerName": "Regent RV - Perth",
+          "customer": "REGENT RV - PERTH",
+          "customerBP": "3121",
+          "technicianBP": "8000003061",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "PDI Complete, Awaiting Time Claim",
+          "rawStatus": "Repair completed",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 4.0,
+          "labourHoursLabel": "4.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Peter Harrison",
+          "vehicle": "SRC263155",
+          "chassisNumber": "SRC263155",
+          "ticketName": "SRC263155",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45829",
+          "serviceOrderId": "45829",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 05:29:30",
+          "dealerYard": "Perth",
+          "dealerName": "Regent RV - Perth",
+          "customer": "REGENT RV - PERTH",
+          "customerBP": "3121",
+          "technicianBP": "8000003061",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "PDI Complete, Awaiting Time Claim",
+          "rawStatus": "Repair completed",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 4.0,
+          "labourHoursLabel": "4.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Peter Harrison",
+          "vehicle": "SRC263490",
+          "chassisNumber": "SRC263490",
+          "ticketName": "SRC263490",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45853",
+          "serviceOrderId": "45853",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 08:25:14",
+          "dealerYard": "Perth",
+          "dealerName": "Regent RV - Perth",
+          "customer": "Shane Leather",
+          "customerBP": "1059779",
+          "technicianBP": "8000003061",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "PDI Complete, Awaiting Time Claim",
+          "rawStatus": "Repair completed",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 4.0,
+          "labourHoursLabel": "4.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Peter Harrison",
+          "vehicle": "SRT264298",
+          "chassisNumber": "SRT264298",
+          "ticketName": "SRT264298",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45627",
+          "serviceOrderId": "45627",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000003101",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Stuart Cook",
+          "vehicle": "SRP253159",
+          "chassisNumber": "SRP253159",
+          "ticketName": "SRP253159",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45628",
+          "serviceOrderId": "45628",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 01:42:39",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "Walk in customer SR Launceston",
+          "customerBP": "1090235",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 116.75,
+          "quoteAmountLabel": "$117",
+          "invoiceNo": "0090050695",
+          "invoiceAmount": 106.14,
+          "invoiceRawAmount": 106.14,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$106",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 1.0,
+          "labourHoursLabel": "1.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "TBC",
+          "chassisNumber": "TBC",
+          "ticketName": "TBC",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45629",
+          "serviceOrderId": "45629",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 2.0,
+          "labourHoursLabel": "2.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC254173",
+          "chassisNumber": "SRC254173",
+          "ticketName": "SRC254173",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45630",
+          "serviceOrderId": "45630",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Other",
+          "dealerName": "Not Assigned",
+          "customer": "SNOWY RIVER GEELONG",
+          "customerBP": "3128",
+          "technicianBP": "8000003101",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Other",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Stuart Cook",
+          "vehicle": "SRH264006",
+          "chassisNumber": "SRH264006",
+          "ticketName": "45630",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45675",
+          "serviceOrderId": "45675",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "05/11/2026 01:53:29",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Repair In Progress",
+          "rawStatus": "Repair in Progress",
+          "priority": "TBC",
+          "quoteAmount": 770.06,
+          "quoteAmountLabel": "$770",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 3.3,
+          "labourHoursLabel": "3.3h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRP255609",
+          "chassisNumber": "SRP255609",
+          "ticketName": "SRP255609",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45678",
+          "serviceOrderId": "45678",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 05:15:39",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "Preston Murray",
+          "customerBP": "1090513",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 3675.58,
+          "quoteAmountLabel": "$3.7K",
+          "invoiceNo": "0090050710",
+          "invoiceAmount": 3341.44,
+          "invoiceRawAmount": 3341.44,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$3.3K",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 13.5,
+          "labourHoursLabel": "13.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "LRV230953",
+          "chassisNumber": "LRV230953",
+          "ticketName": "LRV230953",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45680",
+          "serviceOrderId": "45680",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 00:09:46",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "Sharon White",
+          "customerBP": "1047445",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 550.01,
+          "quoteAmountLabel": "$550",
+          "invoiceNo": "0090050721",
+          "invoiceAmount": 500.01,
+          "invoiceRawAmount": 500.01,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$500",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 3.5,
+          "labourHoursLabel": "3.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "LRV240051",
+          "chassisNumber": "LA9202ES8R1ZDD479",
+          "ticketName": "LRV240051",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45712",
+          "serviceOrderId": "45712",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "LRV240033",
+          "chassisNumber": "LRV240033",
+          "ticketName": "LRV240033",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45713",
+          "serviceOrderId": "45713",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 06:00:00",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050711",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRC255253",
+          "chassisNumber": "SRC255253",
+          "ticketName": "SRC255253",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45724",
+          "serviceOrderId": "45724",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "REGENT RV - FRANKSTON",
+          "customerBP": "3141",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRC264366",
+          "chassisNumber": "SRC264366",
+          "ticketName": "SRC264366",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45725",
+          "serviceOrderId": "45725",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "REGENT RV - FRANKSTON",
+          "customerBP": "3141",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRH263861",
+          "chassisNumber": "SRH263861",
+          "ticketName": "SRH263861",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45726",
+          "serviceOrderId": "45726",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "Leonard & Karen Davis",
+          "customerBP": "1078417",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRP264212",
+          "chassisNumber": "SRP264212",
+          "ticketName": "SRP264212",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45727",
+          "serviceOrderId": "45727",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "REGENT RV - FRANKSTON",
+          "customerBP": "3141",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRH263605",
+          "chassisNumber": "SRH263605",
+          "ticketName": "SRH263605",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45728",
+          "serviceOrderId": "45728",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Frankston",
+          "dealerName": "Regent RV - Frankston",
+          "customer": "Damian Smethurst",
+          "customerBP": "1080805",
+          "technicianBP": "8000002015",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Matt Sims",
+          "vehicle": "SRC264735",
+          "chassisNumber": "SRC264735",
+          "ticketName": "SRC264735",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45748",
+          "serviceOrderId": "45748",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "SNOWY RIVER GEELONG",
+          "customerBP": "3128",
+          "technicianBP": "8000003101",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Stuart Cook",
+          "vehicle": "D58133",
+          "chassisNumber": "D58133",
+          "ticketName": "D58133",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45751",
+          "serviceOrderId": "45751",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 135.0,
+          "quoteAmountLabel": "$135",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 1.0,
+          "labourHoursLabel": "1.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "LRT230698",
+          "chassisNumber": "LRT230698",
+          "ticketName": "LRT230698",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45752",
+          "serviceOrderId": "45752",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "LRV240067",
+          "chassisNumber": "LRV240067",
+          "ticketName": "LRV240067",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45753",
+          "serviceOrderId": "45753",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "06/11/2026 04:27:30",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "Jeanette Hatt",
+          "customerBP": "1036819",
+          "technicianBP": "8000003030",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Approved, Awaiting Repair",
+          "rawStatus": "Quote Approved",
+          "priority": "TBC",
+          "quoteAmount": 649.99,
+          "quoteAmountLabel": "$650",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 4.5,
+          "labourHoursLabel": "4.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Wayne Gibbons",
+          "vehicle": "LRV240067",
+          "chassisNumber": "LRV240067",
+          "ticketName": "LRV240067",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45754",
+          "serviceOrderId": "45754",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 67.51,
+          "quoteAmountLabel": "$68",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.5,
+          "labourHoursLabel": "0.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRT263084",
+          "chassisNumber": "SRT263084",
+          "ticketName": "SRT263084",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45755",
+          "serviceOrderId": "45755",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 337.51,
+          "quoteAmountLabel": "$338",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 2.5,
+          "labourHoursLabel": "2.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC254445",
+          "chassisNumber": "SRC254445",
+          "ticketName": "SRC254445",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45757",
+          "serviceOrderId": "45757",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "08/11/2026 22:25:57",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "Jon Becker",
+          "customerBP": "1064604",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Repair In Progress",
+          "rawStatus": "Repair in Progress",
+          "priority": "TBC",
+          "quoteAmount": 297.0,
+          "quoteAmountLabel": "$297",
+          "invoiceNo": "0090050774",
+          "invoiceAmount": 270.0,
+          "invoiceRawAmount": 270.0,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$270",
+          "billingDate": "09/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 2.0,
+          "labourHoursLabel": "2.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "SRC255986",
+          "chassisNumber": "SRC255986",
+          "ticketName": "SRC255986",
+          "abnormalReason": "Invoice exists but status is not Create invoice"
+        },
+        {
+          "ticketId": "45758",
+          "serviceOrderId": "45758",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 74.25,
+          "quoteAmountLabel": "$74",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.5,
+          "labourHoursLabel": "0.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC255646",
+          "chassisNumber": "SRC255646",
+          "ticketName": "SRC255646",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45759",
+          "serviceOrderId": "45759",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 675.02,
+          "quoteAmountLabel": "$675",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 5.0,
+          "labourHoursLabel": "5.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC254783",
+          "chassisNumber": "SRC254783",
+          "ticketName": "SRC254783",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45760",
+          "serviceOrderId": "45760",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 540.01,
+          "quoteAmountLabel": "$540",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 4.0,
+          "labourHoursLabel": "4.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC263226",
+          "chassisNumber": "SRC263226",
+          "ticketName": "SRC263226",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45771",
+          "serviceOrderId": "45771",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "SNOWY RIVER GEELONG",
+          "customerBP": "3128",
+          "technicianBP": "8000003101",
+          "role43BP": "",
+          "serviceType": "PDI ticket",
+          "ticketTypeCode": "Z010",
+          "status": "Awaiting PDI Start",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 0.0,
+          "quoteAmountLabel": "",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Stuart Cook",
+          "vehicle": "Y78420",
+          "chassisNumber": "Y78420",
+          "ticketName": "Y78420",
+          "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45781",
+          "serviceOrderId": "45781",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "RRV23123",
+          "chassisNumber": "RRV23123",
+          "ticketName": "RRV23123",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45783",
+          "serviceOrderId": "45783",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "05/11/2026 23:54:53",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050720",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "SRC243968",
+          "chassisNumber": "SRC243968",
+          "ticketName": "SRC243968",
+          "abnormalReason": ""
+        },
+        {
           "ticketId": "45468",
           "serviceOrderId": "45468",
           "source": "C4C",
@@ -143630,6 +145332,45 @@ window.serviceCentreData = {
           "abnormalReason": ""
         },
         {
+          "ticketId": "45626",
+          "serviceOrderId": "45626",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "04/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "Phil Clement",
+          "customerBP": "1056139",
+          "technicianBP": "8000003101",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 550.01,
+          "quoteAmountLabel": "$550",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "External",
+          "labourHours": 3.5,
+          "labourHoursLabel": "3.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Stuart Cook",
+          "vehicle": "LRT240531",
+          "chassisNumber": "LRT240531",
+          "ticketName": "LRT240531",
+          "abnormalReason": ""
+        },
+        {
           "ticketId": "45643",
           "serviceOrderId": "45643",
           "source": "C4C",
@@ -143667,6 +145408,123 @@ window.serviceCentreData = {
           "chassisNumber": "SRT264440",
           "ticketName": "SRT264440",
           "abnormalReason": "Invalid Role_1001 party: dealer/org used as customer"
+        },
+        {
+          "ticketId": "45671",
+          "serviceOrderId": "45671",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "04/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 73.48,
+          "quoteAmountLabel": "$73",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "LRV240330",
+          "chassisNumber": "LRV240330",
+          "ticketName": "LRV240330",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45672",
+          "serviceOrderId": "45672",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "04/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 270.01,
+          "quoteAmountLabel": "$270",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 2.0,
+          "labourHoursLabel": "2.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "LRV233245",
+          "chassisNumber": "LRV233245",
+          "ticketName": "LRV233245",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45673",
+          "serviceOrderId": "45673",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "04/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Awaiting Quote Approval",
+          "rawStatus": "Open",
+          "priority": "TBC",
+          "quoteAmount": 540.01,
+          "quoteAmountLabel": "$540",
+          "invoiceNo": "",
+          "invoiceAmount": 0.0,
+          "invoiceRawAmount": null,
+          "billingType": "",
+          "invoiceAmountLabel": "",
+          "billingDate": "TBC",
+          "invoiceScope": "Internal",
+          "labourHours": 4.0,
+          "labourHoursLabel": "4.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "SRC255768",
+          "chassisNumber": "SRC255768",
+          "ticketName": "SRC255768",
+          "abnormalReason": ""
         },
         {
           "ticketId": "45464",
@@ -144118,8 +145976,8 @@ window.serviceCentreData = {
           "status": "Awaiting Quote Approval",
           "rawStatus": "Open",
           "priority": "TBC",
-          "quoteAmount": 430.0,
-          "quoteAmountLabel": "$430",
+          "quoteAmount": 597.53,
+          "quoteAmountLabel": "$598",
           "invoiceNo": "",
           "invoiceAmount": 0.0,
           "invoiceRawAmount": null,
@@ -144339,32 +146197,32 @@ window.serviceCentreData = {
           "periodKey": "2026-11",
           "year": "2026",
           "createdDate": "01/11/2026",
-          "completedDate": "TBC",
-          "lastchangedtime": "",
-          "dealerYard": "Other",
-          "dealerName": "Not Assigned",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 04:09:46",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
           "customer": "REGENT RV PTY LTD",
           "customerBP": "3110",
-          "technicianBP": "8000003101",
+          "technicianBP": "8000002061",
           "role43BP": "",
           "serviceType": "Repair ticket",
           "ticketTypeCode": "Z007",
-          "status": "Awaiting Quote Approval",
-          "rawStatus": "Open",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
           "priority": "TBC",
-          "quoteAmount": 280.01,
-          "quoteAmountLabel": "$280",
-          "invoiceNo": "",
-          "invoiceAmount": 0.0,
-          "invoiceRawAmount": null,
-          "billingType": "",
-          "invoiceAmountLabel": "",
-          "billingDate": "TBC",
-          "invoiceScope": "Other",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050708",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "Internal",
           "labourHours": 0.0,
           "labourHoursLabel": "",
           "invoicePaidHours": "Missing",
-          "workerName": "Stuart Cook",
+          "workerName": "Cindy Keay",
           "vehicle": "SRC253614",
           "chassisNumber": "LA9202ESXS1ZDD134",
           "ticketName": "SRC253614",
@@ -144925,7 +146783,7 @@ window.serviceCentreData = {
           "year": "2026",
           "createdDate": "29/10/2026",
           "completedDate": "TBC",
-          "lastchangedtime": "",
+          "lastchangedtime": "04/11/2026 23:44:50",
           "dealerYard": "Launceston",
           "dealerName": "Snowy River Launceston",
           "customer": "REGENT RV PTY LTD",
@@ -144934,8 +146792,8 @@ window.serviceCentreData = {
           "role43BP": "",
           "serviceType": "Repair ticket",
           "ticketTypeCode": "Z007",
-          "status": "Awaiting Quote Approval",
-          "rawStatus": "Open",
+          "status": "Approved, Awaiting Repair",
+          "rawStatus": "Quote Approved",
           "priority": "TBC",
           "quoteAmount": 222.75,
           "quoteAmountLabel": "$223",
@@ -145197,18 +147055,18 @@ window.serviceCentreData = {
           "periodKey": "2026-10",
           "year": "2026",
           "createdDate": "29/10/2026",
-          "completedDate": "TBC",
-          "lastchangedtime": "",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 04:18:58",
           "dealerYard": "Geelong",
           "dealerName": "Snowy River Geelong",
           "customer": "SNOWY RIVER GEELONG",
           "customerBP": "3128",
-          "technicianBP": "8000003101",
+          "technicianBP": "8000002061",
           "role43BP": "",
           "serviceType": "PDI ticket",
           "ticketTypeCode": "Z010",
-          "status": "Awaiting PDI Start",
-          "rawStatus": "Open",
+          "status": "PDI Completed",
+          "rawStatus": "Claim Time Ticket",
           "priority": "TBC",
           "quoteAmount": 0.0,
           "quoteAmountLabel": "",
@@ -145219,10 +147077,10 @@ window.serviceCentreData = {
           "invoiceAmountLabel": "",
           "billingDate": "TBC",
           "invoiceScope": "External",
-          "labourHours": 0.0,
-          "labourHoursLabel": "",
+          "labourHours": 1.5,
+          "labourHoursLabel": "1.5h",
           "invoicePaidHours": "Missing",
-          "workerName": "Stuart Cook",
+          "workerName": "Cindy Keay",
           "vehicle": "SRH264004",
           "chassisNumber": "SRH264004",
           "ticketName": "SRH264004",
@@ -145471,7 +147329,7 @@ window.serviceCentreData = {
           "year": "2026",
           "createdDate": "28/10/2026",
           "completedDate": "TBC",
-          "lastchangedtime": "28/10/2026 20:57:54",
+          "lastchangedtime": "05/11/2026 03:57:35",
           "dealerYard": "Traralgon",
           "dealerName": "Regent RV - Traralgon",
           "customer": "noel and Jenifer Cleal",
@@ -145480,8 +147338,8 @@ window.serviceCentreData = {
           "role43BP": "",
           "serviceType": "Repair ticket",
           "ticketTypeCode": "Z007",
-          "status": "Repair In Progress",
-          "rawStatus": "Repair in Progress",
+          "status": "Time Claimed, Awaiting Invoice",
+          "rawStatus": "Claim Time Ticket",
           "priority": "TBC",
           "quoteAmount": 668.25,
           "quoteAmountLabel": "$668",
@@ -145548,8 +147406,8 @@ window.serviceCentreData = {
           "periodKey": "2026-10",
           "year": "2026",
           "createdDate": "28/10/2026",
-          "completedDate": "TBC",
-          "lastchangedtime": "28/10/2026 21:15:17",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 00:17:40",
           "dealerYard": "Traralgon",
           "dealerName": "Regent RV - Traralgon",
           "customer": "Helmuth & Anne Ewinger",
@@ -145558,17 +147416,17 @@ window.serviceCentreData = {
           "role43BP": "",
           "serviceType": "Repair ticket",
           "ticketTypeCode": "Z007",
-          "status": "Approved, Awaiting Repair",
-          "rawStatus": "Quote Approved",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
           "priority": "TBC",
           "quoteAmount": 165.0,
           "quoteAmountLabel": "$165",
-          "invoiceNo": "",
-          "invoiceAmount": 0.0,
-          "invoiceRawAmount": null,
-          "billingType": "",
-          "invoiceAmountLabel": "",
-          "billingDate": "TBC",
+          "invoiceNo": "0090050723",
+          "invoiceAmount": 150.0,
+          "invoiceRawAmount": 150.0,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$150",
+          "billingDate": "06/11/2026",
           "invoiceScope": "External",
           "labourHours": 1.0,
           "labourHoursLabel": "1.0h",
@@ -149176,7 +151034,7 @@ window.serviceCentreData = {
           "year": "2026",
           "createdDate": "22/10/2026",
           "completedDate": "TBC",
-          "lastchangedtime": "",
+          "lastchangedtime": "08/11/2026 22:28:17",
           "dealerYard": "Geelong",
           "dealerName": "Snowy River Geelong",
           "customer": "REGENT RV PTY LTD",
@@ -154219,8 +156077,8 @@ window.serviceCentreData = {
           "status": "Awaiting Quote Approval",
           "rawStatus": "Open",
           "priority": "TBC",
-          "quoteAmount": 0.0,
-          "quoteAmountLabel": "",
+          "quoteAmount": 313.94,
+          "quoteAmountLabel": "$314",
           "invoiceNo": "",
           "invoiceAmount": 0.0,
           "invoiceRawAmount": null,
@@ -160147,8 +162005,8 @@ window.serviceCentreData = {
           "status": "Awaiting Quote Approval",
           "rawStatus": "Open",
           "priority": "TBC",
-          "quoteAmount": 40.02,
-          "quoteAmountLabel": "$40",
+          "quoteAmount": 320.02,
+          "quoteAmountLabel": "$320",
           "invoiceNo": "",
           "invoiceAmount": 0.0,
           "invoiceRawAmount": null,
@@ -330169,6 +332027,279 @@ window.serviceCentreData = {
       ],
       "invoiceDetails": [
         {
+          "ticketId": "45788",
+          "serviceOrderId": "45788",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "06/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 02:48:04",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050751",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "SRP253361",
+          "chassisNumber": "SRP253361",
+          "ticketName": "SRP253361",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45628",
+          "serviceOrderId": "45628",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 01:42:39",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "Walk in customer SR Launceston",
+          "customerBP": "1090235",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 116.75,
+          "quoteAmountLabel": "$117",
+          "invoiceNo": "0090050695",
+          "invoiceAmount": 106.14,
+          "invoiceRawAmount": 106.14,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$106",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 1.0,
+          "labourHoursLabel": "1.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "TBC",
+          "chassisNumber": "TBC",
+          "ticketName": "TBC",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45678",
+          "serviceOrderId": "45678",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 05:15:39",
+          "dealerYard": "Launceston",
+          "dealerName": "Snowy River Launceston",
+          "customer": "Preston Murray",
+          "customerBP": "1090513",
+          "technicianBP": "8000002014",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 3675.58,
+          "quoteAmountLabel": "$3.7K",
+          "invoiceNo": "0090050710",
+          "invoiceAmount": 3341.44,
+          "invoiceRawAmount": 3341.44,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$3.3K",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 13.5,
+          "labourHoursLabel": "13.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Logan Pinner",
+          "vehicle": "LRV230953",
+          "chassisNumber": "LRV230953",
+          "ticketName": "LRV230953",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45680",
+          "serviceOrderId": "45680",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 00:09:46",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "Sharon White",
+          "customerBP": "1047445",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 550.01,
+          "quoteAmountLabel": "$550",
+          "invoiceNo": "0090050721",
+          "invoiceAmount": 500.01,
+          "invoiceRawAmount": 500.01,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$500",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 3.5,
+          "labourHoursLabel": "3.5h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "LRV240051",
+          "chassisNumber": "LA9202ES8R1ZDD479",
+          "ticketName": "LRV240051",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45713",
+          "serviceOrderId": "45713",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 06:00:00",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050711",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRC255253",
+          "chassisNumber": "SRC255253",
+          "ticketName": "SRC255253",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45757",
+          "serviceOrderId": "45757",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "TBC",
+          "lastchangedtime": "08/11/2026 22:25:57",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "Jon Becker",
+          "customerBP": "1064604",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Repair In Progress",
+          "rawStatus": "Repair in Progress",
+          "priority": "TBC",
+          "quoteAmount": 297.0,
+          "quoteAmountLabel": "$297",
+          "invoiceNo": "0090050774",
+          "invoiceAmount": 270.0,
+          "invoiceRawAmount": 270.0,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$270",
+          "billingDate": "09/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 2.0,
+          "labourHoursLabel": "2.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "SRC255986",
+          "chassisNumber": "SRC255986",
+          "ticketName": "SRC255986",
+          "abnormalReason": "Invoice exists but status is not Create invoice"
+        },
+        {
+          "ticketId": "45783",
+          "serviceOrderId": "45783",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "05/11/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "05/11/2026 23:54:53",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050720",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "SRC243968",
+          "chassisNumber": "SRC243968",
+          "ticketName": "SRC243968",
+          "abnormalReason": ""
+        },
+        {
           "ticketId": "45574",
           "serviceOrderId": "45574",
           "source": "C4C",
@@ -330364,6 +332495,45 @@ window.serviceCentreData = {
           "abnormalReason": ""
         },
         {
+          "ticketId": "45436",
+          "serviceOrderId": "45436",
+          "source": "C4C",
+          "period": "Nov 2026",
+          "periodKey": "2026-11",
+          "year": "2026",
+          "createdDate": "01/11/2026",
+          "completedDate": "05/11/2026",
+          "lastchangedtime": "05/11/2026 04:09:46",
+          "dealerYard": "Geelong",
+          "dealerName": "Snowy River Geelong",
+          "customer": "REGENT RV PTY LTD",
+          "customerBP": "3110",
+          "technicianBP": "8000002061",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 430.0,
+          "quoteAmountLabel": "$430",
+          "invoiceNo": "0090050708",
+          "invoiceAmount": 390.91,
+          "invoiceRawAmount": 390.91,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$391",
+          "billingDate": "05/11/2026",
+          "invoiceScope": "Internal",
+          "labourHours": 0.0,
+          "labourHoursLabel": "",
+          "invoicePaidHours": "Missing",
+          "workerName": "Cindy Keay",
+          "vehicle": "SRC253614",
+          "chassisNumber": "LA9202ESXS1ZDD134",
+          "ticketName": "SRC253614",
+          "abnormalReason": ""
+        },
+        {
           "ticketId": "45382",
           "serviceOrderId": "45382",
           "source": "C4C",
@@ -330517,6 +332687,45 @@ window.serviceCentreData = {
           "vehicle": "TBC",
           "chassisNumber": "TBC",
           "ticketName": "TBC",
+          "abnormalReason": ""
+        },
+        {
+          "ticketId": "45268",
+          "serviceOrderId": "45268",
+          "source": "C4C",
+          "period": "Oct 2026",
+          "periodKey": "2026-10",
+          "year": "2026",
+          "createdDate": "28/10/2026",
+          "completedDate": "06/11/2026",
+          "lastchangedtime": "06/11/2026 00:17:40",
+          "dealerYard": "Traralgon",
+          "dealerName": "Regent RV - Traralgon",
+          "customer": "Helmuth & Anne Ewinger",
+          "customerBP": "1040502",
+          "technicianBP": "8000003010",
+          "role43BP": "",
+          "serviceType": "Repair ticket",
+          "ticketTypeCode": "Z007",
+          "status": "Completed / Invoiced",
+          "rawStatus": "Create invoice",
+          "priority": "TBC",
+          "quoteAmount": 165.0,
+          "quoteAmountLabel": "$165",
+          "invoiceNo": "0090050723",
+          "invoiceAmount": 150.0,
+          "invoiceRawAmount": 150.0,
+          "billingType": "F2",
+          "invoiceAmountLabel": "$150",
+          "billingDate": "06/11/2026",
+          "invoiceScope": "External",
+          "labourHours": 1.0,
+          "labourHoursLabel": "1.0h",
+          "invoicePaidHours": "Missing",
+          "workerName": "Karena Phelan",
+          "vehicle": "LRV233230",
+          "chassisNumber": "LRV233230",
+          "ticketName": "LRV233230",
           "abnormalReason": ""
         },
         {
@@ -391471,6 +393680,58 @@ window.serviceCentreData = {
                   "openBalance": 614,
                   "openAmount": 330003.18,
                   "openAmountLabel": "$330.0K"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 614,
+                  "openAmount": 330003.18,
+                  "openAmountLabel": "$330.0K"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 614,
+                  "openAmount": 330003.18,
+                  "openAmountLabel": "$330.0K"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 614,
+                  "openAmount": 330003.18,
+                  "openAmountLabel": "$330.0K"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 614,
+                  "openAmount": 330003.18,
+                  "openAmountLabel": "$330.0K"
                 }
               ],
               "pipeline": [
@@ -391489,15 +393750,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 149
+                      "qty": 135
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 118
+                      "qty": 130
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "ticketIds": [
@@ -391918,15 +394179,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 12
+                      "qty": 9
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "ticketIds": [
@@ -392203,11 +394464,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -392238,11 +394499,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -392962,9 +395223,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 63,
-                  "openAmount": 49535.49,
-                  "openAmountLabel": "$49.5K"
+                  "openBalance": 62,
+                  "openAmount": 49370.49,
+                  "openAmountLabel": "$49.4K"
                 },
                 {
                   "date": "2026-11-02",
@@ -392975,9 +395236,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 63,
-                  "openAmount": 49535.49,
-                  "openAmountLabel": "$49.5K"
+                  "openBalance": 62,
+                  "openAmount": 49370.49,
+                  "openAmountLabel": "$49.4K"
                 },
                 {
                   "date": "2026-11-03",
@@ -392988,9 +395249,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 63,
-                  "openAmount": 49535.49,
-                  "openAmountLabel": "$49.5K"
+                  "openBalance": 62,
+                  "openAmount": 49370.49,
+                  "openAmountLabel": "$49.4K"
                 },
                 {
                   "date": "2026-11-04",
@@ -393001,37 +395262,89 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 63,
-                  "openAmount": 49535.49,
-                  "openAmountLabel": "$49.5K"
+                  "openBalance": 62,
+                  "openAmount": 49370.49,
+                  "openAmountLabel": "$49.4K"
                 },
                 {
                   "date": "2026-11-05",
                   "label": "05 Nov",
+                  "created": 4,
+                  "createdAmount": 1707.01,
+                  "createdAmountLabel": "$1.7K",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 64,
+                  "openAmount": 50097.49,
+                  "openAmountLabel": "$50.1K"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 1,
+                  "createdAmount": 430.0,
+                  "createdAmountLabel": "$430",
+                  "completed": 4,
+                  "completedAmount": 1575.01,
+                  "completedAmountLabel": "$1.6K",
+                  "openBalance": 64,
+                  "openAmount": 50097.49,
+                  "openAmountLabel": "$50.1K"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
                   "created": 0,
                   "createdAmount": 0.0,
                   "createdAmountLabel": "$0",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 63,
-                  "openAmount": 49535.49,
-                  "openAmountLabel": "$49.5K"
+                  "openBalance": 64,
+                  "openAmount": 50097.49,
+                  "openAmountLabel": "$50.1K"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 64,
+                  "openAmount": 50097.49,
+                  "openAmountLabel": "$50.1K"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 64,
+                  "openAmount": 50097.49,
+                  "openAmountLabel": "$50.1K"
                 }
               ],
               "pipeline": [
                 {
                   "status": "Awaiting Quote Approval",
-                  "qty": 10,
-                  "quoteAmount": 5926.25,
-                  "quoteAmountLabel": "$5.9K",
+                  "qty": 11,
+                  "quoteAmount": 6356.25,
+                  "quoteAmountLabel": "$6.4K",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -393056,30 +395369,31 @@ window.serviceCentreData = {
                     "41623",
                     "41902",
                     "42678",
-                    "43656"
+                    "43656",
+                    "45781"
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "status": "Approved, Awaiting Repair",
-                  "qty": 14,
-                  "quoteAmount": 11326.48,
-                  "quoteAmountLabel": "$11.3K",
+                  "qty": 13,
+                  "quoteAmount": 11161.48,
+                  "quoteAmountLabel": "$11.2K",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 5
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 7
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
@@ -393099,7 +395413,6 @@ window.serviceCentreData = {
                     "44279",
                     "44740",
                     "45267",
-                    "45268",
                     "45437"
                   ],
                   "color": "#17a6ad"
@@ -393107,23 +395420,23 @@ window.serviceCentreData = {
                 {
                   "status": "Repair In Progress",
                   "qty": 17,
-                  "quoteAmount": 17618.93,
-                  "quoteAmountLabel": "$17.6K",
+                  "quoteAmount": 17247.68,
+                  "quoteAmountLabel": "$17.2K",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
@@ -393147,7 +395460,7 @@ window.serviceCentreData = {
                     "43657",
                     "43718",
                     "44315",
-                    "45266"
+                    "45757"
                   ],
                   "color": "#f58b1f"
                 },
@@ -393189,16 +395502,16 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "Time Claimed, Awaiting Invoice",
-                  "qty": 16,
-                  "quoteAmount": 9214.81,
-                  "quoteAmountLabel": "$9.2K",
+                  "qty": 17,
+                  "quoteAmount": 9883.06,
+                  "quoteAmountLabel": "$9.9K",
                   "rawStatuses": [
                     "Claim Time Ticket"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -393206,11 +395519,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 6
+                      "qty": 5
                     },
                     {
                       "label": "60+ days",
-                      "qty": 5
+                      "qty": 6
                     }
                   ],
                   "ticketIds": [
@@ -393229,22 +395542,23 @@ window.serviceCentreData = {
                     "44313",
                     "44314",
                     "44701",
-                    "45265"
+                    "45265",
+                    "45266"
                   ],
                   "color": "#22a447"
                 },
                 {
                   "status": "Completed / Invoiced",
-                  "qty": 32,
-                  "quoteAmount": 17319.37,
-                  "quoteAmountLabel": "$17.3K",
+                  "qty": 36,
+                  "quoteAmount": 18894.38,
+                  "quoteAmountLabel": "$18.9K",
                   "rawStatuses": [
                     "Create invoice"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 4
                     },
                     {
                       "label": "8-30 days",
@@ -393252,11 +395566,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 31
                     }
                   ],
                   "ticketIds": [
@@ -393291,7 +395605,11 @@ window.serviceCentreData = {
                     "41027",
                     "41206",
                     "41250",
-                    "41600"
+                    "41600",
+                    "45268",
+                    "45680",
+                    "45783",
+                    "45788"
                   ],
                   "color": "#0f766e"
                 },
@@ -393357,12 +395675,12 @@ window.serviceCentreData = {
                 }
               ],
               "totals": {
-                "created": 1,
-                "completed": 0,
-                "open": 63,
-                "createdAmountLabel": "$297",
-                "completedAmountLabel": "$0",
-                "openAmountLabel": "$49.5K"
+                "created": 6,
+                "completed": 4,
+                "open": 64,
+                "createdAmountLabel": "$2.4K",
+                "completedAmountLabel": "$1.6K",
+                "openAmountLabel": "$50.1K"
               }
             },
             "Launceston": {
@@ -393412,55 +395730,107 @@ window.serviceCentreData = {
                 {
                   "date": "2026-11-04",
                   "label": "04 Nov",
-                  "created": 1,
-                  "createdAmount": 1700.0,
-                  "createdAmountLabel": "$1.7K",
+                  "created": 3,
+                  "createdAmount": 2510.02,
+                  "createdAmountLabel": "$2.5K",
                   "completed": 1,
                   "completedAmount": 1700.0,
                   "completedAmountLabel": "$1.7K",
-                  "openBalance": 174,
-                  "openAmount": 103307.68,
-                  "openAmountLabel": "$103.3K"
+                  "openBalance": 176,
+                  "openAmount": 104117.7,
+                  "openAmountLabel": "$104.1K"
                 },
                 {
                   "date": "2026-11-05",
                   "label": "05 Nov",
+                  "created": 9,
+                  "createdAmount": 6051.63,
+                  "createdAmountLabel": "$6.1K",
+                  "completed": 2,
+                  "completedAmount": 3792.33,
+                  "completedAmountLabel": "$3.8K",
+                  "openBalance": 183,
+                  "openAmount": 106377.0,
+                  "openAmountLabel": "$106.4K"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 3,
+                  "createdAmount": 1653.8,
+                  "createdAmountLabel": "$1.7K",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 186,
+                  "openAmount": 108030.8,
+                  "openAmountLabel": "$108.0K"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
                   "created": 0,
                   "createdAmount": 0.0,
                   "createdAmountLabel": "$0",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 174,
-                  "openAmount": 103307.68,
-                  "openAmountLabel": "$103.3K"
+                  "openBalance": 186,
+                  "openAmount": 108030.8,
+                  "openAmountLabel": "$108.0K"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 186,
+                  "openAmount": 108030.8,
+                  "openAmountLabel": "$108.0K"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 186,
+                  "openAmount": 108030.8,
+                  "openAmountLabel": "$108.0K"
                 }
               ],
               "pipeline": [
                 {
                   "status": "Awaiting Quote Approval",
-                  "qty": 94,
-                  "quoteAmount": 70966.01,
-                  "quoteAmountLabel": "$71.0K",
+                  "qty": 105,
+                  "quoteAmount": 75466.38,
+                  "quoteAmountLabel": "$75.5K",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 5
+                      "qty": 14
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 37
+                      "qty": 34
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 22
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 32
                     }
                   ],
                   "ticketIds": [
@@ -393552,39 +395922,50 @@ window.serviceCentreData = {
                     "45155",
                     "45263",
                     "45270",
-                    "45325",
                     "45331",
                     "45332",
                     "45398",
                     "45464",
-                    "45490"
+                    "45490",
+                    "45629",
+                    "45672",
+                    "45673",
+                    "45751",
+                    "45754",
+                    "45755",
+                    "45758",
+                    "45759",
+                    "45760",
+                    "45782",
+                    "45784",
+                    "45786"
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "status": "Approved, Awaiting Repair",
-                  "qty": 73,
-                  "quoteAmount": 29636.51,
-                  "quoteAmountLabel": "$29.6K",
+                  "qty": 74,
+                  "quoteAmount": 29859.26,
+                  "quoteAmountLabel": "$29.9K",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 4
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 9
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 61
                     }
                   ],
                   "ticketIds": [
@@ -393660,7 +396041,8 @@ window.serviceCentreData = {
                     "42598",
                     "42799",
                     "43660",
-                    "44373"
+                    "44373",
+                    "45325"
                   ],
                   "color": "#17a6ad"
                 },
@@ -393758,28 +396140,28 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "Completed / Invoiced",
-                  "qty": 111,
-                  "quoteAmount": 63788.17,
-                  "quoteAmountLabel": "$63.8K",
+                  "qty": 113,
+                  "quoteAmount": 67580.5,
+                  "quoteAmountLabel": "$67.6K",
                   "rawStatuses": [
                     "Create invoice"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 4
+                      "qty": 3
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 13
+                      "qty": 14
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 26
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 68
+                      "qty": 71
                     }
                   ],
                   "ticketIds": [
@@ -393893,7 +396275,9 @@ window.serviceCentreData = {
                     "45333",
                     "45337",
                     "45339",
-                    "45574"
+                    "45574",
+                    "45628",
+                    "45678"
                   ],
                   "color": "#0f766e"
                 },
@@ -393966,12 +396350,12 @@ window.serviceCentreData = {
                 }
               ],
               "totals": {
-                "created": 3,
-                "completed": 1,
-                "open": 174,
-                "createdAmountLabel": "$2.4K",
-                "completedAmountLabel": "$1.7K",
-                "openAmountLabel": "$103.3K"
+                "created": 17,
+                "completed": 3,
+                "open": 186,
+                "createdAmountLabel": "$10.9K",
+                "completedAmountLabel": "$5.5K",
+                "openAmountLabel": "$108.0K"
               }
             },
             "Geelong": {
@@ -393982,28 +396366,28 @@ window.serviceCentreData = {
                 {
                   "date": "2026-11-01",
                   "label": "01 Nov",
-                  "created": 1,
-                  "createdAmount": 150.0,
-                  "createdAmountLabel": "$150",
+                  "created": 2,
+                  "createdAmount": 580.0,
+                  "createdAmountLabel": "$580",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 396,
-                  "openAmount": 93046.59,
-                  "openAmountLabel": "$93.0K"
+                  "openAmount": 93640.53,
+                  "openAmountLabel": "$93.6K"
                 },
                 {
                   "date": "2026-11-02",
                   "label": "02 Nov",
                   "created": 6,
-                  "createdAmount": 1680.49,
-                  "createdAmountLabel": "$1.7K",
+                  "createdAmount": 1848.02,
+                  "createdAmountLabel": "$1.8K",
                   "completed": 1,
                   "completedAmount": 671.99,
                   "completedAmountLabel": "$672",
                   "openBalance": 400,
-                  "openAmount": 93625.09,
-                  "openAmountLabel": "$93.6K"
+                  "openAmount": 94386.56,
+                  "openAmountLabel": "$94.4K"
                 },
                 {
                   "date": "2026-11-03",
@@ -394015,61 +396399,113 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 400,
-                  "openAmount": 93625.09,
-                  "openAmountLabel": "$93.6K"
+                  "openAmount": 94386.56,
+                  "openAmountLabel": "$94.4K"
                 },
                 {
                   "date": "2026-11-04",
                   "label": "04 Nov",
-                  "created": 10,
-                  "createdAmount": 646.83,
-                  "createdAmountLabel": "$647",
+                  "created": 12,
+                  "createdAmount": 1270.32,
+                  "createdAmountLabel": "$1.3K",
                   "completed": 2,
                   "completedAmount": 860.0,
                   "completedAmountLabel": "$860",
-                  "openBalance": 409,
-                  "openAmount": 93841.92,
-                  "openAmountLabel": "$93.8K"
+                  "openBalance": 411,
+                  "openAmount": 95226.88,
+                  "openAmountLabel": "$95.2K"
                 },
                 {
                   "date": "2026-11-05",
                   "label": "05 Nov",
+                  "created": 6,
+                  "createdAmount": 2280.05,
+                  "createdAmountLabel": "$2.3K",
+                  "completed": 2,
+                  "completedAmount": 860.0,
+                  "completedAmountLabel": "$860",
+                  "openBalance": 416,
+                  "openAmount": 97076.93,
+                  "openAmountLabel": "$97.1K"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 1,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 417,
+                  "openAmount": 97076.93,
+                  "openAmountLabel": "$97.1K"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
                   "created": 0,
                   "createdAmount": 0.0,
                   "createdAmountLabel": "$0",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 409,
-                  "openAmount": 93841.92,
-                  "openAmountLabel": "$93.8K"
+                  "openBalance": 417,
+                  "openAmount": 97076.93,
+                  "openAmountLabel": "$97.1K"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 1,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 418,
+                  "openAmount": 97076.93,
+                  "openAmountLabel": "$97.1K"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 418,
+                  "openAmount": 97076.93,
+                  "openAmountLabel": "$97.1K"
                 }
               ],
               "pipeline": [
                 {
                   "status": "Awaiting Quote Approval",
-                  "qty": 318,
-                  "quoteAmount": 51060.05,
-                  "quoteAmountLabel": "$51.1K",
+                  "qty": 325,
+                  "quoteAmount": 52875.01,
+                  "quoteAmountLabel": "$52.9K",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 15
+                      "qty": 20
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 50
+                      "qty": 48
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "ticketIds": [
@@ -394390,26 +396826,33 @@ window.serviceCentreData = {
                     "45579",
                     "45580",
                     "45624",
-                    "45625"
+                    "45625",
+                    "45626",
+                    "45627",
+                    "45671",
+                    "45712",
+                    "45752",
+                    "45789",
+                    "45834"
                   ],
                   "color": "#1f6feb"
                 },
                 {
                   "status": "Approved, Awaiting Repair",
-                  "qty": 44,
-                  "quoteAmount": 28251.92,
-                  "quoteAmountLabel": "$28.3K",
+                  "qty": 45,
+                  "quoteAmount": 28901.91,
+                  "quoteAmountLabel": "$28.9K",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 9
+                      "qty": 11
                     },
                     {
                       "label": "31-60 days",
@@ -394464,22 +396907,23 @@ window.serviceCentreData = {
                     "44793",
                     "45058",
                     "45093",
-                    "45324"
+                    "45324",
+                    "45753"
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "status": "Repair In Progress",
-                  "qty": 25,
-                  "quoteAmount": 8513.81,
-                  "quoteAmountLabel": "$8.5K",
+                  "qty": 26,
+                  "quoteAmount": 9283.87,
+                  "quoteAmountLabel": "$9.3K",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
@@ -394519,7 +396963,8 @@ window.serviceCentreData = {
                     "40379",
                     "42721",
                     "44934",
-                    "45461"
+                    "45461",
+                    "45675"
                   ],
                   "color": "#f58b1f"
                 },
@@ -394534,11 +396979,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -394603,16 +397048,16 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "Completed / Invoiced",
-                  "qty": 108,
-                  "quoteAmount": 62724.0,
-                  "quoteAmountLabel": "$62.7K",
+                  "qty": 110,
+                  "quoteAmount": 63584.0,
+                  "quoteAmountLabel": "$63.6K",
                   "rawStatuses": [
                     "Create invoice"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 5
                     },
                     {
                       "label": "8-30 days",
@@ -394620,11 +397065,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 13
+                      "qty": 2
                     },
                     {
                       "label": "60+ days",
-                      "qty": 90
+                      "qty": 101
                     }
                   ],
                   "ticketIds": [
@@ -394733,9 +397178,11 @@ window.serviceCentreData = {
                     "41536",
                     "41537",
                     "41754",
+                    "45436",
                     "45483",
                     "45485",
-                    "45576"
+                    "45576",
+                    "45713"
                   ],
                   "color": "#0f766e"
                 },
@@ -394758,11 +397205,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "ticketIds": [
@@ -394784,19 +397231,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 10
+                      "qty": 5
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 2
                     }
                   ],
                   "ticketIds": [
@@ -394820,12 +397267,12 @@ window.serviceCentreData = {
                 }
               ],
               "totals": {
-                "created": 17,
-                "completed": 3,
-                "open": 409,
-                "createdAmountLabel": "$2.5K",
-                "completedAmountLabel": "$1.5K",
-                "openAmountLabel": "$93.8K"
+                "created": 28,
+                "completed": 5,
+                "open": 418,
+                "createdAmountLabel": "$6.0K",
+                "completedAmountLabel": "$2.4K",
+                "openAmountLabel": "$97.1K"
               }
             },
             "Frankston": {
@@ -394897,6 +397344,58 @@ window.serviceCentreData = {
                   "openBalance": 178,
                   "openAmount": 124648.59,
                   "openAmountLabel": "$124.6K"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 178,
+                  "openAmount": 124648.59,
+                  "openAmountLabel": "$124.6K"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 178,
+                  "openAmount": 124648.59,
+                  "openAmountLabel": "$124.6K"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 178,
+                  "openAmount": 124648.59,
+                  "openAmountLabel": "$124.6K"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 178,
+                  "openAmount": 124648.59,
+                  "openAmountLabel": "$124.6K"
                 }
               ],
               "pipeline": [
@@ -394911,7 +397410,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -394923,7 +397422,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "ticketIds": [
@@ -394982,15 +397481,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 36
+                      "qty": 32
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "ticketIds": [
@@ -395134,11 +397633,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
@@ -395229,19 +397728,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 57
+                      "qty": 38
                     },
                     {
                       "label": "60+ days",
-                      "qty": 93
+                      "qty": 114
                     }
                   ],
                   "ticketIds": [
@@ -395446,11 +397945,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
@@ -395557,6 +398056,58 @@ window.serviceCentreData = {
                   "openBalance": 919,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 3,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 3,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 922,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 922,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 922,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 922,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
                 }
               ],
               "pipeline": [
@@ -395596,7 +398147,7 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "PDI Complete, Awaiting Time Claim",
-                  "qty": 914,
+                  "qty": 917,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
                   "rawStatuses": [
@@ -395605,19 +398156,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 3
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 22
+                      "qty": 19
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 43
+                      "qty": 37
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "ticketIds": [
@@ -396534,7 +399085,10 @@ window.serviceCentreData = {
                     "45229",
                     "45311",
                     "45312",
-                    "45354"
+                    "45354",
+                    "45828",
+                    "45829",
+                    "45853"
                   ],
                   "color": "#17a6ad"
                 },
@@ -396549,7 +399103,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -396557,11 +399111,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 52
+                      "qty": 24
                     },
                     {
                       "label": "60+ days",
-                      "qty": 222
+                      "qty": 251
                     }
                   ],
                   "ticketIds": [
@@ -396923,9 +399477,9 @@ window.serviceCentreData = {
                 }
               ],
               "totals": {
-                "created": 0,
-                "completed": 0,
-                "open": 919,
+                "created": 3,
+                "completed": 3,
+                "open": 922,
                 "createdAmountLabel": "$0",
                 "completedAmountLabel": "$0",
                 "openAmountLabel": "$0"
@@ -396991,6 +399545,58 @@ window.serviceCentreData = {
                 {
                   "date": "2026-11-05",
                   "label": "05 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 26,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 26,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 26,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 26,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
                   "created": 0,
                   "createdAmount": 0.0,
                   "createdAmountLabel": "$0",
@@ -397108,11 +399714,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "60+ days",
-                      "qty": 192
+                      "qty": 194
                     }
                   ],
                   "ticketIds": [
@@ -397425,6 +400031,58 @@ window.serviceCentreData = {
                   "openBalance": 5,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 5,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 5,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 5,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 5,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
                 }
               ],
               "pipeline": [
@@ -397573,7 +400231,7 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 120,
+                  "openBalance": 119,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 },
@@ -397586,7 +400244,7 @@ window.serviceCentreData = {
                   "completed": 1,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 122,
+                  "openBalance": 121,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 },
@@ -397599,7 +400257,7 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 122,
+                  "openBalance": 121,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 },
@@ -397612,20 +400270,72 @@ window.serviceCentreData = {
                   "completed": 2,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 123,
+                  "openBalance": 122,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 },
                 {
                   "date": "2026-11-05",
                   "label": "05 Nov",
+                  "created": 2,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 124,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 4,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 4,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 125,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
                   "created": 0,
                   "createdAmount": 0.0,
                   "createdAmountLabel": "$0",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 123,
+                  "openBalance": 125,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 125,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 125,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 }
@@ -397633,7 +400343,7 @@ window.serviceCentreData = {
               "pipeline": [
                 {
                   "status": "Awaiting PDI Start",
-                  "qty": 98,
+                  "qty": 100,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
                   "rawStatuses": [
@@ -397646,15 +400356,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "ticketIds": [
@@ -397751,11 +400461,13 @@ window.serviceCentreData = {
                     "44904",
                     "44908",
                     "45318",
-                    "45341",
                     "45421",
                     "45491",
                     "45496",
-                    "45643"
+                    "45643",
+                    "45748",
+                    "45771",
+                    "45824"
                   ],
                   "color": "#1f6feb"
                 },
@@ -397815,7 +400527,7 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "PDI Completed",
-                  "qty": 356,
+                  "qty": 360,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
                   "rawStatuses": [
@@ -397828,11 +400540,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 52
+                      "qty": 37
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 32
+                      "qty": 51
                     },
                     {
                       "label": "60+ days",
@@ -398192,10 +400904,14 @@ window.serviceCentreData = {
                     "45213",
                     "45221",
                     "45304",
+                    "45341",
                     "45349",
                     "45380",
                     "45472",
-                    "45620"
+                    "45620",
+                    "45778",
+                    "45779",
+                    "45814"
                   ],
                   "color": "#0f766e"
                 },
@@ -398210,11 +400926,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -398265,9 +400981,9 @@ window.serviceCentreData = {
                 }
               ],
               "totals": {
-                "created": 5,
-                "completed": 3,
-                "open": 123,
+                "created": 11,
+                "completed": 7,
+                "open": 125,
                 "createdAmountLabel": "$0",
                 "completedAmountLabel": "$0",
                 "openAmountLabel": "$0"
@@ -398333,13 +401049,65 @@ window.serviceCentreData = {
                 {
                   "date": "2026-11-05",
                   "label": "05 Nov",
+                  "created": 5,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 89,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-06",
+                  "label": "06 Nov",
+                  "created": 3,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 92,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-07",
+                  "label": "07 Nov",
                   "created": 0,
                   "createdAmount": 0.0,
                   "createdAmountLabel": "$0",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 84,
+                  "openBalance": 92,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-08",
+                  "label": "08 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 92,
+                  "openAmount": 0.0,
+                  "openAmountLabel": "$0"
+                },
+                {
+                  "date": "2026-11-09",
+                  "label": "09 Nov",
+                  "created": 0,
+                  "createdAmount": 0.0,
+                  "createdAmountLabel": "$0",
+                  "completed": 0,
+                  "completedAmount": 0.0,
+                  "completedAmountLabel": "$0",
+                  "openBalance": 92,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 }
@@ -398347,7 +401115,7 @@ window.serviceCentreData = {
               "pipeline": [
                 {
                   "status": "Awaiting PDI Start",
-                  "qty": 80,
+                  "qty": 88,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
                   "rawStatuses": [
@@ -398356,11 +401124,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 8
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 29
+                      "qty": 31
                     },
                     {
                       "label": "31-60 days",
@@ -398451,7 +401219,15 @@ window.serviceCentreData = {
                     "45284",
                     "45286",
                     "45424",
-                    "45425"
+                    "45425",
+                    "45724",
+                    "45725",
+                    "45726",
+                    "45727",
+                    "45728",
+                    "45818",
+                    "45819",
+                    "45827"
                   ],
                   "color": "#1f6feb"
                 },
@@ -398767,9 +401543,9 @@ window.serviceCentreData = {
                 }
               ],
               "totals": {
-                "created": 0,
+                "created": 8,
                 "completed": 0,
-                "open": 84,
+                "open": 92,
                 "createdAmountLabel": "$0",
                 "completedAmountLabel": "$0",
                 "openAmountLabel": "$0"
@@ -399204,15 +401980,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 149
+                      "qty": 135
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 118
+                      "qty": 130
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "ticketIds": [
@@ -399628,15 +402404,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 12
+                      "qty": 9
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "ticketIds": [
@@ -399913,11 +402689,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -399948,11 +402724,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -401023,9 +403799,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 62,
-                  "openAmount": 49238.49,
-                  "openAmountLabel": "$49.2K"
+                  "openBalance": 61,
+                  "openAmount": 49073.49,
+                  "openAmountLabel": "$49.1K"
                 },
                 {
                   "date": "2026-10-29",
@@ -401036,9 +403812,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 62,
-                  "openAmount": 49238.49,
-                  "openAmountLabel": "$49.2K"
+                  "openBalance": 61,
+                  "openAmount": 49073.49,
+                  "openAmountLabel": "$49.1K"
                 },
                 {
                   "date": "2026-10-30",
@@ -401049,9 +403825,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 62,
-                  "openAmount": 49238.49,
-                  "openAmountLabel": "$49.2K"
+                  "openBalance": 61,
+                  "openAmount": 49073.49,
+                  "openAmountLabel": "$49.1K"
                 },
                 {
                   "date": "2026-10-31",
@@ -401062,9 +403838,9 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 62,
-                  "openAmount": 49238.49,
-                  "openAmountLabel": "$49.2K"
+                  "openBalance": 61,
+                  "openAmount": 49073.49,
+                  "openAmountLabel": "$49.1K"
                 }
               ],
               "pipeline": [
@@ -401110,9 +403886,9 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "Approved, Awaiting Repair",
-                  "qty": 13,
-                  "quoteAmount": 11029.48,
-                  "quoteAmountLabel": "$11.0K",
+                  "qty": 12,
+                  "quoteAmount": 10864.48,
+                  "quoteAmountLabel": "$10.9K",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
@@ -401123,11 +403899,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 4
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 7
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
@@ -401146,16 +403922,15 @@ window.serviceCentreData = {
                     "43808",
                     "44279",
                     "44740",
-                    "45267",
-                    "45268"
+                    "45267"
                   ],
                   "color": "#17a6ad"
                 },
                 {
                   "status": "Repair In Progress",
-                  "qty": 17,
-                  "quoteAmount": 17618.93,
-                  "quoteAmountLabel": "$17.6K",
+                  "qty": 16,
+                  "quoteAmount": 16950.68,
+                  "quoteAmountLabel": "$17.0K",
                   "rawStatuses": [
                     "Repair in Progress"
                   ],
@@ -401166,11 +403941,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
@@ -401193,8 +403968,7 @@ window.serviceCentreData = {
                     "43655",
                     "43657",
                     "43718",
-                    "44315",
-                    "45266"
+                    "44315"
                   ],
                   "color": "#f58b1f"
                 },
@@ -401236,16 +404010,16 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "Time Claimed, Awaiting Invoice",
-                  "qty": 16,
-                  "quoteAmount": 9214.81,
-                  "quoteAmountLabel": "$9.2K",
+                  "qty": 17,
+                  "quoteAmount": 9883.06,
+                  "quoteAmountLabel": "$9.9K",
                   "rawStatuses": [
                     "Claim Time Ticket"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -401253,11 +404027,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 6
+                      "qty": 5
                     },
                     {
                       "label": "60+ days",
-                      "qty": 5
+                      "qty": 6
                     }
                   ],
                   "ticketIds": [
@@ -401276,22 +404050,23 @@ window.serviceCentreData = {
                     "44313",
                     "44314",
                     "44701",
-                    "45265"
+                    "45265",
+                    "45266"
                   ],
                   "color": "#22a447"
                 },
                 {
                   "status": "Completed / Invoiced",
-                  "qty": 32,
-                  "quoteAmount": 17319.37,
-                  "quoteAmountLabel": "$17.3K",
+                  "qty": 33,
+                  "quoteAmount": 17484.37,
+                  "quoteAmountLabel": "$17.5K",
                   "rawStatuses": [
                     "Create invoice"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
@@ -401299,11 +404074,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 31
                     }
                   ],
                   "ticketIds": [
@@ -401338,7 +404113,8 @@ window.serviceCentreData = {
                     "41027",
                     "41206",
                     "41250",
-                    "41600"
+                    "41600",
+                    "45268"
                   ],
                   "color": "#0f766e"
                 },
@@ -401406,10 +404182,10 @@ window.serviceCentreData = {
               "totals": {
                 "created": 21,
                 "completed": 0,
-                "open": 62,
+                "open": 61,
                 "createdAmountLabel": "$7.3K",
                 "completedAmountLabel": "$0",
-                "openAmountLabel": "$49.2K"
+                "openAmountLabel": "$49.1K"
               }
             },
             "Launceston": {
@@ -401824,28 +404600,28 @@ window.serviceCentreData = {
               "pipeline": [
                 {
                   "status": "Awaiting Quote Approval",
-                  "qty": 92,
-                  "quoteAmount": 70256.0,
-                  "quoteAmountLabel": "$70.3K",
+                  "qty": 91,
+                  "quoteAmount": 70033.25,
+                  "quoteAmountLabel": "$70.0K",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 37
+                      "qty": 34
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 22
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 32
                     }
                   ],
                   "ticketIds": [
@@ -401937,7 +404713,6 @@ window.serviceCentreData = {
                     "45155",
                     "45263",
                     "45270",
-                    "45325",
                     "45331",
                     "45332",
                     "45398"
@@ -401946,28 +404721,28 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "Approved, Awaiting Repair",
-                  "qty": 73,
-                  "quoteAmount": 29636.51,
-                  "quoteAmountLabel": "$29.6K",
+                  "qty": 74,
+                  "quoteAmount": 29859.26,
+                  "quoteAmountLabel": "$29.9K",
                   "rawStatuses": [
                     "Quote Approved"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 4
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 9
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 61
                     }
                   ],
                   "ticketIds": [
@@ -402043,7 +404818,8 @@ window.serviceCentreData = {
                     "42598",
                     "42799",
                     "43660",
-                    "44373"
+                    "44373",
+                    "45325"
                   ],
                   "color": "#17a6ad"
                 },
@@ -402150,19 +404926,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 13
+                      "qty": 14
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 26
+                      "qty": 25
                     },
                     {
                       "label": "60+ days",
-                      "qty": 68
+                      "qty": 71
                     }
                   ],
                   "ticketIds": [
@@ -402469,14 +405245,14 @@ window.serviceCentreData = {
                   "date": "2026-10-09",
                   "label": "09 Oct",
                   "created": 4,
-                  "createdAmount": 804.98,
-                  "createdAmountLabel": "$805",
+                  "createdAmount": 1084.98,
+                  "createdAmountLabel": "$1.1K",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 336,
-                  "openAmount": 85564.64,
-                  "openAmountLabel": "$85.6K"
+                  "openAmount": 85844.64,
+                  "openAmountLabel": "$85.8K"
                 },
                 {
                   "date": "2026-10-10",
@@ -402488,8 +405264,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 336,
-                  "openAmount": 85564.64,
-                  "openAmountLabel": "$85.6K"
+                  "openAmount": 85844.64,
+                  "openAmountLabel": "$85.8K"
                 },
                 {
                   "date": "2026-10-11",
@@ -402501,8 +405277,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 338,
-                  "openAmount": 85564.64,
-                  "openAmountLabel": "$85.6K"
+                  "openAmount": 85844.64,
+                  "openAmountLabel": "$85.8K"
                 },
                 {
                   "date": "2026-10-12",
@@ -402514,8 +405290,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 348,
-                  "openAmount": 85793.79,
-                  "openAmountLabel": "$85.8K"
+                  "openAmount": 86073.79,
+                  "openAmountLabel": "$86.1K"
                 },
                 {
                   "date": "2026-10-13",
@@ -402527,8 +405303,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 350,
-                  "openAmount": 85793.79,
-                  "openAmountLabel": "$85.8K"
+                  "openAmount": 86073.79,
+                  "openAmountLabel": "$86.1K"
                 },
                 {
                   "date": "2026-10-14",
@@ -402540,8 +405316,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 351,
-                  "openAmount": 85812.69,
-                  "openAmountLabel": "$85.8K"
+                  "openAmount": 86092.69,
+                  "openAmountLabel": "$86.1K"
                 },
                 {
                   "date": "2026-10-15",
@@ -402553,21 +405329,21 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 353,
-                  "openAmount": 85812.69,
-                  "openAmountLabel": "$85.8K"
+                  "openAmount": 86092.69,
+                  "openAmountLabel": "$86.1K"
                 },
                 {
                   "date": "2026-10-16",
                   "label": "16 Oct",
                   "created": 4,
-                  "createdAmount": 0.0,
-                  "createdAmountLabel": "$0",
+                  "createdAmount": 313.94,
+                  "createdAmountLabel": "$314",
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 357,
-                  "openAmount": 85812.69,
-                  "openAmountLabel": "$85.8K"
+                  "openAmount": 86406.63,
+                  "openAmountLabel": "$86.4K"
                 },
                 {
                   "date": "2026-10-17",
@@ -402579,8 +405355,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 357,
-                  "openAmount": 85812.69,
-                  "openAmountLabel": "$85.8K"
+                  "openAmount": 86406.63,
+                  "openAmountLabel": "$86.4K"
                 },
                 {
                   "date": "2026-10-18",
@@ -402592,8 +405368,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 359,
-                  "openAmount": 86144.25,
-                  "openAmountLabel": "$86.1K"
+                  "openAmount": 86738.19,
+                  "openAmountLabel": "$86.7K"
                 },
                 {
                   "date": "2026-10-19",
@@ -402605,8 +405381,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 362,
-                  "openAmount": 86295.62,
-                  "openAmountLabel": "$86.3K"
+                  "openAmount": 86889.56,
+                  "openAmountLabel": "$86.9K"
                 },
                 {
                   "date": "2026-10-20",
@@ -402618,8 +405394,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 367,
-                  "openAmount": 86766.15,
-                  "openAmountLabel": "$86.8K"
+                  "openAmount": 87360.09,
+                  "openAmountLabel": "$87.4K"
                 },
                 {
                   "date": "2026-10-21",
@@ -402631,8 +405407,8 @@ window.serviceCentreData = {
                   "completedAmount": 594.0,
                   "completedAmountLabel": "$594",
                   "openBalance": 369,
-                  "openAmount": 88013.55,
-                  "openAmountLabel": "$88.0K"
+                  "openAmount": 88607.49,
+                  "openAmountLabel": "$88.6K"
                 },
                 {
                   "date": "2026-10-22",
@@ -402644,8 +405420,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 374,
-                  "openAmount": 89484.43,
-                  "openAmountLabel": "$89.5K"
+                  "openAmount": 90078.37,
+                  "openAmountLabel": "$90.1K"
                 },
                 {
                   "date": "2026-10-23",
@@ -402657,8 +405433,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 379,
-                  "openAmount": 89484.43,
-                  "openAmountLabel": "$89.5K"
+                  "openAmount": 90078.37,
+                  "openAmountLabel": "$90.1K"
                 },
                 {
                   "date": "2026-10-24",
@@ -402670,8 +405446,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 380,
-                  "openAmount": 89484.43,
-                  "openAmountLabel": "$89.5K"
+                  "openAmount": 90078.37,
+                  "openAmountLabel": "$90.1K"
                 },
                 {
                   "date": "2026-10-25",
@@ -402683,8 +405459,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 381,
-                  "openAmount": 90420.65,
-                  "openAmountLabel": "$90.4K"
+                  "openAmount": 91014.59,
+                  "openAmountLabel": "$91.0K"
                 },
                 {
                   "date": "2026-10-26",
@@ -402696,8 +405472,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 383,
-                  "openAmount": 90420.65,
-                  "openAmountLabel": "$90.4K"
+                  "openAmount": 91014.59,
+                  "openAmountLabel": "$91.0K"
                 },
                 {
                   "date": "2026-10-27",
@@ -402709,8 +405485,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 387,
-                  "openAmount": 90804.74,
-                  "openAmountLabel": "$90.8K"
+                  "openAmount": 91398.68,
+                  "openAmountLabel": "$91.4K"
                 },
                 {
                   "date": "2026-10-28",
@@ -402722,8 +405498,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 392,
-                  "openAmount": 92680.4,
-                  "openAmountLabel": "$92.7K"
+                  "openAmount": 93274.34,
+                  "openAmountLabel": "$93.3K"
                 },
                 {
                   "date": "2026-10-29",
@@ -402735,8 +405511,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 392,
-                  "openAmount": 92680.4,
-                  "openAmountLabel": "$92.7K"
+                  "openAmount": 93274.34,
+                  "openAmountLabel": "$93.3K"
                 },
                 {
                   "date": "2026-10-30",
@@ -402748,8 +405524,8 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 395,
-                  "openAmount": 92896.59,
-                  "openAmountLabel": "$92.9K"
+                  "openAmount": 93490.53,
+                  "openAmountLabel": "$93.5K"
                 },
                 {
                   "date": "2026-10-31",
@@ -402761,35 +405537,35 @@ window.serviceCentreData = {
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
                   "openBalance": 395,
-                  "openAmount": 92896.59,
-                  "openAmountLabel": "$92.9K"
+                  "openAmount": 93490.53,
+                  "openAmountLabel": "$93.5K"
                 }
               ],
               "pipeline": [
                 {
                   "status": "Awaiting Quote Approval",
                   "qty": 305,
-                  "quoteAmount": 50263.22,
-                  "quoteAmountLabel": "$50.3K",
+                  "quoteAmount": 50857.16,
+                  "quoteAmountLabel": "$50.9K",
                   "rawStatuses": [
                     "Open"
                   ],
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 50
+                      "qty": 47
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "ticketIds": [
@@ -403112,11 +405888,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 9
+                      "qty": 11
                     },
                     {
                       "label": "31-60 days",
@@ -403240,11 +406016,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -403326,11 +406102,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 13
+                      "qty": 2
                     },
                     {
                       "label": "60+ days",
-                      "qty": 90
+                      "qty": 101
                     }
                   ],
                   "ticketIds": [
@@ -403461,11 +406237,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "ticketIds": [
@@ -403487,19 +406263,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 10
+                      "qty": 5
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 2
                     }
                   ],
                   "ticketIds": [
@@ -403526,9 +406302,9 @@ window.serviceCentreData = {
                 "created": 71,
                 "completed": 2,
                 "open": 395,
-                "createdAmountLabel": "$9.6K",
+                "createdAmountLabel": "$10.2K",
                 "completedAmountLabel": "$594",
-                "openAmountLabel": "$92.9K"
+                "openAmountLabel": "$93.5K"
               }
             },
             "Frankston": {
@@ -403952,7 +406728,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -403964,7 +406740,7 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "ticketIds": [
@@ -404023,15 +406799,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 36
+                      "qty": 32
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "ticketIds": [
@@ -404175,11 +406951,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 11
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
@@ -404270,19 +407046,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 57
+                      "qty": 38
                     },
                     {
                       "label": "60+ days",
-                      "qty": 93
+                      "qty": 114
                     }
                   ],
                   "ticketIds": [
@@ -404487,11 +407263,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
@@ -404984,19 +407760,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 22
+                      "qty": 19
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 43
+                      "qty": 37
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "ticketIds": [
@@ -405928,7 +408704,7 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
@@ -405936,11 +408712,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 52
+                      "qty": 24
                     },
                     {
                       "label": "60+ days",
-                      "qty": 222
+                      "qty": 251
                     }
                   ],
                   "ticketIds": [
@@ -406825,11 +409601,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "60+ days",
-                      "qty": 192
+                      "qty": 194
                     }
                   ],
                   "ticketIds": [
@@ -407992,7 +410768,7 @@ window.serviceCentreData = {
                   "completed": 2,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 119,
+                  "openBalance": 118,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 },
@@ -408005,7 +410781,7 @@ window.serviceCentreData = {
                   "completed": 2,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 120,
+                  "openBalance": 119,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 },
@@ -408018,7 +410794,7 @@ window.serviceCentreData = {
                   "completed": 0,
                   "completedAmount": 0.0,
                   "completedAmountLabel": "$0",
-                  "openBalance": 120,
+                  "openBalance": 119,
                   "openAmount": 0.0,
                   "openAmountLabel": "$0"
                 }
@@ -408026,7 +410802,7 @@ window.serviceCentreData = {
               "pipeline": [
                 {
                   "status": "Awaiting PDI Start",
-                  "qty": 95,
+                  "qty": 94,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
                   "rawStatuses": [
@@ -408035,19 +410811,19 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 6
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 13
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "ticketIds": [
@@ -408144,7 +410920,6 @@ window.serviceCentreData = {
                     "44904",
                     "44908",
                     "45318",
-                    "45341",
                     "45421"
                   ],
                   "color": "#1f6feb"
@@ -408205,7 +410980,7 @@ window.serviceCentreData = {
                 },
                 {
                   "status": "PDI Completed",
-                  "qty": 354,
+                  "qty": 355,
                   "quoteAmount": 0.0,
                   "quoteAmountLabel": "$0",
                   "rawStatuses": [
@@ -408214,15 +410989,15 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 5
+                      "qty": 2
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 52
+                      "qty": 37
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 32
+                      "qty": 51
                     },
                     {
                       "label": "60+ days",
@@ -408582,6 +411357,7 @@ window.serviceCentreData = {
                     "45213",
                     "45221",
                     "45304",
+                    "45341",
                     "45349",
                     "45380"
                   ],
@@ -408598,11 +411374,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -408655,7 +411431,7 @@ window.serviceCentreData = {
               "totals": {
                 "created": 53,
                 "completed": 57,
-                "open": 120,
+                "open": 119,
                 "createdAmountLabel": "$0",
                 "completedAmountLabel": "$0",
                 "openAmountLabel": "$0"
@@ -409082,11 +411858,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 2
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 29
+                      "qty": 31
                     },
                     {
                       "label": "31-60 days",
@@ -409921,11 +412697,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 94
+                      "qty": 92
                     },
                     {
                       "label": "60+ days",
-                      "qty": 127
+                      "qty": 129
                     }
                   ],
                   "ticketIds": [
@@ -410168,15 +412944,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 7
+                      "qty": 5
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 11
                     },
                     {
                       "label": "60+ days",
-                      "qty": 107
+                      "qty": 114
                     }
                   ],
                   "ticketIds": [
@@ -410447,11 +413223,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -410482,11 +413258,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -411759,11 +414535,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 5
+                      "qty": 4
                     },
                     {
                       "label": "60+ days",
-                      "qty": 5
+                      "qty": 6
                     }
                   ],
                   "ticketIds": [
@@ -411800,11 +414576,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 2
+                      "qty": 1
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 31
                     }
                   ],
                   "ticketIds": [
@@ -412327,11 +415103,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 20
+                      "qty": 18
                     },
                     {
                       "label": "60+ days",
-                      "qty": 30
+                      "qty": 32
                     }
                   ],
                   "ticketIds": [
@@ -412407,11 +415183,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 10
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
-                      "qty": 59
+                      "qty": 61
                     }
                   ],
                   "ticketIds": [
@@ -412598,11 +415374,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 23
+                      "qty": 20
                     },
                     {
                       "label": "60+ days",
-                      "qty": 68
+                      "qty": 71
                     }
                   ],
                   "ticketIds": [
@@ -413195,11 +415971,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 15
+                      "qty": 14
                     },
                     {
                       "label": "60+ days",
-                      "qty": 238
+                      "qty": 239
                     }
                   ],
                   "ticketIds": [
@@ -413671,11 +416447,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 13
+                      "qty": 2
                     },
                     {
                       "label": "60+ days",
-                      "qty": 90
+                      "qty": 101
                     }
                   ],
                   "ticketIds": [
@@ -413806,11 +416582,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 4
                     }
                   ],
                   "ticketIds": [
@@ -413836,15 +416612,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 6
                     },
                     {
                       "label": "60+ days",
-                      "qty": 1
+                      "qty": 2
                     }
                   ],
                   "ticketIds": [
@@ -414286,11 +417062,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 7
+                      "qty": 6
                     },
                     {
                       "label": "60+ days",
-                      "qty": 28
+                      "qty": 29
                     }
                   ],
                   "ticketIds": [
@@ -414347,15 +417123,15 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 35
+                      "qty": 26
                     },
                     {
                       "label": "60+ days",
-                      "qty": 80
+                      "qty": 90
                     }
                   ],
                   "ticketIds": [
@@ -414592,11 +417368,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 49
+                      "qty": 28
                     },
                     {
                       "label": "60+ days",
-                      "qty": 93
+                      "qty": 114
                     }
                   ],
                   "ticketIds": [
@@ -415275,11 +418051,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 39
+                      "qty": 29
                     },
                     {
                       "label": "60+ days",
-                      "qty": 848
+                      "qty": 858
                     }
                   ],
                   "ticketIds": [
@@ -416192,11 +418968,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 37
+                      "qty": 8
                     },
                     {
                       "label": "60+ days",
-                      "qty": 222
+                      "qty": 251
                     }
                   ],
                   "ticketIds": [
@@ -417009,11 +419785,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 3
+                      "qty": 1
                     },
                     {
                       "label": "60+ days",
-                      "qty": 192
+                      "qty": 194
                     }
                   ],
                   "ticketIds": [
@@ -418201,11 +420977,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 16
+                      "qty": 12
                     },
                     {
                       "label": "60+ days",
-                      "qty": 71
+                      "qty": 75
                     }
                   ],
                   "ticketIds": [
@@ -418364,15 +421140,15 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 12
+                      "qty": 9
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 32
+                      "qty": 36
                     },
                     {
                       "label": "60+ days",
@@ -420402,11 +423178,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 2
+                      "qty": 3
                     },
                     {
                       "label": "31-60 days",
@@ -420437,11 +423213,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -422314,11 +425090,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 55
+                      "qty": 56
                     }
                   ],
                   "ticketIds": [
@@ -422490,11 +425266,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 63
+                      "qty": 64
                     }
                   ],
                   "ticketIds": [
@@ -423669,11 +426445,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 5
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 5
                     },
                     {
                       "label": "60+ days",
@@ -426687,11 +429463,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 192
+                      "qty": 193
                     }
                   ],
                   "ticketIds": [
@@ -428052,11 +430828,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 6
+                      "qty": 4
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 12
+                      "qty": 14
                     },
                     {
                       "label": "60+ days",
@@ -430004,11 +432780,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 1
+                      "qty": 2
                     },
                     {
                       "label": "31-60 days",
@@ -430038,11 +432814,11 @@ window.serviceCentreData = {
                   "aging": [
                     {
                       "label": "0-7 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "8-30 days",
-                      "qty": 0
+                      "qty": 1
                     },
                     {
                       "label": "31-60 days",
@@ -432044,11 +434820,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 47
+                      "qty": 48
                     }
                   ],
                   "ticketIds": [
@@ -441179,11 +443955,11 @@ window.serviceCentreData = {
                     },
                     {
                       "label": "31-60 days",
-                      "qty": 1
+                      "qty": 0
                     },
                     {
                       "label": "60+ days",
-                      "qty": 29
+                      "qty": 30
                     }
                   ],
                   "ticketIds": [
@@ -589142,7 +591918,7 @@ window.serviceCentreData = {
         {
           "yard": "Perth",
           "color": "#1f6feb",
-          "newTickets": 5,
+          "newTickets": 8,
           "newAmount": 1241.25,
           "newAmountLabel": "$1.2K",
           "status": "Target",
@@ -589151,34 +591927,34 @@ window.serviceCentreData = {
         {
           "yard": "Traralgon",
           "color": "#17a6ad",
-          "newTickets": 1,
-          "newAmount": 297.0,
-          "newAmountLabel": "$297",
+          "newTickets": 6,
+          "newAmount": 2434.01,
+          "newAmountLabel": "$2.4K",
           "status": "Target",
           "statusTone": "good"
         },
         {
           "yard": "Launceston",
           "color": "#f58b1f",
-          "newTickets": 3,
-          "newAmount": 2410.01,
-          "newAmountLabel": "$2.4K",
+          "newTickets": 17,
+          "newAmount": 10925.46,
+          "newAmountLabel": "$10.9K",
           "status": "Target",
           "statusTone": "good"
         },
         {
           "yard": "Geelong",
           "color": "#7c3aed",
-          "newTickets": 22,
-          "newAmount": 2477.32,
-          "newAmountLabel": "$2.5K",
+          "newTickets": 39,
+          "newAmount": 5978.39,
+          "newAmountLabel": "$6.0K",
           "status": "Target",
           "statusTone": "good"
         },
         {
           "yard": "Frankston",
           "color": "#22a447",
-          "newTickets": 0,
+          "newTickets": 8,
           "newAmount": 0.0,
           "newAmountLabel": "$0",
           "status": "Target",
@@ -589188,8 +591964,8 @@ window.serviceCentreData = {
           "yard": "Other",
           "color": "#64748b",
           "newTickets": 2,
-          "newAmount": 1599.52,
-          "newAmountLabel": "$1.6K",
+          "newAmount": 1319.51,
+          "newAmountLabel": "$1.3K",
           "status": "Other",
           "statusTone": "watch"
         }
@@ -589309,23 +592085,23 @@ window.serviceCentreData = {
           "month": "Oct",
           "monthFull": "Oct 2026",
           "newTickets": 530,
-          "newAmount": 150742.51,
-          "newQuoteAmount": 150742.51,
+          "newAmount": 151336.45,
+          "newQuoteAmount": 151336.45,
           "invoicedTickets": 37,
           "invoicedAmount": 16529.23,
-          "openTickets": 2632,
-          "openQuoteAmount": 746052.22
+          "openTickets": 2630,
+          "openQuoteAmount": 746481.16
         },
         {
           "month": "Nov",
           "monthFull": "Nov 2026",
-          "newTickets": 33,
-          "newAmount": 8025.1,
-          "newQuoteAmount": 8025.1,
-          "invoicedTickets": 5,
-          "invoicedAmount": 2483.62,
-          "openTickets": 2659,
-          "openQuoteAmount": 750845.33
+          "newTickets": 80,
+          "newAmount": 21898.62,
+          "newQuoteAmount": 21898.62,
+          "invoicedTickets": 14,
+          "invoicedAmount": 8414.85,
+          "openTickets": 2694,
+          "openQuoteAmount": 759085.45
         }
       ]
     },
@@ -589335,7 +592111,7 @@ window.serviceCentreData = {
       "kpis": [
         {
           "title": "Current Month Qty",
-          "value": "33",
+          "value": "80",
           "detail": "New tickets created in Nov 2026",
           "icon": "NQ",
           "tone": "blue",
@@ -589344,7 +592120,7 @@ window.serviceCentreData = {
         },
         {
           "title": "Current Month Quote Amount",
-          "value": "$8.0K",
+          "value": "$21.9K",
           "detail": "AmountIncludingTax total for CreatedOn month",
           "icon": "NA",
           "tone": "teal",
@@ -589467,59 +592243,59 @@ window.serviceCentreData = {
           "month": "Oct",
           "monthFull": "Oct 2026",
           "newTickets": 530,
-          "newAmount": 150742.51,
-          "newQuoteAmount": 150742.51,
+          "newAmount": 151336.45,
+          "newQuoteAmount": 151336.45,
           "invoicedTickets": 37,
           "invoicedAmount": 16529.23,
-          "openTickets": 2632,
-          "openQuoteAmount": 746052.22
+          "openTickets": 2630,
+          "openQuoteAmount": 746481.16
         },
         {
           "month": "Nov",
           "monthFull": "Nov 2026",
-          "newTickets": 33,
-          "newAmount": 8025.1,
-          "newQuoteAmount": 8025.1,
-          "invoicedTickets": 5,
-          "invoicedAmount": 2483.62,
-          "openTickets": 2659,
-          "openQuoteAmount": 750845.33
+          "newTickets": 80,
+          "newAmount": 21898.62,
+          "newQuoteAmount": 21898.62,
+          "invoicedTickets": 14,
+          "invoicedAmount": 8414.85,
+          "openTickets": 2694,
+          "openQuoteAmount": 759085.45
         }
       ],
       "breakdown": [
         {
           "title": "Perth",
           "amount": "$1.2K",
-          "count": "5 tickets",
+          "count": "8 tickets",
           "note": "Current CreatedOn month"
         },
         {
           "title": "Traralgon",
-          "amount": "$297",
-          "count": "1 tickets",
+          "amount": "$2.4K",
+          "count": "6 tickets",
           "note": "Current CreatedOn month"
         },
         {
           "title": "Launceston",
-          "amount": "$2.4K",
-          "count": "3 tickets",
+          "amount": "$10.9K",
+          "count": "17 tickets",
           "note": "Current CreatedOn month"
         },
         {
           "title": "Geelong",
-          "amount": "$2.5K",
-          "count": "22 tickets",
+          "amount": "$6.0K",
+          "count": "39 tickets",
           "note": "Current CreatedOn month"
         },
         {
           "title": "Frankston",
           "amount": "$0",
-          "count": "0 tickets",
+          "count": "8 tickets",
           "note": "Current CreatedOn month"
         },
         {
           "title": "Other",
-          "amount": "$1.6K",
+          "amount": "$1.3K",
           "count": "2 tickets",
           "note": "Current CreatedOn month"
         }
